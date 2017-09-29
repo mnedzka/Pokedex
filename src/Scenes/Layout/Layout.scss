@@ -1,0 +1,39 @@
+@import '~/../src/styles/partials/_variables.scss';
+
+.scene {
+    background-color: $scene_background;
+    padding: 1rem 0 1rem 0;
+}
+.block {
+    background-color: $background;
+    margin: 0 auto 1rem auto;
+
+    &:not(:first-of-type) {
+        margin: 0 auto 0 auto;
+        min-height: calc(100vh - 7rem);
+    }
+}
+
+.title {
+    background-color: $blue_light;
+}
+
+.wrapper {
+    padding: 1rem;
+}
+
+@media screen and (min-width: 728px) {
+    .block {
+        width: 728px;
+        border-radius: $border_radius;
+
+        &::first-of-type {
+            margin: 0 auto 1rem auto;
+        }
+    }
+
+    .title {
+        border-top-left-radius: $border_radius;
+        border-top-right-radius: $border_radius;
+    }
+}
