@@ -1,7 +1,7 @@
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 
 module.exports = {
-    entry: ['./src/App.jsx', './src/styles/main.scss'],
+    entry: ['./src/index.jsx', './src/styles/main.scss'],
     output: {
         filename: 'app.js'
     },
@@ -14,7 +14,7 @@ module.exports = {
                 exclude: [/node_modules/],
                 use: [{
                     loader: 'babel-loader',
-                    options: { presets: ['env', 'stage-2', 'react'] },
+                    options: { presets: ['env', 'react', 'stage-2'] },
                 }],
             },
 

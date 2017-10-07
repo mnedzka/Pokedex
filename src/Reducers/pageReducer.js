@@ -4,14 +4,13 @@ const initialState = {
     currentPage : 'home',
 };
 
-const pageReducer = function (state = initialState, action) {
+const pageReducer = function pageChangeReducer (state = initialState, action) {
     switch (action.type) {
         case CHANGE_PAGE:
-            return Object.assign({}, state, {currentPage: action.payload});
-            break;
+            return Object.assign({}, state, {currentPage : action.payload});
         default:
             return state;
     }
 };
 
-export default pageReducer;
+export default pageReducer

@@ -3,7 +3,7 @@ import Styles from './Layout.scss';
 import Menu from './Components/Menu/Menu.jsx';
 
 
-export default class Template extends React.Component {
+class Layout extends React.Component {
     render () {
         return <div className={Styles.scene}>
             <div className={Styles.block}>
@@ -20,3 +20,5 @@ export default class Template extends React.Component {
         </div>;
     }
 }
+
+export default Layout

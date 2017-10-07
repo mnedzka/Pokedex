@@ -1,0 +1,19 @@
+@import '~/../src/styles/partials/_variables.scss';
+
+.img {
+    width: 75px;
+}
+.typeBox {
+    display: inline-block;
+    font-size: 0.75rem;
+    width: 100%;
+    text-align: center;
+}
+
+@each $type in $types {
+    .#{$type} {
+        @extend .typeBox;
+        background-color: map-get($typeColors, $type);
+        border: 1px solid lighten(map-get($typeColors, $type), 10%);
+    }
+}

@@ -1,7 +1,10 @@
 import React from 'react';
 
-export default class Pokedex extends React.Component {
+class Pokedex extends React.Component {
     render () {
-        return 'POKEDEXPOKEDEXPOKEDEX';
+        console.log(this);
+        return 'POKEDEX';
     }
 }
+
+export default Pokedex

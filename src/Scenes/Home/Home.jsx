@@ -2,7 +2,7 @@ import React from 'react';
 import Styles from './Home.scss';
 import Layout from '../Layout/Layout.jsx';
 
-export default class Home extends React.Component {
+class Home extends React.Component {
     render () {
         return <div>
             <p>Welcome on Pokedex page. This page is using Poke Api (link). And provides information about:</p>
@@ -14,3 +14,5 @@ export default class Home extends React.Component {
         </div>
     }
 }
+
+export default Home

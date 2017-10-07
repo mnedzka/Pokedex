@@ -6,8 +6,54 @@ $red: rgb(204, 50, 75);
 $red_light: rgb(230, 76, 101);
 $blue: rgb(26, 78, 149);
 $blue_light: rgb(52, 104, 175);
-$highlight: rgb(17, 168, 171);
+$highlight_green: rgb(17, 168, 171);
+$highlight_blue: rgb(79, 196, 245);
+$wedgewood: rgb(78, 127, 158);
 
 
 // Layout
 $border_radius: 0.25rem;
+
+// Pokemon Types
+// $typeColors =
+$types: (
+    normal,
+    fire,
+    fighting,
+    water,
+    flying,
+    grass,
+    poison,
+    electric,
+    ground,
+    psychic,
+    rock,
+    ice,
+    bug,
+    dragon,
+    ghost,
+    dark,
+    steel,
+    fairy,
+);
+
+$typeColors: (
+  normal: rgb(138, 138, 89),
+  fire: rgb(240, 128, 48),
+  fighting: rgb(192, 48, 40),
+  water: rgb(104, 144, 240),
+  flying: rgb(168, 144, 240),
+  grass: rgb(120, 200, 80),
+  poison: rgb(160, 64, 160),
+  electric: rgb(248, 208, 48),
+  ground: rgb(224, 192, 104),
+  psychic: rgb(248, 88, 136),
+  rock: rgb(184, 160, 56),
+  ice: rgb(152, 216, 216),
+  bug: rgb(168, 184, 32),
+  dragon: rgb(112, 56, 248),
+  ghost: rgb(112, 88, 152),
+  dark: rgb(112, 88, 72),
+  steel: rgb(184, 184, 208),
+  fairy: rgb(232, 152, 232),
+);

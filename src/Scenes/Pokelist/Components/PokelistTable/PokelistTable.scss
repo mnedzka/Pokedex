@@ -1,0 +1,21 @@
+.list {
+    th, td {
+        padding: 0 0.25rem 0 0.25rem;
+        vertical-align: middle;
+        text-align: center;
+    }
+
+    th {
+        user-select: none;
+    }
+
+    tr {
+        border-bottom: 1px solid white;
+    }
+
+    border: 1px solid green;
+}
+
+.sort {
+    cursor: pointer;
+}

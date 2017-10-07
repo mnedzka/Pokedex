@@ -1,21 +1,40 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
 import Home from './Scenes/Home/Home.jsx';
 import Pokedex from './Scenes/Pokedex/Pokedex.jsx';
 import Pokelist from './Scenes/Pokelist/Pokelist.jsx';
 import Layout from './Scenes/Layout/Layout.jsx';
+import { connect } from 'react-redux';
 
 class App extends React.Component {
     render () {
-        return <Layout>
-            <Home />
-            <Pokedex />
-            <Pokelist />
+        const page = this.props.page;
+        let Content = null;
+        let title = null;
+
+        switch (page) {
+            case 'pokemonlist':
+                Content = Pokelist;
+                title = 'Pokemon List';
+                break;
+            case 'pokedex':
+                Content = Pokedex;
+                title = 'Pokedex';
+                break;
+            default:
+                Content = Home;
+                title = 'Home';
+        }
+
+        return <Layout title={title}>
+            <Content />
         </Layout>;
     }
 }
 
-ReactDOM.render(
-    <App />,
-    document.querySelector('#app')
-);
+const mapStateToProps = state => {
+    return {
+        page : state.page.currentPage,
+    };
+};
+
+export default connect(mapStateToProps)(App)

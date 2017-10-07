@@ -1,0 +1,67 @@
+@import '~/../src/styles/partials/_variables.scss';
+
+.item {
+    width: 25%;
+    height: 4rem;
+    display: flex;
+    position: relative;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    background-color: inherit;
+    color: inherit;
+    border: none;
+    outline: none;
+
+    &[disabled] {
+        color: rgb(200, 200, 200);
+        cursor: default;
+    }
+
+    &::after {
+        content: '';
+        display: block;
+        position: absolute;
+        background-color: $highlight_green;
+        height: 5px;
+        bottom: 0;
+        left: 50%;
+        right: 50%;
+        transition: left 0.3s ease-in, right 0.3s ease-in;
+    }
+
+
+    &:not([disabled]) {
+        &:hover,
+        &:focus {
+            background-color: $background_light;
+        }
+
+        &:hover::after,
+        &:focus::after {
+            left: 0;
+            right: 0;
+        }
+    }
+
+
+    @media screen and (min-width: 728px) {
+        &:first-of-type {
+            border-top-left-radius: $border_radius;
+            border-bottom-left-radius: $border_radius;
+
+            &::after {
+                border-bottom-left-radius: $border_radius;
+            }
+        }
+
+        &:last-of-type {
+            border-top-right-radius: $border_radius;
+            border-bottom-right-radius: $border_radius;
+
+            &::after {
+                border-bottom-right-radius: $border_radius;
+            }
+        }
+    }
+}

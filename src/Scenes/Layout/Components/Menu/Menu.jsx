@@ -1,15 +1,8 @@
 import React from 'react';
 import Styles from './Menu.scss';
+import MenuItem from '../MenuItem/MenuItem.jsx';
 
-class MenuItem extends React.Component {
-    render () {
-        return <button className={Styles.item} disabled={this.props.disabled}>
-            {this.props.text}
-        </button>;
-    }
-}
-
-export default class Menu extends React.Component {
+class Menu extends React.Component {
     render () {
         return <div className={Styles.wrapper}>
             <MenuItem text="Home" />
@@ -19,3 +12,5 @@ export default class Menu extends React.Component {
         </div>;
     }
 }
+
+export default Menu

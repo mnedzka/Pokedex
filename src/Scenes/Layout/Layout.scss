@@ -15,7 +15,9 @@
 }
 
 .title {
-    background-color: $blue_light;
+    background-color: $background_light;
+    background: repeating-linear-gradient(45deg, $background_light, $background_light 85%, $wedgewood 85%, $wedgewood);
+    user-select: none;
 }
 
 .wrapper {
