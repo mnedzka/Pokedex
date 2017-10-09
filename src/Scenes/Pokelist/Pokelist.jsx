@@ -1,16 +1,15 @@
 import React from 'react';
 import Styles from './Pokelist.scss';
-import Poke_fetch from '../../fetch.js';
+import Poke_fetch from 'src/fetch.js';
+import Loader from 'Components/Loader/Loader.jsx';
 import PokelistTable from './Components/PokelistTable/PokelistTable.jsx';
-import Loader from '../../Components/Loader/Loader.jsx';
 import { connect } from 'react-redux';
 import {
-    showMoreOnList,
-    updatePokemon,
-    updatePending,
-} from '../../Actions/actions.js';
+    setLength,
+    updateData,
+} from 'Actions/actions.js';
 
-const itemsToLoad = 25;
+const loadMoreBy = 100;
 
 class Pokelist extends React.Component {
     constructor () {
@@ -18,100 +17,49 @@ class Pokelist extends React.Component {
         this.cache = new Poke_fetch('pokemonList');
     }
 
-    getData = (len = itemsToLoad) => {
-        const url = 'https://pokeapi.co/api/v2/pokemon/';
+    getData = () => {
+        const url = './resources/data/pokemonList.json';
         const pokemonData = this.props.data.slice();
-
-        let pend = len;
-        this.props.updatePending(pend);
-
-        for (let i = 1; i <= len; i++) {
-            if (pokemonData[i]) {
-                pend = pend - 1;
-                if (!pend) {
-                    this.props.updatePending(pend);
+        const len = this.props.length;
+        this.cache.get(url)
+        .then(data => {
+            for (let i = 1; i <= len; i++) {
+                if (!pokemonData[i]) {
+                    pokemonData[i] = data[i];
                 }
-                continue;
             }
-            this.cache.get(`${url}${i}/`, i)
-            .then(data => {
-                pend = pend - 1;
-
-                if (!data.hasOwnProperty('lift')) {
-                    pokemonData[i] = this.liftData(data, i);
-                } else if (!pokemonData[i]) {
-                    pokemonData[i] = data;
-                }
-
-                if (!pend) {
-                    this.props.updatePending(pend);
-                    this.cache.finishBatch(pokemonData);
-                    this.props.update(pokemonData);
-                }
-
-                return data;
-            });
-        }
+            this.cache.setStorage({[url] : data});
+            this.props.update(pokemonData);
+        });
     };
 
-    liftData = (pokemon, pokeId) => {
-        const getStat = () => {
-            const stat = {};
-            for (let [i, el] of pokemon.stats.entries()) {
-                stat[el.stat.name] = el.base_stat;
-            }
-            return stat;
-        };
-        const getType = () => {
-            const types = pokemon.types.slice().sort((a, b) => a.slot > b.slot);
-            const lifted = [];
-            for (let i = 0; i < types.length; i++) {
-                lifted.push({
-                    slot : types[i].slot,
-                    name : types[i].type.name,
-                    url : types[i].type.url,
-                });
-            }
-            return lifted;
-        };
-        return {
-            ...getStat(),
-            lift : true,
-            id : pokeId,
-            name : pokemon.name,
-            types : getType(pokemon.types),
-        };
-    };
-
-    scrollHandler = (ev) => {
+    handleScroll = ev => {
         const height = Math.max(
             document.documentElement.scrollHeight,
             document.body.scrollHeight,
         );
         if (height === window.innerHeight + window.scrollY) {
-            if (!this.props.pending) {
-                this.props.showMore(25);
-                this.getData(this.props.length);
+            if (!this.props.pending && this.props.length < 721) {
+                this.props.setLen(this.props.length + loadMoreBy);
             }
         }
     };
 
     componentDidMount () {
-        document.addEventListener('scroll', this.scrollHandler);
-
-        const storedLen = this.cache.getStoredLen();
-        if (!storedLen || !this.props.length) {
-            this.props.showMore(storedLen);
+        document.addEventListener('scroll', this.handleScroll);
+        if (!this.props.length) {
+            this.props.setLen();
         }
-        this.getData(storedLen);
-        return null;
     }
 
     componentWillUnmount () {
-        document.removeEventListener('scroll', this.scrollHandler);
+        document.removeEventListener('scroll', this.handleScroll);
     }
 
     render () {
+        if (this.props.pending) {
+            this.getData();
+        }
         let loader = null;
         let list = null;
         if (this.props.data.length) {
@@ -131,15 +79,14 @@ const mapStateToProps = state => {
     return {
         length : state.pokemonList.length,
         pending : state.pokemonList.pending,
-        data : state.pokemon,
+        data : state.pokemonList.data,
     };
 };
 
 const mapDispatchToProps = dispatch => {
     return {
-        update : (data) => dispatch(updatePokemon(data)),
-        showMore : (number = itemsToLoad) => dispatch(showMoreOnList(number)),
-        updatePending : (number) => dispatch(updatePending(number)),
+        update : (data) => dispatch(updateData(data)),
+        setLen : (number = loadMoreBy) => dispatch(setLength(number)),
     };
 };
 

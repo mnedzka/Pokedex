@@ -1,27 +1,40 @@
 import {
-    INC_LIST_LENGTH,
-    UPDATE_PENDING,
-    SET_LIST_SORTING,
- } from '../Actions/actionTypes.js';
+    LIST_SET_LENGTH,
+    LIST_SET_SORTING,
+    LIST_UPDATE_DATA,
+ } from 'Actions/actionTypes.js';
 
 const initialState = {
     length : 0,
-    pending : 0,
-    sorting : false,
+    pending : false,
+    sortBy : 'id',
     sortDir : 1,
+    data : [],
 };
 
 const listReducer = function pokemonListReducer (state = initialState, action) {
     switch (action.type) {
-        case INC_LIST_LENGTH:
-            const currentLength = state.length;
-            const increasedLength = currentLength + action.payload;
-            return Object.assign({}, state, {length : increasedLength});
-        case UPDATE_PENDING:
-            return Object.assign({}, state, {pending : action.payload});
-        case SET_LIST_SORTING:
-            const sortingDirection = state.sortDir * (-1);
-            return Object.assign({}, state, {sorting : action.payload, sortDir : sortingDirection});
+        case LIST_SET_LENGTH:
+            if (state.length === 721) {
+                console.log('LENGTH REACHED MAX VALUE ', state);
+                return state;
+            }
+            let lengthToSet = action.payload > 721 ? 721 : action.payload;
+            return Object.assign({}, state, {
+                length : lengthToSet,
+                pending : true,
+            });
+        case LIST_SET_SORTING:
+            const reverseDir = state.sortDir * (-1);
+            return Object.assign({}, state, {
+                sortBy : action.payload,
+                sortDir : reverseDir,
+            });
+        case LIST_UPDATE_DATA:
+            return Object.assign({}, state, {
+                data : action.payload,
+                pending : false,
+            });
         default:
             return state;
     }

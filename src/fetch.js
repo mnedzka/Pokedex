@@ -3,12 +3,12 @@ export default class Poke_fetch {
         this.cache = {};
         this.storageItem = item;
 
-        this.get = (url, id) => {
+        this.get = (url) => {
             if (this.storageItem) {
                 this.loadStorage();
             }
-            if (id in this.cache) {
-                return Promise.resolve(this.cache[id]);
+            if (url in this.cache) {
+                return Promise.resolve(this.cache[url]);
             }
             return this.__fetchData(url);
         };
@@ -27,18 +27,9 @@ export default class Poke_fetch {
                     this.cache = obj;
                 }
             } catch (e) {
-                this.storage = false;
                 console.info('Data item present, JSON invalid. String may have had exceed memory limit.');
             }
         }
-    }
-
-    getStoredLen () {
-        this.loadStorage();
-        const cacheArr = Array.from(this.cache);
-        this.clearCache();
-        const len = cacheArr.length;
-        return !len ? undefined : len - 1;
     }
 
     setStorage (data) {

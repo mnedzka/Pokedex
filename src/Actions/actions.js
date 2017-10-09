@@ -1,53 +1,52 @@
 import {
-    CHANGE_PAGE,
-    INC_LIST_LENGTH,
-    UPDATE_POKEMON_DATA,
-    UPDATE_PENDING,
-    SET_LIST_SORTING,
+    PAGE_CHANGE,
+    PAGE_SHOW_IN_DEX,
+    LIST_SET_LENGTH,
+    LIST_SET_SORTING,
+    LIST_UPDATE_DATA,
 } from './actionTypes.js';
 
 // STORE.PAGE
 const changePage = function changeCurrentPage (newPage) {
     return {
-        type : CHANGE_PAGE,
+        type : PAGE_CHANGE,
         payload : newPage,
     };
 };
 
-// STORE.POKEMONLIST
-const showMoreOnList = function increasePokemonListLength (valueToAdd) {
+const showInPokedex = function showInfoInPokedexPage (pokedexPageData) {
     return {
-        type : INC_LIST_LENGTH,
-        payload : valueToAdd,
+        type : PAGE_SHOW_IN_DEX,
+        payload : pokedexPageData,
     };
-};
+}
 
-const updatePending = function updatePendingRequests (value) {
+// STORE.POKEMONLIST
+const setLength = function setPokemonListLengthTo (newLength) {
     return {
-        type : UPDATE_PENDING,
-        payload : value,
+        type : LIST_SET_LENGTH,
+        payload : newLength,
     };
 };
 
 const setSorting = function setPokemonListSotring (sortBy) {
     return {
-        type : SET_LIST_SORTING,
+        type : LIST_SET_SORTING,
         payload : sortBy,
     };
 };
 
-// STORE.POKEMON
-const updatePokemon = function updatePokemonData (data) {
+const updateData = function updatePokemonListData (data) {
     return {
-        type : UPDATE_POKEMON_DATA,
+        type : LIST_UPDATE_DATA,
         payload : data,
     };
 };
 
 export {
     changePage,
-    showMoreOnList,
-    updatePokemon,
-    updatePending,
+    showInPokedex,
+    setLength,
     setSorting,
+    updateData,
 }

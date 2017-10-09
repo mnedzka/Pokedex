@@ -1,24 +1,25 @@
 import React from 'react';
-import PokelistItem from '../PokelistItem/PokelistItem.jsx';
-import Styles from './PokelistTable.scss';
 import { connect } from 'react-redux';
-import { setSorting } from '../../../../Actions/actions.js';
+import { setSorting } from 'Actions/actions.js';
+import Styles from './PokelistTable.scss';
+import PokelistItem from '../PokelistItem/PokelistItem.jsx';
 
 class PokelistTable extends React.Component {
 
-    createHeaders = (headerArray) => {
+    createHeaders = headerArray => {
         const th = [];
         for (let [i, el] of headerArray.entries()) {
-            const sortWith = el[1];
-            const text = el[0];
-            const sortBy = text === '#' ? 'id' : text.toLowerCase().replace(' ', '-');
+            let sortBy = el[0].toLowerCase().replace(' ', '-');
+            if (el[0] === '#') {
+                sortBy = 'id';
+            }
             let cName = null;
             let callback = null;
             let sortDirection = null;
-            if (sortWith) {
+            if (el[1]) {
                 cName = Styles.sort;
-                callback = () => {this.props.changeSorting(sortBy)};
-                if (this.props.sorting === sortBy) {
+                callback = () => {this.props.setSorting(sortBy)};
+                if (this.props.sortBy === sortBy) {
                     if (this.props.direction === 1) {
                         sortDirection = '↓';
                     } else {
@@ -27,7 +28,7 @@ class PokelistTable extends React.Component {
                 }
             }
             th.push(<th key={i} className={cName} onClick={callback}>
-                {text}{sortDirection}
+                {el[0]}{sortDirection}
             </th>);
         }
         return th;
@@ -35,7 +36,7 @@ class PokelistTable extends React.Component {
 
     render () {
         let data = this.props.pokemonData.slice(1);
-        const sortBy = this.props.sorting;
+        const sortBy = this.props.sortBy;
         if (sortBy) {
             data = data.sort((a, b) => {
                 if (this.props.direction === 1) {
@@ -48,7 +49,7 @@ class PokelistTable extends React.Component {
             return <PokelistItem key={i} data={el} />
         });
         const headers = [
-            ['IMG', false],
+            ['', false],
             ['#', true],
             ['Name', false],
             ['Type', false],
@@ -74,14 +75,14 @@ class PokelistTable extends React.Component {
 
 const mapStateToProps = state => {
     return {
-        sorting : state.pokemonList.sorting,
+        sortBy : state.pokemonList.sortBy,
         direction : state.pokemonList.sortDir,
     };
 };
 
 const mapDispatchToProps = dispatch => {
     return {
-        changeSorting : (sortBy) => dispatch(setSorting(sortBy)),
+        setSorting : (sortBy) => dispatch(setSorting(sortBy)),
     };
 };
 

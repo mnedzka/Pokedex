@@ -1,4 +1,4 @@
-import { UPDATE_POKEMON_DATA } from '../Actions/actionTypes.js';
+import { UPDATE_POKEMON_DATA } from 'Actions/actionTypes.js';
 
 const initialState = [];
 

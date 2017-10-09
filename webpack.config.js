@@ -1,4 +1,5 @@
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
+const path = require('path');
 
 module.exports = {
     entry: ['./src/index.jsx', './src/styles/main.scss'],
@@ -42,6 +43,19 @@ module.exports = {
             },
         ]
 
+    },
+
+    resolve: {
+        alias: {
+            src : path.resolve(__dirname, 'src'),
+            Components : path.resolve(__dirname, 'src/Components'),
+            Scenes : path.resolve(__dirname, 'src/Scenes'),
+            Reducers : path.resolve(__dirname, 'src/Reducers'),
+            Actions :  path.resolve(__dirname, 'src/Actions'),
+            styles : path.resolve(__dirname, 'src/styles'),
+            resources : path.resolve(__dirname, 'resources'),
+        },
+        extensions: ['.js', '.jsx'],
     },
 
     plugins: [

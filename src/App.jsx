@@ -1,9 +1,9 @@
 import React from 'react';
-import Home from './Scenes/Home/Home.jsx';
-import Pokedex from './Scenes/Pokedex/Pokedex.jsx';
-import Pokelist from './Scenes/Pokelist/Pokelist.jsx';
-import Layout from './Scenes/Layout/Layout.jsx';
 import { connect } from 'react-redux';
+import Home from 'Scenes/Home/Home.jsx';
+import Pokedex from 'Scenes/Pokedex/Pokedex.jsx';
+import Pokelist from 'Scenes/Pokelist/Pokelist.jsx';
+import Layout from 'Scenes/Layout/Layout.jsx';
 
 class App extends React.Component {
     render () {

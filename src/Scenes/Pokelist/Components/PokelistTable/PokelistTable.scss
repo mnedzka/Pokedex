@@ -1,4 +1,8 @@
+@import '~/../src/styles/partials/_variables.scss';
+
 .list {
+    border-collapse: collapse;
+
     th, td {
         padding: 0 0.25rem 0 0.25rem;
         vertical-align: middle;
@@ -9,13 +13,20 @@
         user-select: none;
     }
 
-    tr {
+    thead tr {
+        background-color: rgba($background_light, 0.5);
         border-bottom: 1px solid white;
     }
 
-    border: 1px solid green;
+    tr:nth-child(even) {
+        background-color: rgba($background_light, 0.5);
+    }
 }
 
 .sort {
     cursor: pointer;
+
+    &:hover {
+        font-weight: bold;
+    }
 }

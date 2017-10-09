@@ -1,4 +1,5 @@
 import React from 'react';
+import Styles from './Pokedex.scss';
 
 class Pokedex extends React.Component {
     render () {

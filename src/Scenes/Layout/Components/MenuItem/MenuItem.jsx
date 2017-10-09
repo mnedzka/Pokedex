@@ -1,7 +1,7 @@
 import React from 'react';
 import Styles from './MenuItem.scss';
 import { connect } from 'react-redux';
-import { changePage } from '../../../../Actions/actions.js';
+import { changePage } from 'Actions/actions.js';
 
 class MenuItem extends React.Component {
     handleClickEvent = (ev) => {

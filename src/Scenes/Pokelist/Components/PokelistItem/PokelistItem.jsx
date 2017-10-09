@@ -1,5 +1,8 @@
 import React from 'react';
 import Styles from './PokelistItem.scss';
+import PokeType from 'Components/PokeType/PokeType.jsx';
+import { connect } from 'react-redux';
+import { showInPokedex } from 'Actions/actions.js';
 
 
 class PokelistItem extends React.Component {
@@ -15,16 +18,12 @@ class PokelistItem extends React.Component {
         return `./resources/pokemon/pokemons_${bundleID}.svg#${pokeID}`;
     };
 
-    parseTypes (types) {
-        const t = types.map((el, i) => {
-            const typeText = `${el.name.substr(0, 1).toUpperCase()}${el.name.substr(1)}`;
-            return <span className={Styles[el.name]} key={i}>
-                {typeText}
-                <br />
-            </span>;
+    handlePokeNameClick = () => {
+        return this.props.redirect({
+            type : 'pokemon',
+            id : this.props.data.id,
         });
-        return t;
-    }
+    };
 
     render () {
         const pokemon = {...this.props.data};
@@ -35,11 +34,11 @@ class PokelistItem extends React.Component {
             <td>
                 {pokemon.id}
             </td>
-            <td>
+            <td onClick={this.handlePokeNameClick} className={Styles.redirect}>
                 {pokemon.name.slice(0, 1).toUpperCase() + pokemon.name.slice(1)}
             </td>
             <td>
-                {this.parseTypes(pokemon.types)}
+                <PokeType types={pokemon.types} />
             </td>
             <td>
                 {pokemon.hp}
@@ -63,4 +62,10 @@ class PokelistItem extends React.Component {
     }
 }
 
-export default PokelistItem
+const mapDispatchToProps = dispatch => {
+    return {
+        redirect : (data) => dispatch(showInPokedex(data)),
+    };
+};
+
+export default connect(null, mapDispatchToProps)(PokelistItem)

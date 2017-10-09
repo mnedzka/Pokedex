@@ -1,6 +1,5 @@
 import React from 'react';
 import Styles from './Home.scss';
-import Layout from '../Layout/Layout.jsx';
 
 class Home extends React.Component {
     render () {

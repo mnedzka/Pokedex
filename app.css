@@ -2,25 +2,32 @@
   width: 50%; }
 .Layout__scene___1FfVyk {
   background-color: #1f253d;
-  padding: 1rem 0 1rem 0;
-  min-height: 100%; }
+  padding: 1rem 0 1rem 0; }
 
 .Layout__block___1vb1pC {
-  border-left: 1px dashed green;
-  border-right: 1px dashed green;
   background-color: #394264;
   margin: 0 auto 1rem auto; }
   .Layout__block___1vb1pC:not(:first-of-type) {
     margin: 0 auto 0 auto;
-    padding: 1rem;
     min-height: calc(100vh - 7rem); }
+
+.Layout__title___2PLGUN {
+  background-color: #50597b;
+  background: repeating-linear-gradient(45deg, #50597b, #50597b 85%, #4e7f9e 85%, #4e7f9e);
+  user-select: none; }
+
+.Layout__wrapper___3DRGTr {
+  padding: 1rem; }
 
 @media screen and (min-width: 728px) {
   .Layout__block___1vb1pC {
     width: 728px;
-    border-radius: 5px; }
+    border-radius: 0.25rem; }
     .Layout__block___1vb1pC::first-of-type {
-      margin: 0 auto 1rem auto; } }
+      margin: 0 auto 1rem auto; }
+  .Layout__title___2PLGUN {
+    border-top-left-radius: 0.25rem;
+    border-top-right-radius: 0.25rem; } }
 .Menu__wrapper___3IaaXV {
   height: 4rem;
   width: 100%;
@@ -28,9 +35,9 @@
   align-items: center;
   justify-content: space-between;
   border-radius: inherit;
-  background-color: inherit; }
-
-.Menu__item___BdQRBI {
+  background-color: inherit;
+  user-select: none; }
+.MenuItem__item___2ONC_f {
   width: 25%;
   height: 4rem;
   display: flex;
@@ -42,10 +49,10 @@
   color: inherit;
   border: none;
   outline: none; }
-  .Menu__item___BdQRBI[disabled] {
+  .MenuItem__item___2ONC_f[disabled] {
     color: #c8c8c8;
     cursor: default; }
-  .Menu__item___BdQRBI::after {
+  .MenuItem__item___2ONC_f::after {
     content: '';
     display: block;
     position: absolute;
@@ -55,22 +62,126 @@
     left: 50%;
     right: 50%;
     transition: left 0.3s ease-in, right 0.3s ease-in; }
-  .Menu__item___BdQRBI:not([disabled]):hover, .Menu__item___BdQRBI:not([disabled]):active {
+  .MenuItem__item___2ONC_f:not([disabled]):hover, .MenuItem__item___2ONC_f:not([disabled]):focus {
     background-color: #50597b; }
-  .Menu__item___BdQRBI:not([disabled]):hover::after {
+  .MenuItem__item___2ONC_f:not([disabled]):hover::after, .MenuItem__item___2ONC_f:not([disabled]):focus::after {
     left: 0;
     right: 0; }
   @media screen and (min-width: 728px) {
-    .Menu__item___BdQRBI:first-of-type {
-      border-top-left-radius: 5px;
-      border-bottom-left-radius: 5px; }
-      .Menu__item___BdQRBI:first-of-type::after {
-        border-bottom-left-radius: 5px; }
-    .Menu__item___BdQRBI:last-of-type {
-      border-top-right-radius: 5px;
-      border-bottom-right-radius: 5px; }
-      .Menu__item___BdQRBI:last-of-type::after {
-        border-bottom-right-radius: 5px; } }
+    .MenuItem__item___2ONC_f:first-of-type {
+      border-top-left-radius: 0.25rem;
+      border-bottom-left-radius: 0.25rem; }
+      .MenuItem__item___2ONC_f:first-of-type::after {
+        border-bottom-left-radius: 0.25rem; }
+    .MenuItem__item___2ONC_f:last-of-type {
+      border-top-right-radius: 0.25rem;
+      border-bottom-right-radius: 0.25rem; }
+      .MenuItem__item___2ONC_f:last-of-type::after {
+        border-bottom-right-radius: 0.25rem; } }
+.Pokelist__wrapper___UHi_9E {
+  overflow-x: auto; }
+.PokelistItem__img___32uYt2 {
+  width: 75px;
+  min-width: 45px; }
+.PokeType__typeBox___19j4cb, .PokeType__normal___2FCHGn, .PokeType__fire___14Os-2, .PokeType__fighting___1hJbDE, .PokeType__water___uleSaX, .PokeType__flying___3EuwJs, .PokeType__grass___Zbof95, .PokeType__poison___2EVDQv, .PokeType__electric___1th6WK, .PokeType__ground___3kWnUF, .PokeType__psychic___z4zdvR, .PokeType__rock___2YAA0z, .PokeType__ice___2Jm7Xc, .PokeType__bug___3QR_TZ, .PokeType__dragon___1chGg1, .PokeType__ghost___18kPWy, .PokeType__dark___1LW6FK, .PokeType__steel___A0NczZ, .PokeType__fairy___1KSOob {
+  display: block;
+  font-size: 0.75rem;
+  width: 100%;
+  padding: 0 0.1rem;
+  text-align: center; }
+
+.PokeType__normal___2FCHGn {
+  background-color: #8a8a59;
+  border: 1px solid #a4a472; }
+
+.PokeType__fire___14Os-2 {
+  background-color: #f08030;
+  border: 1px solid #f39d60; }
+
+.PokeType__fighting___1hJbDE {
+  background-color: #c03028;
+  border: 1px solid #d84b43; }
+
+.PokeType__water___uleSaX {
+  background-color: #6890f0;
+  border: 1px solid #96b2f5; }
+
+.PokeType__flying___3EuwJs {
+  background-color: #a890f0;
+  border: 1px solid #cbbdf6; }
+
+.PokeType__grass___Zbof95 {
+  background-color: #78c850;
+  border: 1px solid #96d477; }
+
+.PokeType__poison___2EVDQv {
+  background-color: #a040a0;
+  border: 1px solid #bc57bc; }
+
+.PokeType__electric___1th6WK {
+  background-color: #f8d030;
+  border: 1px solid #fadb61; }
+
+.PokeType__ground___3kWnUF {
+  background-color: #e0c068;
+  border: 1px solid #e9d292; }
+
+.PokeType__psychic___z4zdvR {
+  background-color: #f85888;
+  border: 1px solid #fa89ab; }
+
+.PokeType__rock___2YAA0z {
+  background-color: #b8a038;
+  border: 1px solid #ccb657; }
+
+.PokeType__ice___2Jm7Xc {
+  background-color: #98d8d8;
+  border: 1px solid #bde6e6; }
+
+.PokeType__bug___3QR_TZ {
+  background-color: #a8b820;
+  border: 1px solid #c9db30; }
+
+.PokeType__dragon___1chGg1 {
+  background-color: #7038f8;
+  border: 1px solid #9369fa; }
+
+.PokeType__ghost___18kPWy {
+  background-color: #705898;
+  border: 1px solid #8a74af; }
+
+.PokeType__dark___1LW6FK {
+  background-color: #705848;
+  border: 1px solid #8f705c; }
+
+.PokeType__steel___A0NczZ {
+  background-color: #b8b8d0;
+  border: 1px solid #d7d7e4; }
+
+.PokeType__fairy___1KSOob {
+  background-color: #e898e8;
+  border: 1px solid #f1c2f1; }
+.PokelistTable__list___2ROvEf {
+  border-collapse: collapse; }
+  .PokelistTable__list___2ROvEf th, .PokelistTable__list___2ROvEf td {
+    padding: 0 0.25rem 0 0.25rem;
+    vertical-align: middle;
+    text-align: center; }
+  .PokelistTable__list___2ROvEf th {
+    user-select: none; }
+  .PokelistTable__list___2ROvEf thead tr {
+    background-color: rgba(78, 127, 158, 0.5);
+    border-bottom: 1px solid white; }
+  .PokelistTable__list___2ROvEf tr:nth-child(even) {
+    background-color: rgba(80, 89, 123, 0.5); }
+
+.PokelistTable__sort___3q9zBZ {
+  cursor: pointer; }
+  .PokelistTable__sort___3q9zBZ:hover {
+    font-weight: bold; }
+.Loader__loader___ZSeS0D {
+  display: block;
+  margin: 0.5rem auto; }
 /*
 	HTML5 Reset :: style.css
 	----------------------------------------------------------
@@ -163,7 +274,7 @@ table {
   border-spacing: 0; }
 
 th {
-  font-weight: bold;
+  font-weight: normal;
   vertical-align: bottom; }
 
 td {
@@ -279,7 +390,8 @@ html, body {
 
 #app {
   width: 100%;
-  height: 100%; }
+  height: 100%;
+  cursor: default; }
 
 h1,
 h2,
@@ -288,6 +400,11 @@ h4,
 h5,
 h6 {
   margin: 0.25em 0 0.5em 0; }
+
+h1,
+h2,
+h3 {
+  text-align: center; }
 
 h1 {
   font-size: 2rem; }
@@ -309,4 +426,4 @@ p {
 
 ul {
   list-style: disc;
-  margin-left: 1.5rem; }
+  padding-left: 1.5rem; }
