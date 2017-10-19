@@ -3,8 +3,8 @@
 .typeBox {
     display: block;
     font-size: 0.75rem;
-    width: 100%;
-    padding: 0 0.1rem;
+    width: 4.5rem;
+    padding: 0 0.5rem;
     text-align: center;
     cursor: pointer;
 }
@@ -14,5 +14,8 @@
         @extend .typeBox;
         background-color: map-get($typeColors, $type);
         border: 1px solid lighten(map-get($typeColors, $type), 10%);
+        &:hover {
+            background-color: darken(map-get($typeColors, $type), 10%);
+        }
     }
 }

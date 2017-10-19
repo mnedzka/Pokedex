@@ -1,0 +1,12 @@
+.redirect {
+    display: block;
+    cursor: pointer;
+
+    &:hover {
+        font-weight: bold;
+    }
+}
+
+.infoText {
+    font-size: 0.75rem;
+}

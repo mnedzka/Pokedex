@@ -1,14 +1,10 @@
 import {
     LIST_SET_LENGTH,
-    LIST_SET_SORTING,
     LIST_UPDATE_DATA,
  } from 'Actions/actionTypes.js';
 
 const initialState = {
-    length : 0,
-    pending : false,
-    sortBy : 'id',
-    sortDir : 1,
+    length : 100,
     data : [],
 };
 
@@ -20,21 +16,15 @@ const listReducer = function pokemonListReducer (state = initialState, action) {
                 return state;
             }
             let lengthToSet = action.payload > 721 ? 721 : action.payload;
-            return Object.assign({}, state, {
+            return {
+                ...state,
                 length : lengthToSet,
-                pending : true,
-            });
-        case LIST_SET_SORTING:
-            const reverseDir = state.sortDir * (-1);
-            return Object.assign({}, state, {
-                sortBy : action.payload,
-                sortDir : reverseDir,
-            });
+            };
         case LIST_UPDATE_DATA:
-            return Object.assign({}, state, {
+            return {
+                ...state,
                 data : action.payload,
-                pending : false,
-            });
+            };
         default:
             return state;
     }

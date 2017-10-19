@@ -1,5 +1,4 @@
+.vscode/
 /node_modules/
 svgstore.js
-resources/pokemon/*
-!resources/pokemon/pokemons_[0-9].svg
-!resources/pokemon/pokemons_[0-9][0-9].svg
+resources/data/

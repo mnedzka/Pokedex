@@ -1,24 +1,38 @@
 import {
     PAGE_CHANGE,
     PAGE_SHOW_IN_DEX,
+    PAGE_UPDATE_DEX_DATA,
 } from 'Actions/actionTypes.js';
 
 const initialState = {
     currentPage : 'home',
     dexItemType : null,
-    dexId : null,
+    dexItemId : null,
+    dexItemData : null,
 };
 
 const pageReducer = function pageChangeReducer (state = initialState, action) {
     switch (action.type) {
         case PAGE_CHANGE:
-            return Object.assign({}, state, {currentPage : action.payload});
+            window.__fetchlist.ab();
+            return {
+                ...state,
+                currentPage : action.payload,
+                dexItemType : action.payload,
+            };
         case PAGE_SHOW_IN_DEX:
-            return Object.assign({}, state, {
+            window.__fetchlist.ab();
+            return {
+                ...state,
                 currentPage : 'pokedex',
                 dexItemType : action.payload.type,
-                dexId : action.payload.id,
-            });
+                dexItemId : action.payload.id,
+            };
+        case PAGE_UPDATE_DEX_DATA:
+            return {
+                ...state,
+                dexItemData : action.payload,
+            };
         default:
             return state;
     }

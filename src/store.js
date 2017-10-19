@@ -1,9 +1,9 @@
 import { createStore } from 'redux';
 import reducer from './Reducers/reducer.js';
 
-let store = createStore(reducer);
-store.subscribe(() => {
-    console.log(store.getState());
+let Store = createStore(reducer);
+Store.subscribe(() => {
+    console.log('### STATE -> ', Store.getState());
 });
 
-export default store;
+export default Store;

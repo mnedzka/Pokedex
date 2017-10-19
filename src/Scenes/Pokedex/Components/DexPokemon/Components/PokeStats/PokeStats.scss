@@ -1,0 +1,18 @@
+@import '~/../src/styles/partials/_variables.scss';
+
+.row {
+    width: 100%;
+    padding: 0.5rem;
+    background-color: $background_light;
+    border-radius: $border_radius;
+    margin-bottom: 0.5rem;
+
+    &:nth-last-of-type() {
+        margin-bottom: 0;
+    }
+}
+
+.bar {
+    text-align: center;
+    border-radius: 0.125rem $border_radius $border_radius 0.125rem;
+}

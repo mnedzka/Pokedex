@@ -4,7 +4,7 @@ import listReducer from './listReducer.js';
 
 const reducer = combineReducers({
     page : pageReducer,
-    pokemonList : listReducer,
+    pokelist : listReducer,
 });
 
 

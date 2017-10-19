@@ -1,0 +1,57 @@
+@import '~/../src/styles/partials/_variables.scss';
+
+.wrapper {
+    text-align: center;
+}
+
+.dmgRel {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.dmgRelItem {
+    padding: 0.2rem;
+}
+
+.dmg {
+    text-align: center;
+    display: block;
+    padding: 0.25rem 0;
+    border-bottom-left-radius: $border_radius;
+    border-bottom-right-radius: $border_radius;
+}
+
+.x0,
+.x025,
+.x05,
+.x1,
+.x2,
+.x4 {
+    @extend .dmg;
+}
+
+.x0 {
+    background-color: #2e3436;
+}
+
+.x025 {
+    background-color: $red;
+}
+
+.x05 {
+    background-color: $red;
+    border: 1px solid lighten($red, 10%);
+}
+
+.x1 {
+    background-color: $blue;
+}
+
+.x2 {
+    background-color: #06692C;
+}
+
+.x4 {
+    background-color: #12EE49;
+}

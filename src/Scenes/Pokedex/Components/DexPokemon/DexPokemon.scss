@@ -1,0 +1,79 @@
+@import '~/../src/styles/partials/_variables.scss';
+
+.section {
+    margin-bottom: 1rem;
+
+    &:nth-last-of-type() {
+        margin-bottom: 0;
+    }
+}
+
+.flexWrapper {
+    @extend .section;
+    display: flex;
+    padding: 0.5rem;
+    margin: 1rem 0;
+}
+
+.flexwrap {
+    @extend .flexWrapper;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    justify-content: space-around;
+}
+
+.showcase {
+    @extend .flexWrapper;
+    align-items: center;
+    border-radius: $border_radius;
+    background-color: $blue_light;
+}
+
+.flavorText {
+    margin: 0 2rem;
+    font-style: italic;
+    position: relative;
+
+    &::after {
+        content: 'Pokedex';
+        display: block;
+        position: absolute;
+        right: 20%;
+        font-size: 0.75rem;
+    }
+}
+
+.dataSection {
+    width: 50%;
+    align-self: stretch;
+    flex-grow: 1;
+    min-width: 16rem;
+
+    &:nth-of-type(1) {
+        margin-bottom: 2rem;
+    }
+
+    h5 {
+        text-align: center;
+    }
+}
+
+.statTable {
+    border-collapse: collapse;
+    width: 90%;
+    margin: 0 auto;
+
+    td {
+        vertical-align: middle;
+        padding: 0.25rem 0.5rem;
+        border-bottom: 1px solid rgb(100, 100, 150);
+
+        &:nth-child(even) {
+            text-align: left;
+        }
+
+        &:nth-child(odd) {
+            text-align: right;
+        }
+    }
+}

@@ -4,26 +4,33 @@ import { connect } from 'react-redux';
 import { showInPokedex } from 'Actions/actions.js';
 
 class PokeType extends React.Component {
-    handleClick = url => {
-        const typeId = url.match(/\/(\d+)\//)[1];
+    shouldComponentUpdate (nextProps) {
+        if (nextProps === this.props) {
+            return false;
+        }
+        return true;
+    }
+
+    handleClick = id => {
         return this.props.redirect({
             type : 'type',
-            id : typeId,
+            id : id,
         });
     };
 
     render () {
-        const typesMap = this.props.types.map((el, i) => {
-            const name = el.type.name;
-            const typeText = `${name.substr(0, 1).toUpperCase()}${name.substr(1)}`;
-            return <span
+        return this.props.type.map((el, i) => {
+            if (el.id === undefined) {
+                console.warn('POKETYPE ID UNDEFINED');
+            }
+            const name = el.name;
+            const text = name.replace(/\b(\w)/g, m => m.toUpperCase());
+            return <span key={i}
                 className={Styles[name]}
-                key={i}
-                onClick={() => this.handleClick(el.type.url)}>
-                {typeText}
+                onClick={() => this.handleClick(el.id)}>
+                {text}
             </span>;
         });
-        return typesMap;
     }
 }
 

@@ -1,0 +1,33 @@
+.center {
+    margin: 0 auto;
+    display: inline-block;
+}
+
+.damageClass {
+    display: block;
+    font-size: 0.75rem;
+    width: 4.5rem;
+    padding: 0 0.5rem;
+    text-align: center;
+}
+
+.status,
+.special,
+.physical {
+    @extend .damageClass;
+}
+
+.status {
+    background-color: rgb(140, 140, 140);
+    border: 1px solid rgb(160, 160, 160);
+}
+
+.special {
+    background-color: rgb(45, 120, 240);
+    border: 1px solid rgb(65, 140, 255);
+}
+
+.physical {
+    background-color: rgb(200, 55, 55);
+    border: 1px solid rgb(220, 75, 75);
+}

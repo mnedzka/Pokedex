@@ -4,13 +4,19 @@ import { connect } from 'react-redux';
 import { changePage } from 'Actions/actions.js';
 
 class MenuItem extends React.Component {
+    shouldComponentUpdate (nextProps) {
+        if (nextProps === this.props) {
+            return false;
+        }
+        return true;
+    }
+
     handleClickEvent = (ev) => {
         const page = this.props.text.toLowerCase().replace(/\W/g, '');
         if (this.props.page === page) {
             return null;
         }
         this.props.onMenuItemClick(page);
-        return null;
     }
 
     render () {
