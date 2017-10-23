@@ -3,6 +3,9 @@ import Styles from './PokeImg.scss';
 
 export default class PokeImg extends React.Component {
     getSrc = id => {
+        if (id > 649) {
+            return './resources/icons/not_ready.svg';
+        }
         const bundleID = ~~(id / 10);
         let pokeID = id.toString();
         if (pokeID.length === 1) {

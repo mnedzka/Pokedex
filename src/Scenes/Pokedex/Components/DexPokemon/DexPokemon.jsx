@@ -37,8 +37,11 @@ const getStats = stats => {
 };
 
 const mapHeldItems = heldItemsArr => {
+    if (!heldItemsArr.length) {
+        return '-';
+    }
     return heldItemsArr.map(item => {
-        return <PokeLink id={item.id} name={item.name} type="item" />
+        return <PokeLink key={item.id} id={item.id} name={item.name} type="item" />
     });
 };
 
