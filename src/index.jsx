@@ -13,7 +13,6 @@ const onLoad = function onDomConentLoaded () {
         list : [],
         ab : function () {
             this.list.forEach(e => {
-                console.log(e);
                 e.abort();
             });
             this.list = [];

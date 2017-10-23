@@ -3,9 +3,6 @@
 .row {
     width: 100%;
     padding: 0.5rem;
-    background-color: $background_light;
-    border-radius: $border_radius;
-    margin-bottom: 0.5rem;
 
     &:nth-last-of-type() {
         margin-bottom: 0;

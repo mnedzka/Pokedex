@@ -7,7 +7,9 @@ class PokeTable extends React.Component {
     constructor (props) {
         super(props);
         let hasLvl = false;
-        if (this.props.data.length && this.props.data[0].hasOwnProperty('level_learned_at')) {
+        if (this.props.data.length &&
+            this.props.data[0].hasOwnProperty('level_learned_at') &&
+            this.props.data[0].level_learned_at) {
             hasLvl = true;
         }
         this.headers = {
@@ -45,6 +47,34 @@ class PokeTable extends React.Component {
             sortBy : sortBy,
             sortDir : this.state.sortDir * (-1),
         });
+    };
+
+    handleMouseDown = event => {
+        let t = event.target;
+        while (!/PokeTable__wrapper/.test(t.className)) {
+            t = t.parentElement;
+            if (/Layout/.test(t.className)) {
+                return;
+            }
+        }
+        const wrapper = t;
+        const mX = event.screenX;
+        const width = wrapper.clientWidth;
+        const totalWidth = wrapper.scrollWidth;
+        if (width === totalWidth) {
+            return;
+        }
+        const currentScroll = wrapper.scrollLeft;
+        const handleMouseMove = ev => {
+            const mmoveX = ev.screenX;
+            wrapper.scrollLeft = currentScroll + (totalWidth - width) * ((mX - mmoveX) / (width >> 1));
+        }
+        const handleMouseUp = ev => {
+            window.removeEventListener('mouseup', handleMouseUp);
+            window.removeEventListener('mousemove', handleMouseMove);
+        }
+        window.addEventListener('mousemove', handleMouseMove);
+        window.addEventListener('mouseup', handleMouseUp);
     };
 
     createHeaders = headerArray => {
@@ -95,7 +125,7 @@ class PokeTable extends React.Component {
             return <Item key={el.name} data={el} />
         });
         let headers = this.headers[this.props.headers];
-        return <div className={Styles.wrapper}>
+        return <div className={Styles.wrapper} onMouseDown={this.handleMouseDown}>
             <table className={Styles.table}>
                 <thead className={Styles.thead}>
                     {this.createHeaders(headers)}

@@ -1,511 +1,291 @@
-.Home__pokemon___20HN8v {
-  width: 50%; }
-.Loader__loader___ZSeS0D {
-  display: block;
-  margin: 0.5rem auto; }
-.Table__table___1C3dyz {
-  border-collapse: collapse; }
-  .Table__table___1C3dyz td, .Table__table___1C3dyz th {
-    padding: 0 0.25rem 0 0.25rem;
-    text-align: center;
-    vertical-align: middle; }
-  .Table__table___1C3dyz img {
-    min-width: 45px;
-    width: 75px; }
-
-.Table__thead___1woKhw tr {
-  background-color: rgba(80, 89, 123, 0.5);
-  border-bottom: 1px solid white; }
-
-.Table__tbody___zZgk3M tr:nth-child(even) {
-  background-color: rgba(80, 89, 123, 0.5); }
-.PokeType__typeBox___19j4cb, .PokeType__normal___2FCHGn, .PokeType__fighting___1hJbDE, .PokeType__flying___3EuwJs, .PokeType__poison___2EVDQv, .PokeType__ground___3kWnUF, .PokeType__rock___2YAA0z, .PokeType__bug___3QR_TZ, .PokeType__ghost___18kPWy, .PokeType__steel___A0NczZ, .PokeType__fire___14Os-2, .PokeType__water___uleSaX, .PokeType__grass___Zbof95, .PokeType__electric___1th6WK, .PokeType__psychic___z4zdvR, .PokeType__ice___2Jm7Xc, .PokeType__dragon___1chGg1, .PokeType__dark___1LW6FK, .PokeType__fairy___1KSOob {
-  display: block;
-  font-size: 0.75rem;
-  width: 4.5rem;
-  padding: 0 0.5rem;
-  text-align: center;
-  cursor: pointer; }
-
-.PokeType__normal___2FCHGn {
-  background-color: #8a8a59;
-  border: 1px solid #a4a472; }
-  .PokeType__normal___2FCHGn:hover {
-    background-color: #6b6b45; }
-
-.PokeType__fighting___1hJbDE {
-  background-color: #c03028;
-  border: 1px solid #d84b43; }
-  .PokeType__fighting___1hJbDE:hover {
-    background-color: #96251f; }
-
-.PokeType__flying___3EuwJs {
-  background-color: #a890f0;
-  border: 1px solid #cbbdf6; }
-  .PokeType__flying___3EuwJs:hover {
-    background-color: #8563ea; }
-
-.PokeType__poison___2EVDQv {
-  background-color: #a040a0;
-  border: 1px solid #bc57bc; }
-  .PokeType__poison___2EVDQv:hover {
-    background-color: #7c317c; }
-
-.PokeType__ground___3kWnUF {
-  background-color: #e0c068;
-  border: 1px solid #e9d292; }
-  .PokeType__ground___3kWnUF:hover {
-    background-color: #d7ae3e; }
-
-.PokeType__rock___2YAA0z {
-  background-color: #b8a038;
-  border: 1px solid #ccb657; }
-  .PokeType__rock___2YAA0z:hover {
-    background-color: #917e2c; }
-
-.PokeType__bug___3QR_TZ {
-  background-color: #a8b820;
-  border: 1px solid #c9db30; }
-  .PokeType__bug___3QR_TZ:hover {
-    background-color: #808d18; }
-
-.PokeType__ghost___18kPWy {
-  background-color: #705898;
-  border: 1px solid #8a74af; }
-  .PokeType__ghost___18kPWy:hover {
-    background-color: #584578; }
-
-.PokeType__steel___A0NczZ {
-  background-color: #b8b8d0;
-  border: 1px solid #d7d7e4; }
-  .PokeType__steel___A0NczZ:hover {
-    background-color: #9999bc; }
-
-.PokeType__fire___14Os-2 {
-  background-color: #f08030;
-  border: 1px solid #f39d60; }
-  .PokeType__fire___14Os-2:hover {
-    background-color: #dd6510; }
-
-.PokeType__water___uleSaX {
-  background-color: #6890f0;
-  border: 1px solid #96b2f5; }
-  .PokeType__water___uleSaX:hover {
-    background-color: #3a6eeb; }
-
-.PokeType__grass___Zbof95 {
-  background-color: #78c850;
-  border: 1px solid #96d477; }
-  .PokeType__grass___Zbof95:hover {
-    background-color: #5fae37; }
-
-.PokeType__electric___1th6WK {
-  background-color: #f8d030;
-  border: 1px solid #fadb61; }
-  .PokeType__electric___1th6WK:hover {
-    background-color: #edbf08; }
-
-.PokeType__psychic___z4zdvR {
-  background-color: #f85888;
-  border: 1px solid #fa89ab; }
-  .PokeType__psychic___z4zdvR:hover {
-    background-color: #f62765; }
-
-.PokeType__ice___2Jm7Xc {
-  background-color: #98d8d8;
-  border: 1px solid #bde6e6; }
-  .PokeType__ice___2Jm7Xc:hover {
-    background-color: #73caca; }
-
-.PokeType__dragon___1chGg1 {
-  background-color: #7038f8;
-  border: 1px solid #9369fa; }
-  .PokeType__dragon___1chGg1:hover {
-    background-color: #4d09f4; }
-
-.PokeType__dark___1LW6FK {
-  background-color: #705848;
-  border: 1px solid #8f705c; }
-  .PokeType__dark___1LW6FK:hover {
-    background-color: #514034; }
-
-.PokeType__fairy___1KSOob {
-  background-color: #e898e8;
-  border: 1px solid #f1c2f1; }
-  .PokeType__fairy___1KSOob:hover {
-    background-color: #df6edf; }
-.PokeName__redirect___9QP0VN {
-  cursor: pointer; }
-  .PokeName__redirect___9QP0VN:hover {
-    font-weight: bold; }
-.PokeImg__img___20Eyil {
-  width: 75px;
-  min-width: 45px; }
-.DamageRelations__dmgRel___2snAJS {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center; }
-
-.DamageRelations__dmgRelItem___3CzBmM {
-  padding: 0.2rem; }
-
-.DamageRelations__dmg___1lH4-1, .DamageRelations__x0___m7eaLF,
-.DamageRelations__x025___Dpit3H,
-.DamageRelations__x05___1_3DYx,
-.DamageRelations__x1___2NenhT,
-.DamageRelations__x2___1qBNpu,
-.DamageRelations__x4___2g2bUL {
-  text-align: center;
-  display: block;
-  padding: 0.5rem 0;
-  border-bottom-left-radius: 0.25rem;
-  border-bottom-right-radius: 0.25rem; }
-
-.DamageRelations__x0___m7eaLF {
-  background-color: #2e3436; }
-
-.DamageRelations__x025___Dpit3H {
-  background-color: #cc324b; }
-
-.DamageRelations__x05___1_3DYx {
-  background-color: #cc324b;
-  border: 1px solid #d75a6f; }
-
-.DamageRelations__x1___2NenhT {
-  background-color: #1a4e95; }
-
-.DamageRelations__x2___1qBNpu {
-  background-color: #06692C; }
-
-.DamageRelations__x4___2g2bUL {
-  background-color: #12EE49; }
-.Pokelist__wrapper___UHi_9E {
-  overflow-x: auto; }
-.PokelistTable__sort___3q9zBZ {
-  cursor: pointer; }
-  .PokelistTable__sort___3q9zBZ:hover {
-    font-weight: bold; }
-.Layout__scene___1FfVyk {
-  background-color: #1f253d;
-  padding: 1rem 0 1rem 0; }
-
-.Layout__block___1vb1pC {
-  background-color: #394264;
-  margin: 0 auto 1rem auto; }
-  .Layout__block___1vb1pC:not(:first-of-type) {
-    margin: 0 auto 0 auto;
-    min-height: calc(100vh - 7rem); }
-
-.Layout__title___2PLGUN {
-  background-color: #50597b;
-  background: repeating-linear-gradient(45deg, #50597b, #50597b 85%, #4e7f9e 85%, #4e7f9e);
-  user-select: none; }
-
-.Layout__wrapper___3DRGTr {
-  padding: 1rem; }
-
-@media screen and (min-width: 728px) {
-  .Layout__block___1vb1pC {
-    width: 728px;
-    border-radius: 0.25rem; }
-    .Layout__block___1vb1pC::first-of-type {
-      margin: 0 auto 1rem auto; }
-  .Layout__title___2PLGUN {
-    border-top-left-radius: 0.25rem;
-    border-top-right-radius: 0.25rem; } }
-.Menu__wrapper___3IaaXV {
-  height: 4rem;
-  width: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  border-radius: inherit;
-  background-color: inherit;
-  user-select: none; }
-.MenuItem__item___2ONC_f {
-  width: 25%;
-  height: 4rem;
-  display: flex;
-  position: relative;
-  align-items: center;
-  justify-content: center;
-  cursor: pointer;
-  background-color: inherit;
-  color: inherit;
-  border: none;
-  outline: none; }
-  .MenuItem__item___2ONC_f[disabled] {
-    color: #c8c8c8;
-    cursor: default; }
-  .MenuItem__item___2ONC_f::after {
-    content: '';
-    display: block;
-    position: absolute;
-    background-color: #11a8ab;
-    height: 5px;
-    bottom: 0;
-    left: 50%;
-    right: 50%;
-    transition: left 0.3s ease-in, right 0.3s ease-in; }
-  .MenuItem__item___2ONC_f:not([disabled]):hover, .MenuItem__item___2ONC_f:not([disabled]):focus {
-    background-color: #50597b; }
-  .MenuItem__item___2ONC_f:not([disabled]):hover::after, .MenuItem__item___2ONC_f:not([disabled]):focus::after {
-    left: 0;
-    right: 0; }
-  @media screen and (min-width: 728px) {
-    .MenuItem__item___2ONC_f:first-of-type {
-      border-top-left-radius: 0.25rem;
-      border-bottom-left-radius: 0.25rem; }
-      .MenuItem__item___2ONC_f:first-of-type::after {
-        border-bottom-left-radius: 0.25rem; }
-    .MenuItem__item___2ONC_f:last-of-type {
-      border-top-right-radius: 0.25rem;
-      border-bottom-right-radius: 0.25rem; }
-      .MenuItem__item___2ONC_f:last-of-type::after {
-        border-bottom-right-radius: 0.25rem; } }
-/*
-	HTML5 Reset :: style.css
-	----------------------------------------------------------
-	We have learned much from/been inspired by/taken code where offered from:
-
-	Eric Meyer					:: http://meyerweb.com
-	HTML5 Doctor				:: http://html5doctor.com
-	and the HTML5 Boilerplate	:: http://html5boilerplate.com
-
--------------------------------------------------------------------------------*/
-/* Let's default this puppy out
--------------------------------------------------------------------------------*/
-html, body, body div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, abbr, address, cite, code, del, dfn, em, img, ins, kbd, q, samp, small, strong, sub, sup, var, b, i, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, figure, footer, header, menu, nav, section, time, mark, audio, video, details, summary {
-  margin: 0;
-  padding: 0;
-  border: 0;
-  font-size: 100%;
-  font-weight: normal;
-  vertical-align: baseline;
-  background: transparent; }
-
-main, article, aside, figure, footer, header, nav, section, details, summary {
-  display: block; }
-
-/* Handle box-sizing while better addressing child elements:
-   http://css-tricks.com/inheriting-box-sizing-probably-slightly-better-best-practice/ */
-html {
-  box-sizing: border-box; }
-
-*,
-*:before,
-*:after {
-  box-sizing: inherit;
-  font-family: inherit; }
-
-/* consider resetting the default cursor: https://gist.github.com/murtaugh/5247154 */
-/* Responsive images and other embedded objects */
-/* if you don't have full control over `img` tags (if you have to overcome attributes), consider adding height: auto */
-img,
-object,
-embed {
-  max-width: 100%; }
-
-/*
-   Note: keeping IMG here will cause problems if you're using foreground images as sprites.
-	In fact, it *will* cause problems with Google Maps' controls at small size.
-	If this is the case for you, try uncommenting the following:
-
-#map img {
-		max-width: none;
-}
-*/
-/* force a vertical scrollbar to prevent a jumpy page */
-html {
-  overflow-y: scroll; }
-
-/* we use a lot of ULs that aren't bulleted.
-	you'll have to restore the bullets within content,
-	which is fine because they're probably customized anyway */
-ul {
-  list-style: none; }
-
-blockquote, q {
-  quotes: none; }
-
-blockquote:before,
-blockquote:after,
-q:before,
-q:after {
-  content: '';
-  content: none; }
-
-a {
-  margin: 0;
-  padding: 0;
-  font-size: 100%;
-  vertical-align: baseline;
-  background: transparent; }
-
-del {
-  text-decoration: line-through; }
-
-abbr[title], dfn[title] {
-  border-bottom: 1px dotted #000;
-  cursor: help; }
-
-/* tables still need cellspacing="0" in the markup */
-table {
-  border-collapse: separate;
-  border-spacing: 0; }
-
-th {
-  font-weight: normal;
-  vertical-align: bottom; }
-
-td {
-  font-weight: normal;
-  vertical-align: top; }
-
-hr {
-  display: block;
-  height: 1px;
-  border: 0;
-  border-top: 1px solid #ccc;
-  margin: 1em 0;
-  padding: 0; }
-
-input, select {
-  vertical-align: middle; }
-
-pre {
-  white-space: pre;
-  /* CSS2 */
-  white-space: pre-wrap;
-  /* CSS 2.1 */
-  white-space: pre-line;
-  /* CSS 3 (and 2.1 as well, actually) */
-  word-wrap: break-word;
-  /* IE */ }
-
-input[type="radio"] {
-  vertical-align: text-bottom; }
-
-input[type="checkbox"] {
-  vertical-align: bottom; }
-
-.main__ie7___XX95XI input[type="checkbox"] {
-  vertical-align: baseline; }
-
-.main__ie6___2E9Psy input {
-  vertical-align: text-bottom; }
-
-select, input, textarea {
-  font: 99% sans-serif; }
-
-table {
-  font-size: inherit;
-  font: 100%; }
-
-small {
-  font-size: 85%; }
-
-strong {
-  font-weight: bold; }
-
-td, td img {
-  vertical-align: top; }
-
-/* Make sure sup and sub don't mess with your line-heights http://gist.github.com/413930 */
-sub, sup {
-  font-size: 75%;
-  line-height: 0;
-  position: relative; }
-
-sup {
-  top: -0.5em; }
-
-sub {
-  bottom: -0.25em; }
-
-/* standardize any monospaced elements */
-pre, code, kbd, samp {
-  font-family: monospace, sans-serif; }
-
-/* hand cursor on clickable elements */
-.main__clickable___1c2b4a,
-label,
-input[type=button],
-input[type=submit],
-input[type=file],
-button {
-  cursor: pointer; }
-
-/* Webkit browsers add a 2px margin outside the chrome of form elements */
-button, input, select, textarea {
-  margin: 0; }
-
-/* make buttons play nice in IE */
-button,
-input[type=button] {
-  width: auto;
-  overflow: visible; }
-
-/* scale images in IE7 more attractively */
-.main__ie7___XX95XI img {
-  -ms-interpolation-mode: bicubic; }
-
-/* prevent BG image flicker upon hover
-   (commented out as usage is rare, and the filter syntax messes with some pre-processors)
-.ie6 html {filter: expression(document.execCommand("BackgroundImageCache", false, true));}
-*/
-/* let's clear some floats */
-.main__clearfix___3F0pTI:after {
-  content: " ";
-  display: block;
-  clear: both; }
-
-:root {
-  font-size: 16px;
-  color: white;
-  font-family: 'ubunturegular', sans-serif; }
-
-html, body {
-  width: 100%;
-  height: 100%; }
-
-#app {
-  width: 100%;
-  height: 100%;
-  cursor: default; }
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  margin: 0 0 0.5em 0;
-  display: block; }
-
-h1,
-h2,
-h3 {
-  text-align: center; }
-
-h1 {
-  font-size: 2rem; }
-
-h2 {
-  font-size: 1.8rem; }
-
-h3 {
-  font-size: 1.6rem; }
-
-h4 {
-  font-size: 1.4rem; }
-
-h5 {
-  font-size: 1.2rem; }
-
-p {
-  margin: 0.25rem 0 0.25rem 0; }
-
-ul {
-  list-style: disc;
-  padding-left: 1.5rem; }
+exports = module.exports = require("../../../node_modules/css-loader/lib/css-base.js")(undefined);
+// imports
+
+
+// module
+exports.push([module.id, ".Home__link___3R6ohx:link, .Home__link___3R6ohx:hover, .Home__link___3R6ohx:visited, .Home__link___3R6ohx:active {\n  text-decoration: underline;\n  color: white; }\n\n.Home__link___3R6ohx:hover {\n  font-weight: bold; }\n", ""]);
+
+// exports
+exports.locals = {
+	"link": "Home__link___3R6ohx"
+};exports = module.exports = require("../../../../../node_modules/css-loader/lib/css-base.js")(undefined);
+// imports
+
+
+// module
+exports.push([module.id, ".DexType__section___3YgcKH, .DexType__about___2j9W3R, .DexType__relations___Mr0CCn {\n  padding: 0.5rem;\n  margin-bottom: 1rem;\n  border-radius: 0.25rem; }\n  .DexType__section___3YgcKH:nth-last-of-type, .DexType__about___2j9W3R:nth-last-of-type, .DexType__relations___Mr0CCn:nth-last-of-type {\n    margin-bottom: 0; }\n\n.DexType__about___2j9W3R {\n  background-color: #323278; }\n\n.DexType__keyword___66ipGK {\n  color: #69dcd7; }\n\n.DexType__relations___Mr0CCn {\n  background-color: #323278; }\n", ""]);
+
+// exports
+exports.locals = {
+	"section": "DexType__section___3YgcKH",
+	"about": "DexType__about___2j9W3R",
+	"relations": "DexType__relations___Mr0CCn",
+	"keyword": "DexType__keyword___66ipGK"
+};exports = module.exports = require("../../../node_modules/css-loader/lib/css-base.js")(undefined);
+// imports
+
+
+// module
+exports.push([module.id, ".DamageRelations__section___200I6O, .DamageRelations__about___2cGskL {\n  padding: 0.5rem;\n  margin-bottom: 1rem;\n  border-radius: 0.25rem; }\n  .DamageRelations__section___200I6O:nth-last-of-type, .DamageRelations__about___2cGskL:nth-last-of-type {\n    margin-bottom: 0; }\n\n.DamageRelations__about___2cGskL {\n  background-color: #323278; }\n\n.DamageRelations__keyword___3thhoJ {\n  color: #69dcd7; }\n\n.DamageRelations__wrapper___3IhV4- {\n  text-align: center; }\n\n.DamageRelations__dmgRel___2snAJS {\n  display: flex;\n  flex-wrap: wrap;\n  justify-content: center; }\n  .DamageRelations__dmgRel___2snAJS:first-of-type {\n    margin-bottom: 1rem; }\n\n.DamageRelations__dmgRelItem___3CzBmM {\n  padding: 0.2rem; }\n\n.DamageRelations__dmg___1lH4-1, .DamageRelations__x0___m7eaLF,\n.DamageRelations__x025___Dpit3H,\n.DamageRelations__x05___1_3DYx,\n.DamageRelations__x1___2NenhT,\n.DamageRelations__x2___1qBNpu,\n.DamageRelations__x4___2g2bUL {\n  text-align: center;\n  display: block;\n  padding: 0.25rem 0;\n  border-bottom-left-radius: 0.25rem;\n  border-bottom-right-radius: 0.25rem; }\n\n.DamageRelations__x0___m7eaLF {\n  background-color: #2e3436; }\n\n.DamageRelations__x025___Dpit3H {\n  background-color: #9b2d3c; }\n\n.DamageRelations__x05___1_3DYx {\n  background-color: #e12855; }\n\n.DamageRelations__x1___2NenhT {\n  background-color: #8282be; }\n\n.DamageRelations__x2___1qBNpu {\n  background-color: #46d246; }\n\n.DamageRelations__x4___2g2bUL {\n  background-color: #3cb43c; }\n", ""]);
+
+// exports
+exports.locals = {
+	"section": "DamageRelations__section___200I6O",
+	"about": "DamageRelations__about___2cGskL",
+	"keyword": "DamageRelations__keyword___3thhoJ",
+	"wrapper": "DamageRelations__wrapper___3IhV4-",
+	"dmgRel": "DamageRelations__dmgRel___2snAJS",
+	"dmgRelItem": "DamageRelations__dmgRelItem___3CzBmM",
+	"dmg": "DamageRelations__dmg___1lH4-1",
+	"x0": "DamageRelations__x0___m7eaLF",
+	"x025": "DamageRelations__x025___Dpit3H",
+	"x05": "DamageRelations__x05___1_3DYx",
+	"x1": "DamageRelations__x1___2NenhT",
+	"x2": "DamageRelations__x2___1qBNpu",
+	"x4": "DamageRelations__x4___2g2bUL"
+};exports = module.exports = require("../../../node_modules/css-loader/lib/css-base.js")(undefined);
+// imports
+
+
+// module
+exports.push([module.id, ".Loader__loader___ZSeS0D {\n  display: block;\n  margin: 0.5rem auto; }\n", ""]);
+
+// exports
+exports.locals = {
+	"loader": "Loader__loader___ZSeS0D"
+};exports = module.exports = require("../../../node_modules/css-loader/lib/css-base.js")(undefined);
+// imports
+
+
+// module
+exports.push([module.id, ".PokeType__section___9Bjmne, .PokeType__about___55TzF2 {\n  padding: 0.5rem;\n  margin-bottom: 1rem;\n  border-radius: 0.25rem; }\n  .PokeType__section___9Bjmne:nth-last-of-type, .PokeType__about___55TzF2:nth-last-of-type {\n    margin-bottom: 0; }\n\n.PokeType__about___55TzF2 {\n  background-color: #323278; }\n\n.PokeType__keyword___1ynegR {\n  color: #69dcd7; }\n\n.PokeType__typeBox___19j4cb, .PokeType__normal___2FCHGn, .PokeType__fighting___1hJbDE, .PokeType__flying___3EuwJs, .PokeType__poison___2EVDQv, .PokeType__ground___3kWnUF, .PokeType__rock___2YAA0z, .PokeType__bug___3QR_TZ, .PokeType__ghost___18kPWy, .PokeType__steel___A0NczZ, .PokeType__fire___14Os-2, .PokeType__water___uleSaX, .PokeType__grass___Zbof95, .PokeType__electric___1th6WK, .PokeType__psychic___z4zdvR, .PokeType__ice___2Jm7Xc, .PokeType__dragon___1chGg1, .PokeType__dark___1LW6FK, .PokeType__fairy___1KSOob {\n  display: block;\n  font-size: 0.75rem;\n  width: 4.5rem;\n  padding: 0 0.5rem;\n  text-align: center;\n  cursor: pointer; }\n\n.PokeType__normal___2FCHGn {\n  background-color: #8a8a59;\n  border: 1px solid #a4a472; }\n  .PokeType__normal___2FCHGn:hover {\n    background-color: #6b6b45; }\n\n.PokeType__fighting___1hJbDE {\n  background-color: #c03028;\n  border: 1px solid #d84b43; }\n  .PokeType__fighting___1hJbDE:hover {\n    background-color: #96251f; }\n\n.PokeType__flying___3EuwJs {\n  background-color: #a890f0;\n  border: 1px solid #cbbdf6; }\n  .PokeType__flying___3EuwJs:hover {\n    background-color: #8563ea; }\n\n.PokeType__poison___2EVDQv {\n  background-color: #a040a0;\n  border: 1px solid #bc57bc; }\n  .PokeType__poison___2EVDQv:hover {\n    background-color: #7c317c; }\n\n.PokeType__ground___3kWnUF {\n  background-color: #e0c068;\n  border: 1px solid #e9d292; }\n  .PokeType__ground___3kWnUF:hover {\n    background-color: #d7ae3e; }\n\n.PokeType__rock___2YAA0z {\n  background-color: #b8a038;\n  border: 1px solid #ccb657; }\n  .PokeType__rock___2YAA0z:hover {\n    background-color: #917e2c; }\n\n.PokeType__bug___3QR_TZ {\n  background-color: #a8b820;\n  border: 1px solid #c9db30; }\n  .PokeType__bug___3QR_TZ:hover {\n    background-color: #808d18; }\n\n.PokeType__ghost___18kPWy {\n  background-color: #705898;\n  border: 1px solid #8a74af; }\n  .PokeType__ghost___18kPWy:hover {\n    background-color: #584578; }\n\n.PokeType__steel___A0NczZ {\n  background-color: #b8b8d0;\n  border: 1px solid #d7d7e4; }\n  .PokeType__steel___A0NczZ:hover {\n    background-color: #9999bc; }\n\n.PokeType__fire___14Os-2 {\n  background-color: #f08030;\n  border: 1px solid #f39d60; }\n  .PokeType__fire___14Os-2:hover {\n    background-color: #dd6510; }\n\n.PokeType__water___uleSaX {\n  background-color: #6890f0;\n  border: 1px solid #96b2f5; }\n  .PokeType__water___uleSaX:hover {\n    background-color: #3a6eeb; }\n\n.PokeType__grass___Zbof95 {\n  background-color: #78c850;\n  border: 1px solid #96d477; }\n  .PokeType__grass___Zbof95:hover {\n    background-color: #5fae37; }\n\n.PokeType__electric___1th6WK {\n  background-color: #f8d030;\n  border: 1px solid #fadb61; }\n  .PokeType__electric___1th6WK:hover {\n    background-color: #edbf08; }\n\n.PokeType__psychic___z4zdvR {\n  background-color: #f85888;\n  border: 1px solid #fa89ab; }\n  .PokeType__psychic___z4zdvR:hover {\n    background-color: #f62765; }\n\n.PokeType__ice___2Jm7Xc {\n  background-color: #46c4c4;\n  border: 1px solid #6dd0d0; }\n  .PokeType__ice___2Jm7Xc:hover {\n    background-color: #34a3a3; }\n\n.PokeType__dragon___1chGg1 {\n  background-color: #7038f8;\n  border: 1px solid #9369fa; }\n  .PokeType__dragon___1chGg1:hover {\n    background-color: #4d09f4; }\n\n.PokeType__dark___1LW6FK {\n  background-color: #705848;\n  border: 1px solid #8f705c; }\n  .PokeType__dark___1LW6FK:hover {\n    background-color: #514034; }\n\n.PokeType__fairy___1KSOob {\n  background-color: #e898e8;\n  border: 1px solid #f1c2f1; }\n  .PokeType__fairy___1KSOob:hover {\n    background-color: #df6edf; }\n", ""]);
+
+// exports
+exports.locals = {
+	"section": "PokeType__section___9Bjmne",
+	"about": "PokeType__about___55TzF2",
+	"keyword": "PokeType__keyword___1ynegR",
+	"typeBox": "PokeType__typeBox___19j4cb",
+	"normal": "PokeType__normal___2FCHGn",
+	"fighting": "PokeType__fighting___1hJbDE",
+	"flying": "PokeType__flying___3EuwJs",
+	"poison": "PokeType__poison___2EVDQv",
+	"ground": "PokeType__ground___3kWnUF",
+	"rock": "PokeType__rock___2YAA0z",
+	"bug": "PokeType__bug___3QR_TZ",
+	"ghost": "PokeType__ghost___18kPWy",
+	"steel": "PokeType__steel___A0NczZ",
+	"fire": "PokeType__fire___14Os-2",
+	"water": "PokeType__water___uleSaX",
+	"grass": "PokeType__grass___Zbof95",
+	"electric": "PokeType__electric___1th6WK",
+	"psychic": "PokeType__psychic___z4zdvR",
+	"ice": "PokeType__ice___2Jm7Xc",
+	"dragon": "PokeType__dragon___1chGg1",
+	"dark": "PokeType__dark___1LW6FK",
+	"fairy": "PokeType__fairy___1KSOob"
+};exports = module.exports = require("../../../node_modules/css-loader/lib/css-base.js")(undefined);
+// imports
+
+
+// module
+exports.push([module.id, ".PokeTable__section___2uvuct, .PokeTable__about___kBAPoz {\n  padding: 0.5rem;\n  margin-bottom: 1rem;\n  border-radius: 0.25rem; }\n  .PokeTable__section___2uvuct:nth-last-of-type, .PokeTable__about___kBAPoz:nth-last-of-type {\n    margin-bottom: 0; }\n\n.PokeTable__about___kBAPoz {\n  background-color: #323278; }\n\n.PokeTable__keyword___XepI6F {\n  color: #69dcd7; }\n\n.PokeTable__wrapper___3RDHSw {\n  overflow-x: auto; }\n\n.PokeTable__table___2zeT0p {\n  border-collapse: collapse;\n  user-select: none;\n  width: 100%; }\n  .PokeTable__table___2zeT0p td, .PokeTable__table___2zeT0p th {\n    padding: 0.25rem;\n    text-align: center;\n    vertical-align: middle; }\n  .PokeTable__table___2zeT0p img {\n    min-width: 45px;\n    width: 75px; }\n\n.PokeTable__thead___1hvSHe tr {\n  background-color: rgba(55, 55, 90, 0.5);\n  border-bottom: 1px solid white; }\n\n.PokeTable__tbody___2Envmw {\n  font-size: 0.9rem; }\n  .PokeTable__tbody___2Envmw tr:nth-child(even) {\n    background-color: rgba(55, 55, 90, 0.5); }\n\n.PokeTable__sort___3pQ_iq {\n  cursor: pointer; }\n  .PokeTable__sort___3pQ_iq:hover {\n    font-weight: bold; }\n", ""]);
+
+// exports
+exports.locals = {
+	"section": "PokeTable__section___2uvuct",
+	"about": "PokeTable__about___kBAPoz",
+	"keyword": "PokeTable__keyword___XepI6F",
+	"wrapper": "PokeTable__wrapper___3RDHSw",
+	"table": "PokeTable__table___2zeT0p",
+	"thead": "PokeTable__thead___1hvSHe",
+	"tbody": "PokeTable__tbody___2Envmw",
+	"sort": "PokeTable__sort___3pQ_iq"
+};exports = module.exports = require("../../../node_modules/css-loader/lib/css-base.js")(undefined);
+// imports
+
+
+// module
+exports.push([module.id, ".PokeLink__redirect___2vFw-V {\n  cursor: pointer; }\n  .PokeLink__redirect___2vFw-V:hover {\n    font-weight: bold; }\n\n.PokeLink__infoText___3Gvzp2 {\n  font-size: 0.75rem; }\n", ""]);
+
+// exports
+exports.locals = {
+	"redirect": "PokeLink__redirect___2vFw-V",
+	"infoText": "PokeLink__infoText___3Gvzp2"
+};exports = module.exports = require("../../../node_modules/css-loader/lib/css-base.js")(undefined);
+// imports
+
+
+// module
+exports.push([module.id, ".PokeImg__img___20Eyil {\n  width: 75px;\n  min-width: 45px; }\n\n.PokeImg__md___Hb3TYW {\n  width: 50%;\n  min-width: 200px;\n  background: radial-gradient(closest-side at 50% 90%, #23324b 15%, transparent); }\n", ""]);
+
+// exports
+exports.locals = {
+	"img": "PokeImg__img___20Eyil",
+	"md": "PokeImg__md___Hb3TYW"
+};exports = module.exports = require("../../../../../node_modules/css-loader/lib/css-base.js")(undefined);
+// imports
+
+
+// module
+exports.push([module.id, ".MovelistItem__center___2uHbUz {\n  margin: 0 auto;\n  display: inline-block; }\n", ""]);
+
+// exports
+exports.locals = {
+	"center": "MovelistItem__center___2uHbUz"
+};exports = module.exports = require("../../../node_modules/css-loader/lib/css-base.js")(undefined);
+// imports
+
+
+// module
+exports.push([module.id, ".MoveClass__center___1aijtn {\n  margin: 0 auto;\n  display: inline-block; }\n\n.MoveClass__damageClass___375B1z, .MoveClass__status___2_zVde,\n.MoveClass__special___3yEeZ-,\n.MoveClass__physical___oV2K2d {\n  display: block;\n  font-size: 0.75rem;\n  width: 4.5rem;\n  padding: 0 0.5rem;\n  text-align: center; }\n\n.MoveClass__status___2_zVde {\n  background-color: #8c8c8c;\n  border: 1px solid #a0a0a0; }\n\n.MoveClass__special___3yEeZ- {\n  background-color: #2d78f0;\n  border: 1px solid #418cff; }\n\n.MoveClass__physical___oV2K2d {\n  background-color: #c83737;\n  border: 1px solid #dc4b4b; }\n", ""]);
+
+// exports
+exports.locals = {
+	"center": "MoveClass__center___1aijtn",
+	"damageClass": "MoveClass__damageClass___375B1z",
+	"status": "MoveClass__status___2_zVde",
+	"special": "MoveClass__special___3yEeZ-",
+	"physical": "MoveClass__physical___oV2K2d"
+};exports = module.exports = require("../../../../../node_modules/css-loader/lib/css-base.js")(undefined);
+// imports
+
+
+// module
+exports.push([module.id, ".DexPokemon__section___1tkI20, .DexPokemon__about___3KZZ2H, .DexPokemon__flexWrapper___27fWVD, .DexPokemon__showcase___35BRG5, .DexPokemon__info___1bKQKg, .DexPokemon__evolution___KJC2f6 {\n  padding: 0.5rem;\n  margin-bottom: 1rem;\n  border-radius: 0.25rem; }\n  .DexPokemon__section___1tkI20:nth-last-of-type, .DexPokemon__about___3KZZ2H:nth-last-of-type, .DexPokemon__flexWrapper___27fWVD:nth-last-of-type, .DexPokemon__showcase___35BRG5:nth-last-of-type, .DexPokemon__info___1bKQKg:nth-last-of-type, .DexPokemon__evolution___KJC2f6:nth-last-of-type {\n    margin-bottom: 0; }\n\n.DexPokemon__about___3KZZ2H {\n  background-color: #323278; }\n\n.DexPokemon__keyword___3Gf5oZ {\n  color: #69dcd7; }\n\n.DexPokemon__flexWrapper___27fWVD, .DexPokemon__showcase___35BRG5, .DexPokemon__info___1bKQKg {\n  display: flex; }\n\n.DexPokemon__showcase___35BRG5 {\n  align-items: center;\n  background-color: #2d9b9b; }\n\n.DexPokemon__evolution___KJC2f6 {\n  text-align: center;\n  background-color: #323278; }\n\n.DexPokemon__info___1bKQKg {\n  flex-wrap: wrap;\n  align-items: flex-start;\n  justify-content: space-around;\n  background-color: #323278; }\n\n.DexPokemon__flavorText___277gss {\n  margin: 0 2rem;\n  font-style: italic;\n  position: relative; }\n  .DexPokemon__flavorText___277gss::after {\n    content: 'Pokedex';\n    display: block;\n    position: absolute;\n    right: 20%;\n    font-size: 0.75rem; }\n\n.DexPokemon__dataSection___hsI3el {\n  width: 50%;\n  align-self: stretch;\n  flex-grow: 1;\n  min-width: 16rem; }\n  .DexPokemon__dataSection___hsI3el:nth-of-type(1) {\n    margin-bottom: 2rem; }\n  .DexPokemon__dataSection___hsI3el h5 {\n    text-align: center; }\n\n.DexPokemon__statTable___3EyxV- {\n  border-collapse: collapse;\n  width: 90%;\n  margin: 0 auto; }\n  .DexPokemon__statTable___3EyxV- td {\n    vertical-align: middle;\n    padding: 0.25rem 0.5rem;\n    border-bottom: 1px solid #646496; }\n    .DexPokemon__statTable___3EyxV- td:nth-child(even) {\n      text-align: left; }\n    .DexPokemon__statTable___3EyxV- td:nth-child(odd) {\n      text-align: right; }\n", ""]);
+
+// exports
+exports.locals = {
+	"section": "DexPokemon__section___1tkI20",
+	"about": "DexPokemon__about___3KZZ2H",
+	"flexWrapper": "DexPokemon__flexWrapper___27fWVD",
+	"showcase": "DexPokemon__showcase___35BRG5",
+	"info": "DexPokemon__info___1bKQKg",
+	"evolution": "DexPokemon__evolution___KJC2f6",
+	"keyword": "DexPokemon__keyword___3Gf5oZ",
+	"flavorText": "DexPokemon__flavorText___277gss",
+	"dataSection": "DexPokemon__dataSection___hsI3el",
+	"statTable": "DexPokemon__statTable___3EyxV-"
+};exports = module.exports = require("../../../../../../../node_modules/css-loader/lib/css-base.js")(undefined);
+// imports
+
+
+// module
+exports.push([module.id, ".PokeStats__section___18SXs_, .PokeStats__about___YzHQe5 {\n  padding: 0.5rem;\n  margin-bottom: 1rem;\n  border-radius: 0.25rem; }\n  .PokeStats__section___18SXs_:nth-last-of-type, .PokeStats__about___YzHQe5:nth-last-of-type {\n    margin-bottom: 0; }\n\n.PokeStats__about___YzHQe5 {\n  background-color: #323278; }\n\n.PokeStats__keyword___374j-h {\n  color: #69dcd7; }\n\n.PokeStats__row___OSULaT {\n  width: 100%;\n  padding: 0.5rem; }\n  .PokeStats__row___OSULaT:nth-last-of-type {\n    margin-bottom: 0; }\n\n.PokeStats__bar___3aBnF0 {\n  text-align: center;\n  border-radius: 0.125rem 0.25rem 0.25rem 0.125rem; }\n", ""]);
+
+// exports
+exports.locals = {
+	"section": "PokeStats__section___18SXs_",
+	"about": "PokeStats__about___YzHQe5",
+	"keyword": "PokeStats__keyword___374j-h",
+	"row": "PokeStats__row___OSULaT",
+	"bar": "PokeStats__bar___3aBnF0"
+};exports = module.exports = require("../../../../../../../node_modules/css-loader/lib/css-base.js")(undefined);
+// imports
+
+
+// module
+exports.push([module.id, ".PokeEvo__row___34QO03 {\n  border-bottom: 1px solid #646496; }\n\n.PokeEvo__item___2YZeaz {\n  display: inline-block;\n  width: 4rem;\n  font-size: 0.9rem; }\n\n.PokeEvo__arrow___1S27fg {\n  display: inline-block;\n  height: 5rem;\n  width: 4rem;\n  background-image: url(" + require("~/resources/icons/arrow_down.png") + ");\n  background-size: contain;\n  background-position: center;\n  background-repeat: no-repeat; }\n\n.PokeEvo__details___2yEb98 {\n  height: 100%;\n  width: 100%;\n  display: flex;\n  flex-wrap: wrap;\n  justify-content: center;\n  align-items: center;\n  align-content: center; }\n", ""]);
+
+// exports
+exports.locals = {
+	"row": "PokeEvo__row___34QO03",
+	"item": "PokeEvo__item___2YZeaz",
+	"arrow": "PokeEvo__arrow___1S27fg",
+	"details": "PokeEvo__details___2yEb98"
+};exports = module.exports = require("../../../../../node_modules/css-loader/lib/css-base.js")(undefined);
+// imports
+
+
+// module
+exports.push([module.id, ".DexAbility__section___3FvV1W, .DexAbility__about___2ThCSj {\n  padding: 0.5rem;\n  margin-bottom: 1rem;\n  border-radius: 0.25rem; }\n  .DexAbility__section___3FvV1W:nth-last-of-type, .DexAbility__about___2ThCSj:nth-last-of-type {\n    margin-bottom: 0; }\n\n.DexAbility__about___2ThCSj {\n  background-color: #323278; }\n\n.DexAbility__keyword___2ZpQRT {\n  color: #69dcd7; }\n", ""]);
+
+// exports
+exports.locals = {
+	"section": "DexAbility__section___3FvV1W",
+	"about": "DexAbility__about___2ThCSj",
+	"keyword": "DexAbility__keyword___2ZpQRT"
+};exports = module.exports = require("../../../../../node_modules/css-loader/lib/css-base.js")(undefined);
+// imports
+
+
+// module
+exports.push([module.id, ".DexMove__section___14z5RS, .DexMove__about___2BNXEf {\n  padding: 0.5rem;\n  margin-bottom: 1rem;\n  border-radius: 0.25rem; }\n  .DexMove__section___14z5RS:nth-last-of-type, .DexMove__about___2BNXEf:nth-last-of-type {\n    margin-bottom: 0; }\n\n.DexMove__about___2BNXEf {\n  background-color: #323278; }\n\n.DexMove__keyword___Qlwx0l {\n  color: #69dcd7; }\n\n.DexMove__statTable___EN64RP {\n  border-collapse: collapse;\n  width: 90%;\n  margin: 0 auto; }\n  .DexMove__statTable___EN64RP td {\n    vertical-align: middle;\n    padding: 0.25rem 0.5rem;\n    border-bottom: 1px solid #646496; }\n    .DexMove__statTable___EN64RP td:nth-child(even) {\n      text-align: left; }\n    .DexMove__statTable___EN64RP td:nth-child(odd) {\n      text-align: right; }\n", ""]);
+
+// exports
+exports.locals = {
+	"section": "DexMove__section___14z5RS",
+	"about": "DexMove__about___2BNXEf",
+	"keyword": "DexMove__keyword___Qlwx0l",
+	"statTable": "DexMove__statTable___EN64RP"
+};exports = module.exports = require("../../../../../node_modules/css-loader/lib/css-base.js")(undefined);
+// imports
+
+
+// module
+exports.push([module.id, ".DexGlossary__section___MYAUNj, .DexGlossary__about___2bjw5p {\n  padding: 0.5rem;\n  margin-bottom: 1rem;\n  border-radius: 0.25rem; }\n  .DexGlossary__section___MYAUNj:nth-last-of-type, .DexGlossary__about___2bjw5p:nth-last-of-type {\n    margin-bottom: 0; }\n\n.DexGlossary__about___2bjw5p {\n  background-color: #323278; }\n\n.DexGlossary__keyword___2Bn6Ou {\n  color: #69dcd7; }\n", ""]);
+
+// exports
+exports.locals = {
+	"section": "DexGlossary__section___MYAUNj",
+	"about": "DexGlossary__about___2bjw5p",
+	"keyword": "DexGlossary__keyword___2Bn6Ou"
+};exports = module.exports = require("../../../node_modules/css-loader/lib/css-base.js")(undefined);
+// imports
+
+
+// module
+exports.push([module.id, ".Layout__section___32zmQN, .Layout__about___pdoSNJ {\n  padding: 0.5rem;\n  margin-bottom: 1rem;\n  border-radius: 0.25rem; }\n  .Layout__section___32zmQN:nth-last-of-type, .Layout__about___pdoSNJ:nth-last-of-type {\n    margin-bottom: 0; }\n\n.Layout__about___pdoSNJ {\n  background-color: #323278; }\n\n.Layout__keyword___22gXMM {\n  color: #69dcd7; }\n\n.Layout__scene___1FfVyk {\n  background-color: #19192d;\n  padding: 1rem 0 1rem 0; }\n\n.Layout__block___1vb1pC {\n  background-color: #262d4b;\n  margin: 0 auto 1rem auto; }\n  .Layout__block___1vb1pC:not(:first-of-type) {\n    margin: 0 auto 0 auto;\n    min-height: calc(100vh - 7rem); }\n\n.Layout__title___2PLGUN {\n  background-color: #37375a;\n  background: repeating-linear-gradient(45deg, #37375a, #37375a 85%, #4e7f9e 85%, #4e7f9e);\n  user-select: none; }\n\n.Layout__wrapper___3DRGTr {\n  padding: 1rem; }\n\n@media screen and (min-width: 728px) {\n  .Layout__block___1vb1pC {\n    width: 728px;\n    border-radius: 0.25rem; }\n    .Layout__block___1vb1pC::first-of-type {\n      margin: 0 auto 1rem auto; }\n  .Layout__title___2PLGUN {\n    border-top-left-radius: 0.25rem;\n    border-top-right-radius: 0.25rem; } }\n", ""]);
+
+// exports
+exports.locals = {
+	"section": "Layout__section___32zmQN",
+	"about": "Layout__about___pdoSNJ",
+	"keyword": "Layout__keyword___22gXMM",
+	"scene": "Layout__scene___1FfVyk",
+	"block": "Layout__block___1vb1pC",
+	"title": "Layout__title___2PLGUN",
+	"wrapper": "Layout__wrapper___3DRGTr"
+};exports = module.exports = require("../../../../../node_modules/css-loader/lib/css-base.js")(undefined);
+// imports
+
+
+// module
+exports.push([module.id, ".Menu__section___o8unVM, .Menu__about___1FSn_K {\n  padding: 0.5rem;\n  margin-bottom: 1rem;\n  border-radius: 0.25rem; }\n  .Menu__section___o8unVM:nth-last-of-type, .Menu__about___1FSn_K:nth-last-of-type {\n    margin-bottom: 0; }\n\n.Menu__about___1FSn_K {\n  background-color: #323278; }\n\n.Menu__keyword___1EC9jG {\n  color: #69dcd7; }\n\n.Menu__wrapper___3IaaXV {\n  height: 4rem;\n  width: 100%;\n  display: flex;\n  align-items: center;\n  justify-content: space-between;\n  border-radius: inherit;\n  background-color: inherit;\n  user-select: none; }\n", ""]);
+
+// exports
+exports.locals = {
+	"section": "Menu__section___o8unVM",
+	"about": "Menu__about___1FSn_K",
+	"keyword": "Menu__keyword___1EC9jG",
+	"wrapper": "Menu__wrapper___3IaaXV"
+};exports = module.exports = require("../../../../../node_modules/css-loader/lib/css-base.js")(undefined);
+// imports
+
+
+// module
+exports.push([module.id, ".MenuItem__section___22Z1w7, .MenuItem__about___3JXmtW {\n  padding: 0.5rem;\n  margin-bottom: 1rem;\n  border-radius: 0.25rem; }\n  .MenuItem__section___22Z1w7:nth-last-of-type, .MenuItem__about___3JXmtW:nth-last-of-type {\n    margin-bottom: 0; }\n\n.MenuItem__about___3JXmtW {\n  background-color: #323278; }\n\n.MenuItem__keyword___2gWbsM {\n  color: #69dcd7; }\n\n.MenuItem__item___2ONC_f {\n  width: 25%;\n  height: 4rem;\n  display: flex;\n  position: relative;\n  align-items: center;\n  justify-content: center;\n  cursor: pointer;\n  background-color: inherit;\n  color: inherit;\n  border: none;\n  outline: none; }\n  .MenuItem__item___2ONC_f[disabled] {\n    color: #c8c8c8;\n    cursor: default; }\n  .MenuItem__item___2ONC_f::after {\n    content: '';\n    display: block;\n    position: absolute;\n    background-color: #11a8ab;\n    height: 5px;\n    bottom: 0;\n    left: 50%;\n    right: 50%;\n    transition: left 0.3s ease-in, right 0.3s ease-in; }\n  .MenuItem__item___2ONC_f:not([disabled]):hover, .MenuItem__item___2ONC_f:not([disabled]):focus {\n    background-color: #37375a; }\n  .MenuItem__item___2ONC_f:not([disabled]):hover::after, .MenuItem__item___2ONC_f:not([disabled]):focus::after {\n    left: 0;\n    right: 0; }\n  @media screen and (min-width: 728px) {\n    .MenuItem__item___2ONC_f:first-of-type {\n      border-top-left-radius: 0.25rem;\n      border-bottom-left-radius: 0.25rem; }\n      .MenuItem__item___2ONC_f:first-of-type::after {\n        border-bottom-left-radius: 0.25rem; }\n    .MenuItem__item___2ONC_f:last-of-type {\n      border-top-right-radius: 0.25rem;\n      border-bottom-right-radius: 0.25rem; }\n      .MenuItem__item___2ONC_f:last-of-type::after {\n        border-bottom-right-radius: 0.25rem; } }\n", ""]);
+
+// exports
+exports.locals = {
+	"section": "MenuItem__section___22Z1w7",
+	"about": "MenuItem__about___3JXmtW",
+	"keyword": "MenuItem__keyword___2gWbsM",
+	"item": "MenuItem__item___2ONC_f"
+};exports = module.exports = require("../../node_modules/css-loader/lib/css-base.js")(undefined);
+// imports
+
+
+// module
+exports.push([module.id, "/*\n\tHTML5 Reset :: style.css\n\t----------------------------------------------------------\n\tWe have learned much from/been inspired by/taken code where offered from:\n\n\tEric Meyer\t\t\t\t\t:: http://meyerweb.com\n\tHTML5 Doctor\t\t\t\t:: http://html5doctor.com\n\tand the HTML5 Boilerplate\t:: http://html5boilerplate.com\n\n-------------------------------------------------------------------------------*/\n/* Let's default this puppy out\n-------------------------------------------------------------------------------*/\nhtml, body, body div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, abbr, address, cite, code, del, dfn, em, img, ins, kbd, q, samp, small, strong, sub, sup, var, b, i, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, figure, footer, header, menu, nav, section, time, mark, audio, video, details, summary {\n  margin: 0;\n  padding: 0;\n  border: 0;\n  font-size: 100%;\n  font-weight: normal;\n  vertical-align: baseline;\n  background: transparent; }\n\nmain, article, aside, figure, footer, header, nav, section, details, summary {\n  display: block; }\n\n/* Handle box-sizing while better addressing child elements:\n   http://css-tricks.com/inheriting-box-sizing-probably-slightly-better-best-practice/ */\nhtml {\n  box-sizing: border-box; }\n\n*,\n*:before,\n*:after {\n  box-sizing: inherit;\n  font-family: inherit; }\n\n/* consider resetting the default cursor: https://gist.github.com/murtaugh/5247154 */\n/* Responsive images and other embedded objects */\n/* if you don't have full control over `img` tags (if you have to overcome attributes), consider adding height: auto */\nimg,\nobject,\nembed {\n  max-width: 100%; }\n\n/*\n   Note: keeping IMG here will cause problems if you're using foreground images as sprites.\n\tIn fact, it *will* cause problems with Google Maps' controls at small size.\n\tIf this is the case for you, try uncommenting the following:\n\n#map img {\n\t\tmax-width: none;\n}\n*/\n/* force a vertical scrollbar to prevent a jumpy page */\nhtml {\n  overflow-y: scroll; }\n\n/* we use a lot of ULs that aren't bulleted.\n\tyou'll have to restore the bullets within content,\n\twhich is fine because they're probably customized anyway */\nul {\n  list-style: none; }\n\nblockquote, q {\n  quotes: none; }\n\nblockquote:before,\nblockquote:after,\nq:before,\nq:after {\n  content: '';\n  content: none; }\n\na {\n  margin: 0;\n  padding: 0;\n  font-size: 100%;\n  vertical-align: baseline;\n  background: transparent; }\n\ndel {\n  text-decoration: line-through; }\n\nabbr[title], dfn[title] {\n  border-bottom: 1px dotted #000;\n  cursor: help; }\n\n/* tables still need cellspacing=\"0\" in the markup */\ntable {\n  border-collapse: separate;\n  border-spacing: 0; }\n\nth {\n  font-weight: normal;\n  vertical-align: bottom; }\n\ntd {\n  font-weight: normal;\n  vertical-align: top; }\n\nhr {\n  display: block;\n  height: 1px;\n  border: 0;\n  border-top: 1px solid #ccc;\n  margin: 1em 0;\n  padding: 0; }\n\ninput, select {\n  vertical-align: middle; }\n\npre {\n  white-space: pre;\n  /* CSS2 */\n  white-space: pre-wrap;\n  /* CSS 2.1 */\n  white-space: pre-line;\n  /* CSS 3 (and 2.1 as well, actually) */\n  word-wrap: break-word;\n  /* IE */ }\n\ninput[type=\"radio\"] {\n  vertical-align: text-bottom; }\n\ninput[type=\"checkbox\"] {\n  vertical-align: bottom; }\n\n.main__ie7___XX95XI input[type=\"checkbox\"] {\n  vertical-align: baseline; }\n\n.main__ie6___2E9Psy input {\n  vertical-align: text-bottom; }\n\nselect, input, textarea {\n  font: 99% sans-serif; }\n\ntable {\n  font-size: inherit;\n  font: 100%; }\n\nsmall {\n  font-size: 85%; }\n\nstrong {\n  font-weight: bold; }\n\ntd, td img {\n  vertical-align: top; }\n\n/* Make sure sup and sub don't mess with your line-heights http://gist.github.com/413930 */\nsub, sup {\n  font-size: 75%;\n  line-height: 0;\n  position: relative; }\n\nsup {\n  top: -0.5em; }\n\nsub {\n  bottom: -0.25em; }\n\n/* standardize any monospaced elements */\npre, code, kbd, samp {\n  font-family: monospace, sans-serif; }\n\n/* hand cursor on clickable elements */\n.main__clickable___1c2b4a,\nlabel,\ninput[type=button],\ninput[type=submit],\ninput[type=file],\nbutton {\n  cursor: pointer; }\n\n/* Webkit browsers add a 2px margin outside the chrome of form elements */\nbutton, input, select, textarea {\n  margin: 0; }\n\n/* make buttons play nice in IE */\nbutton,\ninput[type=button] {\n  width: auto;\n  overflow: visible; }\n\n/* scale images in IE7 more attractively */\n.main__ie7___XX95XI img {\n  -ms-interpolation-mode: bicubic; }\n\n/* prevent BG image flicker upon hover\n   (commented out as usage is rare, and the filter syntax messes with some pre-processors)\n.ie6 html {filter: expression(document.execCommand(\"BackgroundImageCache\", false, true));}\n*/\n/* let's clear some floats */\n.main__clearfix___3F0pTI:after {\n  content: \" \";\n  display: block;\n  clear: both; }\n\n.main__section___34U_cv, .main__about___2qkciW {\n  padding: 0.5rem;\n  margin-bottom: 1rem;\n  border-radius: 0.25rem; }\n  .main__section___34U_cv:nth-last-of-type, .main__about___2qkciW:nth-last-of-type {\n    margin-bottom: 0; }\n\n.main__about___2qkciW {\n  background-color: #323278; }\n\n.main__keyword___3IPRSF {\n  color: #69dcd7; }\n\n:root {\n  font-size: 16px;\n  color: white;\n  font-family: 'ubunturegular', sans-serif; }\n\nhtml, body {\n  width: 100%;\n  height: 100%; }\n\n#app {\n  width: 100%;\n  height: 100%;\n  cursor: default; }\n\n* {\n  font-size: 1rem; }\n\nb,\nstrong {\n  font-weight: bold; }\n\nh1,\nh2,\nh3,\nh4,\nh5,\nh6 {\n  margin: 0.5rem 0 0.5em 0;\n  display: block; }\n\nh1,\nh2,\nh3,\nh4,\nh5 {\n  text-align: center; }\n\nh1 {\n  font-size: 2rem; }\n\nh2 {\n  font-size: 1.8rem; }\n\nh3 {\n  font-size: 1.6rem; }\n\nh4 {\n  font-size: 1.4rem; }\n\nh5 {\n  font-size: 1.2rem; }\n\np {\n  margin: 0.5rem 0; }\n\nul {\n  list-style: disc;\n  padding-left: 1.5rem; }\n", ""]);
+
+// exports
+exports.locals = {
+	"ie7": "main__ie7___XX95XI",
+	"ie6": "main__ie6___2E9Psy",
+	"clickable": "main__clickable___1c2b4a",
+	"clearfix": "main__clearfix___3F0pTI",
+	"section": "main__section___34U_cv",
+	"about": "main__about___2qkciW",
+	"keyword": "main__keyword___3IPRSF"
+};

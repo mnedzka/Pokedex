@@ -5,6 +5,7 @@ import PokeType from 'Components/PokeType/PokeType.jsx';
 import PokeLink from 'Components/PokeLink/PokeLink.jsx';
 import DamageRelations from 'Components/DamageRelations/DamageRelations.jsx';
 import PokeStats from './Components/PokeStats/PokeStats.jsx';
+import PokeEvo from './Components/PokeEvo/PokeEvo.jsx';
 import {
     PokeTable,
     MovelistItem,
@@ -35,6 +36,12 @@ const getStats = stats => {
     return statsObj;
 };
 
+const mapHeldItems = heldItemsArr => {
+    return heldItemsArr.map(item => {
+        return <PokeLink id={item.id} name={item.name} type="item" />
+    });
+};
+
 const createTable = data => {
     return <table className={Styles.statTable}>
         <tbody>
@@ -59,6 +66,7 @@ const DexPokemon = props => {
         ['Height', `${(data.height * 0.1).toFixed(1)} m`],
         ['Weight', `${(data.weight * 0.1).toFixed(1)} kg`],
         ['Abilities', mapAbilities(data.abilities)],
+        ['Held Items', mapHeldItems(data.held_items)],
     ];
     const genderRatio = `♂ ${(8 - data.gender_rate) * 12.5}%\n♀ ${data.gender_rate * 12.5}%`;
     const breedTrainData = [
@@ -77,8 +85,6 @@ const DexPokemon = props => {
         special_defense.base,
         speed.base,
     ];
-    // Evolution
-
     return <div>
         <h3>
             Pokemon: {data.name.replace(/\b(\w)/g, m => m.toUpperCase())}
@@ -89,7 +95,10 @@ const DexPokemon = props => {
                 {data.flavor_text}
             </span>
         </div>
-        <div className={Styles.flexwrap}>
+        <div className={Styles.evolution}>
+            <PokeEvo data={data.evolution_chain} id={data.id} />
+        </div>
+        <div className={Styles.info}>
             <div className={Styles.dataSection}>
                 <h5>Pokedex Data</h5>
                 {createTable(pokedexData)}
@@ -99,27 +108,27 @@ const DexPokemon = props => {
                 {createTable(breedTrainData)}
             </div>
         </div>
-        <div className={Styles.section}>
+        <div className={Styles.about}>
             <h5>Base stats</h5>
             <PokeStats data={statsData} />
         </div>
-        <div className={Styles.section}>
+        <div className={Styles.about}>
             <DamageRelations type={data.type} />
         </div>
         <div className={Styles.section}>
-            <h5>Moves learnt by lvl</h5>
+            <h5>Moves learned by lvl</h5>
             <PokeTable headers="movelist" listItem={MovelistItem} data={data.moves.level_up} />
         </div>
         <div className={Styles.section}>
-            <h5>Moves learnt by breeding</h5>
+            <h5>Moves learned by breeding</h5>
             <PokeTable headers="movelist" listItem={MovelistItem} data={data.moves.egg} />
         </div>
         <div className={Styles.section}>
-            <h5>Moves learnt by TM</h5>
+            <h5>Moves learned by TM</h5>
             <PokeTable headers="movelist" listItem={MovelistItem} data={data.moves.machine} />
         </div>
         <div className={Styles.section}>
-            <h5>Moves learnt by Tutor</h5>
+            <h5>Moves learned by Tutor</h5>
             <PokeTable headers="movelist" listItem={MovelistItem} data={data.moves.tutor} />
         </div>
     </div>;

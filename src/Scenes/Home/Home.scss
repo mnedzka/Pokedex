@@ -1,3 +1,13 @@
-.pokemon {
-    width: 50%;
+.link {
+    &:link,
+    &:hover,
+    &:visited,
+    &:active {
+        text-decoration: underline;
+        color: white;
+    }
+
+    &:hover {
+        font-weight: bold;
+    }
 }

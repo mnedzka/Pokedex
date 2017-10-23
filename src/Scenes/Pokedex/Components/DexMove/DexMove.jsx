@@ -1,6 +1,7 @@
 import React from 'react';
 import PokeType from 'Components/PokeType/PokeType.jsx';
 import MoveClass from 'Components/MoveClass/MoveClass.jsx';
+import Styles from './DexMove.scss';
 import {
     PokeTable,
     PokelistItem,
@@ -8,12 +9,13 @@ import {
 
 const createTable = dataArr => {
     const rows = dataArr.map((e, i) => {
+        const val = e[1] ? e[1] : '-';
         return <tr key={i}>
             <td>{e[0]}</td>
-            <td>{e[1]}</td>
+            <td>{val}</td>
         </tr>
     });
-    return <table>
+    return <table className={Styles.statTable}>
         <tbody>
             {rows}
         </tbody>
@@ -24,7 +26,7 @@ const createPokemonList = (pokeArr, learnBy) => {
     if (!pokeArr.length) {
         return null;
     }
-    return <div>
+    return <div className={Styles.section}>
         <h5>List of pokemons that can learn this move by {learnBy}.</h5>
         <PokeTable headers="pokelist" data={pokeArr} listItem={PokelistItem} />
     </div>;
@@ -40,21 +42,29 @@ const DexMove = props => {
         ['PP', move.pp],
         ['Accuracy', move.accuracy],
         ['Priority', move.priority],
-        ['Effect Chance', move.effect_chance ? move.effect_chance : '-'],
+        ['Effect Chance', move.effect_chance],
         ['TM', move.tm ? move.tm.replace(/\D+/g, m => m.toUpperCase()) : '-'],
     ];
     return <div>
         <h3>Move: {name}</h3>
-        <p>
-            Pokedex: <em>{move.flavor_text}</em>
-        </p>
-        <p>
-            Short description: <em>{move.effect_entries.short_effect}</em>
-        </p>
-        <p>
-            Description: <em>{move.effect_entries.effect}</em>
-        </p>
-        {createTable(moveData)}
+        <div className={Styles.about}>
+            <p>
+                <span className={Styles.keyword}>Pokedex: </span>
+                <em>{move.flavor_text}</em>
+            </p>
+            <p>
+                <span className={Styles.keyword}>Short description: </span>
+                <em>{move.effect_entries.short_effect}</em>
+            </p>
+            <p>
+                <span className={Styles.keyword}>Description: </span>
+                <em>{move.effect_entries.effect}</em>
+            </p>
+        </div>
+        <div className={Styles.about}>
+            <h5>Move stats</h5>
+            {createTable(moveData)}
+        </div>
         {createPokemonList(egg, 'breeding')}
         {createPokemonList(level_up, 'level')}
         {createPokemonList(machine, 'TM')}

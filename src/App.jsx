@@ -89,14 +89,14 @@ class App extends React.Component {
         }
         if (page.currentPage === 'pokedex') {
             title = 'Pokedex';
-            if (page.dexItemType !== 'pokedex' && this.isFetchNeeded()) {
+            const noDataReq = ['pokedex', 'glossary'];
+            if (!noDataReq.includes(page.dexItemType) && this.isFetchNeeded()) {
                 console.log('FETCH NEEDED');
                 this.getData();
             } else {
                 Content = Pokedex;
             }
         }
-        console.log('### APP -> ', this);
         return <Layout title={title}>
             <Content />
         </Layout>;

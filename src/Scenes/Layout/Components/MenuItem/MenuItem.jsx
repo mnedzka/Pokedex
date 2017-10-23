@@ -13,7 +13,7 @@ class MenuItem extends React.Component {
 
     handleClickEvent = (ev) => {
         const page = this.props.text.toLowerCase().replace(/\W/g, '');
-        if (this.props.page === page) {
+        if (this.props.page === page && this.props.dexItemType === 'pokedex') {
             return null;
         }
         this.props.onMenuItemClick(page);
@@ -32,6 +32,7 @@ class MenuItem extends React.Component {
 const mapStateToProps = state => {
     return {
         page : state.page.currentPage,
+        dexItemType : state.page.dexItemType,
     };
 };
 

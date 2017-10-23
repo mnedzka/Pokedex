@@ -1,105 +1,3 @@
-// const loadStorage = itemName => {
-//     const check = localStorage.getItem(itemName);
-//     let res = false;
-//     try {
-//         const obj = JSON.parse(check);
-//         if (obj && typeof obj === 'object') {
-//             res = obj;
-//         }
-//     } catch (e) {
-//         console.info('JSON stored data invalid');
-//     }
-//     return res;
-// }
-
-// class FetchWrapper {
-//     constructor (url, options, name) {
-//         this.__isAborted = false;
-//         this.__url = url,
-//         this.__opt = options || {};
-//         this.__nam = name;
-//         this.__id = Math.floor(Math.random() * 1000000000);
-//     }
-
-//     abort () {
-//         this.__isAborted = true;
-//     }
-
-//     get () {
-//         return fetch(this.__url, this.__opt)
-//         .then(r => {
-//             if (this.__isAborted || !r.ok) {
-//                 throw new Error('Abort/Failure');
-//             }
-//             return r.json();
-//         })
-//         .then(d => {
-//             if (this.__nam === 'pokelist') {
-//                 this.setStorage(this.__nam, d);
-//             } else {
-//                 const curr = loadStorage(this.__nam);
-//                 if (curr) {
-//                     const next = [...curr];
-//                     next.push(d);
-//                     this.setStorage(this.__nam, next);
-//                 } else {
-//                     this.setStorage(this.__nam, [d]);
-//                 }
-//             }
-//             window.__fetchlist.rm(this.__id);
-//             return d;
-//         })
-//         .catch(e => {
-//             console.warn(e);
-//             return null;
-//         });
-//     }
-
-//     setStorage (itemName, data) {
-//         try {
-//             localStorage.setItem(itemName, JSON.stringify(data));
-//         } catch (e) {
-//             console.warn(e);
-//         }
-//     }
-// }
-
-// export default class PokeCache {
-//     get (reqBody) {
-//         const {type, id} = reqBody.message;
-//         const url = 'https://us-central1-pokedex-182809.cloudfunctions.net/dex';
-//         const opt = {
-//             method : 'POST',
-//             body : JSON.stringify(reqBody),
-//         };
-//         console.log('### REQ BODY -> ', opt);
-//         const storedData = loadStorage(type);
-//         if (storedData) {
-//             if (type === 'pokelist') {
-//                 return Promise.resolve(storedData);
-//             }
-//             const match = storedData.find(e => e.id === id);
-//             if (match) {
-//                 return Promise.resolve(match);
-//             }
-//         }
-//         return this.__fetchData(url, opt, type);
-//     }
-
-//     __fetchData (url, options, itemName) {
-//         const f = new FetchWrapper(url, options, itemName);
-//         window.__fetchlist.ad(f);
-//         return f.get();
-//     }
-// }
-
-
-// UPDATE
-// UPDATE
-// UPDATE
-// UPDATE
-
-
 const loadStorage = itemName => {
     const check = localStorage.getItem(itemName);
     let res = false;
@@ -243,12 +141,12 @@ export default class PokeCache {
         }
         if (type === 'pokemon' || type === 'type') {
             const storedMoves = loadStorage('move') || [];
-            const move_ids = storedMoves.map(e => e.id);
-            const isFetch = this.isMoveFetchNeeded(match, move_ids, type);
+            const moveIDs = storedMoves.map(e => e.id);
+            const isFetch = match ? this.isMoveFetchNeeded(match, moveIDs, type) : false;
             if (!isFetch && match) {
                 return this.fillData(match, type, storedMoves);
             }
-            stored.push(...move_ids);
+            stored.push(...moveIDs);
         }
         const url = 'https://us-central1-pokedex-182809.cloudfunctions.net/dex';
         const rbody = {
@@ -346,9 +244,7 @@ export default class PokeCache {
             }
         } else {
             data.moves.forEach(e => {
-                if (!has.includes(e)) {
-                    has.push(e);
-                }
+                has.push(e);
             });
         }
         has.forEach(e => {

@@ -6,11 +6,11 @@ import DexHome from './Components/DexHome/DexHome.jsx';
 import DexPokemon from './Components/DexPokemon/DexPokemon.jsx';
 import DexAbility from './Components/DexAbility/DexAbility.jsx';
 import DexMove from './Components/DexMove/DexMove.jsx';
-import DexEgg from './Components/DexEgg/DexEgg.jsx'
+import DexEgg from './Components/DexEgg/DexEgg.jsx';
+import DexGlossary from './Components/DexGlossary/DexGlossary.jsx';
 
 class Pokedex extends React.Component {
     render () {
-        console.log(this);
         switch (this.props.type) {
             case 'pokedex':
                 return <DexHome />;
@@ -24,6 +24,8 @@ class Pokedex extends React.Component {
                 return <DexAbility data={this.props.data} />;
             case 'egg_group':
                 return <DexEgg data={this.props.data} />;
+            case 'glossary':
+                return <DexGlossary />;
             default:
                 return 'SUMTING WONG';
         }

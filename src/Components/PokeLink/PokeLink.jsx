@@ -12,20 +12,25 @@ class PokeLink extends React.Component {
     };
 
     render () {
-        const n = this.props.name.replace('-', ' ');
-        const name = n.replace(/\b(\w)/g, m => m.toUpperCase());
+        let name = null;
+        if (this.props.hasOwnProperty('name')) {
+            const n = this.props.name.replace('-', ' ');
+            name = n.replace(/\b(\w)/g, m => m.toUpperCase());
+
+        }
         const hasInfoText = this.props.hasOwnProperty('info') && this.props.info;
-        const infoText = hasInfoText ? this.props.info : null;
-        return <span>
+        const infoText = hasInfoText ? ` ${this.props.info}` : null;
+        return <div>
             <span
                 onClick={this.handlePokeLinkClick}
                 className={Styles.redirect}>
-                {name + ' '}
+                {name}
+                {this.props.children}
                 <span className={Styles.infoText}>
                     {infoText}
                 </span>
             </span>
-        </span>;
+        </div>;
     }
 }
 

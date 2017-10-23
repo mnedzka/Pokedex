@@ -1,10 +1,10 @@
 // COLORS
-$scene_background: rgb(31, 37, 61);
-$background: rgb(57, 66, 100);
-$background_light: rgb(80, 89, 123);
+$scene_background: rgb(25, 25, 45);
+$background: rgb(38, 45, 75);
+$background_light: rgb(55, 55, 90);
 $red: rgb(204, 50, 75);
 $red_light: rgb(230, 76, 101);
-$blue: rgb(26, 78, 149);
+$blue: rgb(50, 50, 120);
 $blue_light: rgb(45, 155, 155);
 $highlight_green: rgb(17, 168, 171);
 $highlight_blue: rgb(79, 196, 245);
@@ -58,3 +58,25 @@ $typeColors: (
   dark: rgb(112, 88, 72),
   fairy: rgb(232, 152, 232),
 );
+
+// Base page content wrapper
+.section {
+    padding: 0.5rem;
+    margin-bottom: 1rem;
+    border-radius: $border_radius;
+
+    &:nth-last-of-type() {
+        margin-bottom: 0;
+    }
+}
+
+.about {
+    @extend .section;
+    background-color: $blue;
+}
+
+
+// Explanation keyword
+.keyword {
+    color: rgb(105, 220, 215);
+}

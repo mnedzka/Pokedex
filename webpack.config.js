@@ -31,15 +31,14 @@ module.exports = {
                                 modules: true,
                                 importLoaders: 2,
                                 localIdentName: '[name]__[local]___[hash:base64:6]',
+                                url: false,
                             },
                         },
                         {
-                            loader: 'sass-loader'
+                            loader: 'sass-loader',
                         },
                     ],
                 }),
-
-                // use: ['css-loader?modules&importLoader=2&sourceMap&localIdentName=[name]__[local]___[hash:base64:5]!sass-loader', 'sass-loader'],
             },
         ]
 

@@ -1,0 +1,6 @@
+@import '~/../src/styles/partials/_variables.scss';
+
+.relations {
+    @extend .section;
+    background-color: $blue;
+}

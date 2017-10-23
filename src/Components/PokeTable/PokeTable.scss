@@ -6,6 +6,7 @@
 
 .table {
     border-collapse: collapse;
+    user-select: none;
     width: 100%;
 
     td, th {

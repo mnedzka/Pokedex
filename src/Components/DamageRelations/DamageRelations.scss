@@ -8,6 +8,10 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+
+    &:first-of-type {
+        margin-bottom: 1rem;
+    }
 }
 
 .dmgRelItem {
@@ -36,22 +40,21 @@
 }
 
 .x025 {
-    background-color: $red;
+    background-color: rgb(155, 45, 60);
 }
 
 .x05 {
-    background-color: $red;
-    border: 1px solid lighten($red, 10%);
+    background-color: rgb(225, 40, 85);
 }
 
 .x1 {
-    background-color: $blue;
+    background-color: rgb(130, 130, 190);
 }
 
 .x2 {
-    background-color: #06692C;
+    background-color: rgb(70, 210, 70);
 }
 
 .x4 {
-    background-color: #12EE49;
+    background-color: rgb(60, 180, 60);
 }

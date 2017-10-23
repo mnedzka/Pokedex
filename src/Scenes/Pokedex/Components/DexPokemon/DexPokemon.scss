@@ -1,32 +1,28 @@
 @import '~/../src/styles/partials/_variables.scss';
 
-.section {
-    margin-bottom: 1rem;
-
-    &:nth-last-of-type() {
-        margin-bottom: 0;
-    }
-}
-
 .flexWrapper {
     @extend .section;
     display: flex;
-    padding: 0.5rem;
-    margin: 1rem 0;
-}
-
-.flexwrap {
-    @extend .flexWrapper;
-    flex-wrap: wrap;
-    align-items: flex-start;
-    justify-content: space-around;
 }
 
 .showcase {
     @extend .flexWrapper;
     align-items: center;
-    border-radius: $border_radius;
     background-color: $blue_light;
+}
+
+.evolution {
+    @extend .section;
+    text-align: center;
+    background-color: $blue;
+}
+
+.info {
+    @extend .flexWrapper;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    justify-content: space-around;
+    background-color: $blue;
 }
 
 .flavorText {
