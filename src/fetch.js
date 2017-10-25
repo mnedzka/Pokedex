@@ -35,39 +35,59 @@ class FetchWrapper {
         })
         .then(d => {
             window.__fetchlist.rm(this.__id);
+            const {data, moves, evolution} = d;
             const currentlyStored = loadStorage(this.__nam) || [];
-            const isThere = currentlyStored.find(e => e.id === d[0].id);
-            if (!isThere) {
-                currentlyStored.push(d[0]);
+            if (this.__nam === 'pokelist') {
+                if (Array.isArray(currentlyStored)) {
+                    this.setStorage(this.__nam, data);
+                }
+                return data;
+            }
+            const isDataStored = currentlyStored.find(el => el.id === data.id);
+            if (!isDataStored) {
+                currentlyStored.push(data);
                 this.setStorage(this.__nam, currentlyStored);
             }
-            if (this.__nam === 'pokelist') {
-                return d[0];
-            }
-
             if (this.__nam === 'pokemon' || this.__nam === 'type') {
-                const moves = loadStorage('move') || [];
-                d[1].forEach(e => {
-                    const move = moves.find(m => m.id === e.id);
+                const local_moves = loadStorage('move') || [];
+                moves.forEach(e => {
+                    const move = local_moves.find(m => m.id === e.id);
                     if (!move) {
-                        moves.push(e);
+                        local_moves.push(e);
                     }
                 });
-                this.setStorage('move', moves);
-                const data = {...d[0]};
+                this.setStorage('move', local_moves);
                 if (this.__nam === 'pokemon') {
                     for (let i in data.moves) {
-                        data.moves[i] = data.moves[i].map(e => {
-                            const move = moves.find(m => m.id === e.id);
-                            if (!move) {
-                                console.warn(move, data, i);
-                            }
-                            return {
-                                ...move,
-                                ...e,
-                            }
-                        });
+                        if (i === 'level_up') {
+                            data.moves[i] = data.moves[i].map(mov => {
+                                const m = local_moves.find(el => el.id === mov.id);
+                                return {
+                                    ...m,
+                                    ...mov,
+                                }
+                            });
+                        } else {
+                            data.moves[i] = data.moves[i].map(e => {
+                                const move = local_moves.find(m => m.id === e);
+                                if (!move) {
+                                    console.warn(move, data, i);
+                                }
+                                return move;
+                            });
+                        }
                     }
+                    const local_evo = loadStorage('evolution_chain') || [];
+                    let evo = local_evo.find(el => el.id === data.evolution_chain);
+                    if (!evo) {
+                        if (!evolution) {
+                            return null;
+                        }
+                        local_evo.push(evolution);
+                        evo = evolution;
+                        this.setStorage('evolution_chain', local_evo);
+                    }
+                    data.evolution_chain = evo;
                 } else {
                     data.moves = data.moves.map(e => {
                         const move = moves.find(m => m.id === e);
@@ -83,33 +103,18 @@ class FetchWrapper {
                 }
                 return data;
             }
-            if (this.__nam === 'move') {
-                const move = {...d[0]};
+            if (data.hasOwnProperty('pokemon')) {
                 const pokelist = loadStorage('pokelist');
-                if (!move || !pokelist) {
-                    console.warn(move, pokelist, '@@ MOVE');
+                if (Array.isArray(data.pokemon)) {
+                    data.pokemon = data.pokemon.map(e => pokelist[e]);
+                } else {
+                    for (let i in data.pokemon) {
+                        data.pokemon[i] = data.pokemon[i].map(e => pokelist[e]);
+                    }
                 }
-                for (let i in move.pokemon) {
-                    move.pokemon[i] = move.pokemon[i].map(e => {
-                        return {
-                            ...pokelist[e - 1],
-                        }
-                    });
-                }
-                return move;
-            }
-
-            if (d[0].hasOwnProperty('pokemon')) {
-                const data = {...d[0]};
-                const pokelist = loadStorage('pokelist');
-                if (pokelist || data) {
-                    console.warn( data, '@@ OTHER');
-                }
-                data.pokemon = data.pokemon.map(e => pokelist[e - 1]);
                 return data;
             }
-
-            return d[0];
+            return data;
         })
         .catch(e => {
             console.warn(e);
@@ -128,31 +133,38 @@ class FetchWrapper {
 
 export default class PokeCache {
     get (reqBody = {}) {
-        const {type = 'pokelist', id = 0, stored = []} = reqBody;
-        const storedData = loadStorage(type) || [];
-        const match = storedData.find(e => e.id === id);
+        const {type = 'pokelist', id = 0, storedMoves = [], storedEvo = []} = reqBody;
+        console.log(reqBody);
+        const storedData = loadStorage(type);
         if (storedData && type !== 'pokemon' && type !== 'type') {
             if (type === 'pokelist') {
                 return Promise.resolve(storedData);
             }
+            const match = storedData.find(e => e.id === id);
             if (match) {
                 return this.fillData(match, type);
             }
+            // return type === 'pokelist' ? Promise.resolve(storedData) : this.fillData(match, type);
         }
-        if (type === 'pokemon' || type === 'type') {
-            const storedMoves = loadStorage('move') || [];
-            const moveIDs = storedMoves.map(e => e.id);
-            const isFetch = match ? this.isMoveFetchNeeded(match, moveIDs, type) : false;
+        if (storedData && (type === 'pokemon' || type === 'type')) {
+            const match = storedData.find(e => e.id === id);
+            const localMoves = loadStorage('move') || [];
+            const localEvo = loadStorage('evolution_chain') || [];
+            const moveIDs = localMoves.map(e => e.id);
+            const evoIDs = localEvo.map(e => e.id);
+            const isFetch = match ? this.isMoveFetchNeeded(match, moveIDs, evoIDs, type) : false;
             if (!isFetch && match) {
-                return this.fillData(match, type, storedMoves);
+                return this.fillData(match, type, localMoves, localEvo);
             }
-            stored.push(...moveIDs);
+            storedMoves.push(...moveIDs);
+            storedEvo.push(...evoIDs);
         }
         const url = 'https://us-central1-pokedex-182809.cloudfunctions.net/dex';
         const rbody = {
             type : type,
             id : id,
-            stored : stored,
+            storedMoves : storedMoves,
+            storedEvo : storedEvo,
         }
         const opt = {
             method : 'POST',
@@ -176,20 +188,31 @@ export default class PokeCache {
         }
     }
 
-    fillData (item, type, mvs) {
+    fillData (item, type, mvs, evo) {
         const data = {...item};
         console.log('FILL DATA IN ACTION');
         if (type === 'pokemon') {
             for (let i in data.moves) {
-                data.moves[i] = data.moves[i].map(e => {
-                    const id = e.id;
-                    const move = mvs.find(e => e.id === id);
-                    return {
-                        ...e,
-                        ...move,
-                    }
-                });
+                if (i === 'level_up') {
+                    data.moves[i] = data.moves[i].map(e => {
+                        const id = e.id;
+                        const move = mvs.find(e => e.id === id);
+                        return {
+                            ...e,
+                            ...move,
+                        }
+                    });
+                } else {
+                    data.moves[i] = data.moves[i].map(e => {
+                        const move = mvs.find(m => m.id === e);
+                        if (!move) {
+                            console.warn(move, data, i);
+                        }
+                        return move;
+                    });
+                }
             }
+            data.evolution_chain = evo.find(e => e.id === data.evolution_chain);
             console.log('@POKEMON', data);
             return Promise.resolve(data);
         }
@@ -199,11 +222,7 @@ export default class PokeCache {
                 console.warn(data, pokelist, '@@ MOVE');
             }
             for (let i in data.pokemon) {
-                data.pokemon[i] = data.pokemon[i].map(e => {
-                    return {
-                        ...pokelist[e - 1],
-                    }
-                });
+                data.pokemon[i] = data.pokemon[i].map(e => pokelist[e]);
             }
             return Promise.resolve(data);
         }
@@ -212,9 +231,13 @@ export default class PokeCache {
             if (!pokelist || !data) {
                 console.warn(move, data, '@@ OTHER');
             }
-            data.pokemon = data.pokemon.map(e => {
-                return pokelist[e - 1]
-            });
+            if (Array.isArray(data.pokemon)) {
+                data.pokemon = data.pokemon.map(e => pokelist[e]);
+            } else {
+                for (let i in data.pokemon) {
+                    data.pokemon[i] = data.pokemon[i].map(e => pokelist[e]);
+                }
+            }
             if (type === 'type') {
                 data.moves = data.moves.map(e => {
                     const move = mvs.find(m => m.id === e);
@@ -230,9 +253,10 @@ export default class PokeCache {
         return Promise.resolve(data);
     }
 
-    isMoveFetchNeeded (data, moveIDs, type) {
+    isMoveFetchNeeded (data, moveIDs, evoIDs, type) {
         const has = [];
         const missing = [];
+        const missingEvo = [];
         if (type === 'pokemon') {
             for (let i in data.moves) {
                 data.moves[i].forEach(e => {
@@ -247,11 +271,14 @@ export default class PokeCache {
                 has.push(e);
             });
         }
+        if (!evoIDs.includes(data.evolution_chain)) {
+            missingEvo.push(data.evolution_chain);
+        }
         has.forEach(e => {
             if (!moveIDs.includes(e)) {
                 missing.push(e);
             }
         });
-        return missing.length;
+        return missing.length && missingEvo.length;
     }
 }

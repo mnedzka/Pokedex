@@ -14,7 +14,7 @@ export default class PokelistItem extends React.Component {
 
     render () {
         const {
-            id, name, type, hp, attack, speed, defense, special_attack, special_defense
+            id, name, types, hp, attack, speed, defense, special_attack, special_defense
          } = this.props.data;
         return <tr>
             <td>
@@ -27,7 +27,7 @@ export default class PokelistItem extends React.Component {
                 <PokeLink id={id} name={name} type="pokemon" />
             </td>
             <td>
-                <PokeType type={type} />
+                <PokeType type={types} />
             </td>
             <td>
                 {hp}

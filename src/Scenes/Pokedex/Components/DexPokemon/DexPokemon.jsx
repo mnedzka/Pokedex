@@ -65,19 +65,22 @@ const DexPokemon = props => {
 
     const pokedexData = [
         ['Pokedex No', data.id],
-        ['Type', <PokeType type={data.type} />],
+        ['Type', <PokeType type={data.types} />],
         ['Height', `${(data.height * 0.1).toFixed(1)} m`],
         ['Weight', `${(data.weight * 0.1).toFixed(1)} kg`],
         ['Abilities', mapAbilities(data.abilities)],
         ['Held Items', mapHeldItems(data.held_items)],
     ];
-    const genderRatio = `♂ ${(8 - data.gender_rate) * 12.5}%\n♀ ${data.gender_rate * 12.5}%`;
+    let genderRate = 'Genderless';
+    if (data.gender_rate > 0) {
+        genderRate = `♂ ${(8 - data.gender_rate) * 12.5}%\n♀ ${data.gender_rate * 12.5}%`
+    }
     const breedTrainData = [
         ['Catch rate', `${data.capture_rate} (${catchValue}% at max HP)`],
         ['Base EXP', data.base_experience],
         ['Growth rate', data.growth_rate],
         ['Egg groups', mapEggGroups(data.egg_groups)],
-        ['Gender', genderRatio],
+        ['Gender', genderRate],
         ['Egg cycles', data.hatch_counter],
     ];
     const statsData = [
@@ -116,7 +119,7 @@ const DexPokemon = props => {
             <PokeStats data={statsData} />
         </div>
         <div className={Styles.about}>
-            <DamageRelations type={data.type} />
+            <DamageRelations type={data.types} />
         </div>
         <div className={Styles.section}>
             <h5>Moves learned by lvl</h5>

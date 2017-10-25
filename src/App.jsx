@@ -22,7 +22,6 @@ class App extends React.Component {
         const body = {
             type : page.dexItemType,
             id : page.dexItemId,
-            stored : [],
         };
         const req = this.fetch.get(body);
         req.then(data => {
@@ -75,9 +74,11 @@ class App extends React.Component {
         const {page, list} = this.props;
         let Content = Loader;
         let title = null;
+        console.log(this.props);
         if (page.currentPage === 'pokelist') {
+            console.log('IT"S A MUTAFUKAN LIST')
             title = 'Pokelist';
-            if (!list.data.length) {
+            if (!list.data) {
                 this.getData();
             } else {
                 Content = Pokelist;

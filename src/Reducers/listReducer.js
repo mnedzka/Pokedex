@@ -5,7 +5,7 @@ import {
 
 const initialState = {
     length : 100,
-    data : [],
+    data : null,
 };
 
 const listReducer = function pokemonListReducer (state = initialState, action) {

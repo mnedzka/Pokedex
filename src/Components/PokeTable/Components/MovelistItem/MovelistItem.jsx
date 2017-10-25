@@ -39,7 +39,7 @@ export default class MovelistItem extends React.Component {
             </td>
             <td>
                 <span className={Styles.center}>
-                    <PokeType type={move.type} />
+                    <PokeType type={move.types} />
                 </span>
             </td>
         </tr>;

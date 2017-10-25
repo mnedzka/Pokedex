@@ -6,7 +6,7 @@ import PokeLink from 'Components/PokeLink/PokeLink.jsx';
 const getEvolutions = (chain, arr) => {
     const allEvoArr = [];
     const mapEvolutions = (evoChain, arrToPush, i) => {
-        const id = ~~evoChain.species.url.match(/\/(\d+)\//)[1];
+        const id = evoChain.species.id;
         arrToPush.push({
             index : i,
             id : id,
@@ -29,108 +29,109 @@ const getEvolutions = (chain, arr) => {
 }
 
 const mapEvoDetails = details => {
-    return details.map((d, i) => {
-        const detailsArray = [];
-        if (d.trigger.name === 'trade') {
-            detailsArray.push(<div key="trade">Trade</div>);
+    if (!details) return null;
+    const detailArr = [];
+    if (details.trigger === 'trade') {
+        detailArr.push(<div key="trade">Trade</div>);
+    }
+    if (details.min_level) {
+        detailArr.push(<div key="lvl">Lvl: {details.min_level}</div>);
+    }
+    if (details.min_beauty) {
+        detailArr.push(<div key="beauty">Beauty: {details.min_beauty}</div>);
+    }
+    if (details.time_of_day.length) {
+        detailArr.push(<div key="time">
+            {details.time_of_day.replace(/\b(\w)/g, m => m.toUpperCase())}
+        </div>);
+    }
+    if (details.gender) {
+        detailArr.push(<div key="gender">{details.gender === 2 ? '♂' : '♀'}</div>);
+    }
+    if (details.relative_physical_stats !== null) {
+        switch (details.relative_physical_stats) {
+            case 0:
+                detailArr.push(<div key="phys">Att = Def</div>);
+                break;
+            case 1:
+                detailArr.push(<div key="phys">Att &gt; Def</div>);
+                break;
+            default:
+                detailArr.push(<div key="phys">Att &lt; Def</div>);
         }
-        if (d.min_level) {
-            detailsArray.push(<div key="lvl">Lvl: {d.min_level}</div>);
-        }
-        if (d.min_beauty) {
-            detailsArray.push(<div key="beauty">Beauty: {d.min_beauty}</div>);
-        }
-        if (d.time_of_day.length) {
-            detailsArray.push(<div key="time">
-                {d.time_of_day.replace(/\b(\w)/g, m => m.toUpperCase())}
-            </div>);
-        }
-        if (d.gender) {
-            detailsArray.push(<div key="gender">{d.gender === 2 ? '♂' : '♀'}</div>);
-        }
-        if (d.relative_physical_stats !== null) {
-            switch (d.relative_physical_stats) {
-                case 0:
-                    detailsArray.push(<div key="phys">Att = Def</div>);
-                    break;
-                case 1:
-                    detailsArray.push(<div key="phys">Att &gt; Def</div>);
-                    break;
-                default:
-                    detailsArray.push(<div key="phys">Att &lt; Def</div>);
-            }
-        }
-        if (d.needs_overworld_rain) {
-            detailsArray.push(<div key="rain">Rain in overworld</div>);
-        }
-        if (d.turn_upside_down) {
-            detailsArray.push(<div key="turn">Turn upside down</div>);
-        }
-        if (d.item) {
-            const id = ~~d.item.url.match(/\/(\d+)\//)[1];
-            const name = d.item.name.replace(/\b(\w)/g, m => m.toUpperCase());
-            detailsArray.push(<div key="item">
-                Use <PokeLink id={id} name={name} type="item" />
-            </div>);
-        }
-        if (d.known_move_type) {
-            detailsArray.push(<div key="moveType">
-                Knows <PokeLink id={18} name="Fairy" type="type" /> move
-            </div>);
-        }
-        if (d.min_affection) {
-            detailsArray.push(<div key="affection">
-                Affection: {d.min_affection}
-            </div>);
-        }
-        if (d.party_type) {
-            const id = ~~d.party_type.url.match(/\/(\d+)\//)[1];
-            const name = d.party_type.name.replace(/\b(\w)/g, m => m.toUpperCase());
-            detailsArray.push(<div key="partyType">
-                With <PokeLink id={id} name={name} type="type" /> pokemon in party.
-            </div>);
-        }
-        if (d.trade_species) {
-            const id = ~~d.trade_species.url.match(/\/(\d+)\//)[1];
-            const name = d.trade_species.name.replace(/\b(\w)/g, m => m.toUpperCase());
-            detailsArray.push(<div key="tradeSpec">
-                For <PokeLink id={id} name={name} type="pokemon" />
-            </div>);
-        }
-        if (d.party_species) {
-            const id = ~~d.party_species.url.match(/\/(\d+)\//)[1];
-            const name = d.party_species.name.replace(/\b(\w)/g, m => m.toUpperCase());
-            detailsArray.push(<div key="partySpec">
-                With <PokeLink id={id} name={name} type="pokemon" /> in party
-            </div>);
-        }
-        if (d.min_happiness) {
-            detailsArray.push(<div key="happiness">Happiness: {d.min_happiness}</div>);
-        }
-        if (d.held_item) {
-            const id = ~~d.held_item.url.match(/\/(\d+)\//)[1];
-            const name = d.held_item.name.replace(/\b(\w)/g, m => m.toUpperCase());
-            detailsArray.push(<div key="heldItem">
-                Has <PokeLink id={id} name={name} type="item" />
-            </div>);
-        }
-        if (d.known_move) {
-            const id = ~~d.known_move.url.match(/\/(\d+)\//)[1];
-            const name = d.known_move.name.replace(/\b(\w)/g, m => m.toUpperCase());
-            detailsArray.push(<div key="move">
-                Knows <PokeLink id={id} name={name} type="move" />
-            </div>);
-        }
-        if (d.location) {
-            const name = d.location.name.replace(/\b(\w)/g, m => m.toUpperCase());
-            detailsArray.push(<div key="location">
-                Near <PokeLink id={0} name={name} type="glossary" />
-            </div>);
-        }
-        return <div key={i} className={Styles.details}>
-            {detailsArray}
-        </div>;
-    });
+    }
+    if (details.needs_overworld_rain) {
+        detailArr.push(<div key="rain">Rain in overworld</div>);
+    }
+    if (details.turn_upside_down) {
+        detailArr.push(<div key="turn">Turn upside down</div>);
+    }
+    if (details.item) {
+        const id = d.item.id;
+        const name = d.item.name.replace(/\b(\w)/g, m => m.toUpperCase());
+        detailArr.push(<div key="item">
+            Use <PokeLink id={id} name={name} type="item" />
+        </div>);
+    }
+    if (details.known_move_type) {
+        const id = details.known_move_type.id;
+        const name = details.known_move_type.name.replace(/\b(\w)/g, m => m.toUpperCase());
+        detailArr.push(<div key="moveType">
+            Knows <PokeLink id={id} name={name} type="type" /> move
+        </div>);
+    }
+    if (details.min_affection) {
+        detailArr.push(<div key="affection">
+            Affection: {details.min_affection}
+        </div>);
+    }
+    if (details.party_type) {
+        const id = details.party_type.id;
+        const name = details.party_type.name.replace(/\b(\w)/g, m => m.toUpperCase());
+        detailArr.push(<div key="partyType">
+            With <PokeLink id={id} name={name} type="type" /> pokemon in party.
+        </div>);
+    }
+    if (details.trade_species) {
+        const id = details.trade_species.id;
+        const name = details.trade_species.name.replace(/\b(\w)/g, m => m.toUpperCase());
+        detailArr.push(<div key="tradeSpec">
+            For <PokeLink id={id} name={name} type="pokemon" />
+        </div>);
+    }
+    if (details.party_species) {
+        const id = details.party_species.id;
+        const name = details.party_species.name.replace(/\b(\w)/g, m => m.toUpperCase());
+        detailArr.push(<div key="partySpec">
+            With <PokeLink id={id} name={name} type="pokemon" /> in party
+        </div>);
+    }
+    if (details.min_happiness) {
+        detailArr.push(<div key="happiness">Happiness: {details.min_happiness}</div>);
+    }
+    if (details.held_item) {
+        const id = details.held_item.id;
+        const name = details.held_item.name.replace(/\b(\w)/g, m => m.toUpperCase());
+        detailArr.push(<div key="heldItem">
+            Has <PokeLink id={id} name={name} type="item" />
+        </div>);
+    }
+    if (details.known_move) {
+        const id = details.known_move.id;
+        const name = details.known_move.name.replace(/\b(\w)/g, m => m.toUpperCase());
+        detailArr.push(<div key="move">
+            Knows <PokeLink id={id} name={name} type="move" />
+        </div>);
+    }
+    if (details.location) {
+        const name = details.location.replace(/\b(\w)/g, m => m.toUpperCase());
+        detailArr.push(<div key="location">
+            Near <PokeLink id={0} name={name} type="glossary" />
+        </div>);
+    }
+    return <div key={details} className={Styles.details}>
+        {detailArr}
+    </div>;
 };
 
 const parseEvo = (evolutions, id) => {

@@ -13,7 +13,7 @@ class PokeLink extends React.Component {
 
     render () {
         let name = null;
-        if (this.props.hasOwnProperty('name')) {
+        if (this.props.hasOwnProperty('name') && this.props.name) {
             const n = this.props.name.replace('-', ' ');
             name = n.replace(/\b(\w)/g, m => m.toUpperCase());
 

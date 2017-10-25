@@ -14,8 +14,9 @@
 [x]&nbsp;&nbsp;&nbsp;Add PokeEvo component
 [x]&nbsp;&nbsp;&nbsp;Update incorrect pokemon evolution data
 [x]&nbsp;&nbsp;&nbsp;Update pokemon held item data
-[ ]&nbsp;&nbsp;&nbsp;Add 7th gen data
-[ ]&nbsp;&nbsp;&nbsp;Extract evolution chains into separate file
+[x]&nbsp;&nbsp;&nbsp;Add 7th gen data
+[x]&nbsp;&nbsp;&nbsp;Extract evolution chains into separate file
+[ ]&nbsp;&nbsp;&nbsp;Add 'Show More' button to PokeTable
 [ ]&nbsp;&nbsp;&nbsp;Add DexItem and item data
 [ ]&nbsp;&nbsp;&nbsp;Update fetch and cloud/dex functions.
 [ ]&nbsp;&nbsp;&nbsp;Add missing svg files

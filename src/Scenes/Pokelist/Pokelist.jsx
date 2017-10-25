@@ -32,9 +32,10 @@ class Pokelist extends React.Component {
     }
 
     render () {
+        const data = Object.values(this.props.data).slice(0, this.props.length);
         const list = <PokeTable headers="pokelist"
                         listItem={PokelistItem}
-                        data={this.props.data.slice(0, this.props.length)} />;
+                        data={data} />;
         return <div>
             {list}
         </div>;

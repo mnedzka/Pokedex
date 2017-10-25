@@ -30,9 +30,9 @@ const onLoad = function onDomConentLoaded () {
     // ReactDOM render
     ReactDOM.render(
         <Provider store={Store}>
-        <App />
-    </Provider>,
-    document.querySelector('#app')
+            <App />
+        </Provider>,
+        document.querySelector('#app')
     );
     // Greet Console Readers
     console.log(`

@@ -8,12 +8,11 @@ import DexAbility from './Components/DexAbility/DexAbility.jsx';
 import DexMove from './Components/DexMove/DexMove.jsx';
 import DexEgg from './Components/DexEgg/DexEgg.jsx';
 import DexGlossary from './Components/DexGlossary/DexGlossary.jsx';
+import DexItem from './Components/DexItem/DexItem.jsx';
 
 class Pokedex extends React.Component {
     render () {
         switch (this.props.type) {
-            case 'pokedex':
-                return <DexHome />;
             case 'type':
                 return <DexType data={this.props.data} />;
             case 'pokemon':
@@ -24,6 +23,10 @@ class Pokedex extends React.Component {
                 return <DexAbility data={this.props.data} />;
             case 'egg_group':
                 return <DexEgg data={this.props.data} />;
+            case 'item':
+                return <DexItem daa={this.props.data} />
+            case 'pokedex':
+                return <DexHome />;
             case 'glossary':
                 return <DexGlossary />;
             default:

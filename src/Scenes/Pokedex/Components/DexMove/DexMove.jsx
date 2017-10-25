@@ -1,6 +1,7 @@
 import React from 'react';
 import PokeType from 'Components/PokeType/PokeType.jsx';
 import MoveClass from 'Components/MoveClass/MoveClass.jsx';
+import PokeLink from 'Components/PokeLink/PokeLink.jsx';
 import Styles from './DexMove.scss';
 import {
     PokeTable,
@@ -32,8 +33,14 @@ const createPokemonList = (pokeArr, learnBy) => {
     </div>;
 };
 
+const createTMLink = machine => {
+    const name = machine.name.toUpperCase();
+    return <PokeLink id={machine.id} name={name} type="item" />;
+};
+
 const DexMove = props => {
     const move = props.data;
+    console.log(move);
     const {egg, machine, tutor, level_up} = move.pokemon;
     const name = move.name.replace(/\b(\w)/g, m => m.toUpperCase());
     const moveData = [
@@ -43,7 +50,7 @@ const DexMove = props => {
         ['Accuracy', move.accuracy],
         ['Priority', move.priority],
         ['Effect Chance', move.effect_chance],
-        ['TM', move.tm ? move.tm.replace(/\D+/g, m => m.toUpperCase()) : '-'],
+        ['TM', move.machine ? createTMLink(move.machine) : '-'],
     ];
     return <div>
         <h3>Move: {name}</h3>
