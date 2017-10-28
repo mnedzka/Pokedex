@@ -1,9 +1,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import {
-    PokeTable,
-    PokelistItem,
-} from 'Components/PokeTable/PokeTable.jsx';
+import Styles from './DexSearchbar.scss';
+import PokeLink from 'Components/PokeLink/PokeLink.jsx';
 
 class DexSearchbar extends React.Component {
     constructor (props) {
@@ -24,6 +22,7 @@ class DexSearchbar extends React.Component {
         } else if (inp.length < 3) {
             return this.setState({
                 input : inp,
+                results : [],
             });
         } else {
             res = res.filter(p => p.name.includes(inp.toLowerCase()));
@@ -36,12 +35,19 @@ class DexSearchbar extends React.Component {
 
     render () {
         console.log(this);
-        const results = this.state.results.slice(0, 10);
+        const results = this.state.results.slice(0, 10).map(p => {
+            return <div key={p.id} className={Styles.row}>
+                <PokeLink id={p.id} name={p.name} info={'#' + p.id} type="pokemon" />
+            </div>;
+        });
         console.log(results);
-        return <div>
+        return <div className={Styles.wrapper}>
             <h5>Search Pokemon</h5>
-            <p>Use Pokemons' name or type '#(Number)' to search by pokedex number.</p>
-            <input onChange={this.handleInputChange} value={this.state.input} />
+            <p>Use Pokemons' name or type '#&lt;Number&gt;' to search by pokedex number.</p>
+            <input onChange={this.handleInputChange} value={this.state.input} placeholder="search" type="text" />
+            <div>
+                {results}
+            </div>
         </div>;
     }
 }

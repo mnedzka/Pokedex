@@ -21,7 +21,7 @@
 - [x] &nbsp;&nbsp;&nbsp;Add DexItem and item data
 - [x] &nbsp;&nbsp;&nbsp;Update fetch and cloud/dex functions.
 - [x] &nbsp;&nbsp;&nbsp;Add Pokemon Forms
-- [ ] &nbsp;&nbsp;&nbsp;Pokemon search in DexHome
+- [x] &nbsp;&nbsp;&nbsp;Pokemon search in DexHome
 - [ ] &nbsp;&nbsp;&nbsp;Add 'back' button
 - [ ] &nbsp;&nbsp;&nbsp;Add 'prev/next' buttons to DexPokemon
 - [ ] &nbsp;&nbsp;&nbsp;Add Compare component

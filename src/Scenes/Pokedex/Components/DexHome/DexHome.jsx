@@ -12,7 +12,9 @@ export default class DexHome extends React.Component {
                     <PokeLink id={0} type="glossary" name="Glossary" />
                 </span>
             </div>
-            <DexSearchbar />
+            <div className={Styles.section}>
+                <DexSearchbar />
+            </div>
         </div>;
     }
 }

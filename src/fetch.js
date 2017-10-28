@@ -118,7 +118,7 @@ export default class PokeCache {
         const match = storedData ? storedData.find(e => e.id === id) : false;
         const needsMoves = ['type', 'pokemon'].includes(type);
         if (match && !needsMoves) {
-            return this.getData(match);
+            return this.collectData(match);
         }
         if (needsMoves) {
             const localMoves = loadStorage('move') || [];
