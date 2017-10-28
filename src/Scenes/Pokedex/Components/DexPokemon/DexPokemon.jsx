@@ -41,7 +41,11 @@ const mapHeldItems = heldItemsArr => {
         return '-';
     }
     return heldItemsArr.map(item => {
-        return <PokeLink key={item.id} id={item.id} name={item.name} type="item" />
+        return <PokeLink key={item.id}
+                    id={item.id}
+                    name={item.name}
+                    info={`${item.rarity}%`}
+                    type="item" />
     });
 };
 
@@ -56,6 +60,31 @@ const createTable = data => {
             })}
         </tbody>
     </table>;
+};
+
+const getMoveList = (moveArr, method) => {
+    if (!moveArr.length) {
+        return null;
+    }
+    return <div className={Styles.section}>
+        <h5>Moves learned by {method}</h5>
+        <PokeTable headers="movelist" listItem={MovelistItem} data={moveArr} />
+    </div>;
+};
+
+const mapPokemonForms = (forms, id) => {
+    if (forms.length < 2) {
+        return null;
+    }
+    const otherForms = forms.filter(f => f.id !== id).map(f => {
+        return <PokeLink key={f.id} name={f.name} id={f.id} type="pokemon">
+            <PokeImg id={f.id} />
+        </PokeLink>;
+    });
+    return <div className={Styles.forms}>
+        <h5>Other forms</h5>
+        {otherForms}
+    </div>;
 };
 
 const DexPokemon = props => {
@@ -91,6 +120,7 @@ const DexPokemon = props => {
         special_defense.base,
         speed.base,
     ];
+
     return <div>
         <h3>
             Pokemon: {data.name.replace(/\b(\w)/g, m => m.toUpperCase())}
@@ -101,9 +131,8 @@ const DexPokemon = props => {
                 {data.flavor_text}
             </span>
         </div>
-        <div className={Styles.evolution}>
-            <PokeEvo data={data.evolution_chain} id={data.id} />
-        </div>
+        {mapPokemonForms(data.forms, data.id)}
+        <PokeEvo data={data.evolution_chain} id={data.id} />
         <div className={Styles.info}>
             <div className={Styles.dataSection}>
                 <h5>Pokedex Data</h5>
@@ -121,22 +150,10 @@ const DexPokemon = props => {
         <div className={Styles.about}>
             <DamageRelations type={data.types} />
         </div>
-        <div className={Styles.section}>
-            <h5>Moves learned by lvl</h5>
-            <PokeTable headers="movelist" listItem={MovelistItem} data={data.moves.level_up} />
-        </div>
-        <div className={Styles.section}>
-            <h5>Moves learned by breeding</h5>
-            <PokeTable headers="movelist" listItem={MovelistItem} data={data.moves.egg} />
-        </div>
-        <div className={Styles.section}>
-            <h5>Moves learned by TM</h5>
-            <PokeTable headers="movelist" listItem={MovelistItem} data={data.moves.machine} />
-        </div>
-        <div className={Styles.section}>
-            <h5>Moves learned by Tutor</h5>
-            <PokeTable headers="movelist" listItem={MovelistItem} data={data.moves.tutor} />
-        </div>
+        {getMoveList(data.moves.level_up, 'level up')}
+        {getMoveList(data.moves.egg, 'breeding')}
+        {getMoveList(data.moves.machine, 'TM')}
+        {getMoveList(data.moves.tutor, 'tutor')}
     </div>;
 };
 

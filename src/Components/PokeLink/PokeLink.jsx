@@ -12,24 +12,28 @@ class PokeLink extends React.Component {
     };
 
     render () {
-        let name = null;
-        if (this.props.hasOwnProperty('name') && this.props.name) {
-            const n = this.props.name.replace('-', ' ');
-            name = n.replace(/\b(\w)/g, m => m.toUpperCase());
-
+        let content = null;
+        let tooltip = null;
+        let infoText = null;
+        const name = this.props.name.replace('-', ' ').replace(/\b(\w)/g, m => m.toUpperCase());
+        if (this.props.hasOwnProperty('children')) {
+            content = this.props.children;
+            tooltip = <span className={Styles.tooltip}>{name}</span>;
+        } else {
+            content = name;
         }
-        const hasInfoText = this.props.hasOwnProperty('info') && this.props.info;
-        const infoText = hasInfoText ? ` ${this.props.info}` : null;
-        return <div>
-            <span
-                onClick={this.handlePokeLinkClick}
-                className={Styles.redirect}>
-                {name}
-                {this.props.children}
-                <span className={Styles.infoText}>
-                    {infoText}
-                </span>
+        if (this.props.hasOwnProperty('info') && this.props.info) {
+            infoText = <span className={Styles.infoText}>
+                {' ' + this.props.info}
             </span>
+        }
+        return <div className={Styles.wrapper}>
+            <button onClick={this.handlePokeLinkClick}
+                    className={Styles.redirect}>
+            {content}
+            </button>
+            {tooltip}
+            {infoText}
         </div>;
     }
 }

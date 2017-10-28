@@ -2,11 +2,11 @@ import React from 'react';
 import Styles from './PokeStats.scss';
 
 const mapData = statArr => {
-    const maxStats = [255, 165, 230, 154, 230, 160];
+    const maxStats = [255, 181, 230, 173, 230, 160];
     const statText = ['HP', 'Attack', 'Defense', 'Sp. Attack', 'Sp. Defense', 'Speed'];
     return statArr.map((e, i) => {
         const max = maxStats[i];
-        const width = ~~((e / max) * 100);
+        const width = Math.min(~~((e / max) * 100), 100);
         const rg = [200 - ~~(width * 1.5), 100 + ~~(width * 1.4)];
         const style = {
             width : `${width}%`,

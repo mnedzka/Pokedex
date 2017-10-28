@@ -1,11 +1,38 @@
-.redirect {
-    cursor: pointer;
+@import '~/../src/styles/partials/_variables.scss';
 
-    &:hover {
+.wrapper {
+    position: relative;
+}
+
+.redirect {
+    border: none;
+    background: none;
+    padding: 0;
+    color: white;
+
+    &:hover,
+    &:focus {
         font-weight: bold;
+
+        &+ .tooltip {
+            visibility: visible;
+            opacity: 1;
+        }
     }
 }
 
 .infoText {
     font-size: 0.75rem;
+}
+
+.tooltip {
+    position: absolute;
+    visibility: hidden;
+    opacity: 0;
+    background: $blue;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    text-align: center;
+    transition: opacity 0.3s;
 }

@@ -34,7 +34,7 @@ class App extends React.Component {
             if (page.currentPage === 'pokelist') {
                 this.props.updateList(data);
             } else {
-                this.props.updateDex(data);
+                this.props.updateDex(data, page.dexItemType);
             }
         });
     };
@@ -43,28 +43,18 @@ class App extends React.Component {
         const type = this.props.page.dexItemType;
         const id = this.props.page.dexItemId;
         const data = this.props.page.dexItemData;
-        if (!data) {
+        const dataType = this.props.page.dexItemDataType;
+        const {dexItemType, dexItemId, dexItemData, dexItemDataType} = this.props.page;
+        if (!dexItemData) {
             console.warn('No data');
             return true;
         }
-        if (data.id !== id) {
+        if (dexItemData.id !== dexItemId) {
             console.warn('Data.id is not equal to props.dexItemId');
             return true;
         }
-        if (!data.hasOwnProperty('sprites') && type === 'pokemon') {
-            console.warn('Data does not have property sprites, and dexItemType is pokemon');
-            return true;
-        }
-        if (!data.hasOwnProperty('damage_relations') && type === 'type') {
-            console.warn('Data does not have property dmg_rel, and dexItemType is type');
-            return true;
-        }
-        if (!data.hasOwnProperty('pp') && type === 'move') {
-            console.warn('Data does not have property pp and dexItemType is move');
-            return true;
-        }
-        if (!data.hasOwnProperty('pokemon') && type === 'egg_group') {
-            console.log('Data type is egg_group, data does not have pokemons property');
+        if (dexItemType !== dexItemDataType) {
+            console.warn('DexItemType not equal DexItemDataType');
             return true;
         }
         return false;
@@ -74,9 +64,7 @@ class App extends React.Component {
         const {page, list} = this.props;
         let Content = Loader;
         let title = null;
-        console.log(this.props);
         if (page.currentPage === 'pokelist') {
-            console.log('IT"S A MUTAFUKAN LIST')
             title = 'Pokelist';
             if (!list.data) {
                 this.getData();
@@ -113,7 +101,7 @@ const mapStateToProps = state => {
 
 const mapDispatchToProps = dispatch => {
     return {
-        updateDex : data => dispatch(updateDexData(data)),
+        updateDex : (data, type) => dispatch(updateDexData(data, type)),
         updateList : data => dispatch(updateData(data)),
     };
 };

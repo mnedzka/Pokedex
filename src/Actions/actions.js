@@ -2,7 +2,6 @@ import {
     PAGE_CHANGE,
     PAGE_SHOW_IN_DEX,
     PAGE_UPDATE_DEX_DATA,
-    LIST_SET_LENGTH,
     LIST_UPDATE_DATA,
 } from './actionTypes.js';
 
@@ -21,21 +20,15 @@ const showInPokedex = function showInfoInPokedexPage (pokedexPageData) {
     };
 };
 
-const updateDexData = function updatePokedexItemData (dexData) {
+const updateDexData = function updatePokedexItemData (dexData, type) {
     return {
         type : PAGE_UPDATE_DEX_DATA,
         payload : dexData,
+        dataType : type,
     };
 };
 
 // STORE.POKEMONLIST
-const setLength = function setPokemonListLengthTo (newLength) {
-    return {
-        type : LIST_SET_LENGTH,
-        payload : newLength,
-    };
-};
-
 const updateData = function updatePokemonListData (data) {
     return {
         type : LIST_UPDATE_DATA,
@@ -47,6 +40,5 @@ export {
     changePage,
     showInPokedex,
     updateDexData,
-    setLength,
     updateData,
 }

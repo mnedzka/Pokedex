@@ -24,7 +24,7 @@ class Pokedex extends React.Component {
             case 'egg_group':
                 return <DexEgg data={this.props.data} />;
             case 'item':
-                return <DexItem daa={this.props.data} />
+                return <DexItem data={this.props.data} />
             case 'pokedex':
                 return <DexHome />;
             case 'glossary':

@@ -67,8 +67,8 @@ const mapEvoDetails = details => {
         detailArr.push(<div key="turn">Turn upside down</div>);
     }
     if (details.item) {
-        const id = d.item.id;
-        const name = d.item.name.replace(/\b(\w)/g, m => m.toUpperCase());
+        const id = details.item.id;
+        const name = details.item.name.replace(/\b(\w)/g, m => m.toUpperCase());
         detailArr.push(<div key="item">
             Use <PokeLink id={id} name={name} type="item" />
         </div>);
@@ -139,7 +139,7 @@ const parseEvo = (evolutions, id) => {
         return <div key={i} className={Styles.row}>{
             evo.map(poke => {
                 let details = i ? <div className={Styles.arrow}>{mapEvoDetails(poke.details)}</div> : null;
-                let pokeImg = <PokeLink id={poke.id} type="pokemon">
+                let pokeImg = <PokeLink name={poke.name} id={poke.id} type="pokemon">
                     <PokeImg id={poke.id} />
                 </PokeLink>;
                 if (id === poke.id) {
@@ -155,10 +155,12 @@ const parseEvo = (evolutions, id) => {
 };
 
 const PokeEvo = props => {
-    const {chain} = props.data;
+    const {chain, id} = props.data;
+    if (props.id > 802) return null;
     const evolutions = getEvolutions(chain, evolutions);
+    if (evolutions.length < 2) return null;
     console.log(evolutions);
-    return <div>
+    return <div className={Styles.evolution}>
         {parseEvo(evolutions, props.id)}
     </div>;
 }

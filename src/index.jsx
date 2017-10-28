@@ -26,7 +26,10 @@ const onLoad = function onDomConentLoaded () {
     };
     // Load pokelist data
     const fet = new PokeCache();
-    fet.get();
+    // LoadPokelist
+    // LoadPokelist
+    // LoadPokelist
+    fet.get().then(d => Store.dispatch({type : 'LIST_UPDATE_DATA', payload: d}));
     // ReactDOM render
     ReactDOM.render(
         <Provider store={Store}>

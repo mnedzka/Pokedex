@@ -39,6 +39,7 @@ class PokeTable extends React.Component {
         this.state = {
             sortBy : hasLvl ? 'level_learned_at' : 'id',
             sortDir : 1,
+            length : 50,
         };
     }
 
@@ -77,6 +78,12 @@ class PokeTable extends React.Component {
         window.addEventListener('mouseup', handleMouseUp);
     };
 
+    handleShowMoreClick = () => {
+        this.setState({
+            length : this.state.length + 50,
+        });
+    };
+
     createHeaders = headerArray => {
         const th = [];
         for (let [i, el] of headerArray.entries()) {
@@ -108,9 +115,9 @@ class PokeTable extends React.Component {
     };
 
     render () {
-        let data = this.props.data.slice();
+        let data = this.props.data.slice(0, this.state.length);
         if (!data.length) {
-            return '--';
+            return null;
         }
         const sortBy = this.state.sortBy;
         data = data.sort((a, b) => {
@@ -125,6 +132,17 @@ class PokeTable extends React.Component {
             return <Item key={el.name} data={el} />
         });
         let headers = this.headers[this.props.headers];
+        let showMore = null;
+        if (this.state.length < this.props.data.length) {
+            showMore = <tr>
+                <td colSpan={headers.length}>
+                    <button onClick={this.handleShowMoreClick}
+                            className={Styles.more}>
+                        Show More
+                    </button>
+                </td>
+            </tr>;
+        }
         return <div className={Styles.wrapper} onMouseDown={this.handleMouseDown}>
             <table className={Styles.table}>
                 <thead className={Styles.thead}>
@@ -132,6 +150,7 @@ class PokeTable extends React.Component {
                 </thead>
                 <tbody className={Styles.tbody}>
                     {listContent}
+                    {showMore}
                 </tbody>
             </table>
         </div>;

@@ -9,6 +9,7 @@ const initialState = {
     dexItemType : null,
     dexItemId : null,
     dexItemData : null,
+    dexItemDataType : null,
 };
 
 const pageReducer = function pageChangeReducer (state = initialState, action) {
@@ -34,6 +35,7 @@ const pageReducer = function pageChangeReducer (state = initialState, action) {
             return {
                 ...state,
                 dexItemData : action.payload,
+                dexItemDataType : action.dataType,
             };
         default:
             return state;
