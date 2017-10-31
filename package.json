@@ -1,6 +1,6 @@
 {
-  "name": "nasajs",
-  "version": "0.0.1",
+  "name": "pokedex",
+  "version": "0.5.0",
   "description": "None",
   "main": "index.html",
   "scripts": {

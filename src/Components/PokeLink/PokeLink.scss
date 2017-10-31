@@ -4,19 +4,37 @@
     position: relative;
 }
 
+
 .redirect {
-    border: none;
-    background: none;
-    padding: 0;
-    color: white;
+    @extend .button;
 
     &:hover,
     &:focus {
-        font-weight: bold;
+        .name {
+            font-weight: bold;
+        }
 
         &+ .tooltip {
             visibility: visible;
             opacity: 1;
+        }
+    }
+}
+
+.search {
+    width: 100%;
+
+    .redirect {
+        width: 100%;
+        text-align: left;
+        padding: 0.25rem;
+
+        &:hover {
+            box-shadow: 0 0 1px $grey;
+        }
+
+        img {
+            vertical-align: text-bottom;
         }
     }
 }
@@ -34,5 +52,6 @@
     left: 0;
     right: 0;
     text-align: center;
-    transition: opacity 0.3s;
+    transition: all 0.3s;
+    pointer-events: none;
 }

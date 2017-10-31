@@ -1,7 +1,7 @@
 import React from 'react';
 import Styles from './PokeType.scss';
 import { connect } from 'react-redux';
-import { showInPokedex } from 'Actions/actions.js';
+import { showInPokedex } from 'Actions';
 
 class PokeType extends React.Component {
     shouldComponentUpdate (nextProps) {
@@ -20,9 +20,6 @@ class PokeType extends React.Component {
 
     render () {
         return this.props.type.map((el, i) => {
-            if (el.id === undefined) {
-                console.warn('POKETYPE ID UNDEFINED');
-            }
             const name = el.name;
             const text = name.replace(/\b(\w)/g, m => m.toUpperCase());
             return <span key={i}

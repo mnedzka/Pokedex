@@ -2,6 +2,7 @@ import {
     PAGE_CHANGE,
     PAGE_SHOW_IN_DEX,
     PAGE_UPDATE_DEX_DATA,
+    PAGE_BACK,
     LIST_UPDATE_DATA,
 } from './actionTypes.js';
 

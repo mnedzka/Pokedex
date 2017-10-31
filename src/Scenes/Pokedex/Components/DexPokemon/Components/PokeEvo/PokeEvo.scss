@@ -31,7 +31,6 @@
 }
 
 .evolution {
-    @extend .section;
+    @extend .about;
     text-align: center;
-    background-color: $blue;
 }

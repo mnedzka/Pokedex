@@ -1,0 +1,11 @@
+@import '~/../src/styles/partials/_variables.scss';
+
+.wrapper {
+    @extend .about;
+    text-align: center;
+}
+
+.item {
+    display: inline-block;
+    width: 5rem;
+}

@@ -1,7 +1,12 @@
 import React from 'react';
 import Styles from './PokeEvo.scss';
-import PokeImg from 'Components/PokeImg/PokeImg.jsx';
-import PokeLink from 'Components/PokeLink/PokeLink.jsx';
+import {
+    PokeImg,
+    PokeLink,
+} from 'Components';
+import {
+    formatName,
+} from 'src/utils.js';
 
 const getEvolutions = (chain, arr) => {
     const allEvoArr = [];
@@ -42,7 +47,7 @@ const mapEvoDetails = details => {
     }
     if (details.time_of_day.length) {
         detailArr.push(<div key="time">
-            {details.time_of_day.replace(/\b(\w)/g, m => m.toUpperCase())}
+            {formatName(details.time_of_day)}
         </div>);
     }
     if (details.gender) {
@@ -68,14 +73,14 @@ const mapEvoDetails = details => {
     }
     if (details.item) {
         const id = details.item.id;
-        const name = details.item.name.replace(/\b(\w)/g, m => m.toUpperCase());
+        const name = formatName(details.item.name);
         detailArr.push(<div key="item">
             Use <PokeLink id={id} name={name} type="item" />
         </div>);
     }
     if (details.known_move_type) {
         const id = details.known_move_type.id;
-        const name = details.known_move_type.name.replace(/\b(\w)/g, m => m.toUpperCase());
+        const name = formatName(details.known_move_type.name);
         detailArr.push(<div key="moveType">
             Knows <PokeLink id={id} name={name} type="type" /> move
         </div>);
@@ -87,21 +92,21 @@ const mapEvoDetails = details => {
     }
     if (details.party_type) {
         const id = details.party_type.id;
-        const name = details.party_type.name.replace(/\b(\w)/g, m => m.toUpperCase());
+        const name = formatName(details.party_type.name);
         detailArr.push(<div key="partyType">
             With <PokeLink id={id} name={name} type="type" /> pokemon in party.
         </div>);
     }
     if (details.trade_species) {
         const id = details.trade_species.id;
-        const name = details.trade_species.name.replace(/\b(\w)/g, m => m.toUpperCase());
+        const name = formatName(details.trade_species.name);
         detailArr.push(<div key="tradeSpec">
             For <PokeLink id={id} name={name} type="pokemon" />
         </div>);
     }
     if (details.party_species) {
         const id = details.party_species.id;
-        const name = details.party_species.name.replace(/\b(\w)/g, m => m.toUpperCase());
+        const name = formatName(details.party_species.name);
         detailArr.push(<div key="partySpec">
             With <PokeLink id={id} name={name} type="pokemon" /> in party
         </div>);
@@ -111,22 +116,22 @@ const mapEvoDetails = details => {
     }
     if (details.held_item) {
         const id = details.held_item.id;
-        const name = details.held_item.name.replace(/\b(\w)/g, m => m.toUpperCase());
+        const name = formatName(details.held_item.name);
         detailArr.push(<div key="heldItem">
             Has <PokeLink id={id} name={name} type="item" />
         </div>);
     }
     if (details.known_move) {
         const id = details.known_move.id;
-        const name = details.known_move.name.replace(/\b(\w)/g, m => m.toUpperCase());
+        const name = formatName(details.known_move.name);
         detailArr.push(<div key="move">
             Knows <PokeLink id={id} name={name} type="move" />
         </div>);
     }
     if (details.location) {
-        const name = details.location.replace(/\b(\w)/g, m => m.toUpperCase());
+        const name = formatName(details.location);
         detailArr.push(<div key="location">
-            Near <PokeLink id={0} name={name} type="glossary" />
+            Near <PokeLink id="evolution" name={name} type="wiki" />
         </div>);
     }
     return <div key={details} className={Styles.details}>
@@ -139,7 +144,7 @@ const parseEvo = (evolutions, id) => {
         return <div key={i} className={Styles.row}>{
             evo.map(poke => {
                 let details = i ? <div className={Styles.arrow}>{mapEvoDetails(poke.details)}</div> : null;
-                let pokeImg = <PokeLink name={poke.name} id={poke.id} type="pokemon">
+                let pokeImg = <PokeLink name={poke.name} id={poke.id} type="pokemon" role="evolution">
                     <PokeImg id={poke.id} />
                 </PokeLink>;
                 if (id === poke.id) {

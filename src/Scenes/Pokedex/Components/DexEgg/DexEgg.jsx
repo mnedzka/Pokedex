@@ -2,12 +2,15 @@ import React from 'react';
 import {
     PokeTable,
     PokelistItem,
-} from 'Components/PokeTable/PokeTable.jsx';
+} from 'Components';
+import {
+    formatName,
+} from 'src/utils.js';
 
 export default class DexEgg extends React.Component {
     render () {
         const group = this.props.data;
-        const name = group.name.replace(/\b(\w)/g, m => m.toUpperCase());
+        const name = formatName(group.name);
         console.log(this);
         return <div>
             <h3>Egg Group: {name}</h3>

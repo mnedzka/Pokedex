@@ -1,0 +1,22 @@
+@import '~/../src/styles/partials/_variables.scss';
+
+.main {
+    border-collapse: collapse;
+    width: 90%;
+    margin: 0 auto;
+    max-width: 25rem;
+
+    td {
+        vertical-align: middle;
+        padding: 0.25rem 0.5rem;
+        border-bottom: 1px solid $grey;
+
+        &:nth-child(even) {
+            text-align: left;
+        }
+
+        &:nth-child(odd) {
+            text-align: right;
+        }
+    }
+}

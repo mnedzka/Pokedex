@@ -1,11 +1,11 @@
 import React from 'react';
 import Styles from './DexType.scss';
-import DamageRelations from 'Components/DamageRelations/DamageRelations.jsx';
 import {
+    DamageRelations,
     PokeTable,
     PokelistItem,
     MovelistItem,
-} from 'Components/PokeTable/PokeTable.jsx';
+} from 'Components';
 
 const DexType = props => {
     const {name, damage, pokemon, moves} = props.data;
@@ -22,7 +22,7 @@ const DexType = props => {
                 Defense damage chart shows how effective are other type attacks against {name} type pokemon. For example: 0.5 stands for 50% of total damage is received and this means attack is not very effective against {name} type pokemon.
             </p>
         </div>
-        <div className={Styles.relations}>
+        <div className={Styles.about}>
             <DamageRelations offense type={[props.data]} />
         </div>
         <div className={Styles.section}>

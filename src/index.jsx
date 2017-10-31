@@ -2,6 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import App from './App.jsx';
 import { Provider } from 'react-redux';
+import { updateData } from 'Actions';
 import Store from './store.js';
 import PokeCache from './fetch.js';
 
@@ -25,11 +26,7 @@ const onLoad = function onDomConentLoaded () {
         },
     };
     // Load pokelist data
-    const fet = new PokeCache();
-    // LoadPokelist
-    // LoadPokelist
-    // LoadPokelist
-    fet.get().then(d => Store.dispatch({type : 'LIST_UPDATE_DATA', payload: d}));
+    new PokeCache().get().then(d => Store.dispatch(updateData(d)));
     // ReactDOM render
     ReactDOM.render(
         <Provider store={Store}>

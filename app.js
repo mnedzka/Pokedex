@@ -60,7 +60,7 @@
 /******/ 	__webpack_require__.p = "";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 39);
+/******/ 	return __webpack_require__(__webpack_require__.s = 35);
 /******/ })
 /************************************************************************/
 /******/ ([
@@ -71,9 +71,9 @@
 /* WEBPACK VAR INJECTION */(function(process) {
 
 if (process.env.NODE_ENV === 'production') {
-  module.exports = __webpack_require__(41);
+  module.exports = __webpack_require__(37);
 } else {
-  module.exports = __webpack_require__(42);
+  module.exports = __webpack_require__(38);
 }
 
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(1)))
@@ -275,6 +275,80 @@ process.umask = function() { return 0; };
 "use strict";
 
 
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+exports.PokeType = exports.MovelistItem = exports.PokelistItem = exports.PokeTable = exports.PokeLink = exports.PokeImg = exports.MoveClass = exports.Loader = exports.DataTable = exports.DamageRelations = undefined;
+
+var _DamageRelations = __webpack_require__(79);
+
+var _DamageRelations2 = _interopRequireDefault(_DamageRelations);
+
+var _DataTable = __webpack_require__(82);
+
+var _DataTable2 = _interopRequireDefault(_DataTable);
+
+var _Loader = __webpack_require__(84);
+
+var _Loader2 = _interopRequireDefault(_Loader);
+
+var _MoveClass = __webpack_require__(86);
+
+var _MoveClass2 = _interopRequireDefault(_MoveClass);
+
+var _PokeImg = __webpack_require__(88);
+
+var _PokeImg2 = _interopRequireDefault(_PokeImg);
+
+var _PokeLink = __webpack_require__(90);
+
+var _PokeLink2 = _interopRequireDefault(_PokeLink);
+
+var _PokeTable = __webpack_require__(33);
+
+var _PokeType = __webpack_require__(97);
+
+var _PokeType2 = _interopRequireDefault(_PokeType);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+exports.DamageRelations = _DamageRelations2.default;
+exports.DataTable = _DataTable2.default;
+exports.Loader = _Loader2.default;
+exports.MoveClass = _MoveClass2.default;
+exports.PokeImg = _PokeImg2.default;
+exports.PokeLink = _PokeLink2.default;
+exports.PokeTable = _PokeTable.PokeTable;
+exports.PokelistItem = _PokeTable.PokelistItem;
+exports.MovelistItem = _PokeTable.MovelistItem;
+exports.PokeType = _PokeType2.default;
+
+/***/ }),
+/* 3 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__components_Provider__ = __webpack_require__(53);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__components_connectAdvanced__ = __webpack_require__(25);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__connect_connect__ = __webpack_require__(57);
+/* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "Provider", function() { return __WEBPACK_IMPORTED_MODULE_0__components_Provider__["b"]; });
+/* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "createProvider", function() { return __WEBPACK_IMPORTED_MODULE_0__components_Provider__["a"]; });
+/* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "connectAdvanced", function() { return __WEBPACK_IMPORTED_MODULE_1__components_connectAdvanced__["a"]; });
+/* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "connect", function() { return __WEBPACK_IMPORTED_MODULE_2__connect_connect__["a"]; });
+
+
+
+
+
+
+/***/ }),
+/* 4 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
 /**
  * Copyright (c) 2013-present, Facebook, Inc.
  *
@@ -311,7 +385,7 @@ emptyFunction.thatReturnsArgument = function (arg) {
 module.exports = emptyFunction;
 
 /***/ }),
-/* 3 */
+/* 5 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -371,26 +445,7 @@ module.exports = invariant;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(1)))
 
 /***/ }),
-/* 4 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__components_Provider__ = __webpack_require__(57);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__components_connectAdvanced__ = __webpack_require__(27);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__connect_connect__ = __webpack_require__(61);
-/* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "Provider", function() { return __WEBPACK_IMPORTED_MODULE_0__components_Provider__["b"]; });
-/* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "createProvider", function() { return __WEBPACK_IMPORTED_MODULE_0__components_Provider__["a"]; });
-/* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "connectAdvanced", function() { return __WEBPACK_IMPORTED_MODULE_1__components_connectAdvanced__["a"]; });
-/* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "connect", function() { return __WEBPACK_IMPORTED_MODULE_2__connect_connect__["a"]; });
-
-
-
-
-
-
-/***/ }),
-/* 5 */
+/* 6 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -399,9 +454,9 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 Object.defineProperty(exports, "__esModule", {
     value: true
 });
-exports.updateData = exports.setLength = exports.updateDexData = exports.showInPokedex = exports.changePage = undefined;
+exports.updateData = exports.updateDexData = exports.showInPokedex = exports.changePage = undefined;
 
-var _actionTypes = __webpack_require__(19);
+var _actionTypes = __webpack_require__(17);
 
 // STORE.PAGE
 var changePage = function changeCurrentPage(newPage) {
@@ -418,21 +473,15 @@ var showInPokedex = function showInfoInPokedexPage(pokedexPageData) {
     };
 };
 
-var updateDexData = function updatePokedexItemData(dexData) {
+var updateDexData = function updatePokedexItemData(dexData, type) {
     return {
         type: _actionTypes.PAGE_UPDATE_DEX_DATA,
-        payload: dexData
+        payload: dexData,
+        dataType: type
     };
 };
 
 // STORE.POKEMONLIST
-var setLength = function setPokemonListLengthTo(newLength) {
-    return {
-        type: _actionTypes.LIST_SET_LENGTH,
-        payload: newLength
-    };
-};
-
 var updateData = function updatePokemonListData(data) {
     return {
         type: _actionTypes.LIST_UPDATE_DATA,
@@ -443,227 +492,7 @@ var updateData = function updatePokemonListData(data) {
 exports.changePage = changePage;
 exports.showInPokedex = showInPokedex;
 exports.updateDexData = updateDexData;
-exports.setLength = setLength;
 exports.updateData = updateData;
-
-/***/ }),
-/* 6 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-    value: true
-});
-exports.MovelistItem = exports.PokelistItem = exports.PokeTable = undefined;
-
-var _slicedToArray = function () { function sliceIterator(arr, i) { var _arr = []; var _n = true; var _d = false; var _e = undefined; try { for (var _i = arr[Symbol.iterator](), _s; !(_n = (_s = _i.next()).done); _n = true) { _arr.push(_s.value); if (i && _arr.length === i) break; } } catch (err) { _d = true; _e = err; } finally { try { if (!_n && _i["return"]) _i["return"](); } finally { if (_d) throw _e; } } return _arr; } return function (arr, i) { if (Array.isArray(arr)) { return arr; } else if (Symbol.iterator in Object(arr)) { return sliceIterator(arr, i); } else { throw new TypeError("Invalid attempt to destructure non-iterable instance"); } }; }();
-
-var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-
-var _react = __webpack_require__(0);
-
-var _react2 = _interopRequireDefault(_react);
-
-var _PokeTable = __webpack_require__(92);
-
-var _PokeTable2 = _interopRequireDefault(_PokeTable);
-
-var _PokelistItem = __webpack_require__(93);
-
-var _PokelistItem2 = _interopRequireDefault(_PokelistItem);
-
-var _MovelistItem = __webpack_require__(96);
-
-var _MovelistItem2 = _interopRequireDefault(_MovelistItem);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
-
-function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
-
-var PokeTable = function (_React$Component) {
-    _inherits(PokeTable, _React$Component);
-
-    function PokeTable(props) {
-        _classCallCheck(this, PokeTable);
-
-        var _this = _possibleConstructorReturn(this, (PokeTable.__proto__ || Object.getPrototypeOf(PokeTable)).call(this, props));
-
-        _this.setSorting = function (sortBy) {
-            _this.setState({
-                sortBy: sortBy,
-                sortDir: _this.state.sortDir * -1
-            });
-        };
-
-        _this.handleMouseDown = function (event) {
-            var t = event.target;
-            while (!/PokeTable__wrapper/.test(t.className)) {
-                t = t.parentElement;
-                if (/Layout/.test(t.className)) {
-                    return;
-                }
-            }
-            var wrapper = t;
-            var mX = event.screenX;
-            var width = wrapper.clientWidth;
-            var totalWidth = wrapper.scrollWidth;
-            if (width === totalWidth) {
-                return;
-            }
-            var currentScroll = wrapper.scrollLeft;
-            var handleMouseMove = function handleMouseMove(ev) {
-                var mmoveX = ev.screenX;
-                wrapper.scrollLeft = currentScroll + (totalWidth - width) * ((mX - mmoveX) / (width >> 1));
-            };
-            var handleMouseUp = function handleMouseUp(ev) {
-                window.removeEventListener('mouseup', handleMouseUp);
-                window.removeEventListener('mousemove', handleMouseMove);
-            };
-            window.addEventListener('mousemove', handleMouseMove);
-            window.addEventListener('mouseup', handleMouseUp);
-        };
-
-        _this.createHeaders = function (headerArray) {
-            var th = [];
-
-            var _loop = function _loop(i, el) {
-                var sortBy = el[0].toLowerCase().replace(' ', '_');
-                if (el[0] === '#') {
-                    sortBy = 'id';
-                } else if (el[0] === 'Lvl') {
-                    sortBy = 'level_learned_at';
-                }
-                var cName = null;
-                var callback = null;
-                var sortDirectionText = null;
-                if (el[1]) {
-                    cName = _PokeTable2.default.sort;
-                    callback = function callback() {
-                        _this.setSorting(sortBy);
-                    };
-                    if (_this.state.sortBy === sortBy) {
-                        if (_this.state.sortDir === 1) {
-                            sortDirectionText = '↓';
-                        } else {
-                            sortDirectionText = '↑';
-                        }
-                    }
-                }
-                th.push(_react2.default.createElement(
-                    'th',
-                    { key: i, className: cName, onClick: callback },
-                    el[0],
-                    sortDirectionText
-                ));
-            };
-
-            var _iteratorNormalCompletion = true;
-            var _didIteratorError = false;
-            var _iteratorError = undefined;
-
-            try {
-                for (var _iterator = headerArray.entries()[Symbol.iterator](), _step; !(_iteratorNormalCompletion = (_step = _iterator.next()).done); _iteratorNormalCompletion = true) {
-                    var _ref = _step.value;
-
-                    var _ref2 = _slicedToArray(_ref, 2);
-
-                    var i = _ref2[0];
-                    var el = _ref2[1];
-
-                    _loop(i, el);
-                }
-            } catch (err) {
-                _didIteratorError = true;
-                _iteratorError = err;
-            } finally {
-                try {
-                    if (!_iteratorNormalCompletion && _iterator.return) {
-                        _iterator.return();
-                    }
-                } finally {
-                    if (_didIteratorError) {
-                        throw _iteratorError;
-                    }
-                }
-            }
-
-            return _react2.default.createElement(
-                'tr',
-                null,
-                th
-            );
-        };
-
-        var hasLvl = false;
-        if (_this.props.data.length && _this.props.data[0].hasOwnProperty('level_learned_at') && _this.props.data[0].level_learned_at) {
-            hasLvl = true;
-        }
-        _this.headers = {
-            pokelist: [['', false], ['#', true], ['Name', false], ['Type', false], ['HP', true], ['Attack', true], ['Defense', true], ['Special Attack', true], ['Special Defense', true], ['Speed', true]],
-            movelist: [['#', true], ['Name', false], ['Lvl', hasLvl ? true : false], ['Power', true], ['PP', true], ['Accuracy', true], ['Class', false], ['Type', false]]
-        };
-        _this.state = {
-            sortBy: hasLvl ? 'level_learned_at' : 'id',
-            sortDir: 1
-        };
-        return _this;
-    }
-
-    _createClass(PokeTable, [{
-        key: 'render',
-        value: function render() {
-            var _this2 = this;
-
-            var data = this.props.data.slice();
-            if (!data.length) {
-                return '--';
-            }
-            var sortBy = this.state.sortBy;
-            data = data.sort(function (a, b) {
-                if (_this2.state.sortDir === 1) {
-                    return a[sortBy] - b[sortBy];
-                } else {
-                    return b[sortBy] - a[sortBy];
-                }
-            });
-            var Item = this.props.listItem;
-            var listContent = data.map(function (el, i) {
-                return _react2.default.createElement(Item, { key: el.name, data: el });
-            });
-            var headers = this.headers[this.props.headers];
-            return _react2.default.createElement(
-                'div',
-                { className: _PokeTable2.default.wrapper, onMouseDown: this.handleMouseDown },
-                _react2.default.createElement(
-                    'table',
-                    { className: _PokeTable2.default.table },
-                    _react2.default.createElement(
-                        'thead',
-                        { className: _PokeTable2.default.thead },
-                        this.createHeaders(headers)
-                    ),
-                    _react2.default.createElement(
-                        'tbody',
-                        { className: _PokeTable2.default.tbody },
-                        listContent
-                    )
-                )
-            );
-        }
-    }]);
-
-    return PokeTable;
-}(_react2.default.Component);
-
-exports.PokeTable = PokeTable;
-exports.PokelistItem = _PokelistItem2.default;
-exports.MovelistItem = _MovelistItem2.default;
 
 /***/ }),
 /* 7 */
@@ -767,208 +596,6 @@ module.exports = shouldUseNative() ? Object.assign : function (target, source) {
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-    value: true
-});
-
-var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-
-var _react = __webpack_require__(0);
-
-var _react2 = _interopRequireDefault(_react);
-
-var _PokeType = __webpack_require__(90);
-
-var _PokeType2 = _interopRequireDefault(_PokeType);
-
-var _reactRedux = __webpack_require__(4);
-
-var _actions = __webpack_require__(5);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
-
-function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
-
-var PokeType = function (_React$Component) {
-    _inherits(PokeType, _React$Component);
-
-    function PokeType() {
-        var _ref;
-
-        var _temp, _this, _ret;
-
-        _classCallCheck(this, PokeType);
-
-        for (var _len = arguments.length, args = Array(_len), _key = 0; _key < _len; _key++) {
-            args[_key] = arguments[_key];
-        }
-
-        return _ret = (_temp = (_this = _possibleConstructorReturn(this, (_ref = PokeType.__proto__ || Object.getPrototypeOf(PokeType)).call.apply(_ref, [this].concat(args))), _this), _this.handleClick = function (id) {
-            return _this.props.redirect({
-                type: 'type',
-                id: id
-            });
-        }, _temp), _possibleConstructorReturn(_this, _ret);
-    }
-
-    _createClass(PokeType, [{
-        key: 'shouldComponentUpdate',
-        value: function shouldComponentUpdate(nextProps) {
-            if (nextProps === this.props) {
-                return false;
-            }
-            return true;
-        }
-    }, {
-        key: 'render',
-        value: function render() {
-            var _this2 = this;
-
-            return this.props.type.map(function (el, i) {
-                if (el.id === undefined) {
-                    console.warn('POKETYPE ID UNDEFINED');
-                }
-                var name = el.name;
-                var text = name.replace(/\b(\w)/g, function (m) {
-                    return m.toUpperCase();
-                });
-                return _react2.default.createElement(
-                    'span',
-                    { key: i,
-                        className: _PokeType2.default[name],
-                        onClick: function onClick() {
-                            return _this2.handleClick(el.id);
-                        } },
-                    text
-                );
-            });
-        }
-    }]);
-
-    return PokeType;
-}(_react2.default.Component);
-
-var mapDispatchToProps = function mapDispatchToProps(dispatch) {
-    return {
-        redirect: function redirect(data) {
-            return dispatch((0, _actions.showInPokedex)(data));
-        }
-    };
-};
-
-exports.default = (0, _reactRedux.connect)(null, mapDispatchToProps)(PokeType);
-
-/***/ }),
-/* 9 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-    value: true
-});
-
-var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-
-var _react = __webpack_require__(0);
-
-var _react2 = _interopRequireDefault(_react);
-
-var _PokeLink = __webpack_require__(94);
-
-var _PokeLink2 = _interopRequireDefault(_PokeLink);
-
-var _reactRedux = __webpack_require__(4);
-
-var _actions = __webpack_require__(5);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
-
-function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
-
-var PokeLink = function (_React$Component) {
-    _inherits(PokeLink, _React$Component);
-
-    function PokeLink() {
-        var _ref;
-
-        var _temp, _this, _ret;
-
-        _classCallCheck(this, PokeLink);
-
-        for (var _len = arguments.length, args = Array(_len), _key = 0; _key < _len; _key++) {
-            args[_key] = arguments[_key];
-        }
-
-        return _ret = (_temp = (_this = _possibleConstructorReturn(this, (_ref = PokeLink.__proto__ || Object.getPrototypeOf(PokeLink)).call.apply(_ref, [this].concat(args))), _this), _this.handlePokeLinkClick = function () {
-            return _this.props.redirect({
-                type: _this.props.type,
-                id: _this.props.id
-            });
-        }, _temp), _possibleConstructorReturn(_this, _ret);
-    }
-
-    _createClass(PokeLink, [{
-        key: 'render',
-        value: function render() {
-            var name = null;
-            if (this.props.hasOwnProperty('name')) {
-                var n = this.props.name.replace('-', ' ');
-                name = n.replace(/\b(\w)/g, function (m) {
-                    return m.toUpperCase();
-                });
-            }
-            var hasInfoText = this.props.hasOwnProperty('info') && this.props.info;
-            var infoText = hasInfoText ? ' ' + this.props.info : null;
-            return _react2.default.createElement(
-                'div',
-                null,
-                _react2.default.createElement(
-                    'span',
-                    {
-                        onClick: this.handlePokeLinkClick,
-                        className: _PokeLink2.default.redirect },
-                    name,
-                    this.props.children,
-                    _react2.default.createElement(
-                        'span',
-                        { className: _PokeLink2.default.infoText },
-                        infoText
-                    )
-                )
-            );
-        }
-    }]);
-
-    return PokeLink;
-}(_react2.default.Component);
-
-var mapDispatchToProps = function mapDispatchToProps(dispatch) {
-    return {
-        redirect: function redirect(data) {
-            return dispatch((0, _actions.showInPokedex)(data));
-        }
-    };
-};
-
-exports.default = (0, _reactRedux.connect)(null, mapDispatchToProps)(PokeLink);
-
-/***/ }),
-/* 10 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
 /* WEBPACK VAR INJECTION */(function(process) {/**
  * Copyright (c) 2013-present, Facebook, Inc.
  *
@@ -989,7 +616,7 @@ module.exports = emptyObject;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(1)))
 
 /***/ }),
-/* 11 */
+/* 9 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -1003,7 +630,7 @@ module.exports = emptyObject;
 
 
 
-var emptyFunction = __webpack_require__(2);
+var emptyFunction = __webpack_require__(4);
 
 /**
  * Similar to invariant but only logs a warning if the condition is not met.
@@ -1058,7 +685,7 @@ module.exports = warning;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(1)))
 
 /***/ }),
-/* 12 */
+/* 10 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -1072,9 +699,9 @@ module.exports = warning;
 
 
 if (process.env.NODE_ENV !== 'production') {
-  var invariant = __webpack_require__(3);
-  var warning = __webpack_require__(11);
-  var ReactPropTypesSecret = __webpack_require__(13);
+  var invariant = __webpack_require__(5);
+  var warning = __webpack_require__(9);
+  var ReactPropTypesSecret = __webpack_require__(11);
   var loggedTypeFailures = {};
 }
 
@@ -1125,7 +752,7 @@ module.exports = checkPropTypes;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(1)))
 
 /***/ }),
-/* 13 */
+/* 11 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -1144,7 +771,7 @@ module.exports = ReactPropTypesSecret;
 
 
 /***/ }),
-/* 14 */
+/* 12 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -1183,7 +810,7 @@ var ExecutionEnvironment = {
 module.exports = ExecutionEnvironment;
 
 /***/ }),
-/* 15 */
+/* 13 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /* WEBPACK VAR INJECTION */(function(process) {/**
@@ -1208,17 +835,17 @@ if (process.env.NODE_ENV !== 'production') {
   // By explicitly using `prop-types` you are opting into new development behavior.
   // http://fb.me/prop-types-in-prod
   var throwOnDirectAccess = true;
-  module.exports = __webpack_require__(54)(isValidElement, throwOnDirectAccess);
+  module.exports = __webpack_require__(50)(isValidElement, throwOnDirectAccess);
 } else {
   // By explicitly using `prop-types` you are opting into new production behavior.
   // http://fb.me/prop-types-in-prod
-  module.exports = __webpack_require__(55)();
+  module.exports = __webpack_require__(51)();
 }
 
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(1)))
 
 /***/ }),
-/* 16 */
+/* 14 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -1246,17 +873,17 @@ function warning(message) {
 }
 
 /***/ }),
-/* 17 */
+/* 15 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* WEBPACK VAR INJECTION */(function(process) {/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__createStore__ = __webpack_require__(28);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__combineReducers__ = __webpack_require__(76);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__bindActionCreators__ = __webpack_require__(77);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__applyMiddleware__ = __webpack_require__(78);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__compose__ = __webpack_require__(32);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__utils_warning__ = __webpack_require__(31);
+/* WEBPACK VAR INJECTION */(function(process) {/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__createStore__ = __webpack_require__(26);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__combineReducers__ = __webpack_require__(72);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__bindActionCreators__ = __webpack_require__(73);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__applyMiddleware__ = __webpack_require__(74);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__compose__ = __webpack_require__(30);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__utils_warning__ = __webpack_require__(29);
 /* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "createStore", function() { return __WEBPACK_IMPORTED_MODULE_0__createStore__["b"]; });
 /* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "combineReducers", function() { return __WEBPACK_IMPORTED_MODULE_1__combineReducers__["a"]; });
 /* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "bindActionCreators", function() { return __WEBPACK_IMPORTED_MODULE_2__bindActionCreators__["a"]; });
@@ -1283,13 +910,13 @@ if (process.env.NODE_ENV !== 'production' && typeof isCrushed.name === 'string' 
 /* WEBPACK VAR INJECTION */}.call(__webpack_exports__, __webpack_require__(1)))
 
 /***/ }),
-/* 18 */
+/* 16 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__baseGetTag_js__ = __webpack_require__(64);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__getPrototype_js__ = __webpack_require__(69);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__isObjectLike_js__ = __webpack_require__(71);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__baseGetTag_js__ = __webpack_require__(60);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__getPrototype_js__ = __webpack_require__(65);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__isObjectLike_js__ = __webpack_require__(67);
 
 
 
@@ -1355,7 +982,7 @@ function isPlainObject(value) {
 
 
 /***/ }),
-/* 19 */
+/* 17 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -1369,79 +996,10 @@ var PAGE_CHANGE = exports.PAGE_CHANGE = 'PAGE_CHANGE';
 var PAGE_SHOW_IN_DEX = exports.PAGE_SHOW_IN_DEX = 'PAGE_SHOW_IN_DEX';
 var PAGE_UPDATE_DEX_DATA = exports.PAGE_UPDATE_DEX_DATA = 'PAGE_UPDATE_DEX_DATA';
 // POKEMONLIST ACTION TYPES
-var LIST_SET_LENGTH = exports.LIST_SET_LENGTH = 'LIST_SET_LENGTH';
 var LIST_UPDATE_DATA = exports.LIST_UPDATE_DATA = 'LIST_UPDATE_DATA';
 
 /***/ }),
-/* 20 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-    value: true
-});
-
-var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-
-var _react = __webpack_require__(0);
-
-var _react2 = _interopRequireDefault(_react);
-
-var _PokeImg = __webpack_require__(95);
-
-var _PokeImg2 = _interopRequireDefault(_PokeImg);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
-
-function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
-
-var PokeImg = function (_React$Component) {
-    _inherits(PokeImg, _React$Component);
-
-    function PokeImg() {
-        var _ref;
-
-        var _temp, _this, _ret;
-
-        _classCallCheck(this, PokeImg);
-
-        for (var _len = arguments.length, args = Array(_len), _key = 0; _key < _len; _key++) {
-            args[_key] = arguments[_key];
-        }
-
-        return _ret = (_temp = (_this = _possibleConstructorReturn(this, (_ref = PokeImg.__proto__ || Object.getPrototypeOf(PokeImg)).call.apply(_ref, [this].concat(args))), _this), _this.getSrc = function (id) {
-            var bundleID = ~~(id / 10);
-            var pokeID = id.toString();
-            if (pokeID.length === 1) {
-                pokeID = '00' + pokeID;
-            } else if (pokeID.length === 2) {
-                pokeID = '0' + pokeID;
-            }
-            return './resources/pokemon/pokemons_' + bundleID + '.svg#' + pokeID;
-        }, _temp), _possibleConstructorReturn(_this, _ret);
-    }
-
-    _createClass(PokeImg, [{
-        key: 'render',
-        value: function render() {
-            var cl = this.props.cl ? this.props.cl : 'img';
-            return _react2.default.createElement('img', { className: _PokeImg2.default[cl], src: this.getSrc(this.props.id) });
-        }
-    }]);
-
-    return PokeImg;
-}(_react2.default.Component);
-
-exports.default = PokeImg;
-
-/***/ }),
-/* 21 */
+/* 18 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -1456,7 +1014,7 @@ exports.default = PokeImg;
  * @typechecks
  */
 
-var emptyFunction = __webpack_require__(2);
+var emptyFunction = __webpack_require__(4);
 
 /**
  * Upstream version of event listener. Does not take into account specific
@@ -1522,7 +1080,7 @@ module.exports = EventListener;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(1)))
 
 /***/ }),
-/* 22 */
+/* 19 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -1593,7 +1151,7 @@ function shallowEqual(objA, objB) {
 module.exports = shallowEqual;
 
 /***/ }),
-/* 23 */
+/* 20 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -1608,7 +1166,7 @@ module.exports = shallowEqual;
  * 
  */
 
-var isTextNode = __webpack_require__(45);
+var isTextNode = __webpack_require__(41);
 
 /*eslint-disable no-bitwise */
 
@@ -1636,7 +1194,7 @@ function containsNode(outerNode, innerNode) {
 module.exports = containsNode;
 
 /***/ }),
-/* 24 */
+/* 21 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -1666,7 +1224,7 @@ function focusNode(node) {
 module.exports = focusNode;
 
 /***/ }),
-/* 25 */
+/* 22 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -1708,13 +1266,333 @@ function getActiveElement(doc) /*?DOMElement*/{
 module.exports = getActiveElement;
 
 /***/ }),
-/* 26 */
+/* 23 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+
+var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; };
+
+function _toConsumableArray(arr) { if (Array.isArray(arr)) { for (var i = 0, arr2 = Array(arr.length); i < arr.length; i++) { arr2[i] = arr[i]; } return arr2; } else { return Array.from(arr); } }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+var loadStorage = function loadStorage(itemName) {
+    var check = localStorage.getItem(itemName);
+    var res = false;
+    try {
+        var obj = JSON.parse(check);
+        if (obj && (typeof obj === 'undefined' ? 'undefined' : _typeof(obj)) === 'object') {
+            res = obj;
+        }
+    } catch (e) {
+        console.info('JSON stored data invalid');
+    }
+    return res;
+};
+
+var FetchWrapper = function () {
+    function FetchWrapper(url, options, name) {
+        _classCallCheck(this, FetchWrapper);
+
+        this.__isAborted = false;
+        this.__url = url, this.__opt = options || {};
+        this.__nam = name;
+        this.__id = Math.floor(Math.random() * 1000000000);
+    }
+
+    _createClass(FetchWrapper, [{
+        key: 'abort',
+        value: function abort() {
+            this.__isAborted = true;
+        }
+    }, {
+        key: 'get',
+        value: function get() {
+            var _this = this;
+
+            return fetch(this.__url, this.__opt).then(function (r) {
+                if (_this.__isAborted || !r.ok) {
+                    throw new Error('Abort/Failure');
+                }
+                return r.json();
+            }).then(function (d) {
+                window.__fetchlist.rm(_this.__id);
+                var data = d.data,
+                    moves = d.moves,
+                    evolution = d.evolution;
+
+                var localData = loadStorage(_this.__nam) || [];
+                if (_this.__nam === 'pokelist') {
+                    if (Array.isArray(localData)) _this.setStorage(_this.__nam, data);
+                    return data;
+                }
+                var isStored = localData.find(function (e) {
+                    return e.id === data.id;
+                });
+                if (!isStored) {
+                    localData.push(data);
+                    _this.setStorage(_this.__nam, localData);
+                }
+                if (data.hasOwnProperty('moves')) {
+                    (function () {
+                        var localMoves = loadStorage('move') || [];
+                        moves.forEach(function (m) {
+                            if (!localMoves.find(function (e) {
+                                return e.id === m.id;
+                            })) {
+                                localMoves.push(m);
+                            }
+                        });
+                        _this.setStorage('move', localMoves);
+                        if (Array.isArray(data.moves)) {
+                            data.moves = data.moves.map(function (m) {
+                                return localMoves.find(function (e) {
+                                    return e.id === m;
+                                });
+                            });
+                        } else {
+                            for (var i in data.moves) {
+                                data.moves[i] = data.moves[i].map(function (m) {
+                                    if (typeof m === 'number') {
+                                        return localMoves.find(function (e) {
+                                            return e.id === m;
+                                        });
+                                    }
+                                    return _extends({}, localMoves.find(function (e) {
+                                        return e.id === m.id;
+                                    }), m);
+                                });
+                            }
+                        }
+                    })();
+                }
+                if (data.hasOwnProperty('pokemon')) {
+                    (function () {
+                        var localPoke = loadStorage('pokelist');
+                        if (Array.isArray(data.pokemon)) {
+                            data.pokemon = data.pokemon.map(function (p) {
+                                return localPoke[p];
+                            });
+                        } else {
+                            for (var i in data.pokemon) {
+                                data.pokemon[i] = data.pokemon[i].map(function (p) {
+                                    return localPoke[p];
+                                });
+                            }
+                        }
+                    })();
+                }
+                if (data.hasOwnProperty('evolution_chain')) {
+                    var localEvo = loadStorage('evolution_chain') || [];
+                    var evo = localEvo.find(function (e) {
+                        return e.id === data.evolution_chain;
+                    });
+                    if (!evo) {
+                        localEvo.push(evolution);
+                        evo = evolution;
+                        _this.setStorage('evolution_chain', localEvo);
+                    }
+                    data.evolution_chain = evo;
+                }
+                return data;
+            }).catch(function (e) {
+                if (_this.__isAborted) {
+                    return null;
+                }
+                console.warn(e);
+                return;
+            });
+        }
+    }, {
+        key: 'setStorage',
+        value: function setStorage(itemName, data) {
+            try {
+                localStorage.setItem(itemName, JSON.stringify(data));
+            } catch (e) {
+                console.warn(e);
+            }
+        }
+    }]);
+
+    return FetchWrapper;
+}();
+
+var PokeCache = function () {
+    function PokeCache() {
+        _classCallCheck(this, PokeCache);
+    }
+
+    _createClass(PokeCache, [{
+        key: 'get',
+        value: function get() {
+            var reqBody = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : {};
+            var _reqBody$type = reqBody.type,
+                type = _reqBody$type === undefined ? 'pokelist' : _reqBody$type,
+                _reqBody$id = reqBody.id,
+                id = _reqBody$id === undefined ? 0 : _reqBody$id,
+                _reqBody$storedMoves = reqBody.storedMoves,
+                storedMoves = _reqBody$storedMoves === undefined ? [] : _reqBody$storedMoves,
+                _reqBody$storedEvo = reqBody.storedEvo,
+                storedEvo = _reqBody$storedEvo === undefined ? [] : _reqBody$storedEvo;
+
+            console.log(reqBody);
+            var storedData = loadStorage(type);
+            if (storedData && type === 'pokelist') {
+                return Promise.resolve(storedData);
+            }
+            var match = storedData ? storedData.find(function (e) {
+                return e.id === id;
+            }) : false;
+            var needsMoves = ['type', 'pokemon'].includes(type);
+            if (match && !needsMoves) {
+                return this.collectData(match);
+            }
+            if (needsMoves) {
+                var localMoves = loadStorage('move') || [];
+                var localEvo = loadStorage('evolution_chain') || [];
+                var localMoveId = localMoves.map(function (e) {
+                    return e.id;
+                });
+                var localEvoId = localEvo.map(function (e) {
+                    return e.id;
+                });
+                if (match) {
+                    var missData = this.isDataMissing(match, localMoveId, localEvoId);
+                    if (!missData) {
+                        return this.collectData(match, localMoves, localEvo);
+                    }
+                }
+                storedMoves.push.apply(storedMoves, _toConsumableArray(localMoveId));
+                storedEvo.push.apply(storedEvo, _toConsumableArray(localEvoId));
+            }
+            var url = 'https://us-central1-pokedex-182809.cloudfunctions.net/dex';
+            var rbody = {
+                type: type,
+                id: id,
+                storedMoves: storedMoves,
+                storedEvo: storedEvo
+            };
+            var opt = {
+                method: 'POST',
+                body: JSON.stringify(rbody)
+            };
+            console.log('### REQ BODY -> ', opt);
+            return this.__fetchData(url, opt, type);
+        }
+    }, {
+        key: '__fetchData',
+        value: function __fetchData(url, options, itemName) {
+            var f = new FetchWrapper(url, options, itemName);
+            window.__fetchlist.ad(f);
+            return f.get();
+        }
+    }, {
+        key: 'setStorage',
+        value: function setStorage(itemName, data) {
+            try {
+                localStorage.setItem(itemName, JSON.stringify(data));
+            } catch (e) {
+                console.warn(e);
+            }
+        }
+    }, {
+        key: 'collectData',
+        value: function collectData(data, localMoves, localEvo) {
+            if (data.hasOwnProperty('pokemon')) {
+                (function () {
+                    var localPoke = loadStorage('pokelist');
+                    if (Array.isArray(data.pokemon)) {
+                        data.pokemon = data.pokemon.map(function (poke) {
+                            return localPoke[poke];
+                        });
+                    } else {
+                        for (var i in data.pokemon) {
+                            data.pokemon[i] = data.pokemon[i].map(function (poke) {
+                                return localPoke[poke];
+                            });
+                        }
+                    }
+                })();
+            }
+            if (data.hasOwnProperty('moves')) {
+                if (Array.isArray(data.moves)) {
+                    data.moves = data.moves.map(function (mov) {
+                        return localMoves.find(function (el) {
+                            return el.id === mov;
+                        });
+                    });
+                } else {
+                    for (var i in data.moves) {
+                        data.moves[i] = data.moves[i].map(function (m) {
+                            if (typeof m === 'number') {
+                                return localMoves.find(function (el) {
+                                    return el.id === m;
+                                });
+                            }
+                            return _extends({}, localMoves.find(function (el) {
+                                return el.id === m.id;
+                            }), m);
+                        });
+                    }
+                }
+            }
+            if (data.hasOwnProperty('evolution_chain')) {
+                data.evolution_chain = localEvo.find(function (ev) {
+                    return ev.id === data.evolution_chain;
+                });
+            }
+            return Promise.resolve(data);
+        }
+    }, {
+        key: 'isDataMissing',
+        value: function isDataMissing(data, moveIDs, evoIDs) {
+            var missing = [];
+            var missingEvo = [];
+            if (data.hasOwnProperty('evolution_chain') && !evoIDs.includes(data.evolution_chain)) {
+                missingEvo.push(data.evolution_chain);
+            }
+            if (Array.isArray(data.moves)) {
+                data.moves.forEach(function (m) {
+                    if (!moveIDs.includes(m)) missing.push(m);
+                });
+                return missing.length || missingEvo.length;
+            }
+            for (var i in data.moves) {
+                data.moves[i].forEach(function (m) {
+                    if (typeof m === 'number') {
+                        if (!moveIDs.includes(m)) missing.push(m);
+                    } else {
+                        if (!moveIDs.includes(m.id)) missing.push(m.id);
+                    }
+                });
+            }
+            return missing.length || missingEvo.length;
+        }
+    }]);
+
+    return PokeCache;
+}();
+
+exports.default = PokeCache;
+
+/***/ }),
+/* 24 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "b", function() { return subscriptionShape; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return storeShape; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_prop_types__ = __webpack_require__(15);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_prop_types__ = __webpack_require__(13);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_prop_types___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_prop_types__);
 
 
@@ -1732,19 +1610,19 @@ var storeShape = __WEBPACK_IMPORTED_MODULE_0_prop_types___default.a.shape({
 });
 
 /***/ }),
-/* 27 */
+/* 25 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* WEBPACK VAR INJECTION */(function(process) {/* harmony export (immutable) */ __webpack_exports__["a"] = connectAdvanced;
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_hoist_non_react_statics__ = __webpack_require__(58);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_hoist_non_react_statics__ = __webpack_require__(54);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_hoist_non_react_statics___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_hoist_non_react_statics__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_invariant__ = __webpack_require__(59);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_invariant__ = __webpack_require__(55);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_invariant___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_invariant__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_react__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_react__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__utils_Subscription__ = __webpack_require__(60);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__utils_PropTypes__ = __webpack_require__(26);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__utils_Subscription__ = __webpack_require__(56);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__utils_PropTypes__ = __webpack_require__(24);
 var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -2037,14 +1915,14 @@ selectorFactory) {
 /* WEBPACK VAR INJECTION */}.call(__webpack_exports__, __webpack_require__(1)))
 
 /***/ }),
-/* 28 */
+/* 26 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ActionTypes; });
 /* harmony export (immutable) */ __webpack_exports__["b"] = createStore;
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_lodash_es_isPlainObject__ = __webpack_require__(18);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_symbol_observable__ = __webpack_require__(72);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_lodash_es_isPlainObject__ = __webpack_require__(16);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_symbol_observable__ = __webpack_require__(68);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_symbol_observable___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_symbol_observable__);
 
 
@@ -2296,11 +2174,11 @@ var ActionTypes = {
 }
 
 /***/ }),
-/* 29 */
+/* 27 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__root_js__ = __webpack_require__(65);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__root_js__ = __webpack_require__(61);
 
 
 /** Built-in value references. */
@@ -2310,7 +2188,7 @@ var Symbol = __WEBPACK_IMPORTED_MODULE_0__root_js__["a" /* default */].Symbol;
 
 
 /***/ }),
-/* 30 */
+/* 28 */
 /***/ (function(module, exports) {
 
 var g;
@@ -2337,7 +2215,7 @@ module.exports = g;
 
 
 /***/ }),
-/* 31 */
+/* 29 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -2365,7 +2243,7 @@ function warning(message) {
 }
 
 /***/ }),
-/* 32 */
+/* 30 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -2404,14 +2282,14 @@ function compose() {
 }
 
 /***/ }),
-/* 33 */
+/* 31 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* WEBPACK VAR INJECTION */(function(process) {/* harmony export (immutable) */ __webpack_exports__["a"] = wrapMapToPropsConstant;
 /* unused harmony export getDependsOnOwnProps */
 /* harmony export (immutable) */ __webpack_exports__["b"] = wrapMapToPropsFunc;
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__utils_verifyPlainObject__ = __webpack_require__(34);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__utils_verifyPlainObject__ = __webpack_require__(32);
 
 
 function wrapMapToPropsConstant(getConstant) {
@@ -2482,13 +2360,13 @@ function wrapMapToPropsFunc(mapToProps, methodName) {
 /* WEBPACK VAR INJECTION */}.call(__webpack_exports__, __webpack_require__(1)))
 
 /***/ }),
-/* 34 */
+/* 32 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (immutable) */ __webpack_exports__["a"] = verifyPlainObject;
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_lodash_es_isPlainObject__ = __webpack_require__(18);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__warning__ = __webpack_require__(16);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_lodash_es_isPlainObject__ = __webpack_require__(16);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__warning__ = __webpack_require__(14);
 
 
 
@@ -2499,7 +2377,7 @@ function verifyPlainObject(value, displayName, methodName) {
 }
 
 /***/ }),
-/* 35 */
+/* 33 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -2508,333 +2386,270 @@ function verifyPlainObject(value, displayName, methodName) {
 Object.defineProperty(exports, "__esModule", {
     value: true
 });
+exports.MovelistItem = exports.PokelistItem = exports.PokeTable = undefined;
 
-var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
+var _slicedToArray = function () { function sliceIterator(arr, i) { var _arr = []; var _n = true; var _d = false; var _e = undefined; try { for (var _i = arr[Symbol.iterator](), _s; !(_n = (_s = _i.next()).done); _n = true) { _arr.push(_s.value); if (i && _arr.length === i) break; } } catch (err) { _d = true; _e = err; } finally { try { if (!_n && _i["return"]) _i["return"](); } finally { if (_d) throw _e; } } return _arr; } return function (arr, i) { if (Array.isArray(arr)) { return arr; } else if (Symbol.iterator in Object(arr)) { return sliceIterator(arr, i); } else { throw new TypeError("Invalid attempt to destructure non-iterable instance"); } }; }();
 
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
-var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; };
+var _react = __webpack_require__(0);
 
-function _toConsumableArray(arr) { if (Array.isArray(arr)) { for (var i = 0, arr2 = Array(arr.length); i < arr.length; i++) { arr2[i] = arr[i]; } return arr2; } else { return Array.from(arr); } }
+var _react2 = _interopRequireDefault(_react);
+
+var _PokeTable = __webpack_require__(92);
+
+var _PokeTable2 = _interopRequireDefault(_PokeTable);
+
+var _Components = __webpack_require__(93);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
-var loadStorage = function loadStorage(itemName) {
-    var check = localStorage.getItem(itemName);
-    var res = false;
-    try {
-        var obj = JSON.parse(check);
-        if (obj && (typeof obj === 'undefined' ? 'undefined' : _typeof(obj)) === 'object') {
-            res = obj;
-        }
-    } catch (e) {
-        console.info('JSON stored data invalid');
-    }
-    return res;
-};
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
 
-var FetchWrapper = function () {
-    function FetchWrapper(url, options, name) {
-        _classCallCheck(this, FetchWrapper);
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
-        this.__isAborted = false;
-        this.__url = url, this.__opt = options || {};
-        this.__nam = name;
-        this.__id = Math.floor(Math.random() * 1000000000);
-    }
+var PokeTable = function (_React$Component) {
+    _inherits(PokeTable, _React$Component);
 
-    _createClass(FetchWrapper, [{
-        key: 'abort',
-        value: function abort() {
-            this.__isAborted = true;
-        }
-    }, {
-        key: 'get',
-        value: function get() {
-            var _this = this;
+    function PokeTable(props) {
+        _classCallCheck(this, PokeTable);
 
-            return fetch(this.__url, this.__opt).then(function (r) {
-                if (_this.__isAborted || !r.ok) {
-                    throw new Error('Abort/Failure');
-                }
-                return r.json();
-            }).then(function (d) {
-                window.__fetchlist.rm(_this.__id);
-                var currentlyStored = loadStorage(_this.__nam) || [];
-                var isThere = currentlyStored.find(function (e) {
-                    return e.id === d[0].id;
-                });
-                if (!isThere) {
-                    currentlyStored.push(d[0]);
-                    _this.setStorage(_this.__nam, currentlyStored);
-                }
-                if (_this.__nam === 'pokelist') {
-                    return d[0];
-                }
+        var _this = _possibleConstructorReturn(this, (PokeTable.__proto__ || Object.getPrototypeOf(PokeTable)).call(this, props));
 
-                if (_this.__nam === 'pokemon' || _this.__nam === 'type') {
-                    var _ret = function () {
-                        var moves = loadStorage('move') || [];
-                        d[1].forEach(function (e) {
-                            var move = moves.find(function (m) {
-                                return m.id === e.id;
-                            });
-                            if (!move) {
-                                moves.push(e);
-                            }
-                        });
-                        _this.setStorage('move', moves);
-                        var data = _extends({}, d[0]);
-                        if (_this.__nam === 'pokemon') {
-                            var _loop = function _loop(i) {
-                                data.moves[i] = data.moves[i].map(function (e) {
-                                    var move = moves.find(function (m) {
-                                        return m.id === e.id;
-                                    });
-                                    if (!move) {
-                                        console.warn(move, data, i);
-                                    }
-                                    return _extends({}, move, e);
-                                });
-                            };
-
-                            for (var i in data.moves) {
-                                _loop(i);
-                            }
-                        } else {
-                            data.moves = data.moves.map(function (e) {
-                                var move = moves.find(function (m) {
-                                    return m.id === e;
-                                });
-                                if (!move) {
-                                    console.warn(move, data, e, 'TYPE');
-                                }
-                                return move;
-                            });
-                            var pokelist = loadStorage('pokelist');
-                            data.pokemon = data.pokemon.map(function (e) {
-                                return pokelist[e - 1];
-                            });
-                        }
-                        return {
-                            v: data
-                        };
-                    }();
-
-                    if ((typeof _ret === 'undefined' ? 'undefined' : _typeof(_ret)) === "object") return _ret.v;
-                }
-                if (_this.__nam === 'move') {
-                    var _ret3 = function () {
-                        var move = _extends({}, d[0]);
-                        var pokelist = loadStorage('pokelist');
-                        if (!move || !pokelist) {
-                            console.warn(move, pokelist, '@@ MOVE');
-                        }
-                        for (var i in move.pokemon) {
-                            move.pokemon[i] = move.pokemon[i].map(function (e) {
-                                return _extends({}, pokelist[e - 1]);
-                            });
-                        }
-                        return {
-                            v: move
-                        };
-                    }();
-
-                    if ((typeof _ret3 === 'undefined' ? 'undefined' : _typeof(_ret3)) === "object") return _ret3.v;
-                }
-
-                if (d[0].hasOwnProperty('pokemon')) {
-                    var data = _extends({}, d[0]);
-                    var pokelist = loadStorage('pokelist');
-                    if (pokelist || data) {
-                        console.warn(data, '@@ OTHER');
-                    }
-                    data.pokemon = data.pokemon.map(function (e) {
-                        return pokelist[e - 1];
-                    });
-                    return data;
-                }
-
-                return d[0];
-            }).catch(function (e) {
-                console.warn(e);
-                return null;
+        _this.setSorting = function (sortBy) {
+            _this.setState({
+                sortBy: sortBy,
+                sortDir: _this.state.sortDir * -1
             });
-        }
-    }, {
-        key: 'setStorage',
-        value: function setStorage(itemName, data) {
-            try {
-                localStorage.setItem(itemName, JSON.stringify(data));
-            } catch (e) {
-                console.warn(e);
+        };
+
+        _this.handleMouseDown = function (event) {
+            var t = event.target;
+            while (!/PokeTable__wrapper/.test(t.className)) {
+                t = t.parentElement;
+                if (/Layout/.test(t.className)) {
+                    return;
+                }
             }
-        }
-    }]);
+            var wrapper = t;
+            var mX = event.screenX;
+            var width = wrapper.clientWidth;
+            var totalWidth = wrapper.scrollWidth;
+            var previousX = null;
+            if (width === totalWidth) {
+                return;
+            }
+            var currentScroll = wrapper.scrollLeft;
+            var handleMouseMove = function handleMouseMove(ev) {
+                var mmoveX = ev.screenX;
+                if (Math.abs(previousX - mmoveX) < 3) {
+                    return;
+                }
+                previousX = mmoveX;
+                wrapper.scrollLeft = currentScroll + (totalWidth - width) * ((mX - mmoveX) / (width >> 1));
+            };
+            var handleMouseUp = function handleMouseUp(ev) {
+                window.removeEventListener('mouseup', handleMouseUp);
+                window.removeEventListener('mousemove', handleMouseMove);
+            };
+            window.addEventListener('mousemove', handleMouseMove);
+            window.addEventListener('mouseup', handleMouseUp);
+        };
 
-    return FetchWrapper;
-}();
-
-var PokeCache = function () {
-    function PokeCache() {
-        _classCallCheck(this, PokeCache);
-    }
-
-    _createClass(PokeCache, [{
-        key: 'get',
-        value: function get() {
-            var reqBody = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : {};
-            var _reqBody$type = reqBody.type,
-                type = _reqBody$type === undefined ? 'pokelist' : _reqBody$type,
-                _reqBody$id = reqBody.id,
-                id = _reqBody$id === undefined ? 0 : _reqBody$id,
-                _reqBody$stored = reqBody.stored,
-                stored = _reqBody$stored === undefined ? [] : _reqBody$stored;
-
-            var storedData = loadStorage(type) || [];
-            var match = storedData.find(function (e) {
-                return e.id === id;
+        _this.handleShowMoreClick = function () {
+            _this.setState({
+                length: _this.state.length + 50
             });
-            if (storedData && type !== 'pokemon' && type !== 'type') {
-                if (type === 'pokelist') {
-                    return Promise.resolve(storedData);
+        };
+
+        _this.createHeaders = function (headerArray) {
+            var th = [];
+
+            var _loop = function _loop(i, el) {
+                var sortBy = el[0].toLowerCase().replace(' ', '_');
+                if (el[0] === '#') {
+                    sortBy = 'id';
+                } else if (el[0] === 'Lvl') {
+                    sortBy = 'level_learned_at';
                 }
-                if (match) {
-                    return this.fillData(match, type);
-                }
-            }
-            if (type === 'pokemon' || type === 'type') {
-                var storedMoves = loadStorage('move') || [];
-                var moveIDs = storedMoves.map(function (e) {
-                    return e.id;
-                });
-                var isFetch = match ? this.isMoveFetchNeeded(match, moveIDs, type) : false;
-                if (!isFetch && match) {
-                    return this.fillData(match, type, storedMoves);
-                }
-                stored.push.apply(stored, _toConsumableArray(moveIDs));
-            }
-            var url = 'https://us-central1-pokedex-182809.cloudfunctions.net/dex';
-            var rbody = {
-                type: type,
-                id: id,
-                stored: stored
-            };
-            var opt = {
-                method: 'POST',
-                body: JSON.stringify(rbody)
-            };
-            console.log('### REQ BODY -> ', opt);
-            return this.__fetchData(url, opt, type);
-        }
-    }, {
-        key: '__fetchData',
-        value: function __fetchData(url, options, itemName) {
-            var f = new FetchWrapper(url, options, itemName);
-            window.__fetchlist.ad(f);
-            return f.get();
-        }
-    }, {
-        key: 'setStorage',
-        value: function setStorage(itemName, data) {
-            try {
-                localStorage.setItem(itemName, JSON.stringify(data));
-            } catch (e) {
-                console.warn(e);
-            }
-        }
-    }, {
-        key: 'fillData',
-        value: function fillData(item, type, mvs) {
-            var data = _extends({}, item);
-            console.log('FILL DATA IN ACTION');
-            if (type === 'pokemon') {
-                for (var i in data.moves) {
-                    data.moves[i] = data.moves[i].map(function (e) {
-                        var id = e.id;
-                        var move = mvs.find(function (e) {
-                            return e.id === id;
-                        });
-                        return _extends({}, e, move);
-                    });
-                }
-                console.log('@POKEMON', data);
-                return Promise.resolve(data);
-            }
-            if (type === 'move') {
-                var _ret4 = function () {
-                    var pokelist = loadStorage('pokelist');
-                    if (!data || !pokelist) {
-                        console.warn(data, pokelist, '@@ MOVE');
-                    }
-                    for (var _i in data.pokemon) {
-                        data.pokemon[_i] = data.pokemon[_i].map(function (e) {
-                            return _extends({}, pokelist[e - 1]);
-                        });
-                    }
-                    return {
-                        v: Promise.resolve(data)
+                var cName = null;
+                var callback = null;
+                var sortDirectionText = null;
+                if (el[1]) {
+                    cName = _PokeTable2.default.sort;
+                    callback = function callback() {
+                        _this.setSorting(sortBy);
                     };
-                }();
-
-                if ((typeof _ret4 === 'undefined' ? 'undefined' : _typeof(_ret4)) === "object") return _ret4.v;
-            }
-            if (data.hasOwnProperty('pokemon')) {
-                var pokelist = loadStorage('pokelist');
-                if (!pokelist || !data) {
-                    console.warn(move, data, '@@ OTHER');
-                }
-                data.pokemon = data.pokemon.map(function (e) {
-                    return pokelist[e - 1];
-                });
-                if (type === 'type') {
-                    data.moves = data.moves.map(function (e) {
-                        var move = mvs.find(function (m) {
-                            return m.id === e;
-                        });
-                        if (!move) {
-                            console.warn('Missing move', data, e);
+                    if (_this.state.sortBy === sortBy) {
+                        if (_this.state.sortDir === 1) {
+                            sortDirectionText = '↓';
+                        } else {
+                            sortDirectionText = '↑';
                         }
-                        return move;
-                    });
+                    }
                 }
-                return Promise.resolve(data);
+                th.push(_react2.default.createElement(
+                    'th',
+                    { key: i, className: cName, onClick: callback },
+                    el[0],
+                    sortDirectionText
+                ));
+            };
+
+            var _iteratorNormalCompletion = true;
+            var _didIteratorError = false;
+            var _iteratorError = undefined;
+
+            try {
+                for (var _iterator = headerArray.entries()[Symbol.iterator](), _step; !(_iteratorNormalCompletion = (_step = _iterator.next()).done); _iteratorNormalCompletion = true) {
+                    var _ref = _step.value;
+
+                    var _ref2 = _slicedToArray(_ref, 2);
+
+                    var i = _ref2[0];
+                    var el = _ref2[1];
+
+                    _loop(i, el);
+                }
+            } catch (err) {
+                _didIteratorError = true;
+                _iteratorError = err;
+            } finally {
+                try {
+                    if (!_iteratorNormalCompletion && _iterator.return) {
+                        _iterator.return();
+                    }
+                } finally {
+                    if (_didIteratorError) {
+                        throw _iteratorError;
+                    }
+                }
             }
 
-            return Promise.resolve(data);
+            return _react2.default.createElement(
+                'tr',
+                null,
+                th
+            );
+        };
+
+        var hasLvl = false;
+        if (_this.props.data.length && _this.props.data[0].hasOwnProperty('level_learned_at') && _this.props.data[0].level_learned_at) {
+            hasLvl = true;
         }
-    }, {
-        key: 'isMoveFetchNeeded',
-        value: function isMoveFetchNeeded(data, moveIDs, type) {
-            var has = [];
-            var missing = [];
-            if (type === 'pokemon') {
-                for (var i in data.moves) {
-                    data.moves[i].forEach(function (e) {
-                        var id = e.id;
-                        if (!has.includes(id)) {
-                            has.push(id);
-                        }
-                    });
-                }
-            } else {
-                data.moves.forEach(function (e) {
-                    has.push(e);
-                });
+        var pokeHeaders = [['', false], ['#', true], ['Name', false], ['Type', false], ['HP', true], ['Attack', true], ['Defense', true], ['Special Attack', true], ['Special Defense', true], ['Speed', true]];
+        var moveHeaders = [['#', true], ['Name', false], ['Lvl', hasLvl ? true : false], ['Power', true], ['PP', true], ['Accuracy', true], ['Class', false], ['Type', false]];
+        var isPoke = _this.props.headers === 'pokelist';
+        _this.headers = isPoke ? pokeHeaders : moveHeaders;
+        _this.state = {
+            sortBy: hasLvl ? 'level_learned_at' : 'id',
+            sortDir: 1,
+            length: isPoke ? 50 : 25
+        };
+        return _this;
+    }
+
+    _createClass(PokeTable, [{
+        key: 'render',
+        value: function render() {
+            var _this2 = this;
+
+            var data = this.props.data.slice(0, this.state.length);
+            if (!data.length) {
+                return null;
             }
-            has.forEach(function (e) {
-                if (!moveIDs.includes(e)) {
-                    missing.push(e);
+            var sortBy = this.state.sortBy;
+            data = data.sort(function (a, b) {
+                if (_this2.state.sortDir === 1) {
+                    return a[sortBy] - b[sortBy];
+                } else {
+                    return b[sortBy] - a[sortBy];
                 }
             });
-            return missing.length;
+            var Item = this.props.listItem;
+            var listContent = data.map(function (el, i) {
+                return _react2.default.createElement(Item, { key: el.name, data: el });
+            });
+            var showMore = null;
+            if (this.state.length < this.props.data.length) {
+                showMore = _react2.default.createElement(
+                    'tr',
+                    null,
+                    _react2.default.createElement(
+                        'td',
+                        { colSpan: this.headers.length },
+                        _react2.default.createElement(
+                            'button',
+                            { onClick: this.handleShowMoreClick,
+                                className: _PokeTable2.default.more },
+                            'Show More'
+                        )
+                    )
+                );
+            }
+            return _react2.default.createElement(
+                'div',
+                { className: _PokeTable2.default.wrapper, onMouseDown: this.handleMouseDown },
+                _react2.default.createElement(
+                    'table',
+                    { className: _PokeTable2.default.table },
+                    _react2.default.createElement(
+                        'thead',
+                        { className: _PokeTable2.default.thead },
+                        this.createHeaders(this.headers)
+                    ),
+                    _react2.default.createElement(
+                        'tbody',
+                        { className: _PokeTable2.default.tbody },
+                        listContent,
+                        showMore
+                    )
+                )
+            );
         }
     }]);
 
-    return PokeCache;
-}();
+    return PokeTable;
+}(_react2.default.Component);
 
-exports.default = PokeCache;
+exports.PokeTable = PokeTable;
+exports.PokelistItem = _Components.PokelistItem;
+exports.MovelistItem = _Components.MovelistItem;
+
+/***/ }),
+/* 34 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+exports.MenuItem = exports.Menu = undefined;
+
+var _Menu = __webpack_require__(105);
+
+var _Menu2 = _interopRequireDefault(_Menu);
+
+var _MenuItem = __webpack_require__(107);
+
+var _MenuItem2 = _interopRequireDefault(_MenuItem);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+exports.Menu = _Menu2.default;
+exports.MenuItem = _MenuItem2.default;
+
+/***/ }),
+/* 35 */
+/***/ (function(module, exports, __webpack_require__) {
+
+__webpack_require__(36);
+module.exports = __webpack_require__(144);
+
 
 /***/ }),
 /* 36 */
@@ -2843,353 +2658,27 @@ exports.default = PokeCache;
 "use strict";
 
 
-Object.defineProperty(exports, "__esModule", {
-    value: true
-});
-
-var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
-
-var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-
 var _react = __webpack_require__(0);
 
 var _react2 = _interopRequireDefault(_react);
 
-var _DamageRelations = __webpack_require__(88);
-
-var _DamageRelations2 = _interopRequireDefault(_DamageRelations);
-
-var _Loader = __webpack_require__(37);
-
-var _Loader2 = _interopRequireDefault(_Loader);
-
-var _PokeType = __webpack_require__(8);
-
-var _PokeType2 = _interopRequireDefault(_PokeType);
-
-var _DamageRelations3 = __webpack_require__(91);
-
-var _DamageRelations4 = _interopRequireDefault(_DamageRelations3);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
-
-function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
-
-var DamageRelations = function (_React$Component) {
-    _inherits(DamageRelations, _React$Component);
-
-    function DamageRelations() {
-        _classCallCheck(this, DamageRelations);
-
-        var _this = _possibleConstructorReturn(this, (DamageRelations.__proto__ || Object.getPrototypeOf(DamageRelations)).call(this));
-
-        _this.calcMultipliers = function (dmgArr) {
-            var table = [];
-            _this.table.forEach(function (type) {
-                return table.push(_extends({}, type));
-            });
-            dmgArr.forEach(function (typeRel) {
-                typeRel.forEach(function (relation) {
-                    var multiplier = relation[1];
-                    relation[0].forEach(function (type) {
-                        var index = table.findIndex(function (e) {
-                            return e.name === type;
-                        });
-                        table[index].multi = table[index].multi * multiplier;
-                    });
-                });
-            });
-            return table;
-        };
-
-        _this.createMultiplierTable = function (typeArr, dir) {
-            var table = typeArr.map(function (typeObj) {
-                var type = _DamageRelations4.default.find(function (e) {
-                    return e.name === typeObj.name;
-                });
-                var noDamage = type.damage_relations['no_' + dir].slice();
-                var halfDamage = type.damage_relations['half_' + dir].slice();
-                var doubleDamage = type.damage_relations['double_' + dir].slice();
-                return [[noDamage, 0], [halfDamage, 0.5], [doubleDamage, 2]];
-            });
-            return _this.calcMultipliers(table);
-        };
-
-        _this.parseMultiplierTable = function (table) {
-            var typeMultiMap = table.map(function (el, i) {
-                var cName = el.multi.toString().replace('.', '');
-                return _react2.default.createElement(
-                    'div',
-                    { key: i, className: _DamageRelations2.default.dmgRelItem },
-                    _react2.default.createElement(_PokeType2.default, { type: [el] }),
-                    _react2.default.createElement(
-                        'span',
-                        { className: _DamageRelations2.default['x' + cName] },
-                        el.multi
-                    )
-                );
-            });
-            return _react2.default.createElement(
-                'div',
-                { className: _DamageRelations2.default.dmgRel },
-                typeMultiMap
-            );
-        };
-
-        _this.table = [{
-            name: 'normal',
-            multi: 1,
-            id: 1
-        }, {
-            name: 'fighting',
-            multi: 1,
-            id: 2
-        }, {
-            name: 'flying',
-            multi: 1,
-            id: 3
-        }, {
-            name: 'poison',
-            multi: 1,
-            id: 4
-        }, {
-            name: 'ground',
-            multi: 1,
-            id: 5
-        }, {
-            name: 'rock',
-            multi: 1,
-            id: 6
-        }, {
-            name: 'bug',
-            multi: 1,
-            id: 7
-        }, {
-            name: 'ghost',
-            multi: 1,
-            id: 8
-        }, {
-            name: 'steel',
-            multi: 1,
-            id: 9
-        }, {
-            name: 'fire',
-            multi: 1,
-            id: 10
-        }, {
-            name: 'water',
-            multi: 1,
-            id: 11
-        }, {
-            name: 'grass',
-            multi: 1,
-            id: 12
-        }, {
-            name: 'electric',
-            multi: 1,
-            id: 13
-        }, {
-            name: 'psychic',
-            multi: 1,
-            id: 14
-        }, {
-            name: 'ice',
-            multi: 1,
-            id: 15
-        }, {
-            name: 'dragon',
-            multi: 1,
-            id: 16
-        }, {
-            name: 'dark',
-            multi: 1,
-            id: 17
-        }, {
-            name: 'fairy',
-            multi: 1,
-            id: 18
-        }];
-        return _this;
-    }
-
-    _createClass(DamageRelations, [{
-        key: 'render',
-        value: function render() {
-            var infoDef = _react2.default.createElement(
-                'p',
-                null,
-                'How effective are moves of given types against this pokemon'
-            );
-            var defense = this.createMultiplierTable(this.props.type, 'from');
-            var offense = null;
-            if (this.props.hasOwnProperty('offense')) {
-                offense = this.createMultiplierTable(this.props.type, 'to');
-            }
-            return _react2.default.createElement(
-                'div',
-                { className: _DamageRelations2.default.wrapper },
-                offense ? _react2.default.createElement(
-                    'h5',
-                    null,
-                    'Offense'
-                ) : null,
-                offense ? this.parseMultiplierTable(offense) : null,
-                _react2.default.createElement(
-                    'h5',
-                    null,
-                    'Defense'
-                ),
-                offense ? null : infoDef,
-                this.parseMultiplierTable(defense)
-            );
-        }
-    }]);
-
-    return DamageRelations;
-}(_react2.default.Component);
-
-exports.default = DamageRelations;
-
-/***/ }),
-/* 37 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-    value: true
-});
-
-var _react = __webpack_require__(0);
-
-var _react2 = _interopRequireDefault(_react);
-
-var _Loader = __webpack_require__(89);
-
-var _Loader2 = _interopRequireDefault(_Loader);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-// export default class Loader extends React.Component {
-//     render () {
-//         return <img className={Styles.loader} src="./resources/icons/loader.svg" />
-//     }
-// }
-
-var Loader = function Loader() {
-    return _react2.default.createElement('img', { className: _Loader2.default.loader, src: './resources/icons/loader.svg' });
-};
-
-exports.default = Loader;
-
-/***/ }),
-/* 38 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-    value: true
-});
-
-var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-
-var _react = __webpack_require__(0);
-
-var _react2 = _interopRequireDefault(_react);
-
-var _MoveClass = __webpack_require__(98);
-
-var _MoveClass2 = _interopRequireDefault(_MoveClass);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
-
-function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
-
-var MoveClass = function (_React$Component) {
-    _inherits(MoveClass, _React$Component);
-
-    function MoveClass() {
-        _classCallCheck(this, MoveClass);
-
-        return _possibleConstructorReturn(this, (MoveClass.__proto__ || Object.getPrototypeOf(MoveClass)).apply(this, arguments));
-    }
-
-    _createClass(MoveClass, [{
-        key: 'shouldComponentUpdate',
-        value: function shouldComponentUpdate(nextProps) {
-            if (nextProps === this.props) {
-                return false;
-            }
-            return true;
-        }
-    }, {
-        key: 'render',
-        value: function render() {
-            var cl = this.props.data;
-            return _react2.default.createElement(
-                'span',
-                { className: _MoveClass2.default.center },
-                _react2.default.createElement(
-                    'span',
-                    { className: _MoveClass2.default[cl] },
-                    cl.replace(/\b(\w)/g, function (m) {
-                        return m.toUpperCase();
-                    })
-                )
-            );
-        }
-    }]);
-
-    return MoveClass;
-}(_react2.default.Component);
-
-exports.default = MoveClass;
-
-/***/ }),
-/* 39 */
-/***/ (function(module, exports, __webpack_require__) {
-
-__webpack_require__(40);
-module.exports = __webpack_require__(124);
-
-
-/***/ }),
-/* 40 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-var _react = __webpack_require__(0);
-
-var _react2 = _interopRequireDefault(_react);
-
-var _reactDom = __webpack_require__(43);
+var _reactDom = __webpack_require__(39);
 
 var _reactDom2 = _interopRequireDefault(_reactDom);
 
-var _App = __webpack_require__(56);
+var _App = __webpack_require__(52);
 
 var _App2 = _interopRequireDefault(_App);
 
-var _reactRedux = __webpack_require__(4);
+var _reactRedux = __webpack_require__(3);
 
-var _store = __webpack_require__(120);
+var _Actions = __webpack_require__(6);
+
+var _store = __webpack_require__(140);
 
 var _store2 = _interopRequireDefault(_store);
 
-var _fetch = __webpack_require__(35);
+var _fetch = __webpack_require__(23);
 
 var _fetch2 = _interopRequireDefault(_fetch);
 
@@ -3217,8 +2706,9 @@ var onLoad = function onDomConentLoaded() {
         }
     };
     // Load pokelist data
-    var fet = new _fetch2.default();
-    fet.get();
+    new _fetch2.default().get().then(function (d) {
+        return _store2.default.dispatch((0, _Actions.updateData)(d));
+    });
     // ReactDOM render
     _reactDom2.default.render(_react2.default.createElement(
         _reactRedux.Provider,
@@ -3232,7 +2722,7 @@ var onLoad = function onDomConentLoaded() {
 document.addEventListener('DOMContentLoaded', onLoad);
 
 /***/ }),
-/* 41 */
+/* 37 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -3245,7 +2735,7 @@ document.addEventListener('DOMContentLoaded', onLoad);
  This source code is licensed under the MIT license found in the
  LICENSE file in the root directory of this source tree.
 */
-var f=__webpack_require__(7),p=__webpack_require__(10);__webpack_require__(3);var r=__webpack_require__(2);
+var f=__webpack_require__(7),p=__webpack_require__(8);__webpack_require__(5);var r=__webpack_require__(4);
 function t(a){for(var b=arguments.length-1,d="Minified React error #"+a+"; visit http://facebook.github.io/react/docs/error-decoder.html?invariant\x3d"+a,e=0;e<b;e++)d+="\x26args[]\x3d"+encodeURIComponent(arguments[e+1]);b=Error(d+" for the full message or use the non-minified dev environment for full errors and additional helpful warnings.");b.name="Invariant Violation";b.framesToPop=1;throw b;}
 var u={isMounted:function(){return!1},enqueueForceUpdate:function(){},enqueueReplaceState:function(){},enqueueSetState:function(){}};function v(a,b,d){this.props=a;this.context=b;this.refs=p;this.updater=d||u}v.prototype.isReactComponent={};v.prototype.setState=function(a,b){"object"!==typeof a&&"function"!==typeof a&&null!=a?t("85"):void 0;this.updater.enqueueSetState(this,a,b,"setState")};v.prototype.forceUpdate=function(a){this.updater.enqueueForceUpdate(this,a,"forceUpdate")};
 function w(a,b,d){this.props=a;this.context=b;this.refs=p;this.updater=d||u}function x(){}x.prototype=v.prototype;var y=w.prototype=new x;y.constructor=w;f(y,v.prototype);y.isPureReactComponent=!0;function z(a,b,d){this.props=a;this.context=b;this.refs=p;this.updater=d||u}var A=z.prototype=new x;A.constructor=z;f(A,v.prototype);A.unstable_isAsyncReactComponent=!0;A.render=function(){return this.props.children};
@@ -3262,7 +2752,7 @@ module.exports={Children:{map:S.map,forEach:S.forEach,count:S.count,toArray:S.to
 
 
 /***/ }),
-/* 42 */
+/* 38 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -3283,11 +2773,11 @@ if (process.env.NODE_ENV !== "production") {
 'use strict';
 
 var objectAssign$1 = __webpack_require__(7);
-var require$$0 = __webpack_require__(11);
-var emptyObject = __webpack_require__(10);
-var invariant = __webpack_require__(3);
-var emptyFunction = __webpack_require__(2);
-var checkPropTypes = __webpack_require__(12);
+var require$$0 = __webpack_require__(9);
+var emptyObject = __webpack_require__(8);
+var invariant = __webpack_require__(5);
+var emptyFunction = __webpack_require__(4);
+var checkPropTypes = __webpack_require__(10);
 
 /**
  * Copyright (c) 2013-present, Facebook, Inc.
@@ -4968,7 +4458,7 @@ module.exports = ReactEntry;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(1)))
 
 /***/ }),
-/* 43 */
+/* 39 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -5006,15 +4496,15 @@ if (process.env.NODE_ENV === 'production') {
   // DCE check should happen before ReactDOM bundle executes so that
   // DevTools can report bad minification during injection.
   checkDCE();
-  module.exports = __webpack_require__(44);
+  module.exports = __webpack_require__(40);
 } else {
-  module.exports = __webpack_require__(47);
+  module.exports = __webpack_require__(43);
 }
 
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(1)))
 
 /***/ }),
-/* 44 */
+/* 40 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -5028,7 +4518,7 @@ if (process.env.NODE_ENV === 'production') {
  LICENSE file in the root directory of this source tree.
  Modernizr 3.0.0pre (Custom Build) | MIT
 */
-var aa=__webpack_require__(0);__webpack_require__(3);var l=__webpack_require__(14),n=__webpack_require__(7),ba=__webpack_require__(21),ca=__webpack_require__(2),da=__webpack_require__(10),ea=__webpack_require__(22),fa=__webpack_require__(23),ha=__webpack_require__(24),ia=__webpack_require__(25);
+var aa=__webpack_require__(0);__webpack_require__(5);var l=__webpack_require__(12),n=__webpack_require__(7),ba=__webpack_require__(18),ca=__webpack_require__(4),da=__webpack_require__(8),ea=__webpack_require__(19),fa=__webpack_require__(20),ha=__webpack_require__(21),ia=__webpack_require__(22);
 function w(a){for(var b=arguments.length-1,c="Minified React error #"+a+"; visit http://facebook.github.io/react/docs/error-decoder.html?invariant\x3d"+a,d=0;d<b;d++)c+="\x26args[]\x3d"+encodeURIComponent(arguments[d+1]);b=Error(c+" for the full message or use the non-minified dev environment for full errors and additional helpful warnings.");b.name="Invariant Violation";b.framesToPop=1;throw b;}aa?void 0:w("227");
 function ja(a){switch(a){case "svg":return"http://www.w3.org/2000/svg";case "math":return"http://www.w3.org/1998/Math/MathML";default:return"http://www.w3.org/1999/xhtml"}}
 var ka={Namespaces:{html:"http://www.w3.org/1999/xhtml",mathml:"http://www.w3.org/1998/Math/MathML",svg:"http://www.w3.org/2000/svg"},getIntrinsicNamespace:ja,getChildNamespace:function(a,b){return null==a||"http://www.w3.org/1999/xhtml"===a?ja(b):"http://www.w3.org/2000/svg"===a&&"foreignObject"===b?"http://www.w3.org/1999/xhtml":a}},la=null,oa={};
@@ -5277,7 +4767,7 @@ unstable_deferredUpdates:Xj.deferredUpdates,flushSync:Xj.flushSync,__SECRET_INTE
 
 
 /***/ }),
-/* 45 */
+/* 41 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -5292,7 +4782,7 @@ unstable_deferredUpdates:Xj.deferredUpdates,flushSync:Xj.flushSync,__SECRET_INTE
  * @typechecks
  */
 
-var isNode = __webpack_require__(46);
+var isNode = __webpack_require__(42);
 
 /**
  * @param {*} object The object to check.
@@ -5305,7 +4795,7 @@ function isTextNode(object) {
 module.exports = isTextNode;
 
 /***/ }),
-/* 46 */
+/* 42 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -5333,7 +4823,7 @@ function isNode(object) {
 module.exports = isNode;
 
 /***/ }),
-/* 47 */
+/* 43 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -5354,22 +4844,22 @@ if (process.env.NODE_ENV !== "production") {
 'use strict';
 
 var react = __webpack_require__(0);
-var invariant = __webpack_require__(3);
-var ExecutionEnvironment = __webpack_require__(14);
+var invariant = __webpack_require__(5);
+var ExecutionEnvironment = __webpack_require__(12);
 var _assign = __webpack_require__(7);
-var EventListener = __webpack_require__(21);
-var require$$0 = __webpack_require__(11);
-var hyphenateStyleName = __webpack_require__(48);
-var emptyFunction = __webpack_require__(2);
-var camelizeStyleName = __webpack_require__(50);
-var performanceNow = __webpack_require__(52);
-var propTypes = __webpack_require__(15);
-var emptyObject = __webpack_require__(10);
-var checkPropTypes = __webpack_require__(12);
-var shallowEqual = __webpack_require__(22);
-var containsNode = __webpack_require__(23);
-var focusNode = __webpack_require__(24);
-var getActiveElement = __webpack_require__(25);
+var EventListener = __webpack_require__(18);
+var require$$0 = __webpack_require__(9);
+var hyphenateStyleName = __webpack_require__(44);
+var emptyFunction = __webpack_require__(4);
+var camelizeStyleName = __webpack_require__(46);
+var performanceNow = __webpack_require__(48);
+var propTypes = __webpack_require__(13);
+var emptyObject = __webpack_require__(8);
+var checkPropTypes = __webpack_require__(10);
+var shallowEqual = __webpack_require__(19);
+var containsNode = __webpack_require__(20);
+var focusNode = __webpack_require__(21);
+var getActiveElement = __webpack_require__(22);
 
 /**
  * Copyright (c) 2013-present, Facebook, Inc.
@@ -22562,7 +22052,7 @@ module.exports = ReactDOMFiberEntry;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(1)))
 
 /***/ }),
-/* 48 */
+/* 44 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -22577,7 +22067,7 @@ module.exports = ReactDOMFiberEntry;
 
 
 
-var hyphenate = __webpack_require__(49);
+var hyphenate = __webpack_require__(45);
 
 var msPattern = /^ms-/;
 
@@ -22604,7 +22094,7 @@ function hyphenateStyleName(string) {
 module.exports = hyphenateStyleName;
 
 /***/ }),
-/* 49 */
+/* 45 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -22640,7 +22130,7 @@ function hyphenate(string) {
 module.exports = hyphenate;
 
 /***/ }),
-/* 50 */
+/* 46 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -22655,7 +22145,7 @@ module.exports = hyphenate;
 
 
 
-var camelize = __webpack_require__(51);
+var camelize = __webpack_require__(47);
 
 var msPattern = /^-ms-/;
 
@@ -22683,7 +22173,7 @@ function camelizeStyleName(string) {
 module.exports = camelizeStyleName;
 
 /***/ }),
-/* 51 */
+/* 47 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -22718,7 +22208,7 @@ function camelize(string) {
 module.exports = camelize;
 
 /***/ }),
-/* 52 */
+/* 48 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -22733,7 +22223,7 @@ module.exports = camelize;
  * @typechecks
  */
 
-var performance = __webpack_require__(53);
+var performance = __webpack_require__(49);
 
 var performanceNow;
 
@@ -22755,7 +22245,7 @@ if (performance.now) {
 module.exports = performanceNow;
 
 /***/ }),
-/* 53 */
+/* 49 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -22770,7 +22260,7 @@ module.exports = performanceNow;
 
 
 
-var ExecutionEnvironment = __webpack_require__(14);
+var ExecutionEnvironment = __webpack_require__(12);
 
 var performance;
 
@@ -22781,7 +22271,7 @@ if (ExecutionEnvironment.canUseDOM) {
 module.exports = performance || {};
 
 /***/ }),
-/* 54 */
+/* 50 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -22794,13 +22284,13 @@ module.exports = performance || {};
 
 
 
-var emptyFunction = __webpack_require__(2);
-var invariant = __webpack_require__(3);
-var warning = __webpack_require__(11);
+var emptyFunction = __webpack_require__(4);
+var invariant = __webpack_require__(5);
+var warning = __webpack_require__(9);
 var assign = __webpack_require__(7);
 
-var ReactPropTypesSecret = __webpack_require__(13);
-var checkPropTypes = __webpack_require__(12);
+var ReactPropTypesSecret = __webpack_require__(11);
+var checkPropTypes = __webpack_require__(10);
 
 module.exports = function(isValidElement, throwOnDirectAccess) {
   /* global Symbol */
@@ -23331,7 +22821,7 @@ module.exports = function(isValidElement, throwOnDirectAccess) {
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(1)))
 
 /***/ }),
-/* 55 */
+/* 51 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -23344,9 +22834,9 @@ module.exports = function(isValidElement, throwOnDirectAccess) {
 
 
 
-var emptyFunction = __webpack_require__(2);
-var invariant = __webpack_require__(3);
-var ReactPropTypesSecret = __webpack_require__(13);
+var emptyFunction = __webpack_require__(4);
+var invariant = __webpack_require__(5);
+var ReactPropTypesSecret = __webpack_require__(11);
 
 module.exports = function() {
   function shim(props, propName, componentName, location, propFullName, secret) {
@@ -23396,7 +22886,7 @@ module.exports = function() {
 
 
 /***/ }),
-/* 56 */
+/* 52 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -23412,33 +22902,17 @@ var _react = __webpack_require__(0);
 
 var _react2 = _interopRequireDefault(_react);
 
-var _reactRedux = __webpack_require__(4);
-
-var _actions = __webpack_require__(5);
-
-var _fetch = __webpack_require__(35);
+var _fetch = __webpack_require__(23);
 
 var _fetch2 = _interopRequireDefault(_fetch);
 
-var _Home = __webpack_require__(83);
+var _reactRedux = __webpack_require__(3);
 
-var _Home2 = _interopRequireDefault(_Home);
+var _Components = __webpack_require__(2);
 
-var _Pokedex = __webpack_require__(85);
+var _Actions = __webpack_require__(6);
 
-var _Pokedex2 = _interopRequireDefault(_Pokedex);
-
-var _Pokelist = __webpack_require__(113);
-
-var _Pokelist2 = _interopRequireDefault(_Pokelist);
-
-var _Layout = __webpack_require__(114);
-
-var _Layout2 = _interopRequireDefault(_Layout);
-
-var _Loader = __webpack_require__(37);
-
-var _Loader2 = _interopRequireDefault(_Loader);
+var _Scenes = __webpack_require__(99);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -23460,13 +22934,15 @@ var App = function (_React$Component) {
             var page = _this.props.page;
             var body = {
                 type: page.dexItemType,
-                id: page.dexItemId,
-                stored: []
+                id: page.dexItemId
             };
             var req = _this.fetch.get(body);
             req.then(function (data) {
-                if (data === null) {
-                    return;
+                if (!data) {
+                    if (data === null) {
+                        return;
+                    }
+                    return _this.props.fetchFail('404');
                 }
                 console.log('## FETCHED ##');
                 console.log(data);
@@ -23474,37 +22950,32 @@ var App = function (_React$Component) {
                 if (page.currentPage === 'pokelist') {
                     _this.props.updateList(data);
                 } else {
-                    _this.props.updateDex(data);
+                    _this.props.updateDex(data, page.dexItemType);
                 }
             });
         };
 
         _this.isFetchNeeded = function () {
-            var type = _this.props.page.dexItemType;
-            var id = _this.props.page.dexItemId;
-            var data = _this.props.page.dexItemData;
-            if (!data) {
+            var _this$props$page = _this.props.page,
+                dexItemType = _this$props$page.dexItemType,
+                dexItemId = _this$props$page.dexItemId,
+                dexItemData = _this$props$page.dexItemData,
+                dexItemDataType = _this$props$page.dexItemDataType,
+                currentPage = _this$props$page.currentPage;
+
+            if (currentPage === '404') {
+                return false;
+            }
+            if (!dexItemData) {
                 console.warn('No data');
                 return true;
             }
-            if (data.id !== id) {
+            if (dexItemData.id !== dexItemId) {
                 console.warn('Data.id is not equal to props.dexItemId');
                 return true;
             }
-            if (!data.hasOwnProperty('sprites') && type === 'pokemon') {
-                console.warn('Data does not have property sprites, and dexItemType is pokemon');
-                return true;
-            }
-            if (!data.hasOwnProperty('damage_relations') && type === 'type') {
-                console.warn('Data does not have property dmg_rel, and dexItemType is type');
-                return true;
-            }
-            if (!data.hasOwnProperty('pp') && type === 'move') {
-                console.warn('Data does not have property pp and dexItemType is move');
-                return true;
-            }
-            if (!data.hasOwnProperty('pokemon') && type === 'egg_group') {
-                console.log('Data type is egg_group, data does not have pokemons property');
+            if (dexItemType !== dexItemDataType) {
+                console.warn('DexItemType not equal DexItemDataType');
                 return true;
             }
             return false;
@@ -23521,18 +22992,18 @@ var App = function (_React$Component) {
                 page = _props.page,
                 list = _props.list;
 
-            var Content = _Loader2.default;
+            var Content = _Components.Loader;
             var title = null;
             if (page.currentPage === 'pokelist') {
                 title = 'Pokelist';
-                if (!list.data.length) {
+                if (!list.data) {
                     this.getData();
                 } else {
-                    Content = _Pokelist2.default;
+                    Content = _Scenes.Pokelist;
                 }
             }
             if (page.currentPage === 'home') {
-                Content = _Home2.default;
+                Content = _Scenes.Home;
                 title = 'Home';
             }
             if (page.currentPage === 'pokedex') {
@@ -23542,11 +23013,15 @@ var App = function (_React$Component) {
                     console.log('FETCH NEEDED');
                     this.getData();
                 } else {
-                    Content = _Pokedex2.default;
+                    Content = _Scenes.Pokedex;
                 }
             }
+            if (page.currentPage === '404') {
+                title = 'Sorry!';
+                Content = _Scenes.NotFound;
+            }
             return _react2.default.createElement(
-                _Layout2.default,
+                _Scenes.Layout,
                 { title: title },
                 _react2.default.createElement(Content, null)
             );
@@ -23565,11 +23040,14 @@ var mapStateToProps = function mapStateToProps(state) {
 
 var mapDispatchToProps = function mapDispatchToProps(dispatch) {
     return {
-        updateDex: function updateDex(data) {
-            return dispatch((0, _actions.updateDexData)(data));
+        updateDex: function updateDex(data, type) {
+            return dispatch((0, _Actions.updateDexData)(data, type));
         },
         updateList: function updateList(data) {
-            return dispatch((0, _actions.updateData)(data));
+            return dispatch((0, _Actions.updateData)(data));
+        },
+        fetchFail: function fetchFail(page) {
+            return dispatch((0, _Actions.changePage)(page));
         }
     };
 };
@@ -23577,17 +23055,17 @@ var mapDispatchToProps = function mapDispatchToProps(dispatch) {
 exports.default = (0, _reactRedux.connect)(mapStateToProps, mapDispatchToProps)(App);
 
 /***/ }),
-/* 57 */
+/* 53 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* WEBPACK VAR INJECTION */(function(process) {/* harmony export (immutable) */ __webpack_exports__["a"] = createProvider;
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_react__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_prop_types__ = __webpack_require__(15);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_prop_types__ = __webpack_require__(13);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_prop_types___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_prop_types__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__utils_PropTypes__ = __webpack_require__(26);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__utils_warning__ = __webpack_require__(16);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__utils_PropTypes__ = __webpack_require__(24);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__utils_warning__ = __webpack_require__(14);
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
 function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
@@ -23663,7 +23141,7 @@ function createProvider() {
 /* WEBPACK VAR INJECTION */}.call(__webpack_exports__, __webpack_require__(1)))
 
 /***/ }),
-/* 58 */
+/* 54 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -23735,7 +23213,7 @@ module.exports = function hoistNonReactStatics(targetComponent, sourceComponent,
 
 
 /***/ }),
-/* 59 */
+/* 55 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -23794,7 +23272,7 @@ module.exports = invariant;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(1)))
 
 /***/ }),
-/* 60 */
+/* 56 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -23893,17 +23371,17 @@ var Subscription = function () {
 
 
 /***/ }),
-/* 61 */
+/* 57 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* unused harmony export createConnect */
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__components_connectAdvanced__ = __webpack_require__(27);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__utils_shallowEqual__ = __webpack_require__(62);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__mapDispatchToProps__ = __webpack_require__(63);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__mapStateToProps__ = __webpack_require__(79);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__mergeProps__ = __webpack_require__(80);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__selectorFactory__ = __webpack_require__(81);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__components_connectAdvanced__ = __webpack_require__(25);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__utils_shallowEqual__ = __webpack_require__(58);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__mapDispatchToProps__ = __webpack_require__(59);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__mapStateToProps__ = __webpack_require__(75);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__mergeProps__ = __webpack_require__(76);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__selectorFactory__ = __webpack_require__(77);
 var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
 
 function _objectWithoutProperties(obj, keys) { var target = {}; for (var i in obj) { if (keys.indexOf(i) >= 0) continue; if (!Object.prototype.hasOwnProperty.call(obj, i)) continue; target[i] = obj[i]; } return target; }
@@ -24009,7 +23487,7 @@ function createConnect() {
 /* harmony default export */ __webpack_exports__["a"] = (createConnect());
 
 /***/ }),
-/* 62 */
+/* 58 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -24046,15 +23524,15 @@ function shallowEqual(objA, objB) {
 }
 
 /***/ }),
-/* 63 */
+/* 59 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* unused harmony export whenMapDispatchToPropsIsFunction */
 /* unused harmony export whenMapDispatchToPropsIsMissing */
 /* unused harmony export whenMapDispatchToPropsIsObject */
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_redux__ = __webpack_require__(17);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__wrapMapToProps__ = __webpack_require__(33);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_redux__ = __webpack_require__(15);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__wrapMapToProps__ = __webpack_require__(31);
 
 
 
@@ -24077,13 +23555,13 @@ function whenMapDispatchToPropsIsObject(mapDispatchToProps) {
 /* harmony default export */ __webpack_exports__["a"] = ([whenMapDispatchToPropsIsFunction, whenMapDispatchToPropsIsMissing, whenMapDispatchToPropsIsObject]);
 
 /***/ }),
-/* 64 */
+/* 60 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__Symbol_js__ = __webpack_require__(29);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__getRawTag_js__ = __webpack_require__(67);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__objectToString_js__ = __webpack_require__(68);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__Symbol_js__ = __webpack_require__(27);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__getRawTag_js__ = __webpack_require__(63);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__objectToString_js__ = __webpack_require__(64);
 
 
 
@@ -24115,11 +23593,11 @@ function baseGetTag(value) {
 
 
 /***/ }),
-/* 65 */
+/* 61 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__freeGlobal_js__ = __webpack_require__(66);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__freeGlobal_js__ = __webpack_require__(62);
 
 
 /** Detect free variable `self`. */
@@ -24132,7 +23610,7 @@ var root = __WEBPACK_IMPORTED_MODULE_0__freeGlobal_js__["a" /* default */] || fr
 
 
 /***/ }),
-/* 66 */
+/* 62 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -24141,14 +23619,14 @@ var freeGlobal = typeof global == 'object' && global && global.Object === Object
 
 /* harmony default export */ __webpack_exports__["a"] = (freeGlobal);
 
-/* WEBPACK VAR INJECTION */}.call(__webpack_exports__, __webpack_require__(30)))
+/* WEBPACK VAR INJECTION */}.call(__webpack_exports__, __webpack_require__(28)))
 
 /***/ }),
-/* 67 */
+/* 63 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__Symbol_js__ = __webpack_require__(29);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__Symbol_js__ = __webpack_require__(27);
 
 
 /** Used for built-in method references. */
@@ -24198,7 +23676,7 @@ function getRawTag(value) {
 
 
 /***/ }),
-/* 68 */
+/* 64 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -24227,11 +23705,11 @@ function objectToString(value) {
 
 
 /***/ }),
-/* 69 */
+/* 65 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__overArg_js__ = __webpack_require__(70);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__overArg_js__ = __webpack_require__(66);
 
 
 /** Built-in value references. */
@@ -24241,7 +23719,7 @@ var getPrototype = Object(__WEBPACK_IMPORTED_MODULE_0__overArg_js__["a" /* defau
 
 
 /***/ }),
-/* 70 */
+/* 66 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -24263,7 +23741,7 @@ function overArg(func, transform) {
 
 
 /***/ }),
-/* 71 */
+/* 67 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -24299,14 +23777,14 @@ function isObjectLike(value) {
 
 
 /***/ }),
-/* 72 */
+/* 68 */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(73);
+module.exports = __webpack_require__(69);
 
 
 /***/ }),
-/* 73 */
+/* 69 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -24316,7 +23794,7 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
-var _ponyfill = __webpack_require__(75);
+var _ponyfill = __webpack_require__(71);
 
 var _ponyfill2 = _interopRequireDefault(_ponyfill);
 
@@ -24339,10 +23817,10 @@ if (typeof self !== 'undefined') {
 
 var result = (0, _ponyfill2['default'])(root);
 exports['default'] = result;
-/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(30), __webpack_require__(74)(module)))
+/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(28), __webpack_require__(70)(module)))
 
 /***/ }),
-/* 74 */
+/* 70 */
 /***/ (function(module, exports) {
 
 module.exports = function(module) {
@@ -24370,7 +23848,7 @@ module.exports = function(module) {
 
 
 /***/ }),
-/* 75 */
+/* 71 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -24399,14 +23877,14 @@ function symbolObservablePonyfill(root) {
 };
 
 /***/ }),
-/* 76 */
+/* 72 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* WEBPACK VAR INJECTION */(function(process) {/* harmony export (immutable) */ __webpack_exports__["a"] = combineReducers;
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__createStore__ = __webpack_require__(28);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_lodash_es_isPlainObject__ = __webpack_require__(18);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__utils_warning__ = __webpack_require__(31);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__createStore__ = __webpack_require__(26);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_lodash_es_isPlainObject__ = __webpack_require__(16);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__utils_warning__ = __webpack_require__(29);
 
 
 
@@ -24540,7 +24018,7 @@ function combineReducers(reducers) {
 /* WEBPACK VAR INJECTION */}.call(__webpack_exports__, __webpack_require__(1)))
 
 /***/ }),
-/* 77 */
+/* 73 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -24594,12 +24072,12 @@ function bindActionCreators(actionCreators, dispatch) {
 }
 
 /***/ }),
-/* 78 */
+/* 74 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (immutable) */ __webpack_exports__["a"] = applyMiddleware;
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__compose__ = __webpack_require__(32);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__compose__ = __webpack_require__(30);
 var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
 
 
@@ -24650,13 +24128,13 @@ function applyMiddleware() {
 }
 
 /***/ }),
-/* 79 */
+/* 75 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* unused harmony export whenMapStateToPropsIsFunction */
 /* unused harmony export whenMapStateToPropsIsMissing */
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__wrapMapToProps__ = __webpack_require__(33);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__wrapMapToProps__ = __webpack_require__(31);
 
 
 function whenMapStateToPropsIsFunction(mapStateToProps) {
@@ -24672,7 +24150,7 @@ function whenMapStateToPropsIsMissing(mapStateToProps) {
 /* harmony default export */ __webpack_exports__["a"] = ([whenMapStateToPropsIsFunction, whenMapStateToPropsIsMissing]);
 
 /***/ }),
-/* 80 */
+/* 76 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -24680,7 +24158,7 @@ function whenMapStateToPropsIsMissing(mapStateToProps) {
 /* unused harmony export wrapMergePropsFunc */
 /* unused harmony export whenMergePropsIsFunction */
 /* unused harmony export whenMergePropsIsOmitted */
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__utils_verifyPlainObject__ = __webpack_require__(34);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__utils_verifyPlainObject__ = __webpack_require__(32);
 var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
 
 
@@ -24729,14 +24207,14 @@ function whenMergePropsIsOmitted(mergeProps) {
 /* WEBPACK VAR INJECTION */}.call(__webpack_exports__, __webpack_require__(1)))
 
 /***/ }),
-/* 81 */
+/* 77 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* WEBPACK VAR INJECTION */(function(process) {/* unused harmony export impureFinalPropsSelectorFactory */
 /* unused harmony export pureFinalPropsSelectorFactory */
 /* harmony export (immutable) */ __webpack_exports__["a"] = finalPropsSelectorFactory;
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__verifySubselectors__ = __webpack_require__(82);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__verifySubselectors__ = __webpack_require__(78);
 function _objectWithoutProperties(obj, keys) { var target = {}; for (var i in obj) { if (keys.indexOf(i) >= 0) continue; if (!Object.prototype.hasOwnProperty.call(obj, i)) continue; target[i] = obj[i]; } return target; }
 
 
@@ -24842,12 +24320,12 @@ function finalPropsSelectorFactory(dispatch, _ref2) {
 /* WEBPACK VAR INJECTION */}.call(__webpack_exports__, __webpack_require__(1)))
 
 /***/ }),
-/* 82 */
+/* 78 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (immutable) */ __webpack_exports__["a"] = verifySubselectors;
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__utils_warning__ = __webpack_require__(16);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__utils_warning__ = __webpack_require__(14);
 
 
 function verify(selector, methodName, displayName) {
@@ -24867,7 +24345,307 @@ function verifySubselectors(mapStateToProps, mapDispatchToProps, mergeProps, dis
 }
 
 /***/ }),
+/* 79 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+
+var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
+
+var _react = __webpack_require__(0);
+
+var _react2 = _interopRequireDefault(_react);
+
+var _DamageRelations = __webpack_require__(80);
+
+var _DamageRelations2 = _interopRequireDefault(_DamageRelations);
+
+var _TypeDamage = __webpack_require__(81);
+
+var _TypeDamage2 = _interopRequireDefault(_TypeDamage);
+
+var _Components = __webpack_require__(2);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+var typeTable = [{
+    name: 'normal',
+    multi: 1,
+    id: 1
+}, {
+    name: 'fighting',
+    multi: 1,
+    id: 2
+}, {
+    name: 'flying',
+    multi: 1,
+    id: 3
+}, {
+    name: 'poison',
+    multi: 1,
+    id: 4
+}, {
+    name: 'ground',
+    multi: 1,
+    id: 5
+}, {
+    name: 'rock',
+    multi: 1,
+    id: 6
+}, {
+    name: 'bug',
+    multi: 1,
+    id: 7
+}, {
+    name: 'ghost',
+    multi: 1,
+    id: 8
+}, {
+    name: 'steel',
+    multi: 1,
+    id: 9
+}, {
+    name: 'fire',
+    multi: 1,
+    id: 10
+}, {
+    name: 'water',
+    multi: 1,
+    id: 11
+}, {
+    name: 'grass',
+    multi: 1,
+    id: 12
+}, {
+    name: 'electric',
+    multi: 1,
+    id: 13
+}, {
+    name: 'psychic',
+    multi: 1,
+    id: 14
+}, {
+    name: 'ice',
+    multi: 1,
+    id: 15
+}, {
+    name: 'dragon',
+    multi: 1,
+    id: 16
+}, {
+    name: 'dark',
+    multi: 1,
+    id: 17
+}, {
+    name: 'fairy',
+    multi: 1,
+    id: 18
+}];
+
+var calcMultipliers = function calcMultipliers(multiTable) {
+    var table = [];
+    typeTable.forEach(function (type) {
+        return table.push(_extends({}, type));
+    });
+    multiTable.forEach(function (typeRel) {
+        typeRel.forEach(function (relation) {
+            var multiplier = relation[1];
+            relation[0].forEach(function (type) {
+                var index = table.findIndex(function (e) {
+                    return e.name === type;
+                });
+                table[index].multi = table[index].multi * multiplier;
+            });
+        });
+    });
+    return table;
+};
+
+var createMultiplierTable = function createMultiplierTable(typeArr, dir) {
+    var table = typeArr.map(function (typeObj) {
+        var type = _TypeDamage2.default.find(function (e) {
+            return e.name === typeObj.name;
+        });
+        var noDamage = type.damage_relations['no_' + dir].slice();
+        var halfDamage = type.damage_relations['half_' + dir].slice();
+        var doubleDamage = type.damage_relations['double_' + dir].slice();
+        return [[noDamage, 0], [halfDamage, 0.5], [doubleDamage, 2]];
+    });
+    return calcMultipliers(table);
+};
+
+var parseMultiplierTable = function parseMultiplierTable(multiTable) {
+    var typeMultiMap = multiTable.map(function (el, i) {
+        var cName = el.multi.toString().replace('.', '');
+        return _react2.default.createElement(
+            'div',
+            { key: i, className: _DamageRelations2.default.dmgRelItem },
+            _react2.default.createElement(_Components.PokeType, { type: [el] }),
+            _react2.default.createElement(
+                'span',
+                { className: _DamageRelations2.default['x' + cName] },
+                el.multi
+            )
+        );
+    });
+    return _react2.default.createElement(
+        'div',
+        { className: _DamageRelations2.default.dmgRel },
+        typeMultiMap
+    );
+};
+
+var DamageRelations = function DamageRelations(props) {
+    var infoDef = _react2.default.createElement(
+        'p',
+        null,
+        'How effective are moves of given types against this pokemon'
+    );
+    var defense = createMultiplierTable(props.type, 'from');
+    var offense = null;
+    if (props.hasOwnProperty('offense')) {
+        offense = createMultiplierTable(props.type, 'to');
+    }
+    return _react2.default.createElement(
+        'div',
+        { className: _DamageRelations2.default.wrapper },
+        offense ? _react2.default.createElement(
+            'h5',
+            null,
+            'Offense'
+        ) : null,
+        offense ? parseMultiplierTable(offense) : null,
+        _react2.default.createElement(
+            'h5',
+            null,
+            'Defense'
+        ),
+        offense ? null : infoDef,
+        parseMultiplierTable(defense)
+    );
+};
+
+exports.default = DamageRelations;
+
+/***/ }),
+/* 80 */
+/***/ (function(module, exports) {
+
+// removed by extract-text-webpack-plugin
+module.exports = {"section":"DamageRelations__section___200I6O","about":"DamageRelations__about___2cGskL","keyword":"DamageRelations__keyword___3thhoJ","button":"DamageRelations__button___WEc2rE","wrapper":"DamageRelations__wrapper___3IhV4-","dmgRel":"DamageRelations__dmgRel___2snAJS","dmgRelItem":"DamageRelations__dmgRelItem___3CzBmM","dmg":"DamageRelations__dmg___1lH4-1","x0":"DamageRelations__x0___m7eaLF","x025":"DamageRelations__x025___Dpit3H","x05":"DamageRelations__x05___1_3DYx","x1":"DamageRelations__x1___2NenhT","x2":"DamageRelations__x2___1qBNpu","x4":"DamageRelations__x4___2g2bUL"};
+
+/***/ }),
+/* 81 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+var dmg_rel = [{ "name": "normal", "id": 1, "damage_relations": { "half_from": [], "no_from": ["ghost"], "half_to": ["rock", "steel"], "no_to": ["ghost"], "double_to": [], "double_from": ["fighting"] } }, { "name": "fighting", "id": 2, "damage_relations": { "half_from": ["rock", "bug", "dark"], "no_from": [], "half_to": ["flying", "poison", "bug", "psychic", "fairy"], "no_to": ["ghost"], "double_to": ["normal", "rock", "steel", "ice", "dark"], "double_from": ["flying", "psychic", "fairy"] } }, { "name": "flying", "id": 3, "damage_relations": { "half_from": ["fighting", "bug", "grass"], "no_from": ["ground"], "half_to": ["rock", "steel", "electric"], "no_to": [], "double_to": ["fighting", "bug", "grass"], "double_from": ["rock", "electric", "ice"] } }, { "name": "poison", "id": 4, "damage_relations": { "half_from": ["fighting", "poison", "bug", "grass", "fairy"], "no_from": [], "half_to": ["poison", "ground", "rock", "ghost"], "no_to": ["steel"], "double_to": ["grass", "fairy"], "double_from": ["ground", "psychic"] } }, { "name": "ground", "id": 5, "damage_relations": { "half_from": ["poison", "rock"], "no_from": ["electric"], "half_to": ["bug", "grass"], "no_to": ["flying"], "double_to": ["poison", "rock", "steel", "fire", "electric"], "double_from": ["water", "grass", "ice"] } }, { "name": "rock", "id": 6, "damage_relations": { "half_from": ["normal", "flying", "poison", "fire"], "no_from": [], "half_to": ["fighting", "ground", "steel"], "no_to": [], "double_to": ["flying", "bug", "fire", "ice"], "double_from": ["fighting", "ground", "steel", "water", "grass"] } }, { "name": "bug", "id": 7, "damage_relations": { "half_from": ["fighting", "ground", "grass"], "no_from": [], "half_to": ["fighting", "flying", "poison", "ghost", "steel", "fire", "fairy"], "no_to": [], "double_to": ["grass", "psychic", "dark"], "double_from": ["flying", "rock", "fire"] } }, { "name": "ghost", "id": 8, "damage_relations": { "half_from": ["poison", "bug"], "no_from": ["normal", "fighting"], "half_to": ["dark"], "no_to": ["normal"], "double_to": ["ghost", "psychic"], "double_from": ["ghost", "dark"] } }, { "name": "steel", "id": 9, "damage_relations": { "half_from": ["normal", "flying", "rock", "bug", "steel", "grass", "psychic", "ice", "dragon", "fairy"], "no_from": ["poison"], "half_to": ["steel", "fire", "water", "electric"], "no_to": [], "double_to": ["rock", "ice", "fairy"], "double_from": ["fighting", "ground", "fire"] } }, { "name": "fire", "id": 10, "damage_relations": { "half_from": ["bug", "steel", "fire", "grass", "ice", "fairy"], "no_from": [], "half_to": ["rock", "fire", "water", "dragon"], "no_to": [], "double_to": ["bug", "steel", "grass", "ice"], "double_from": ["ground", "rock", "water"] } }, { "name": "water", "id": 11, "damage_relations": { "half_from": ["steel", "fire", "water", "ice"], "no_from": [], "half_to": ["water", "grass", "dragon"], "no_to": [], "double_to": ["ground", "rock", "fire"], "double_from": ["grass", "electric"] } }, { "name": "grass", "id": 12, "damage_relations": { "half_from": ["ground", "water", "grass", "electric"], "no_from": [], "half_to": ["flying", "poison", "bug", "steel", "fire", "grass", "dragon"], "no_to": [], "double_to": ["ground", "rock", "water"], "double_from": ["flying", "poison", "bug", "fire", "ice"] } }, { "name": "electric", "id": 13, "damage_relations": { "half_from": ["flying", "steel", "electric"], "no_from": [], "half_to": ["grass", "electric", "dragon"], "no_to": ["ground"], "double_to": ["flying", "water"], "double_from": ["ground"] } }, { "name": "psychic", "id": 14, "damage_relations": { "half_from": ["fighting", "psychic"], "no_from": [], "half_to": ["steel", "psychic"], "no_to": ["dark"], "double_to": ["fighting", "poison"], "double_from": ["bug", "ghost", "dark"] } }, { "name": "ice", "id": 15, "damage_relations": { "half_from": ["ice"], "no_from": [], "half_to": ["steel", "fire", "water", "ice"], "no_to": [], "double_to": ["flying", "ground", "grass", "dragon"], "double_from": ["fighting", "rock", "steel", "fire"] } }, { "name": "dragon", "id": 16, "damage_relations": { "half_from": ["fire", "water", "grass", "electric"], "no_from": [], "half_to": ["steel"], "no_to": ["fairy"], "double_to": ["dragon"], "double_from": ["ice", "dragon", "fairy"] } }, { "name": "dark", "id": 17, "damage_relations": { "half_from": ["ghost", "dark"], "no_from": ["psychic"], "half_to": ["fighting", "dark", "fairy"], "no_to": [], "double_to": ["ghost", "psychic"], "double_from": ["fighting", "bug", "fairy"] } }, { "name": "fairy", "id": 18, "damage_relations": { "half_from": ["fighting", "bug", "dark"], "no_from": ["dragon"], "half_to": ["poison", "steel", "fire"], "no_to": [], "double_to": ["fighting", "dragon", "dark"], "double_from": ["poison", "steel"] } }];
+exports.default = dmg_rel;
+
+/***/ }),
+/* 82 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+
+var _react = __webpack_require__(0);
+
+var _react2 = _interopRequireDefault(_react);
+
+var _DataTable = __webpack_require__(83);
+
+var _DataTable2 = _interopRequireDefault(_DataTable);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+var DataTable = function DataTable(props) {
+    var rows = props.data.map(function (d, i) {
+        return _react2.default.createElement(
+            'tr',
+            { key: i },
+            _react2.default.createElement(
+                'td',
+                null,
+                d[0] ? d[0] : '-'
+            ),
+            _react2.default.createElement(
+                'td',
+                null,
+                d[1] ? d[1] : '-'
+            )
+        );
+    });
+    return _react2.default.createElement(
+        'table',
+        { className: _DataTable2.default.main },
+        _react2.default.createElement(
+            'tbody',
+            null,
+            rows
+        )
+    );
+};
+
+exports.default = DataTable;
+
+/***/ }),
 /* 83 */
+/***/ (function(module, exports) {
+
+// removed by extract-text-webpack-plugin
+module.exports = {"section":"DataTable__section___Llagif","about":"DataTable__about___RLU7b2","keyword":"DataTable__keyword___1eO7Q0","button":"DataTable__button___3YyiZX","main":"DataTable__main___fXWgSV"};
+
+/***/ }),
+/* 84 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+
+var _react = __webpack_require__(0);
+
+var _react2 = _interopRequireDefault(_react);
+
+var _Loader = __webpack_require__(85);
+
+var _Loader2 = _interopRequireDefault(_Loader);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+var Loader = function Loader() {
+    return _react2.default.createElement('img', { className: _Loader2.default.loader, src: './resources/icons/loader.svg' });
+};
+
+exports.default = Loader;
+
+/***/ }),
+/* 85 */
+/***/ (function(module, exports) {
+
+// removed by extract-text-webpack-plugin
+module.exports = {"loader":"Loader__loader___ZSeS0D"};
+
+/***/ }),
+/* 86 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -24883,7 +24661,757 @@ var _react = __webpack_require__(0);
 
 var _react2 = _interopRequireDefault(_react);
 
-var _Home = __webpack_require__(84);
+var _MoveClass = __webpack_require__(87);
+
+var _MoveClass2 = _interopRequireDefault(_MoveClass);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+var MoveClass = function (_React$Component) {
+    _inherits(MoveClass, _React$Component);
+
+    function MoveClass() {
+        _classCallCheck(this, MoveClass);
+
+        return _possibleConstructorReturn(this, (MoveClass.__proto__ || Object.getPrototypeOf(MoveClass)).apply(this, arguments));
+    }
+
+    _createClass(MoveClass, [{
+        key: 'shouldComponentUpdate',
+        value: function shouldComponentUpdate(nextProps) {
+            if (nextProps === this.props) {
+                return false;
+            }
+            return true;
+        }
+    }, {
+        key: 'render',
+        value: function render() {
+            var cl = this.props.data;
+            return _react2.default.createElement(
+                'span',
+                { className: _MoveClass2.default.center },
+                _react2.default.createElement(
+                    'span',
+                    { className: _MoveClass2.default[cl] },
+                    cl.replace(/\b(\w)/g, function (m) {
+                        return m.toUpperCase();
+                    })
+                )
+            );
+        }
+    }]);
+
+    return MoveClass;
+}(_react2.default.Component);
+
+exports.default = MoveClass;
+
+/***/ }),
+/* 87 */
+/***/ (function(module, exports) {
+
+// removed by extract-text-webpack-plugin
+module.exports = {"center":"MoveClass__center___1aijtn","damageClass":"MoveClass__damageClass___375B1z","status":"MoveClass__status___2_zVde","special":"MoveClass__special___3yEeZ-","physical":"MoveClass__physical___oV2K2d"};
+
+/***/ }),
+/* 88 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+var _react = __webpack_require__(0);
+
+var _react2 = _interopRequireDefault(_react);
+
+var _PokeImg = __webpack_require__(89);
+
+var _PokeImg2 = _interopRequireDefault(_PokeImg);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+var PokeImg = function (_React$Component) {
+    _inherits(PokeImg, _React$Component);
+
+    function PokeImg() {
+        _classCallCheck(this, PokeImg);
+
+        return _possibleConstructorReturn(this, (PokeImg.__proto__ || Object.getPrototypeOf(PokeImg)).apply(this, arguments));
+    }
+
+    _createClass(PokeImg, [{
+        key: 'shouldComponentUpdate',
+        value: function shouldComponentUpdate(nextProps) {
+            if (nextProps === this.props) {
+                return false;
+            }
+            return true;
+        }
+    }, {
+        key: 'getSrc',
+        value: function getSrc(id) {
+            // #TODO
+            if (id > 649) {
+                return './resources/icons/not_ready.svg';
+            }
+            // #TODO
+            var bundleID = ~~(id / 10);
+            var pokeID = id.toString();
+            if (pokeID.length === 1) {
+                pokeID = '00' + pokeID;
+            } else if (pokeID.length === 2) {
+                pokeID = '0' + pokeID;
+            }
+            return './resources/pokemon/pokemons_' + bundleID + '.svg#' + pokeID;
+        }
+    }, {
+        key: 'render',
+        value: function render() {
+            var cl = this.props.cl ? this.props.cl : 'sm';
+            var url = this.getSrc(this.props.id);
+            return _react2.default.createElement('img', { className: _PokeImg2.default[cl], src: url });
+        }
+    }]);
+
+    return PokeImg;
+}(_react2.default.Component);
+
+exports.default = PokeImg;
+
+/***/ }),
+/* 89 */
+/***/ (function(module, exports) {
+
+// removed by extract-text-webpack-plugin
+module.exports = {"sm":"PokeImg__sm___3CGzd9","md":"PokeImg__md___Hb3TYW"};
+
+/***/ }),
+/* 90 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+var _react = __webpack_require__(0);
+
+var _react2 = _interopRequireDefault(_react);
+
+var _PokeLink = __webpack_require__(91);
+
+var _PokeLink2 = _interopRequireDefault(_PokeLink);
+
+var _reactRedux = __webpack_require__(3);
+
+var _Actions = __webpack_require__(6);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+var PokeLink = function (_React$Component) {
+    _inherits(PokeLink, _React$Component);
+
+    function PokeLink() {
+        var _ref;
+
+        var _temp, _this, _ret;
+
+        _classCallCheck(this, PokeLink);
+
+        for (var _len = arguments.length, args = Array(_len), _key = 0; _key < _len; _key++) {
+            args[_key] = arguments[_key];
+        }
+
+        return _ret = (_temp = (_this = _possibleConstructorReturn(this, (_ref = PokeLink.__proto__ || Object.getPrototypeOf(PokeLink)).call.apply(_ref, [this].concat(args))), _this), _this.handlePokeLinkClick = function () {
+            return _this.props.redirect({
+                type: _this.props.type,
+                id: _this.props.id
+            });
+        }, _temp), _possibleConstructorReturn(_this, _ret);
+    }
+
+    _createClass(PokeLink, [{
+        key: 'shouldComponentUpdate',
+        value: function shouldComponentUpdate(nextProps) {
+            if (nextProps === this.props) {
+                return false;
+            }
+            return true;
+        }
+    }, {
+        key: 'render',
+        value: function render() {
+            var content = null;
+            var tooltip = null;
+            var infoText = null;
+            var name = this.props.name.replace('-', ' ').replace(/\b(\w)/g, function (m) {
+                return m.toUpperCase();
+            });
+            if (this.props.hasOwnProperty('children')) {
+                content = this.props.children;
+                tooltip = _react2.default.createElement(
+                    'span',
+                    { className: _PokeLink2.default.tooltip },
+                    name
+                );
+            } else {
+                content = name;
+            }
+            if (this.props.hasOwnProperty('info') && this.props.info) {
+                infoText = _react2.default.createElement(
+                    'span',
+                    { className: _PokeLink2.default.infoText },
+                    ' ' + this.props.info
+                );
+            }
+            return _react2.default.createElement(
+                'div',
+                { className: _PokeLink2.default.wrapper },
+                _react2.default.createElement(
+                    'button',
+                    { onClick: this.handlePokeLinkClick,
+                        className: _PokeLink2.default.redirect },
+                    content
+                ),
+                tooltip,
+                infoText
+            );
+        }
+    }]);
+
+    return PokeLink;
+}(_react2.default.Component);
+
+var mapDispatchToProps = function mapDispatchToProps(dispatch) {
+    return {
+        redirect: function redirect(data) {
+            return dispatch((0, _Actions.showInPokedex)(data));
+        }
+    };
+};
+
+exports.default = (0, _reactRedux.connect)(null, mapDispatchToProps)(PokeLink);
+
+/***/ }),
+/* 91 */
+/***/ (function(module, exports) {
+
+// removed by extract-text-webpack-plugin
+module.exports = {"section":"PokeLink__section___2Ae177","about":"PokeLink__about___2EPqHw","keyword":"PokeLink__keyword___3nJf3x","button":"PokeLink__button___xSqEM6","redirect":"PokeLink__redirect___2vFw-V","wrapper":"PokeLink__wrapper___1CPgQx","tooltip":"PokeLink__tooltip___19_FWm","infoText":"PokeLink__infoText___3Gvzp2"};
+
+/***/ }),
+/* 92 */
+/***/ (function(module, exports) {
+
+// removed by extract-text-webpack-plugin
+module.exports = {"section":"PokeTable__section___2uvuct","about":"PokeTable__about___kBAPoz","keyword":"PokeTable__keyword___XepI6F","button":"PokeTable__button___3jqDOv","wrapper":"PokeTable__wrapper___3RDHSw","table":"PokeTable__table___2zeT0p","thead":"PokeTable__thead___1hvSHe","tbody":"PokeTable__tbody___2Envmw","sort":"PokeTable__sort___3pQ_iq","more":"PokeTable__more___jbklZz"};
+
+/***/ }),
+/* 93 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+exports.MovelistItem = exports.PokelistItem = undefined;
+
+var _PokelistItem = __webpack_require__(94);
+
+var _PokelistItem2 = _interopRequireDefault(_PokelistItem);
+
+var _MovelistItem = __webpack_require__(95);
+
+var _MovelistItem2 = _interopRequireDefault(_MovelistItem);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+exports.PokelistItem = _PokelistItem2.default;
+exports.MovelistItem = _MovelistItem2.default;
+
+/***/ }),
+/* 94 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+var _react = __webpack_require__(0);
+
+var _react2 = _interopRequireDefault(_react);
+
+var _Components = __webpack_require__(2);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+var PokelistItem = function (_React$Component) {
+    _inherits(PokelistItem, _React$Component);
+
+    function PokelistItem() {
+        _classCallCheck(this, PokelistItem);
+
+        return _possibleConstructorReturn(this, (PokelistItem.__proto__ || Object.getPrototypeOf(PokelistItem)).apply(this, arguments));
+    }
+
+    _createClass(PokelistItem, [{
+        key: 'shouldComponentUpdate',
+        value: function shouldComponentUpdate(nextProps) {
+            if (this.props.data === nextProps.data) {
+                return false;
+            } else {
+                return true;
+            }
+        }
+    }, {
+        key: 'render',
+        value: function render() {
+            var _props$data = this.props.data,
+                id = _props$data.id,
+                name = _props$data.name,
+                types = _props$data.types,
+                hp = _props$data.hp,
+                attack = _props$data.attack,
+                speed = _props$data.speed,
+                defense = _props$data.defense,
+                special_attack = _props$data.special_attack,
+                special_defense = _props$data.special_defense;
+
+            return _react2.default.createElement(
+                'tr',
+                null,
+                _react2.default.createElement(
+                    'td',
+                    null,
+                    _react2.default.createElement(_Components.PokeImg, { id: id })
+                ),
+                _react2.default.createElement(
+                    'td',
+                    null,
+                    id
+                ),
+                _react2.default.createElement(
+                    'td',
+                    null,
+                    _react2.default.createElement(_Components.PokeLink, { id: id, name: name, type: 'pokemon' })
+                ),
+                _react2.default.createElement(
+                    'td',
+                    null,
+                    _react2.default.createElement(_Components.PokeType, { type: types })
+                ),
+                _react2.default.createElement(
+                    'td',
+                    null,
+                    hp
+                ),
+                _react2.default.createElement(
+                    'td',
+                    null,
+                    attack
+                ),
+                _react2.default.createElement(
+                    'td',
+                    null,
+                    defense
+                ),
+                _react2.default.createElement(
+                    'td',
+                    null,
+                    special_attack
+                ),
+                _react2.default.createElement(
+                    'td',
+                    null,
+                    special_defense
+                ),
+                _react2.default.createElement(
+                    'td',
+                    null,
+                    speed
+                )
+            );
+        }
+    }]);
+
+    return PokelistItem;
+}(_react2.default.Component);
+
+exports.default = PokelistItem;
+
+/***/ }),
+/* 95 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+var _react = __webpack_require__(0);
+
+var _react2 = _interopRequireDefault(_react);
+
+var _MovelistItem = __webpack_require__(96);
+
+var _MovelistItem2 = _interopRequireDefault(_MovelistItem);
+
+var _Components = __webpack_require__(2);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+var MovelistItem = function (_React$Component) {
+    _inherits(MovelistItem, _React$Component);
+
+    function MovelistItem() {
+        _classCallCheck(this, MovelistItem);
+
+        return _possibleConstructorReturn(this, (MovelistItem.__proto__ || Object.getPrototypeOf(MovelistItem)).apply(this, arguments));
+    }
+
+    _createClass(MovelistItem, [{
+        key: 'shouldComponentUpdate',
+        value: function shouldComponentUpdate(nextProps) {
+            if (this.props.data === nextProps.data) {
+                return false;
+            } else {
+                return true;
+            }
+        }
+    }, {
+        key: 'render',
+        value: function render() {
+            var move = this.props.data;
+            return _react2.default.createElement(
+                'tr',
+                null,
+                _react2.default.createElement(
+                    'td',
+                    null,
+                    move.id
+                ),
+                _react2.default.createElement(
+                    'td',
+                    null,
+                    _react2.default.createElement(_Components.PokeLink, { name: move.name, id: move.id, type: 'move' })
+                ),
+                _react2.default.createElement(
+                    'td',
+                    null,
+                    move.level_learned_at || '-'
+                ),
+                _react2.default.createElement(
+                    'td',
+                    null,
+                    move.power || '-'
+                ),
+                _react2.default.createElement(
+                    'td',
+                    null,
+                    move.pp || '-'
+                ),
+                _react2.default.createElement(
+                    'td',
+                    null,
+                    move.accuracy || '-'
+                ),
+                _react2.default.createElement(
+                    'td',
+                    null,
+                    _react2.default.createElement(_Components.MoveClass, { data: move.damage_class })
+                ),
+                _react2.default.createElement(
+                    'td',
+                    null,
+                    _react2.default.createElement(
+                        'span',
+                        { className: _MovelistItem2.default.center },
+                        _react2.default.createElement(_Components.PokeType, { type: move.types })
+                    )
+                )
+            );
+        }
+    }]);
+
+    return MovelistItem;
+}(_react2.default.Component);
+
+exports.default = MovelistItem;
+
+/***/ }),
+/* 96 */
+/***/ (function(module, exports) {
+
+// removed by extract-text-webpack-plugin
+module.exports = {"center":"MovelistItem__center___2uHbUz"};
+
+/***/ }),
+/* 97 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+var _react = __webpack_require__(0);
+
+var _react2 = _interopRequireDefault(_react);
+
+var _PokeType = __webpack_require__(98);
+
+var _PokeType2 = _interopRequireDefault(_PokeType);
+
+var _reactRedux = __webpack_require__(3);
+
+var _Actions = __webpack_require__(6);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+var PokeType = function (_React$Component) {
+    _inherits(PokeType, _React$Component);
+
+    function PokeType() {
+        var _ref;
+
+        var _temp, _this, _ret;
+
+        _classCallCheck(this, PokeType);
+
+        for (var _len = arguments.length, args = Array(_len), _key = 0; _key < _len; _key++) {
+            args[_key] = arguments[_key];
+        }
+
+        return _ret = (_temp = (_this = _possibleConstructorReturn(this, (_ref = PokeType.__proto__ || Object.getPrototypeOf(PokeType)).call.apply(_ref, [this].concat(args))), _this), _this.handleClick = function (id) {
+            return _this.props.redirect({
+                type: 'type',
+                id: id
+            });
+        }, _temp), _possibleConstructorReturn(_this, _ret);
+    }
+
+    _createClass(PokeType, [{
+        key: 'shouldComponentUpdate',
+        value: function shouldComponentUpdate(nextProps) {
+            if (nextProps === this.props) {
+                return false;
+            }
+            return true;
+        }
+    }, {
+        key: 'render',
+        value: function render() {
+            var _this2 = this;
+
+            return this.props.type.map(function (el, i) {
+                var name = el.name;
+                var text = name.replace(/\b(\w)/g, function (m) {
+                    return m.toUpperCase();
+                });
+                return _react2.default.createElement(
+                    'span',
+                    { key: i,
+                        className: _PokeType2.default[name],
+                        onClick: function onClick() {
+                            return _this2.handleClick(el.id);
+                        } },
+                    text
+                );
+            });
+        }
+    }]);
+
+    return PokeType;
+}(_react2.default.Component);
+
+var mapDispatchToProps = function mapDispatchToProps(dispatch) {
+    return {
+        redirect: function redirect(data) {
+            return dispatch((0, _Actions.showInPokedex)(data));
+        }
+    };
+};
+
+exports.default = (0, _reactRedux.connect)(null, mapDispatchToProps)(PokeType);
+
+/***/ }),
+/* 98 */
+/***/ (function(module, exports) {
+
+// removed by extract-text-webpack-plugin
+module.exports = {"section":"PokeType__section___9Bjmne","about":"PokeType__about___55TzF2","keyword":"PokeType__keyword___1ynegR","button":"PokeType__button___2SYAT5","typeBox":"PokeType__typeBox___19j4cb","normal":"PokeType__normal___2FCHGn","fighting":"PokeType__fighting___1hJbDE","flying":"PokeType__flying___3EuwJs","poison":"PokeType__poison___2EVDQv","ground":"PokeType__ground___3kWnUF","rock":"PokeType__rock___2YAA0z","bug":"PokeType__bug___3QR_TZ","ghost":"PokeType__ghost___18kPWy","steel":"PokeType__steel___A0NczZ","fire":"PokeType__fire___14Os-2","water":"PokeType__water___uleSaX","grass":"PokeType__grass___Zbof95","electric":"PokeType__electric___1th6WK","psychic":"PokeType__psychic___z4zdvR","ice":"PokeType__ice___2Jm7Xc","dragon":"PokeType__dragon___1chGg1","dark":"PokeType__dark___1LW6FK","fairy":"PokeType__fairy___1KSOob"};
+
+/***/ }),
+/* 99 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+exports.Pokelist = exports.Pokedex = exports.NotFound = exports.Layout = exports.Home = exports.Compare = undefined;
+
+var _Compare = __webpack_require__(100);
+
+var _Compare2 = _interopRequireDefault(_Compare);
+
+var _Home = __webpack_require__(101);
+
+var _Home2 = _interopRequireDefault(_Home);
+
+var _Layout = __webpack_require__(103);
+
+var _Layout2 = _interopRequireDefault(_Layout);
+
+var _NotFound = __webpack_require__(109);
+
+var _NotFound2 = _interopRequireDefault(_NotFound);
+
+var _Pokedex = __webpack_require__(111);
+
+var _Pokedex2 = _interopRequireDefault(_Pokedex);
+
+var _Pokelist = __webpack_require__(139);
+
+var _Pokelist2 = _interopRequireDefault(_Pokelist);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+exports.Compare = _Compare2.default;
+exports.Home = _Home2.default;
+exports.Layout = _Layout2.default;
+exports.NotFound = _NotFound2.default;
+exports.Pokedex = _Pokedex2.default;
+exports.Pokelist = _Pokelist2.default;
+
+/***/ }),
+/* 100 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+var _react = __webpack_require__(0);
+
+var _react2 = _interopRequireDefault(_react);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+var Compare = function (_React$Component) {
+    _inherits(Compare, _React$Component);
+
+    function Compare() {
+        _classCallCheck(this, Compare);
+
+        return _possibleConstructorReturn(this, (Compare.__proto__ || Object.getPrototypeOf(Compare)).apply(this, arguments));
+    }
+
+    _createClass(Compare, [{
+        key: 'render',
+        value: function render() {
+            return null;
+        }
+    }]);
+
+    return Compare;
+}(_react2.default.Component);
+
+exports.default = Compare;
+
+/***/ }),
+/* 101 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+var _react = __webpack_require__(0);
+
+var _react2 = _interopRequireDefault(_react);
+
+var _Home = __webpack_require__(102);
 
 var _Home2 = _interopRequireDefault(_Home);
 
@@ -24956,13 +25484,14 @@ var Home = function (_React$Component) {
 exports.default = Home;
 
 /***/ }),
-/* 84 */
+/* 102 */
 /***/ (function(module, exports) {
 
 // removed by extract-text-webpack-plugin
+module.exports = {"link":"Home__link___3R6ohx"};
 
 /***/ }),
-/* 85 */
+/* 103 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -24978,37 +25507,338 @@ var _react = __webpack_require__(0);
 
 var _react2 = _interopRequireDefault(_react);
 
-var _reactRedux = __webpack_require__(4);
+var _Layout = __webpack_require__(104);
 
-var _actions = __webpack_require__(5);
+var _Layout2 = _interopRequireDefault(_Layout);
 
-var _DexType = __webpack_require__(86);
+var _Components = __webpack_require__(34);
 
-var _DexType2 = _interopRequireDefault(_DexType);
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-var _DexHome = __webpack_require__(99);
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
-var _DexHome2 = _interopRequireDefault(_DexHome);
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
 
-var _DexPokemon = __webpack_require__(100);
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
-var _DexPokemon2 = _interopRequireDefault(_DexPokemon);
+var Layout = function (_React$Component) {
+    _inherits(Layout, _React$Component);
 
-var _DexAbility = __webpack_require__(106);
+    function Layout() {
+        _classCallCheck(this, Layout);
 
-var _DexAbility2 = _interopRequireDefault(_DexAbility);
+        return _possibleConstructorReturn(this, (Layout.__proto__ || Object.getPrototypeOf(Layout)).apply(this, arguments));
+    }
 
-var _DexMove = __webpack_require__(108);
+    _createClass(Layout, [{
+        key: 'render',
+        value: function render() {
+            return _react2.default.createElement(
+                'div',
+                { className: _Layout2.default.scene },
+                _react2.default.createElement(
+                    'div',
+                    { className: _Layout2.default.block },
+                    _react2.default.createElement(_Components.Menu, null)
+                ),
+                _react2.default.createElement(
+                    'div',
+                    { className: _Layout2.default.block },
+                    _react2.default.createElement(
+                        'h1',
+                        { className: _Layout2.default.title },
+                        this.props.title
+                    ),
+                    _react2.default.createElement(
+                        'div',
+                        { className: _Layout2.default.wrapper },
+                        this.props.children
+                    )
+                )
+            );
+        }
+    }]);
 
-var _DexMove2 = _interopRequireDefault(_DexMove);
+    return Layout;
+}(_react2.default.Component);
 
-var _DexEgg = __webpack_require__(110);
+exports.default = Layout;
 
-var _DexEgg2 = _interopRequireDefault(_DexEgg);
+/***/ }),
+/* 104 */
+/***/ (function(module, exports) {
 
-var _DexGlossary = __webpack_require__(111);
+// removed by extract-text-webpack-plugin
+module.exports = {"section":"Layout__section___32zmQN","about":"Layout__about___pdoSNJ","keyword":"Layout__keyword___22gXMM","button":"Layout__button___24IgU9","scene":"Layout__scene___1FfVyk","block":"Layout__block___1vb1pC","title":"Layout__title___2PLGUN","wrapper":"Layout__wrapper___3DRGTr"};
 
-var _DexGlossary2 = _interopRequireDefault(_DexGlossary);
+/***/ }),
+/* 105 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+var _react = __webpack_require__(0);
+
+var _react2 = _interopRequireDefault(_react);
+
+var _Menu = __webpack_require__(106);
+
+var _Menu2 = _interopRequireDefault(_Menu);
+
+var _ = __webpack_require__(34);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+var Menu = function (_React$Component) {
+    _inherits(Menu, _React$Component);
+
+    function Menu() {
+        _classCallCheck(this, Menu);
+
+        return _possibleConstructorReturn(this, (Menu.__proto__ || Object.getPrototypeOf(Menu)).apply(this, arguments));
+    }
+
+    _createClass(Menu, [{
+        key: 'render',
+        value: function render() {
+            return _react2.default.createElement(
+                'div',
+                { className: _Menu2.default.wrapper },
+                _react2.default.createElement(_.MenuItem, { text: 'Home' }),
+                _react2.default.createElement(_.MenuItem, { text: 'Pokelist' }),
+                _react2.default.createElement(_.MenuItem, { text: 'Pokedex' }),
+                _react2.default.createElement(_.MenuItem, { text: 'Compare', disabled: true })
+            );
+        }
+    }]);
+
+    return Menu;
+}(_react2.default.Component);
+
+exports.default = Menu;
+
+/***/ }),
+/* 106 */
+/***/ (function(module, exports) {
+
+// removed by extract-text-webpack-plugin
+module.exports = {"section":"Menu__section___o8unVM","about":"Menu__about___1FSn_K","keyword":"Menu__keyword___1EC9jG","button":"Menu__button___3tTUyM","wrapper":"Menu__wrapper___3IaaXV"};
+
+/***/ }),
+/* 107 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+var _react = __webpack_require__(0);
+
+var _react2 = _interopRequireDefault(_react);
+
+var _MenuItem = __webpack_require__(108);
+
+var _MenuItem2 = _interopRequireDefault(_MenuItem);
+
+var _reactRedux = __webpack_require__(3);
+
+var _Actions = __webpack_require__(6);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+var MenuItem = function (_React$Component) {
+    _inherits(MenuItem, _React$Component);
+
+    function MenuItem() {
+        var _ref;
+
+        var _temp, _this, _ret;
+
+        _classCallCheck(this, MenuItem);
+
+        for (var _len = arguments.length, args = Array(_len), _key = 0; _key < _len; _key++) {
+            args[_key] = arguments[_key];
+        }
+
+        return _ret = (_temp = (_this = _possibleConstructorReturn(this, (_ref = MenuItem.__proto__ || Object.getPrototypeOf(MenuItem)).call.apply(_ref, [this].concat(args))), _this), _this.handleClickEvent = function (ev) {
+            var page = _this.props.text.toLowerCase();
+            if (_this.props.page !== page || _this.props.dexItemType !== 'pokedex' && _this.props.page === 'pokedex') {
+                _this.props.onMenuItemClick(page);
+            }
+        }, _temp), _possibleConstructorReturn(_this, _ret);
+    }
+
+    _createClass(MenuItem, [{
+        key: 'shouldComponentUpdate',
+        value: function shouldComponentUpdate(nextProps) {
+            if (nextProps === this.props) {
+                return false;
+            }
+            return true;
+        }
+    }, {
+        key: 'render',
+        value: function render() {
+            return _react2.default.createElement(
+                'button',
+                { className: _MenuItem2.default.item, onClick: this.handleClickEvent,
+                    disabled: this.props.disabled },
+                this.props.text
+            );
+        }
+    }]);
+
+    return MenuItem;
+}(_react2.default.Component);
+
+var mapStateToProps = function mapStateToProps(state) {
+    return {
+        page: state.page.currentPage,
+        dexItemType: state.page.dexItemType
+    };
+};
+
+var mapDispatchToProps = function mapDispatchToProps(dispatch) {
+    return {
+        onMenuItemClick: function onMenuItemClick(page) {
+            return dispatch((0, _Actions.changePage)(page));
+        }
+    };
+};
+
+exports.default = (0, _reactRedux.connect)(mapStateToProps, mapDispatchToProps)(MenuItem);
+
+/***/ }),
+/* 108 */
+/***/ (function(module, exports) {
+
+// removed by extract-text-webpack-plugin
+module.exports = {"section":"MenuItem__section___22Z1w7","about":"MenuItem__about___3JXmtW","keyword":"MenuItem__keyword___2gWbsM","button":"MenuItem__button___1ztylB","item":"MenuItem__item___2ONC_f"};
+
+/***/ }),
+/* 109 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+var _react = __webpack_require__(0);
+
+var _react2 = _interopRequireDefault(_react);
+
+var _NotFound = __webpack_require__(110);
+
+var _NotFound2 = _interopRequireDefault(_NotFound);
+
+var _reactRedux = __webpack_require__(3);
+
+var _Components = __webpack_require__(2);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+var NotFound = function (_React$Component) {
+    _inherits(NotFound, _React$Component);
+
+    function NotFound() {
+        _classCallCheck(this, NotFound);
+
+        return _possibleConstructorReturn(this, (NotFound.__proto__ || Object.getPrototypeOf(NotFound)).apply(this, arguments));
+    }
+
+    _createClass(NotFound, [{
+        key: 'render',
+        value: function render() {
+            return _react2.default.createElement(
+                'div',
+                { className: _NotFound2.default.wrapper },
+                _react2.default.createElement(
+                    'div',
+                    null,
+                    _react2.default.createElement('img', { src: './resources/pokemon/404.svg' })
+                ),
+                'Request failed.',
+                _react2.default.createElement(_Components.PokeLink, { name: 'Retry?', id: this.props.id, type: this.props.type })
+            );
+        }
+    }]);
+
+    return NotFound;
+}(_react2.default.Component);
+
+var mapStateToProps = function mapStateToProps(state) {
+    return {
+        id: state.page.dexItemId,
+        type: state.page.dexItemType
+    };
+};
+
+exports.default = (0, _reactRedux.connect)(mapStateToProps)(NotFound);
+
+/***/ }),
+/* 110 */
+/***/ (function(module, exports) {
+
+// removed by extract-text-webpack-plugin
+module.exports = {"section":"NotFound__section___1Sb8qT","about":"NotFound__about___1B961-","wrapper":"NotFound__wrapper___10kd-F","keyword":"NotFound__keyword___1Yudim","button":"NotFound__button___1U_lYj"};
+
+/***/ }),
+/* 111 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+var _react = __webpack_require__(0);
+
+var _react2 = _interopRequireDefault(_react);
+
+var _reactRedux = __webpack_require__(3);
+
+var _Actions = __webpack_require__(6);
+
+var _Components = __webpack_require__(112);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -25031,20 +25861,22 @@ var Pokedex = function (_React$Component) {
         key: 'render',
         value: function render() {
             switch (this.props.type) {
-                case 'pokedex':
-                    return _react2.default.createElement(_DexHome2.default, null);
                 case 'type':
-                    return _react2.default.createElement(_DexType2.default, { data: this.props.data });
+                    return _react2.default.createElement(_Components.DexType, { data: this.props.data });
                 case 'pokemon':
-                    return _react2.default.createElement(_DexPokemon2.default, { data: this.props.data });
+                    return _react2.default.createElement(_Components.DexPokemon, { data: this.props.data });
                 case 'move':
-                    return _react2.default.createElement(_DexMove2.default, { data: this.props.data });
+                    return _react2.default.createElement(_Components.DexMove, { data: this.props.data });
                 case 'ability':
-                    return _react2.default.createElement(_DexAbility2.default, { data: this.props.data });
+                    return _react2.default.createElement(_Components.DexAbility, { data: this.props.data });
                 case 'egg_group':
-                    return _react2.default.createElement(_DexEgg2.default, { data: this.props.data });
+                    return _react2.default.createElement(_Components.DexEgg, { data: this.props.data });
+                case 'item':
+                    return _react2.default.createElement(_Components.DexItem, { data: this.props.data });
+                case 'pokedex':
+                    return _react2.default.createElement(_Components.DexHome, null);
                 case 'glossary':
-                    return _react2.default.createElement(_DexGlossary2.default, null);
+                    return _react2.default.createElement(_Components.DexGlossary, null);
                 default:
                     return 'SUMTING WONG';
             }
@@ -25064,7 +25896,7 @@ var mapStateToProps = function mapStateToProps(state) {
 var mapDispatchToProps = function mapDispatchToProps(dispatch) {
     return {
         update: function update(data) {
-            return dispatch((0, _actions.updateDexData)(data));
+            return dispatch((0, _Actions.updateDexData)(data));
         }
     };
 };
@@ -25072,7 +25904,7 @@ var mapDispatchToProps = function mapDispatchToProps(dispatch) {
 exports.default = (0, _reactRedux.connect)(mapStateToProps, mapDispatchToProps)(Pokedex);
 
 /***/ }),
-/* 86 */
+/* 112 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -25081,1096 +25913,73 @@ exports.default = (0, _reactRedux.connect)(mapStateToProps, mapDispatchToProps)(
 Object.defineProperty(exports, "__esModule", {
     value: true
 });
+exports.DexType = exports.DexPokemon = exports.DexMove = exports.DexItem = exports.DexHome = exports.DexGlossary = exports.DexEgg = exports.DexAbility = undefined;
 
-var _react = __webpack_require__(0);
-
-var _react2 = _interopRequireDefault(_react);
-
-var _DexType = __webpack_require__(87);
-
-var _DexType2 = _interopRequireDefault(_DexType);
-
-var _DamageRelations = __webpack_require__(36);
-
-var _DamageRelations2 = _interopRequireDefault(_DamageRelations);
-
-var _PokeTable = __webpack_require__(6);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-var DexType = function DexType(props) {
-    var _props$data = props.data,
-        name = _props$data.name,
-        damage = _props$data.damage,
-        pokemon = _props$data.pokemon,
-        moves = _props$data.moves;
-
-    return _react2.default.createElement(
-        'div',
-        null,
-        _react2.default.createElement(
-            'h3',
-            null,
-            'Type: ',
-            name.slice(0, 1).toUpperCase() + name.slice(1)
-        ),
-        _react2.default.createElement(
-            'div',
-            { className: _DexType2.default.about },
-            _react2.default.createElement(
-                'h5',
-                null,
-                'Damage effectiveness.'
-            ),
-            _react2.default.createElement(
-                'p',
-                null,
-                'Ofense damage effectiveness chart shows how effective is ',
-                name,
-                ' type attack against other types. Number below type is the number that multiplies the damage when types are considered in damage output calculation.'
-            ),
-            _react2.default.createElement(
-                'p',
-                null,
-                'Defense damage chart shows how effective are other type attacks against ',
-                name,
-                ' type pokemon. For example: 0.5 stands for 50% of total damage is received and this means attack is not very effective against ',
-                name,
-                ' type pokemon.'
-            )
-        ),
-        _react2.default.createElement(
-            'div',
-            { className: _DexType2.default.relations },
-            _react2.default.createElement(_DamageRelations2.default, { offense: true, type: [props.data] })
-        ),
-        _react2.default.createElement(
-            'div',
-            { className: _DexType2.default.section },
-            _react2.default.createElement(
-                'h5',
-                null,
-                'There are ',
-                pokemon.length,
-                ' ',
-                name,
-                ' type pokemons.'
-            ),
-            _react2.default.createElement(_PokeTable.PokeTable, { headers: 'pokelist', data: pokemon, listItem: _PokeTable.PokelistItem })
-        ),
-        _react2.default.createElement(
-            'div',
-            { className: _DexType2.default.section },
-            _react2.default.createElement(
-                'h5',
-                null,
-                'There are ',
-                moves.length,
-                ' ',
-                name,
-                ' type moves.'
-            ),
-            _react2.default.createElement(_PokeTable.PokeTable, { headers: 'movelist', data: moves, listItem: _PokeTable.MovelistItem })
-        )
-    );
-};
-
-exports.default = DexType;
-
-/***/ }),
-/* 87 */
-/***/ (function(module, exports) {
-
-// removed by extract-text-webpack-plugin
-
-/***/ }),
-/* 88 */
-/***/ (function(module, exports) {
-
-// removed by extract-text-webpack-plugin
-
-/***/ }),
-/* 89 */
-/***/ (function(module, exports) {
-
-// removed by extract-text-webpack-plugin
-
-/***/ }),
-/* 90 */
-/***/ (function(module, exports) {
-
-// removed by extract-text-webpack-plugin
-
-/***/ }),
-/* 91 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-var dmg_rel = [{ "name": "normal", "id": 1, "damage_relations": { "half_from": [], "no_from": ["ghost"], "half_to": ["rock", "steel"], "no_to": ["ghost"], "double_to": [], "double_from": ["fighting"] } }, { "name": "fighting", "id": 2, "damage_relations": { "half_from": ["rock", "bug", "dark"], "no_from": [], "half_to": ["flying", "poison", "bug", "psychic", "fairy"], "no_to": ["ghost"], "double_to": ["normal", "rock", "steel", "ice", "dark"], "double_from": ["flying", "psychic", "fairy"] } }, { "name": "flying", "id": 3, "damage_relations": { "half_from": ["fighting", "bug", "grass"], "no_from": ["ground"], "half_to": ["rock", "steel", "electric"], "no_to": [], "double_to": ["fighting", "bug", "grass"], "double_from": ["rock", "electric", "ice"] } }, { "name": "poison", "id": 4, "damage_relations": { "half_from": ["fighting", "poison", "bug", "grass", "fairy"], "no_from": [], "half_to": ["poison", "ground", "rock", "ghost"], "no_to": ["steel"], "double_to": ["grass", "fairy"], "double_from": ["ground", "psychic"] } }, { "name": "ground", "id": 5, "damage_relations": { "half_from": ["poison", "rock"], "no_from": ["electric"], "half_to": ["bug", "grass"], "no_to": ["flying"], "double_to": ["poison", "rock", "steel", "fire", "electric"], "double_from": ["water", "grass", "ice"] } }, { "name": "rock", "id": 6, "damage_relations": { "half_from": ["normal", "flying", "poison", "fire"], "no_from": [], "half_to": ["fighting", "ground", "steel"], "no_to": [], "double_to": ["flying", "bug", "fire", "ice"], "double_from": ["fighting", "ground", "steel", "water", "grass"] } }, { "name": "bug", "id": 7, "damage_relations": { "half_from": ["fighting", "ground", "grass"], "no_from": [], "half_to": ["fighting", "flying", "poison", "ghost", "steel", "fire", "fairy"], "no_to": [], "double_to": ["grass", "psychic", "dark"], "double_from": ["flying", "rock", "fire"] } }, { "name": "ghost", "id": 8, "damage_relations": { "half_from": ["poison", "bug"], "no_from": ["normal", "fighting"], "half_to": ["dark"], "no_to": ["normal"], "double_to": ["ghost", "psychic"], "double_from": ["ghost", "dark"] } }, { "name": "steel", "id": 9, "damage_relations": { "half_from": ["normal", "flying", "rock", "bug", "steel", "grass", "psychic", "ice", "dragon", "fairy"], "no_from": ["poison"], "half_to": ["steel", "fire", "water", "electric"], "no_to": [], "double_to": ["rock", "ice", "fairy"], "double_from": ["fighting", "ground", "fire"] } }, { "name": "fire", "id": 10, "damage_relations": { "half_from": ["bug", "steel", "fire", "grass", "ice", "fairy"], "no_from": [], "half_to": ["rock", "fire", "water", "dragon"], "no_to": [], "double_to": ["bug", "steel", "grass", "ice"], "double_from": ["ground", "rock", "water"] } }, { "name": "water", "id": 11, "damage_relations": { "half_from": ["steel", "fire", "water", "ice"], "no_from": [], "half_to": ["water", "grass", "dragon"], "no_to": [], "double_to": ["ground", "rock", "fire"], "double_from": ["grass", "electric"] } }, { "name": "grass", "id": 12, "damage_relations": { "half_from": ["ground", "water", "grass", "electric"], "no_from": [], "half_to": ["flying", "poison", "bug", "steel", "fire", "grass", "dragon"], "no_to": [], "double_to": ["ground", "rock", "water"], "double_from": ["flying", "poison", "bug", "fire", "ice"] } }, { "name": "electric", "id": 13, "damage_relations": { "half_from": ["flying", "steel", "electric"], "no_from": [], "half_to": ["grass", "electric", "dragon"], "no_to": ["ground"], "double_to": ["flying", "water"], "double_from": ["ground"] } }, { "name": "psychic", "id": 14, "damage_relations": { "half_from": ["fighting", "psychic"], "no_from": [], "half_to": ["steel", "psychic"], "no_to": ["dark"], "double_to": ["fighting", "poison"], "double_from": ["bug", "ghost", "dark"] } }, { "name": "ice", "id": 15, "damage_relations": { "half_from": ["ice"], "no_from": [], "half_to": ["steel", "fire", "water", "ice"], "no_to": [], "double_to": ["flying", "ground", "grass", "dragon"], "double_from": ["fighting", "rock", "steel", "fire"] } }, { "name": "dragon", "id": 16, "damage_relations": { "half_from": ["fire", "water", "grass", "electric"], "no_from": [], "half_to": ["steel"], "no_to": ["fairy"], "double_to": ["dragon"], "double_from": ["ice", "dragon", "fairy"] } }, { "name": "dark", "id": 17, "damage_relations": { "half_from": ["ghost", "dark"], "no_from": ["psychic"], "half_to": ["fighting", "dark", "fairy"], "no_to": [], "double_to": ["ghost", "psychic"], "double_from": ["fighting", "bug", "fairy"] } }, { "name": "fairy", "id": 18, "damage_relations": { "half_from": ["fighting", "bug", "dark"], "no_from": ["dragon"], "half_to": ["poison", "steel", "fire"], "no_to": [], "double_to": ["fighting", "dragon", "dark"], "double_from": ["poison", "steel"] } }];
-exports.default = dmg_rel;
-
-/***/ }),
-/* 92 */
-/***/ (function(module, exports) {
-
-// removed by extract-text-webpack-plugin
-
-/***/ }),
-/* 93 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-    value: true
-});
-
-var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-
-var _react = __webpack_require__(0);
-
-var _react2 = _interopRequireDefault(_react);
-
-var _PokeType = __webpack_require__(8);
-
-var _PokeType2 = _interopRequireDefault(_PokeType);
-
-var _PokeLink = __webpack_require__(9);
-
-var _PokeLink2 = _interopRequireDefault(_PokeLink);
-
-var _PokeImg = __webpack_require__(20);
-
-var _PokeImg2 = _interopRequireDefault(_PokeImg);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
-
-function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
-
-var PokelistItem = function (_React$Component) {
-    _inherits(PokelistItem, _React$Component);
-
-    function PokelistItem() {
-        _classCallCheck(this, PokelistItem);
-
-        return _possibleConstructorReturn(this, (PokelistItem.__proto__ || Object.getPrototypeOf(PokelistItem)).apply(this, arguments));
-    }
-
-    _createClass(PokelistItem, [{
-        key: 'shouldComponentUpdate',
-        value: function shouldComponentUpdate(nextProps) {
-            if (this.props.data === nextProps.data) {
-                return false;
-            } else {
-                return true;
-            }
-        }
-    }, {
-        key: 'render',
-        value: function render() {
-            var _props$data = this.props.data,
-                id = _props$data.id,
-                name = _props$data.name,
-                type = _props$data.type,
-                hp = _props$data.hp,
-                attack = _props$data.attack,
-                speed = _props$data.speed,
-                defense = _props$data.defense,
-                special_attack = _props$data.special_attack,
-                special_defense = _props$data.special_defense;
-
-            return _react2.default.createElement(
-                'tr',
-                null,
-                _react2.default.createElement(
-                    'td',
-                    null,
-                    _react2.default.createElement(_PokeImg2.default, { id: id })
-                ),
-                _react2.default.createElement(
-                    'td',
-                    null,
-                    id
-                ),
-                _react2.default.createElement(
-                    'td',
-                    null,
-                    _react2.default.createElement(_PokeLink2.default, { id: id, name: name, type: 'pokemon' })
-                ),
-                _react2.default.createElement(
-                    'td',
-                    null,
-                    _react2.default.createElement(_PokeType2.default, { type: type })
-                ),
-                _react2.default.createElement(
-                    'td',
-                    null,
-                    hp
-                ),
-                _react2.default.createElement(
-                    'td',
-                    null,
-                    attack
-                ),
-                _react2.default.createElement(
-                    'td',
-                    null,
-                    defense
-                ),
-                _react2.default.createElement(
-                    'td',
-                    null,
-                    special_attack
-                ),
-                _react2.default.createElement(
-                    'td',
-                    null,
-                    special_defense
-                ),
-                _react2.default.createElement(
-                    'td',
-                    null,
-                    speed
-                )
-            );
-        }
-    }]);
-
-    return PokelistItem;
-}(_react2.default.Component);
-
-exports.default = PokelistItem;
-
-/***/ }),
-/* 94 */
-/***/ (function(module, exports) {
-
-// removed by extract-text-webpack-plugin
-
-/***/ }),
-/* 95 */
-/***/ (function(module, exports) {
-
-// removed by extract-text-webpack-plugin
-
-/***/ }),
-/* 96 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-    value: true
-});
-
-var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-
-var _react = __webpack_require__(0);
-
-var _react2 = _interopRequireDefault(_react);
-
-var _MovelistItem = __webpack_require__(97);
-
-var _MovelistItem2 = _interopRequireDefault(_MovelistItem);
-
-var _PokeType = __webpack_require__(8);
-
-var _PokeType2 = _interopRequireDefault(_PokeType);
-
-var _PokeLink = __webpack_require__(9);
-
-var _PokeLink2 = _interopRequireDefault(_PokeLink);
-
-var _MoveClass = __webpack_require__(38);
-
-var _MoveClass2 = _interopRequireDefault(_MoveClass);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
-
-function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
-
-var MovelistItem = function (_React$Component) {
-    _inherits(MovelistItem, _React$Component);
-
-    function MovelistItem() {
-        _classCallCheck(this, MovelistItem);
-
-        return _possibleConstructorReturn(this, (MovelistItem.__proto__ || Object.getPrototypeOf(MovelistItem)).apply(this, arguments));
-    }
-
-    _createClass(MovelistItem, [{
-        key: 'shouldComponentUpdate',
-        value: function shouldComponentUpdate(nextProps) {
-            if (this.props.data === nextProps.data) {
-                return false;
-            } else {
-                return true;
-            }
-        }
-    }, {
-        key: 'render',
-        value: function render() {
-            var move = this.props.data;
-            return _react2.default.createElement(
-                'tr',
-                null,
-                _react2.default.createElement(
-                    'td',
-                    null,
-                    move.id
-                ),
-                _react2.default.createElement(
-                    'td',
-                    null,
-                    _react2.default.createElement(_PokeLink2.default, { name: move.name, id: move.id, type: 'move' })
-                ),
-                _react2.default.createElement(
-                    'td',
-                    null,
-                    move.level_learned_at || '-'
-                ),
-                _react2.default.createElement(
-                    'td',
-                    null,
-                    move.power || '-'
-                ),
-                _react2.default.createElement(
-                    'td',
-                    null,
-                    move.pp || '-'
-                ),
-                _react2.default.createElement(
-                    'td',
-                    null,
-                    move.accuracy || '-'
-                ),
-                _react2.default.createElement(
-                    'td',
-                    null,
-                    _react2.default.createElement(_MoveClass2.default, { data: move.damage_class })
-                ),
-                _react2.default.createElement(
-                    'td',
-                    null,
-                    _react2.default.createElement(
-                        'span',
-                        { className: _MovelistItem2.default.center },
-                        _react2.default.createElement(_PokeType2.default, { type: move.type })
-                    )
-                )
-            );
-        }
-    }]);
-
-    return MovelistItem;
-}(_react2.default.Component);
-
-exports.default = MovelistItem;
-
-/***/ }),
-/* 97 */
-/***/ (function(module, exports) {
-
-// removed by extract-text-webpack-plugin
-
-/***/ }),
-/* 98 */
-/***/ (function(module, exports) {
-
-// removed by extract-text-webpack-plugin
-
-/***/ }),
-/* 99 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-    value: true
-});
-
-var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-
-var _react = __webpack_require__(0);
-
-var _react2 = _interopRequireDefault(_react);
-
-var _PokeLink = __webpack_require__(9);
-
-var _PokeLink2 = _interopRequireDefault(_PokeLink);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
-
-function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
-
-var DexHome = function (_React$Component) {
-    _inherits(DexHome, _React$Component);
-
-    function DexHome() {
-        _classCallCheck(this, DexHome);
-
-        return _possibleConstructorReturn(this, (DexHome.__proto__ || Object.getPrototypeOf(DexHome)).apply(this, arguments));
-    }
-
-    _createClass(DexHome, [{
-        key: 'render',
-        value: function render() {
-            return _react2.default.createElement(
-                'div',
-                null,
-                'Pokedex is source of knowledge about pokemon related topics. To see specific information please see a Pokemon page. If you need any explanation see: ',
-                _react2.default.createElement(
-                    'span',
-                    { style: { display: 'inline-block' } },
-                    _react2.default.createElement(_PokeLink2.default, { id: 0, type: 'glossary', name: 'Glossary' })
-                )
-            );
-        }
-    }]);
-
-    return DexHome;
-}(_react2.default.Component);
-
-exports.default = DexHome;
-
-/***/ }),
-/* 100 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-    value: true
-});
-
-var _react = __webpack_require__(0);
-
-var _react2 = _interopRequireDefault(_react);
-
-var _DexPokemon = __webpack_require__(101);
-
-var _DexPokemon2 = _interopRequireDefault(_DexPokemon);
-
-var _PokeImg = __webpack_require__(20);
-
-var _PokeImg2 = _interopRequireDefault(_PokeImg);
-
-var _PokeType = __webpack_require__(8);
-
-var _PokeType2 = _interopRequireDefault(_PokeType);
-
-var _PokeLink = __webpack_require__(9);
-
-var _PokeLink2 = _interopRequireDefault(_PokeLink);
-
-var _DamageRelations = __webpack_require__(36);
-
-var _DamageRelations2 = _interopRequireDefault(_DamageRelations);
-
-var _PokeStats = __webpack_require__(102);
-
-var _PokeStats2 = _interopRequireDefault(_PokeStats);
-
-var _PokeEvo = __webpack_require__(104);
-
-var _PokeEvo2 = _interopRequireDefault(_PokeEvo);
-
-var _PokeTable = __webpack_require__(6);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-var mapAbilities = function mapAbilities(abilities) {
-    return abilities.sort(function (a, b) {
-        return a.slot - b.slot;
-    }).map(function (e) {
-        var id = e.id;
-        var name = e.name;
-        var infoText = e.is_hidden ? '(hidden)' : null;
-        return _react2.default.createElement(_PokeLink2.default, { key: name,
-            name: name, id: id,
-            info: infoText, type: 'ability' });
-    });
-};
-
-var mapEggGroups = function mapEggGroups(egg) {
-    return egg.map(function (e) {
-        return _react2.default.createElement(_PokeLink2.default, { key: e.id, name: e.name, id: e.id, type: 'egg_group' });
-    });
-};
-
-var getStats = function getStats(stats) {
-    var statsObj = {};
-    stats.forEach(function (el) {
-        statsObj[el.stat.name] = el.base_stat;
-    });
-    return statsObj;
-};
-
-var createTable = function createTable(data) {
-    return _react2.default.createElement(
-        'table',
-        { className: _DexPokemon2.default.statTable },
-        _react2.default.createElement(
-            'tbody',
-            null,
-            data.map(function (el) {
-                return _react2.default.createElement(
-                    'tr',
-                    { key: el[0] },
-                    _react2.default.createElement(
-                        'td',
-                        null,
-                        el[0]
-                    ),
-                    _react2.default.createElement(
-                        'td',
-                        null,
-                        el[1]
-                    )
-                );
-            })
-        )
-    );
-};
-
-var DexPokemon = function DexPokemon(props) {
-    var data = props.data;
-    var _data$stats = data.stats,
-        hp = _data$stats.hp,
-        speed = _data$stats.speed,
-        special_attack = _data$stats.special_attack,
-        special_defense = _data$stats.special_defense,
-        attack = _data$stats.attack,
-        defense = _data$stats.defense;
-
-    var catchValue = (hp.base * data.capture_rate / (3 * hp.base) / 2.55).toFixed(1);
-
-    var pokedexData = [['Pokedex No', data.id], ['Type', _react2.default.createElement(_PokeType2.default, { type: data.type })], ['Height', (data.height * 0.1).toFixed(1) + ' m'], ['Weight', (data.weight * 0.1).toFixed(1) + ' kg'], ['Abilities', mapAbilities(data.abilities)]];
-    var genderRatio = '\u2642 ' + (8 - data.gender_rate) * 12.5 + '%\n\u2640 ' + data.gender_rate * 12.5 + '%';
-    var breedTrainData = [['Catch rate', data.capture_rate + ' (' + catchValue + '% at max HP)'], ['Base EXP', data.base_experience], ['Growth rate', data.growth_rate], ['Egg groups', mapEggGroups(data.egg_groups)], ['Gender', genderRatio], ['Egg cycles', data.hatch_counter]];
-    var statsData = [hp.base, attack.base, defense.base, special_attack.base, special_defense.base, speed.base];
-    return _react2.default.createElement(
-        'div',
-        null,
-        _react2.default.createElement(
-            'h3',
-            null,
-            'Pokemon: ',
-            data.name.replace(/\b(\w)/g, function (m) {
-                return m.toUpperCase();
-            })
-        ),
-        _react2.default.createElement(
-            'div',
-            { className: _DexPokemon2.default.showcase },
-            _react2.default.createElement(_PokeImg2.default, { id: data.id, cl: 'md' }),
-            _react2.default.createElement(
-                'span',
-                { className: _DexPokemon2.default.flavorText },
-                data.flavor_text
-            )
-        ),
-        _react2.default.createElement(
-            'div',
-            { className: _DexPokemon2.default.evolution },
-            _react2.default.createElement(_PokeEvo2.default, { data: data.evolution_chain, id: data.id })
-        ),
-        _react2.default.createElement(
-            'div',
-            { className: _DexPokemon2.default.info },
-            _react2.default.createElement(
-                'div',
-                { className: _DexPokemon2.default.dataSection },
-                _react2.default.createElement(
-                    'h5',
-                    null,
-                    'Pokedex Data'
-                ),
-                createTable(pokedexData)
-            ),
-            _react2.default.createElement(
-                'div',
-                { className: _DexPokemon2.default.dataSection },
-                _react2.default.createElement(
-                    'h5',
-                    null,
-                    'Training & Breeding'
-                ),
-                createTable(breedTrainData)
-            )
-        ),
-        _react2.default.createElement(
-            'div',
-            { className: _DexPokemon2.default.about },
-            _react2.default.createElement(
-                'h5',
-                null,
-                'Base stats'
-            ),
-            _react2.default.createElement(_PokeStats2.default, { data: statsData })
-        ),
-        _react2.default.createElement(
-            'div',
-            { className: _DexPokemon2.default.about },
-            _react2.default.createElement(_DamageRelations2.default, { type: data.type })
-        ),
-        _react2.default.createElement(
-            'div',
-            { className: _DexPokemon2.default.section },
-            _react2.default.createElement(
-                'h5',
-                null,
-                'Moves learned by lvl'
-            ),
-            _react2.default.createElement(_PokeTable.PokeTable, { headers: 'movelist', listItem: _PokeTable.MovelistItem, data: data.moves.level_up })
-        ),
-        _react2.default.createElement(
-            'div',
-            { className: _DexPokemon2.default.section },
-            _react2.default.createElement(
-                'h5',
-                null,
-                'Moves learned by breeding'
-            ),
-            _react2.default.createElement(_PokeTable.PokeTable, { headers: 'movelist', listItem: _PokeTable.MovelistItem, data: data.moves.egg })
-        ),
-        _react2.default.createElement(
-            'div',
-            { className: _DexPokemon2.default.section },
-            _react2.default.createElement(
-                'h5',
-                null,
-                'Moves learned by TM'
-            ),
-            _react2.default.createElement(_PokeTable.PokeTable, { headers: 'movelist', listItem: _PokeTable.MovelistItem, data: data.moves.machine })
-        ),
-        _react2.default.createElement(
-            'div',
-            { className: _DexPokemon2.default.section },
-            _react2.default.createElement(
-                'h5',
-                null,
-                'Moves learned by Tutor'
-            ),
-            _react2.default.createElement(_PokeTable.PokeTable, { headers: 'movelist', listItem: _PokeTable.MovelistItem, data: data.moves.tutor })
-        )
-    );
-};
-
-exports.default = DexPokemon;
-
-/***/ }),
-/* 101 */
-/***/ (function(module, exports) {
-
-// removed by extract-text-webpack-plugin
-
-/***/ }),
-/* 102 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-    value: true
-});
-
-var _react = __webpack_require__(0);
-
-var _react2 = _interopRequireDefault(_react);
-
-var _PokeStats = __webpack_require__(103);
-
-var _PokeStats2 = _interopRequireDefault(_PokeStats);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-var mapData = function mapData(statArr) {
-    var maxStats = [255, 165, 230, 154, 230, 160];
-    var statText = ['HP', 'Attack', 'Defense', 'Sp. Attack', 'Sp. Defense', 'Speed'];
-    return statArr.map(function (e, i) {
-        var max = maxStats[i];
-        var width = ~~(e / max * 100);
-        var rg = [200 - ~~(width * 1.5), 100 + ~~(width * 1.4)];
-        var style = {
-            width: width + '%',
-            backgroundColor: 'rgb(' + rg[0] + ', ' + rg[1] + ', 0)'
-        };
-        return _react2.default.createElement(
-            'div',
-            { key: statText[i], className: _PokeStats2.default.row },
-            statText[i],
-            _react2.default.createElement(
-                'div',
-                { className: _PokeStats2.default.bar, style: style },
-                e
-            )
-        );
-    });
-};
-
-var PokeStats = function PokeStats(props) {
-    return _react2.default.createElement(
-        'div',
-        null,
-        mapData(props.data)
-    );
-};
-
-exports.default = PokeStats;
-
-/***/ }),
-/* 103 */
-/***/ (function(module, exports) {
-
-// removed by extract-text-webpack-plugin
-
-/***/ }),
-/* 104 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-    value: true
-});
-
-var _react = __webpack_require__(0);
-
-var _react2 = _interopRequireDefault(_react);
-
-var _PokeEvo = __webpack_require__(105);
-
-var _PokeEvo2 = _interopRequireDefault(_PokeEvo);
-
-var _PokeImg = __webpack_require__(20);
-
-var _PokeImg2 = _interopRequireDefault(_PokeImg);
-
-var _PokeLink = __webpack_require__(9);
-
-var _PokeLink2 = _interopRequireDefault(_PokeLink);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-var getEvolutions = function getEvolutions(chain, arr) {
-    var allEvoArr = [];
-    var mapEvolutions = function mapEvolutions(evoChain, arrToPush, i) {
-        var id = ~~evoChain.species.url.match(/\/(\d+)\//)[1];
-        arrToPush.push({
-            index: i,
-            id: id,
-            name: evoChain.species.name,
-            details: evoChain.evolution_details
-        });
-        evoChain.evolves_to.map(function (evolvesTo) {
-            mapEvolutions(evolvesTo, allEvoArr, i + 1);
-        });
-    };
-    mapEvolutions(chain, allEvoArr, 0);
-    var evolutions = [];
-    allEvoArr.forEach(function (evo) {
-        var i = evo.index;
-        var step = evolutions[i] ? evolutions[i] : [];
-        step.push(evo);
-        evolutions[i] = step;
-    });
-    return evolutions;
-};
-
-var mapEvoDetails = function mapEvoDetails(details) {
-    return details.map(function (d, i) {
-        var detailsArray = [];
-        if (d.trigger.name === 'trade') {
-            detailsArray.push(_react2.default.createElement(
-                'div',
-                { key: 'trade' },
-                'Trade'
-            ));
-        }
-        if (d.min_level) {
-            detailsArray.push(_react2.default.createElement(
-                'div',
-                { key: 'lvl' },
-                'Lvl: ',
-                d.min_level
-            ));
-        }
-        if (d.min_beauty) {
-            detailsArray.push(_react2.default.createElement(
-                'div',
-                { key: 'beauty' },
-                'Beauty: ',
-                d.min_beauty
-            ));
-        }
-        if (d.time_of_day.length) {
-            detailsArray.push(_react2.default.createElement(
-                'div',
-                { key: 'time' },
-                d.time_of_day.replace(/\b(\w)/g, function (m) {
-                    return m.toUpperCase();
-                })
-            ));
-        }
-        if (d.gender) {
-            detailsArray.push(_react2.default.createElement(
-                'div',
-                { key: 'gender' },
-                d.gender === 2 ? '♂' : '♀'
-            ));
-        }
-        if (d.relative_physical_stats !== null) {
-            switch (d.relative_physical_stats) {
-                case 0:
-                    detailsArray.push(_react2.default.createElement(
-                        'div',
-                        { key: 'phys' },
-                        'Att = Def'
-                    ));
-                    break;
-                case 1:
-                    detailsArray.push(_react2.default.createElement(
-                        'div',
-                        { key: 'phys' },
-                        'Att > Def'
-                    ));
-                    break;
-                default:
-                    detailsArray.push(_react2.default.createElement(
-                        'div',
-                        { key: 'phys' },
-                        'Att < Def'
-                    ));
-            }
-        }
-        if (d.needs_overworld_rain) {
-            detailsArray.push(_react2.default.createElement(
-                'div',
-                { key: 'rain' },
-                'Rain in overworld'
-            ));
-        }
-        if (d.turn_upside_down) {
-            detailsArray.push(_react2.default.createElement(
-                'div',
-                { key: 'turn' },
-                'Turn upside down'
-            ));
-        }
-        if (d.item) {
-            var id = ~~d.item.url.match(/\/(\d+)\//)[1];
-            var name = d.item.name.replace(/\b(\w)/g, function (m) {
-                return m.toUpperCase();
-            });
-            detailsArray.push(_react2.default.createElement(
-                'div',
-                { key: 'item' },
-                'Use ',
-                _react2.default.createElement(_PokeLink2.default, { id: id, name: name, type: 'item' })
-            ));
-        }
-        if (d.known_move_type) {
-            detailsArray.push(_react2.default.createElement(
-                'div',
-                { key: 'moveType' },
-                'Knows ',
-                _react2.default.createElement(_PokeLink2.default, { id: 18, name: 'Fairy', type: 'type' }),
-                ' move'
-            ));
-        }
-        if (d.min_affection) {
-            detailsArray.push(_react2.default.createElement(
-                'div',
-                { key: 'affection' },
-                'Affection: ',
-                d.min_affection
-            ));
-        }
-        if (d.party_type) {
-            var _id = ~~d.party_type.url.match(/\/(\d+)\//)[1];
-            var _name = d.party_type.name.replace(/\b(\w)/g, function (m) {
-                return m.toUpperCase();
-            });
-            detailsArray.push(_react2.default.createElement(
-                'div',
-                { key: 'partyType' },
-                'With ',
-                _react2.default.createElement(_PokeLink2.default, { id: _id, name: _name, type: 'type' }),
-                ' pokemon in party.'
-            ));
-        }
-        if (d.trade_species) {
-            var _id2 = ~~d.trade_species.url.match(/\/(\d+)\//)[1];
-            var _name2 = d.trade_species.name.replace(/\b(\w)/g, function (m) {
-                return m.toUpperCase();
-            });
-            detailsArray.push(_react2.default.createElement(
-                'div',
-                { key: 'tradeSpec' },
-                'For ',
-                _react2.default.createElement(_PokeLink2.default, { id: _id2, name: _name2, type: 'pokemon' })
-            ));
-        }
-        if (d.party_species) {
-            var _id3 = ~~d.party_species.url.match(/\/(\d+)\//)[1];
-            var _name3 = d.party_species.name.replace(/\b(\w)/g, function (m) {
-                return m.toUpperCase();
-            });
-            detailsArray.push(_react2.default.createElement(
-                'div',
-                { key: 'partySpec' },
-                'With ',
-                _react2.default.createElement(_PokeLink2.default, { id: _id3, name: _name3, type: 'pokemon' }),
-                ' in party'
-            ));
-        }
-        if (d.min_happiness) {
-            detailsArray.push(_react2.default.createElement(
-                'div',
-                { key: 'happiness' },
-                'Happiness: ',
-                d.min_happiness
-            ));
-        }
-        if (d.held_item) {
-            var _id4 = ~~d.held_item.url.match(/\/(\d+)\//)[1];
-            var _name4 = d.held_item.name.replace(/\b(\w)/g, function (m) {
-                return m.toUpperCase();
-            });
-            detailsArray.push(_react2.default.createElement(
-                'div',
-                { key: 'heldItem' },
-                'Has ',
-                _react2.default.createElement(_PokeLink2.default, { id: _id4, name: _name4, type: 'item' })
-            ));
-        }
-        if (d.known_move) {
-            var _id5 = ~~d.known_move.url.match(/\/(\d+)\//)[1];
-            var _name5 = d.known_move.name.replace(/\b(\w)/g, function (m) {
-                return m.toUpperCase();
-            });
-            detailsArray.push(_react2.default.createElement(
-                'div',
-                { key: 'move' },
-                'Knows ',
-                _react2.default.createElement(_PokeLink2.default, { id: _id5, name: _name5, type: 'move' })
-            ));
-        }
-        if (d.location) {
-            var _name6 = d.location.name.replace(/\b(\w)/g, function (m) {
-                return m.toUpperCase();
-            });
-            detailsArray.push(_react2.default.createElement(
-                'div',
-                { key: 'location' },
-                'Near ',
-                _react2.default.createElement(_PokeLink2.default, { id: 0, name: _name6, type: 'glossary' })
-            ));
-        }
-        return _react2.default.createElement(
-            'div',
-            { key: i, className: _PokeEvo2.default.details },
-            detailsArray
-        );
-    });
-};
-
-var parseEvo = function parseEvo(evolutions, id) {
-    return evolutions.map(function (evo, i) {
-        return _react2.default.createElement(
-            'div',
-            { key: i, className: _PokeEvo2.default.row },
-            evo.map(function (poke) {
-                var details = i ? _react2.default.createElement(
-                    'div',
-                    { className: _PokeEvo2.default.arrow },
-                    mapEvoDetails(poke.details)
-                ) : null;
-                var pokeImg = _react2.default.createElement(
-                    _PokeLink2.default,
-                    { id: poke.id, type: 'pokemon' },
-                    _react2.default.createElement(_PokeImg2.default, { id: poke.id })
-                );
-                if (id === poke.id) {
-                    pokeImg = _react2.default.createElement(_PokeImg2.default, { id: poke.id });
-                }
-                return _react2.default.createElement(
-                    'div',
-                    { className: _PokeEvo2.default.item, key: poke.id },
-                    details,
-                    pokeImg
-                );
-            })
-        );
-    });
-};
-
-var PokeEvo = function PokeEvo(props) {
-    var chain = props.data.chain;
-
-    var evolutions = getEvolutions(chain, evolutions);
-    console.log(evolutions);
-    return _react2.default.createElement(
-        'div',
-        null,
-        parseEvo(evolutions, props.id)
-    );
-};
-
-exports.default = PokeEvo;
-
-/***/ }),
-/* 105 */
-/***/ (function(module, exports) {
-
-// removed by extract-text-webpack-plugin
-
-/***/ }),
-/* 106 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-    value: true
-});
-
-var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-
-var _react = __webpack_require__(0);
-
-var _react2 = _interopRequireDefault(_react);
-
-var _DexAbility = __webpack_require__(107);
+var _DexAbility = __webpack_require__(113);
 
 var _DexAbility2 = _interopRequireDefault(_DexAbility);
 
-var _PokeTable = __webpack_require__(6);
+var _DexEgg = __webpack_require__(115);
+
+var _DexEgg2 = _interopRequireDefault(_DexEgg);
+
+var _DexGlossary = __webpack_require__(116);
+
+var _DexGlossary2 = _interopRequireDefault(_DexGlossary);
+
+var _DexHome = __webpack_require__(118);
+
+var _DexHome2 = _interopRequireDefault(_DexHome);
+
+var _DexItem = __webpack_require__(124);
+
+var _DexItem2 = _interopRequireDefault(_DexItem);
+
+var _DexMove = __webpack_require__(126);
+
+var _DexMove2 = _interopRequireDefault(_DexMove);
+
+var _DexPokemon = __webpack_require__(128);
+
+var _DexPokemon2 = _interopRequireDefault(_DexPokemon);
+
+var _DexType = __webpack_require__(137);
+
+var _DexType2 = _interopRequireDefault(_DexType);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+exports.DexAbility = _DexAbility2.default;
+exports.DexEgg = _DexEgg2.default;
+exports.DexGlossary = _DexGlossary2.default;
+exports.DexHome = _DexHome2.default;
+exports.DexItem = _DexItem2.default;
+exports.DexMove = _DexMove2.default;
+exports.DexPokemon = _DexPokemon2.default;
+exports.DexType = _DexType2.default;
+
+/***/ }),
+/* 113 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+var _react = __webpack_require__(0);
+
+var _react2 = _interopRequireDefault(_react);
+
+var _DexAbility = __webpack_require__(114);
+
+var _DexAbility2 = _interopRequireDefault(_DexAbility);
+
+var _Components = __webpack_require__(2);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -26261,7 +26070,7 @@ var DexAbility = function (_React$Component) {
                         name,
                         ' ability'
                     ),
-                    _react2.default.createElement(_PokeTable.PokeTable, { listItem: _PokeTable.PokelistItem, data: ability.pokemon, headers: 'pokelist' })
+                    _react2.default.createElement(_Components.PokeTable, { listItem: _Components.PokelistItem, data: ability.pokemon, headers: 'pokelist' })
                 )
             );
         }
@@ -26273,185 +26082,14 @@ var DexAbility = function (_React$Component) {
 exports.default = DexAbility;
 
 /***/ }),
-/* 107 */
+/* 114 */
 /***/ (function(module, exports) {
 
 // removed by extract-text-webpack-plugin
+module.exports = {"section":"DexAbility__section___3FvV1W","about":"DexAbility__about___2ThCSj","keyword":"DexAbility__keyword___2ZpQRT","button":"DexAbility__button___3ae1kL"};
 
 /***/ }),
-/* 108 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-    value: true
-});
-
-var _react = __webpack_require__(0);
-
-var _react2 = _interopRequireDefault(_react);
-
-var _PokeType = __webpack_require__(8);
-
-var _PokeType2 = _interopRequireDefault(_PokeType);
-
-var _MoveClass = __webpack_require__(38);
-
-var _MoveClass2 = _interopRequireDefault(_MoveClass);
-
-var _DexMove = __webpack_require__(109);
-
-var _DexMove2 = _interopRequireDefault(_DexMove);
-
-var _PokeTable = __webpack_require__(6);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-var createTable = function createTable(dataArr) {
-    var rows = dataArr.map(function (e, i) {
-        var val = e[1] ? e[1] : '-';
-        return _react2.default.createElement(
-            'tr',
-            { key: i },
-            _react2.default.createElement(
-                'td',
-                null,
-                e[0]
-            ),
-            _react2.default.createElement(
-                'td',
-                null,
-                val
-            )
-        );
-    });
-    return _react2.default.createElement(
-        'table',
-        { className: _DexMove2.default.statTable },
-        _react2.default.createElement(
-            'tbody',
-            null,
-            rows
-        )
-    );
-};
-
-var createPokemonList = function createPokemonList(pokeArr, learnBy) {
-    if (!pokeArr.length) {
-        return null;
-    }
-    return _react2.default.createElement(
-        'div',
-        { className: _DexMove2.default.section },
-        _react2.default.createElement(
-            'h5',
-            null,
-            'List of pokemons that can learn this move by ',
-            learnBy,
-            '.'
-        ),
-        _react2.default.createElement(_PokeTable.PokeTable, { headers: 'pokelist', data: pokeArr, listItem: _PokeTable.PokelistItem })
-    );
-};
-
-var DexMove = function DexMove(props) {
-    var move = props.data;
-    var _move$pokemon = move.pokemon,
-        egg = _move$pokemon.egg,
-        machine = _move$pokemon.machine,
-        tutor = _move$pokemon.tutor,
-        level_up = _move$pokemon.level_up;
-
-    var name = move.name.replace(/\b(\w)/g, function (m) {
-        return m.toUpperCase();
-    });
-    var moveData = [['Damage Class', _react2.default.createElement(_MoveClass2.default, { data: move.damage_class })], ['Power', move.power], ['PP', move.pp], ['Accuracy', move.accuracy], ['Priority', move.priority], ['Effect Chance', move.effect_chance], ['TM', move.tm ? move.tm.replace(/\D+/g, function (m) {
-        return m.toUpperCase();
-    }) : '-']];
-    return _react2.default.createElement(
-        'div',
-        null,
-        _react2.default.createElement(
-            'h3',
-            null,
-            'Move: ',
-            name
-        ),
-        _react2.default.createElement(
-            'div',
-            { className: _DexMove2.default.about },
-            _react2.default.createElement(
-                'p',
-                null,
-                _react2.default.createElement(
-                    'span',
-                    { className: _DexMove2.default.keyword },
-                    'Pokedex: '
-                ),
-                _react2.default.createElement(
-                    'em',
-                    null,
-                    move.flavor_text
-                )
-            ),
-            _react2.default.createElement(
-                'p',
-                null,
-                _react2.default.createElement(
-                    'span',
-                    { className: _DexMove2.default.keyword },
-                    'Short description: '
-                ),
-                _react2.default.createElement(
-                    'em',
-                    null,
-                    move.effect_entries.short_effect
-                )
-            ),
-            _react2.default.createElement(
-                'p',
-                null,
-                _react2.default.createElement(
-                    'span',
-                    { className: _DexMove2.default.keyword },
-                    'Description: '
-                ),
-                _react2.default.createElement(
-                    'em',
-                    null,
-                    move.effect_entries.effect
-                )
-            )
-        ),
-        _react2.default.createElement(
-            'div',
-            { className: _DexMove2.default.about },
-            _react2.default.createElement(
-                'h5',
-                null,
-                'Move stats'
-            ),
-            createTable(moveData)
-        ),
-        createPokemonList(egg, 'breeding'),
-        createPokemonList(level_up, 'level'),
-        createPokemonList(machine, 'TM'),
-        createPokemonList(tutor, 'tutor')
-    );
-};
-
-exports.default = DexMove;
-
-/***/ }),
-/* 109 */
-/***/ (function(module, exports) {
-
-// removed by extract-text-webpack-plugin
-
-/***/ }),
-/* 110 */
+/* 115 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -26467,7 +26105,7 @@ var _react = __webpack_require__(0);
 
 var _react2 = _interopRequireDefault(_react);
 
-var _PokeTable = __webpack_require__(6);
+var _Components = __webpack_require__(2);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -26510,7 +26148,7 @@ var DexEgg = function (_React$Component) {
                     name,
                     ' egg group.'
                 ),
-                _react2.default.createElement(_PokeTable.PokeTable, { headers: 'pokelist', data: group.pokemon, listItem: _PokeTable.PokelistItem })
+                _react2.default.createElement(_Components.PokeTable, { headers: 'pokelist', data: group.pokemon, listItem: _Components.PokelistItem })
             );
         }
     }]);
@@ -26521,7 +26159,7 @@ var DexEgg = function (_React$Component) {
 exports.default = DexEgg;
 
 /***/ }),
-/* 111 */
+/* 116 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -26537,7 +26175,7 @@ var _react = __webpack_require__(0);
 
 var _react2 = _interopRequireDefault(_react);
 
-var _DexGlossary = __webpack_require__(112);
+var _DexGlossary = __webpack_require__(117);
 
 var _DexGlossary2 = _interopRequireDefault(_DexGlossary);
 
@@ -26565,212 +26203,280 @@ var DexGlossary = function (_React$Component) {
                 'div',
                 null,
                 _react2.default.createElement(
-                    'h5',
-                    null,
-                    'Move'
-                ),
-                _react2.default.createElement(
-                    'p',
-                    null,
+                    'div',
+                    { className: _DexGlossary2.default.section },
                     _react2.default.createElement(
-                        'span',
-                        { className: _DexGlossary2.default.keyword },
-                        'Damage Class '
+                        'h5',
+                        null,
+                        'Move'
                     ),
-                    '- determines kind of damage a given move deals. Damage calculation is performed using user\'s Attack and target\'s Defense (Physical) or user\'s Special Attack and target\'s Special Defense (Special). There is also Status move category, which does not inflicts damage.'
-                ),
-                _react2.default.createElement(
-                    'p',
-                    null,
                     _react2.default.createElement(
-                        'span',
-                        { className: _DexGlossary2.default.keyword },
-                        'Power '
+                        'p',
+                        null,
+                        _react2.default.createElement(
+                            'span',
+                            { className: _DexGlossary2.default.keyword },
+                            'Damage Class '
+                        ),
+                        '- determines kind of damage a given move deals. Damage calculation is performed using user\'s Attack and target\'s Defense (Physical) or user\'s Special Attack and target\'s Special Defense (Special). There is also Status move category, which does not inflicts damage.'
                     ),
-                    '- base damage of given move.'
-                ),
-                _react2.default.createElement(
-                    'p',
-                    null,
                     _react2.default.createElement(
-                        'span',
-                        { className: _DexGlossary2.default.keyword },
-                        'PP (Power Point) '
+                        'p',
+                        null,
+                        _react2.default.createElement(
+                            'span',
+                            { className: _DexGlossary2.default.keyword },
+                            'Power '
+                        ),
+                        '- base damage of given move.'
                     ),
-                    '- determines the amount of times that move can be used. Base usage of PP per move is 1.'
-                ),
-                _react2.default.createElement(
-                    'p',
-                    null,
                     _react2.default.createElement(
-                        'span',
-                        { className: _DexGlossary2.default.keyword },
-                        'Accuracy '
+                        'p',
+                        null,
+                        _react2.default.createElement(
+                            'span',
+                            { className: _DexGlossary2.default.keyword },
+                            'PP (Power Point) '
+                        ),
+                        '- determines the amount of times that move can be used. Base usage of PP per move is 1.'
                     ),
-                    '- a move\'s accuracy can be any number from 1-100, reflecting the probability of move being successful as a procentage. Currently only multiplies of 5 between 30 and 100 (inclusive) are used.'
-                ),
-                _react2.default.createElement(
-                    'p',
-                    null,
                     _react2.default.createElement(
-                        'span',
-                        { className: _DexGlossary2.default.keyword },
-                        'Priority '
+                        'p',
+                        null,
+                        _react2.default.createElement(
+                            'span',
+                            { className: _DexGlossary2.default.keyword },
+                            'Accuracy '
+                        ),
+                        '- a move\'s accuracy can be any number from 1-100, reflecting the probability of move being successful as a procentage. Currently only multiplies of 5 between 30 and 100 (inclusive) are used.'
                     ),
-                    '- characteristic of a move, such that any move with a higher priority than another will always be performed first. When two moves have the same priority, the user\'s Speed statistics will determine which one is performed first in battle.'
-                ),
-                _react2.default.createElement(
-                    'p',
-                    null,
                     _react2.default.createElement(
-                        'span',
-                        { className: _DexGlossary2.default.keyword },
-                        'TM (Technical Machine) '
+                        'p',
+                        null,
+                        _react2.default.createElement(
+                            'span',
+                            { className: _DexGlossary2.default.keyword },
+                            'Priority '
+                        ),
+                        '- characteristic of a move, such that any move with a higher priority than another will always be performed first. When two moves have the same priority, the user\'s Speed statistics will determine which one is performed first in battle.'
                     ),
-                    '- is an item, that is used to teach a Pokemon a move.'
-                ),
-                _react2.default.createElement(
-                    'h5',
-                    null,
-                    'Pokemon'
-                ),
-                _react2.default.createElement(
-                    'p',
-                    null,
                     _react2.default.createElement(
-                        'span',
-                        { className: _DexGlossary2.default.keyword },
-                        'HP (Hit Points) '
+                        'p',
+                        null,
+                        _react2.default.createElement(
+                            'span',
+                            { className: _DexGlossary2.default.keyword },
+                            'TM (Technical Machine) '
+                        ),
+                        '- is an item, that is used to teach a Pokemon a move.'
+                    )
+                ),
+                _react2.default.createElement(
+                    'div',
+                    { className: _DexGlossary2.default.section },
+                    _react2.default.createElement(
+                        'h5',
+                        null,
+                        'Pokemon'
                     ),
-                    '- determines how much damage a Pokemon can receive before fainting.'
-                ),
-                _react2.default.createElement(
-                    'p',
-                    null,
                     _react2.default.createElement(
-                        'span',
-                        { className: _DexGlossary2.default.keyword },
-                        'Attack '
+                        'p',
+                        null,
+                        _react2.default.createElement(
+                            'span',
+                            { className: _DexGlossary2.default.keyword },
+                            'HP (Hit Points) '
+                        ),
+                        '- determines how much damage a Pokemon can receive before fainting.'
                     ),
-                    '- determines how much damage a Pokemon deals when using a physical move.'
-                ),
-                _react2.default.createElement(
-                    'p',
-                    null,
                     _react2.default.createElement(
-                        'span',
-                        { className: _DexGlossary2.default.keyword },
-                        'Defense '
+                        'p',
+                        null,
+                        _react2.default.createElement(
+                            'span',
+                            { className: _DexGlossary2.default.keyword },
+                            'Attack '
+                        ),
+                        '- determines how much damage a Pokemon deals when using a physical move.'
                     ),
-                    '- partly determines how much damage a Pokemon receives when it is hit with physical move.'
-                ),
-                _react2.default.createElement(
-                    'p',
-                    null,
                     _react2.default.createElement(
-                        'span',
-                        { className: _DexGlossary2.default.keyword },
-                        'Special Attack '
+                        'p',
+                        null,
+                        _react2.default.createElement(
+                            'span',
+                            { className: _DexGlossary2.default.keyword },
+                            'Defense '
+                        ),
+                        '- partly determines how much damage a Pokemon receives when it is hit with physical move.'
                     ),
-                    '- determines how much damage a Pokemon deals when usin a special move.'
-                ),
-                _react2.default.createElement(
-                    'p',
-                    null,
                     _react2.default.createElement(
-                        'span',
-                        { className: _DexGlossary2.default.keyword },
-                        'Special Defense '
+                        'p',
+                        null,
+                        _react2.default.createElement(
+                            'span',
+                            { className: _DexGlossary2.default.keyword },
+                            'Special Attack '
+                        ),
+                        '- determines how much damage a Pokemon deals when usin a special move.'
                     ),
-                    '- partly determines how much damage a Pokemon receives when it is hit with special move.'
-                ),
-                _react2.default.createElement(
-                    'p',
-                    null,
                     _react2.default.createElement(
-                        'span',
-                        { className: _DexGlossary2.default.keyword },
-                        'Speed determines '
+                        'p',
+                        null,
+                        _react2.default.createElement(
+                            'span',
+                            { className: _DexGlossary2.default.keyword },
+                            'Special Defense '
+                        ),
+                        '- partly determines how much damage a Pokemon receives when it is hit with special move.'
                     ),
-                    '- the order of Pokemon that cant act in battle. Pokemon with higher Speed at the start of any turn will generally make a move before ones with lower speed.'
-                ),
-                _react2.default.createElement(
-                    'p',
-                    null,
                     _react2.default.createElement(
-                        'span',
-                        { className: _DexGlossary2.default.keyword },
-                        'Egg groups '
+                        'p',
+                        null,
+                        _react2.default.createElement(
+                            'span',
+                            { className: _DexGlossary2.default.keyword },
+                            'Speed determines '
+                        ),
+                        '- the order of Pokemon that cant act in battle. Pokemon with higher Speed at the start of any turn will generally make a move before ones with lower speed.'
                     ),
-                    '- categories that determine which Pokemon are able to interbreed. This concept was introduced in Generation II. Similar to types, a Pokemon may belong to either one or two Egg groups.'
-                ),
-                _react2.default.createElement(
-                    'p',
-                    null,
                     _react2.default.createElement(
-                        'span',
-                        { className: _DexGlossary2.default.keyword },
-                        'Abilities '
+                        'p',
+                        null,
+                        _react2.default.createElement(
+                            'span',
+                            { className: _DexGlossary2.default.keyword },
+                            'Egg groups '
+                        ),
+                        '- categories that determine which Pokemon are able to interbreed. This concept was introduced in Generation II. Similar to types, a Pokemon may belong to either one or two Egg groups.'
                     ),
-                    '- provides a passive effect in battle or in the overworld. Individual Pokemon may have only one Ability at a time.'
-                ),
-                _react2.default.createElement(
-                    'p',
-                    null,
                     _react2.default.createElement(
-                        'span',
-                        { className: _DexGlossary2.default.keyword },
-                        'Growth rate '
+                        'p',
+                        null,
+                        _react2.default.createElement(
+                            'span',
+                            { className: _DexGlossary2.default.keyword },
+                            'Abilities '
+                        ),
+                        '- provides a passive effect in battle or in the overworld. Individual Pokemon may have only one Ability at a time.'
                     ),
-                    '- determines curve of  amount of experience required to Pokemon to reach higher level. Which is amount of experience that Pokemon needs to gain in order to reach 100 level.'
-                ),
-                _react2.default.createElement(
-                    'p',
-                    null,
                     _react2.default.createElement(
-                        'span',
-                        { className: _DexGlossary2.default.keyword },
-                        'Egg cycles '
+                        'p',
+                        null,
+                        _react2.default.createElement(
+                            'span',
+                            { className: _DexGlossary2.default.keyword },
+                            'Growth rate '
+                        ),
+                        '- determines curve of  amount of experience required to Pokemon to reach higher level. Which is amount of experience that Pokemon needs to gain in order to reach 100 level.'
                     ),
-                    '- determines how long an egg takes to hatch. One egg cycle is 256 steps. For example if hatching takes 15 egg cycles then a total of 3840 steps will cause an egg to hatch.'
-                ),
-                _react2.default.createElement(
-                    'h5',
-                    null,
-                    'Locations'
-                ),
-                _react2.default.createElement(
-                    'p',
-                    null,
                     _react2.default.createElement(
-                        'span',
-                        { className: _DexGlossary2.default.keyword },
-                        'Mossy Rock '
+                        'p',
+                        null,
+                        _react2.default.createElement(
+                            'span',
+                            { className: _DexGlossary2.default.keyword },
+                            'Egg cycles '
+                        ),
+                        '- determines how long an egg takes to hatch. One egg cycle is 256 steps. For example if hatching takes 15 egg cycles then a total of 3840 steps will cause an egg to hatch.'
+                    )
+                ),
+                _react2.default.createElement(
+                    'div',
+                    { className: _DexGlossary2.default.section },
+                    _react2.default.createElement(
+                        'h5',
+                        null,
+                        'Evolution Locations'
                     ),
-                    '- a special rock that enables Eevee to evolve into Leafeon when leveled up nearby. Mossy Rocks are located in Eterna Forest (Sinnoh), Pinwheel Forest (Unova), Route 20 (Kalos).'
-                ),
-                _react2.default.createElement(
-                    'p',
-                    null,
                     _react2.default.createElement(
-                        'span',
-                        { className: _DexGlossary2.default.keyword },
-                        'Icy Rock '
+                        'p',
+                        null,
+                        _react2.default.createElement(
+                            'span',
+                            { className: _DexGlossary2.default.keyword },
+                            'Mossy Rock '
+                        ),
+                        '- a special rock that enables Eevee to evolve into Leafeon when leveled up nearby. Mossy Rocks are located in Eterna Forest (Sinnoh), Pinwheel Forest (Unova), Route 20 (Kalos).'
                     ),
-                    '- a special rock that enables Eevee to evolve into Glaceon when leveled up nearby. Icy Rocks are located in Twist Mountain (Unova), Route-117 (Sinnoh), Frost Cavern (Kalos).'
-                ),
-                _react2.default.createElement(
-                    'h5',
-                    null,
-                    'Evolutions'
-                ),
-                _react2.default.createElement(
-                    'p',
-                    null,
                     _react2.default.createElement(
-                        'span',
-                        { className: _DexGlossary2.default.keyword },
-                        ' '
+                        'p',
+                        null,
+                        _react2.default.createElement(
+                            'span',
+                            { className: _DexGlossary2.default.keyword },
+                            'Icy Rock '
+                        ),
+                        '- a special rock that enables Eevee to evolve into Glaceon when leveled up nearby. Icy Rocks are located in Twist Mountain (Unova), Route-117 (Sinnoh), Frost Cavern (Kalos).'
+                    ),
+                    _react2.default.createElement(
+                        'p',
+                        null,
+                        _react2.default.createElement(
+                            'span',
+                            { className: _DexGlossary2.default.keyword },
+                            'Magnetic Field '
+                        ),
+                        '- enables Magneton, Nosepass evolte into Magnezone and Probopass respectively. Magnetic Field is located in Mt. Coronet (Sinnoh), Chargestone Cave (Unova), Route-13 (Kalos).'
+                    )
+                ),
+                _react2.default.createElement(
+                    'div',
+                    { className: _DexGlossary2.default.section },
+                    _react2.default.createElement(
+                        'h5',
+                        null,
+                        'Evolution Methods'
+                    ),
+                    _react2.default.createElement(
+                        'p',
+                        null,
+                        _react2.default.createElement(
+                            'span',
+                            { className: _DexGlossary2.default.keyword },
+                            'Level up '
+                        ),
+                        '- method of evolution when it is required for pokemon to reach certain level to evolve. There are also pokemon that has to fit other conditions besides reaching required level to evolve.',
+                        _react2.default.createElement('br', null),
+                        'Those conditions are: high friendship, knowing certain move, training in certain area, certain day time, holding an item, being certain gender.'
+                    ),
+                    _react2.default.createElement(
+                        'p',
+                        null,
+                        _react2.default.createElement(
+                            'span',
+                            { className: _DexGlossary2.default.keyword },
+                            'Via Trading '
+                        ),
+                        '- a few pokemon can only evolve when they are traded. The evolution starts immediately after the trade is completed, regardless of the method of the trading used.'
+                    ),
+                    _react2.default.createElement(
+                        'p',
+                        null,
+                        _react2.default.createElement(
+                            'span',
+                            { className: _DexGlossary2.default.keyword },
+                            'Evolutionary Stone '
+                        ),
+                        '- some pokemon evolve when they are exposed to an evolutionary stone. The stone may be applied at any time and causes an instant evolution. The player can decide whether and when to evolve his or her Pok\xE9mon, but he or she must choose carefully as most Pok\xE9mon will no longer be able to learn certain moves when they evolve in this way.'
+                    )
+                ),
+                _react2.default.createElement(
+                    'div',
+                    { className: _DexGlossary2.default.section },
+                    _react2.default.createElement(
+                        'h5',
+                        null,
+                        'Item'
+                    ),
+                    _react2.default.createElement(
+                        'p',
+                        null,
+                        _react2.default.createElement(
+                            'span',
+                            { className: _DexGlossary2.default.keyword },
+                            'Category '
+                        ),
+                        '- since Gen. II items are divided into categories to help with overall organization. These categories have varied between games. Some of the item categories are: Held Item (given to pokemon to hold by its Trainer), Evolutionary Stones, Fossils, Poke Balls, Mail, Berries, Medicine, TM\'s.'
                     )
                 )
             );
@@ -26783,271 +26489,11 @@ var DexGlossary = function (_React$Component) {
 exports.default = DexGlossary;
 
 /***/ }),
-/* 112 */
-/***/ (function(module, exports) {
-
-// removed by extract-text-webpack-plugin
-
-/***/ }),
-/* 113 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-    value: true
-});
-
-var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-
-var _react = __webpack_require__(0);
-
-var _react2 = _interopRequireDefault(_react);
-
-var _reactRedux = __webpack_require__(4);
-
-var _actions = __webpack_require__(5);
-
-var _PokeTable = __webpack_require__(6);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
-
-function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
-
-var loadMoreBy = 100;
-
-var Pokelist = function (_React$Component) {
-    _inherits(Pokelist, _React$Component);
-
-    function Pokelist() {
-        var _ref;
-
-        var _temp, _this, _ret;
-
-        _classCallCheck(this, Pokelist);
-
-        for (var _len = arguments.length, args = Array(_len), _key = 0; _key < _len; _key++) {
-            args[_key] = arguments[_key];
-        }
-
-        return _ret = (_temp = (_this = _possibleConstructorReturn(this, (_ref = Pokelist.__proto__ || Object.getPrototypeOf(Pokelist)).call.apply(_ref, [this].concat(args))), _this), _this.handleScroll = function (ev) {
-            var height = Math.max(document.documentElement.scrollHeight, document.body.scrollHeight);
-            var scroll = Math.round(window.innerHeight + window.scrollY);
-            if (height === scroll) {
-                if (_this.props.length < 721) {
-                    console.log(_this.props.length + loadMoreBy);
-                    _this.props.setLen(_this.props.length + loadMoreBy);
-                }
-            }
-        }, _temp), _possibleConstructorReturn(_this, _ret);
-    }
-
-    _createClass(Pokelist, [{
-        key: 'componentDidMount',
-        value: function componentDidMount() {
-            document.addEventListener('scroll', this.handleScroll);
-        }
-    }, {
-        key: 'componentWillUnmount',
-        value: function componentWillUnmount() {
-            document.removeEventListener('scroll', this.handleScroll);
-        }
-    }, {
-        key: 'render',
-        value: function render() {
-            var list = _react2.default.createElement(_PokeTable.PokeTable, { headers: 'pokelist',
-                listItem: _PokeTable.PokelistItem,
-                data: this.props.data.slice(0, this.props.length) });
-            return _react2.default.createElement(
-                'div',
-                null,
-                list
-            );
-        }
-    }]);
-
-    return Pokelist;
-}(_react2.default.Component);
-
-var mapStateToProps = function mapStateToProps(state) {
-    return {
-        length: state.pokelist.length,
-        data: state.pokelist.data
-    };
-};
-
-var mapDispatchToProps = function mapDispatchToProps(dispatch) {
-    return {
-        setLen: function setLen() {
-            var number = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : loadMoreBy;
-            return dispatch((0, _actions.setLength)(number));
-        }
-    };
-};
-
-exports.default = (0, _reactRedux.connect)(mapStateToProps, mapDispatchToProps)(Pokelist);
-
-/***/ }),
-/* 114 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-    value: true
-});
-
-var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-
-var _react = __webpack_require__(0);
-
-var _react2 = _interopRequireDefault(_react);
-
-var _Layout = __webpack_require__(115);
-
-var _Layout2 = _interopRequireDefault(_Layout);
-
-var _Menu = __webpack_require__(116);
-
-var _Menu2 = _interopRequireDefault(_Menu);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
-
-function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
-
-var Layout = function (_React$Component) {
-    _inherits(Layout, _React$Component);
-
-    function Layout() {
-        _classCallCheck(this, Layout);
-
-        return _possibleConstructorReturn(this, (Layout.__proto__ || Object.getPrototypeOf(Layout)).apply(this, arguments));
-    }
-
-    _createClass(Layout, [{
-        key: 'render',
-        value: function render() {
-            return _react2.default.createElement(
-                'div',
-                { className: _Layout2.default.scene },
-                _react2.default.createElement(
-                    'div',
-                    { className: _Layout2.default.block },
-                    _react2.default.createElement(_Menu2.default, null)
-                ),
-                _react2.default.createElement(
-                    'div',
-                    { className: _Layout2.default.block },
-                    _react2.default.createElement(
-                        'h1',
-                        { className: _Layout2.default.title },
-                        this.props.title
-                    ),
-                    _react2.default.createElement(
-                        'div',
-                        { className: _Layout2.default.wrapper },
-                        this.props.children
-                    )
-                )
-            );
-        }
-    }]);
-
-    return Layout;
-}(_react2.default.Component);
-
-exports.default = Layout;
-
-/***/ }),
-/* 115 */
-/***/ (function(module, exports) {
-
-// removed by extract-text-webpack-plugin
-
-/***/ }),
-/* 116 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-    value: true
-});
-
-var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-
-var _react = __webpack_require__(0);
-
-var _react2 = _interopRequireDefault(_react);
-
-var _Menu = __webpack_require__(117);
-
-var _Menu2 = _interopRequireDefault(_Menu);
-
-var _MenuItem = __webpack_require__(118);
-
-var _MenuItem2 = _interopRequireDefault(_MenuItem);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
-
-function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
-
-var Menu = function (_React$Component) {
-    _inherits(Menu, _React$Component);
-
-    function Menu() {
-        _classCallCheck(this, Menu);
-
-        return _possibleConstructorReturn(this, (Menu.__proto__ || Object.getPrototypeOf(Menu)).apply(this, arguments));
-    }
-
-    _createClass(Menu, [{
-        key: 'shouldComponentUpdate',
-        value: function shouldComponentUpdate(nextProps) {
-            if (nextProps === this.props) {
-                return false;
-            }
-            return true;
-        }
-    }, {
-        key: 'render',
-        value: function render() {
-            return _react2.default.createElement(
-                'div',
-                { className: _Menu2.default.wrapper },
-                _react2.default.createElement(_MenuItem2.default, { text: 'Home' }),
-                _react2.default.createElement(_MenuItem2.default, { text: 'Pokelist' }),
-                _react2.default.createElement(_MenuItem2.default, { text: 'Pokedex' }),
-                _react2.default.createElement(_MenuItem2.default, { text: 'Compare', disabled: true })
-            );
-        }
-    }]);
-
-    return Menu;
-}(_react2.default.Component);
-
-exports.default = Menu;
-
-/***/ }),
 /* 117 */
 /***/ (function(module, exports) {
 
 // removed by extract-text-webpack-plugin
+module.exports = {"section":"DexGlossary__section___MYAUNj","about":"DexGlossary__about___2bjw5p","keyword":"DexGlossary__keyword___2Bn6Ou","button":"DexGlossary__button___1VIXvj"};
 
 /***/ }),
 /* 118 */
@@ -27066,13 +26512,15 @@ var _react = __webpack_require__(0);
 
 var _react2 = _interopRequireDefault(_react);
 
-var _MenuItem = __webpack_require__(119);
+var _reactRedux = __webpack_require__(3);
 
-var _MenuItem2 = _interopRequireDefault(_MenuItem);
+var _DexHome = __webpack_require__(119);
 
-var _reactRedux = __webpack_require__(4);
+var _DexHome2 = _interopRequireDefault(_DexHome);
 
-var _actions = __webpack_require__(5);
+var _Components = __webpack_require__(2);
+
+var _Components2 = __webpack_require__(120);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -27082,76 +26530,51 @@ function _possibleConstructorReturn(self, call) { if (!self) { throw new Referen
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
-var MenuItem = function (_React$Component) {
-    _inherits(MenuItem, _React$Component);
+var DexHome = function (_React$Component) {
+    _inherits(DexHome, _React$Component);
 
-    function MenuItem() {
-        var _ref;
+    function DexHome() {
+        _classCallCheck(this, DexHome);
 
-        var _temp, _this, _ret;
-
-        _classCallCheck(this, MenuItem);
-
-        for (var _len = arguments.length, args = Array(_len), _key = 0; _key < _len; _key++) {
-            args[_key] = arguments[_key];
-        }
-
-        return _ret = (_temp = (_this = _possibleConstructorReturn(this, (_ref = MenuItem.__proto__ || Object.getPrototypeOf(MenuItem)).call.apply(_ref, [this].concat(args))), _this), _this.handleClickEvent = function (ev) {
-            var page = _this.props.text.toLowerCase().replace(/\W/g, '');
-            if (_this.props.page === page && _this.props.dexItemType === 'pokedex') {
-                return null;
-            }
-            _this.props.onMenuItemClick(page);
-        }, _temp), _possibleConstructorReturn(_this, _ret);
+        return _possibleConstructorReturn(this, (DexHome.__proto__ || Object.getPrototypeOf(DexHome)).apply(this, arguments));
     }
 
-    _createClass(MenuItem, [{
-        key: 'shouldComponentUpdate',
-        value: function shouldComponentUpdate(nextProps) {
-            if (nextProps === this.props) {
-                return false;
-            }
-            return true;
-        }
-    }, {
+    _createClass(DexHome, [{
         key: 'render',
         value: function render() {
             return _react2.default.createElement(
-                'button',
-                {
-                    className: _MenuItem2.default.item,
-                    disabled: this.props.disabled,
-                    onClick: this.handleClickEvent },
-                this.props.text
+                'div',
+                null,
+                _react2.default.createElement(
+                    'div',
+                    { className: _DexHome2.default.section },
+                    'Pokedex is source of knowledge about pokemon related topics. To see specific information please see a Pokemon page. If you need any explanation see: ',
+                    _react2.default.createElement(
+                        'span',
+                        { style: { display: 'inline-block' } },
+                        _react2.default.createElement(_Components.PokeLink, { id: 0, type: 'glossary', name: 'Glossary' })
+                    )
+                ),
+                _react2.default.createElement(
+                    'div',
+                    { className: _DexHome2.default.section },
+                    _react2.default.createElement(_Components2.DexSearchbar, null)
+                )
             );
         }
     }]);
 
-    return MenuItem;
+    return DexHome;
 }(_react2.default.Component);
 
-var mapStateToProps = function mapStateToProps(state) {
-    return {
-        page: state.page.currentPage,
-        dexItemType: state.page.dexItemType
-    };
-};
-
-var mapDispatchToProps = function mapDispatchToProps(dispatch) {
-    return {
-        onMenuItemClick: function onMenuItemClick(page) {
-            return dispatch((0, _actions.changePage)(page));
-        }
-    };
-};
-
-exports.default = (0, _reactRedux.connect)(mapStateToProps, mapDispatchToProps)(MenuItem);
+exports.default = DexHome;
 
 /***/ }),
 /* 119 */
 /***/ (function(module, exports) {
 
 // removed by extract-text-webpack-plugin
+module.exports = {"section":"DexHome__section___3zgb3m","about":"DexHome__about___ZwmgXv","keyword":"DexHome__keyword___3sbis6","button":"DexHome__button___395wQ4"};
 
 /***/ }),
 /* 120 */
@@ -27163,21 +26586,15 @@ exports.default = (0, _reactRedux.connect)(mapStateToProps, mapDispatchToProps)(
 Object.defineProperty(exports, "__esModule", {
     value: true
 });
+exports.DexSearchbar = undefined;
 
-var _redux = __webpack_require__(17);
+var _DexSearchbar = __webpack_require__(121);
 
-var _reducer = __webpack_require__(121);
-
-var _reducer2 = _interopRequireDefault(_reducer);
+var _DexSearchbar2 = _interopRequireDefault(_DexSearchbar);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-var Store = (0, _redux.createStore)(_reducer2.default);
-Store.subscribe(function () {
-    console.log('### STATE -> ', Store.getState());
-});
-
-exports.default = Store;
+exports.DexSearchbar = _DexSearchbar2.default;
 
 /***/ }),
 /* 121 */
@@ -27190,13 +26607,1257 @@ Object.defineProperty(exports, "__esModule", {
     value: true
 });
 
-var _redux = __webpack_require__(17);
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
-var _pageReducer = __webpack_require__(122);
+var _react = __webpack_require__(0);
+
+var _react2 = _interopRequireDefault(_react);
+
+var _DexSearchbar = __webpack_require__(122);
+
+var _DexSearchbar2 = _interopRequireDefault(_DexSearchbar);
+
+var _Components = __webpack_require__(2);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+var items = __webpack_require__(123);
+
+var DexSearchbar = function (_React$Component) {
+    _inherits(DexSearchbar, _React$Component);
+
+    function DexSearchbar() {
+        _classCallCheck(this, DexSearchbar);
+
+        var _this = _possibleConstructorReturn(this, (DexSearchbar.__proto__ || Object.getPrototypeOf(DexSearchbar)).call(this));
+
+        _this.handleInputChange = function (ev) {
+            var inp = ev.target.value;
+            var filterById = /#\d+/.test(inp);
+            var res = void 0;
+            if (inp.length > 1 && filterById) {
+                res = items.filter(function (p) {
+                    return p.type === 'pokemon' && p.id.toString().startsWith(inp.slice(1));
+                });
+            } else if (inp.length < 3) {
+                return _this.setState({
+                    input: inp,
+                    results: []
+                });
+            } else {
+                res = items.filter(function (p) {
+                    return p.name.includes(inp.replace(' ', '-').toLowerCase());
+                });
+            }
+            return _this.setState({
+                input: inp,
+                results: res
+            });
+        };
+
+        _this.state = {
+            input: '',
+            results: []
+        };
+        return _this;
+    }
+
+    _createClass(DexSearchbar, [{
+        key: 'render',
+        value: function render() {
+            var results = this.state.results.slice(0, 10).map(function (r) {
+                var info = r.type === 'pokemon' ? '#' + r.id : '(' + r.type + ')';
+                return _react2.default.createElement(
+                    'div',
+                    { key: r.name + r.id, className: _DexSearchbar2.default.row },
+                    _react2.default.createElement('img', { className: _DexSearchbar2.default.icon, src: './resources/icons/' + r.type + '.svg' }),
+                    _react2.default.createElement(_Components.PokeLink, { id: r.id, name: r.name, info: info, type: r.type })
+                );
+            });
+            console.log(results);
+            return _react2.default.createElement(
+                'div',
+                { className: _DexSearchbar2.default.wrapper },
+                _react2.default.createElement(
+                    'h5',
+                    null,
+                    'Search'
+                ),
+                _react2.default.createElement(
+                    'p',
+                    null,
+                    'Use Pokemon, Move, Ability, Item name or type \'#<Number>\' to search Pokemon by pokedex number.'
+                ),
+                _react2.default.createElement('input', { className: _DexSearchbar2.default.input,
+                    onChange: this.handleInputChange,
+                    value: this.state.input,
+                    placeholder: 'search', type: 'text' }),
+                _react2.default.createElement(
+                    'div',
+                    null,
+                    results
+                )
+            );
+        }
+    }]);
+
+    return DexSearchbar;
+}(_react2.default.Component);
+
+exports.default = DexSearchbar;
+
+/***/ }),
+/* 122 */
+/***/ (function(module, exports) {
+
+// removed by extract-text-webpack-plugin
+module.exports = {"section":"DexSearchbar__section___387lmY","about":"DexSearchbar__about___34Kxrx","keyword":"DexSearchbar__keyword___2MFTqQ","button":"DexSearchbar__button___1daRuy","wrapper":"DexSearchbar__wrapper___2hrzL4","input":"DexSearchbar__input___2ONwjL","row":"DexSearchbar__row___7h_bdH","icon":"DexSearchbar__icon___1gJ172"};
+
+/***/ }),
+/* 123 */
+/***/ (function(module, exports) {
+
+module.exports = [{"id":1,"name":"bulbasaur","type":"pokemon"},{"id":2,"name":"ivysaur","type":"pokemon"},{"id":3,"name":"venusaur","type":"pokemon"},{"id":4,"name":"charmander","type":"pokemon"},{"id":5,"name":"charmeleon","type":"pokemon"},{"id":6,"name":"charizard","type":"pokemon"},{"id":7,"name":"squirtle","type":"pokemon"},{"id":8,"name":"wartortle","type":"pokemon"},{"id":9,"name":"blastoise","type":"pokemon"},{"id":10,"name":"caterpie","type":"pokemon"},{"id":11,"name":"metapod","type":"pokemon"},{"id":12,"name":"butterfree","type":"pokemon"},{"id":13,"name":"weedle","type":"pokemon"},{"id":14,"name":"kakuna","type":"pokemon"},{"id":15,"name":"beedrill","type":"pokemon"},{"id":16,"name":"pidgey","type":"pokemon"},{"id":17,"name":"pidgeotto","type":"pokemon"},{"id":18,"name":"pidgeot","type":"pokemon"},{"id":19,"name":"rattata","type":"pokemon"},{"id":20,"name":"raticate","type":"pokemon"},{"id":21,"name":"spearow","type":"pokemon"},{"id":22,"name":"fearow","type":"pokemon"},{"id":23,"name":"ekans","type":"pokemon"},{"id":24,"name":"arbok","type":"pokemon"},{"id":25,"name":"pikachu","type":"pokemon"},{"id":26,"name":"raichu","type":"pokemon"},{"id":27,"name":"sandshrew","type":"pokemon"},{"id":28,"name":"sandslash","type":"pokemon"},{"id":29,"name":"nidoran-f","type":"pokemon"},{"id":30,"name":"nidorina","type":"pokemon"},{"id":31,"name":"nidoqueen","type":"pokemon"},{"id":32,"name":"nidoran-m","type":"pokemon"},{"id":33,"name":"nidorino","type":"pokemon"},{"id":34,"name":"nidoking","type":"pokemon"},{"id":35,"name":"clefairy","type":"pokemon"},{"id":36,"name":"clefable","type":"pokemon"},{"id":37,"name":"vulpix","type":"pokemon"},{"id":38,"name":"ninetales","type":"pokemon"},{"id":39,"name":"jigglypuff","type":"pokemon"},{"id":40,"name":"wigglytuff","type":"pokemon"},{"id":41,"name":"zubat","type":"pokemon"},{"id":42,"name":"golbat","type":"pokemon"},{"id":43,"name":"oddish","type":"pokemon"},{"id":44,"name":"gloom","type":"pokemon"},{"id":45,"name":"vileplume","type":"pokemon"},{"id":46,"name":"paras","type":"pokemon"},{"id":47,"name":"parasect","type":"pokemon"},{"id":48,"name":"venonat","type":"pokemon"},{"id":49,"name":"venomoth","type":"pokemon"},{"id":50,"name":"diglett","type":"pokemon"},{"id":51,"name":"dugtrio","type":"pokemon"},{"id":52,"name":"meowth","type":"pokemon"},{"id":53,"name":"persian","type":"pokemon"},{"id":54,"name":"psyduck","type":"pokemon"},{"id":55,"name":"golduck","type":"pokemon"},{"id":56,"name":"mankey","type":"pokemon"},{"id":57,"name":"primeape","type":"pokemon"},{"id":58,"name":"growlithe","type":"pokemon"},{"id":59,"name":"arcanine","type":"pokemon"},{"id":60,"name":"poliwag","type":"pokemon"},{"id":61,"name":"poliwhirl","type":"pokemon"},{"id":62,"name":"poliwrath","type":"pokemon"},{"id":63,"name":"abra","type":"pokemon"},{"id":64,"name":"kadabra","type":"pokemon"},{"id":65,"name":"alakazam","type":"pokemon"},{"id":66,"name":"machop","type":"pokemon"},{"id":67,"name":"machoke","type":"pokemon"},{"id":68,"name":"machamp","type":"pokemon"},{"id":69,"name":"bellsprout","type":"pokemon"},{"id":70,"name":"weepinbell","type":"pokemon"},{"id":71,"name":"victreebel","type":"pokemon"},{"id":72,"name":"tentacool","type":"pokemon"},{"id":73,"name":"tentacruel","type":"pokemon"},{"id":74,"name":"geodude","type":"pokemon"},{"id":75,"name":"graveler","type":"pokemon"},{"id":76,"name":"golem","type":"pokemon"},{"id":77,"name":"ponyta","type":"pokemon"},{"id":78,"name":"rapidash","type":"pokemon"},{"id":79,"name":"slowpoke","type":"pokemon"},{"id":80,"name":"slowbro","type":"pokemon"},{"id":81,"name":"magnemite","type":"pokemon"},{"id":82,"name":"magneton","type":"pokemon"},{"id":83,"name":"farfetchd","type":"pokemon"},{"id":84,"name":"doduo","type":"pokemon"},{"id":85,"name":"dodrio","type":"pokemon"},{"id":86,"name":"seel","type":"pokemon"},{"id":87,"name":"dewgong","type":"pokemon"},{"id":88,"name":"grimer","type":"pokemon"},{"id":89,"name":"muk","type":"pokemon"},{"id":90,"name":"shellder","type":"pokemon"},{"id":91,"name":"cloyster","type":"pokemon"},{"id":92,"name":"gastly","type":"pokemon"},{"id":93,"name":"haunter","type":"pokemon"},{"id":94,"name":"gengar","type":"pokemon"},{"id":95,"name":"onix","type":"pokemon"},{"id":96,"name":"drowzee","type":"pokemon"},{"id":97,"name":"hypno","type":"pokemon"},{"id":98,"name":"krabby","type":"pokemon"},{"id":99,"name":"kingler","type":"pokemon"},{"id":100,"name":"voltorb","type":"pokemon"},{"id":101,"name":"electrode","type":"pokemon"},{"id":102,"name":"exeggcute","type":"pokemon"},{"id":103,"name":"exeggutor","type":"pokemon"},{"id":104,"name":"cubone","type":"pokemon"},{"id":105,"name":"marowak","type":"pokemon"},{"id":106,"name":"hitmonlee","type":"pokemon"},{"id":107,"name":"hitmonchan","type":"pokemon"},{"id":108,"name":"lickitung","type":"pokemon"},{"id":109,"name":"koffing","type":"pokemon"},{"id":110,"name":"weezing","type":"pokemon"},{"id":111,"name":"rhyhorn","type":"pokemon"},{"id":112,"name":"rhydon","type":"pokemon"},{"id":113,"name":"chansey","type":"pokemon"},{"id":114,"name":"tangela","type":"pokemon"},{"id":115,"name":"kangaskhan","type":"pokemon"},{"id":116,"name":"horsea","type":"pokemon"},{"id":117,"name":"seadra","type":"pokemon"},{"id":118,"name":"goldeen","type":"pokemon"},{"id":119,"name":"seaking","type":"pokemon"},{"id":120,"name":"staryu","type":"pokemon"},{"id":121,"name":"starmie","type":"pokemon"},{"id":122,"name":"mr-mime","type":"pokemon"},{"id":123,"name":"scyther","type":"pokemon"},{"id":124,"name":"jynx","type":"pokemon"},{"id":125,"name":"electabuzz","type":"pokemon"},{"id":126,"name":"magmar","type":"pokemon"},{"id":127,"name":"pinsir","type":"pokemon"},{"id":128,"name":"tauros","type":"pokemon"},{"id":129,"name":"magikarp","type":"pokemon"},{"id":130,"name":"gyarados","type":"pokemon"},{"id":131,"name":"lapras","type":"pokemon"},{"id":132,"name":"ditto","type":"pokemon"},{"id":133,"name":"eevee","type":"pokemon"},{"id":134,"name":"vaporeon","type":"pokemon"},{"id":135,"name":"jolteon","type":"pokemon"},{"id":136,"name":"flareon","type":"pokemon"},{"id":137,"name":"porygon","type":"pokemon"},{"id":138,"name":"omanyte","type":"pokemon"},{"id":139,"name":"omastar","type":"pokemon"},{"id":140,"name":"kabuto","type":"pokemon"},{"id":141,"name":"kabutops","type":"pokemon"},{"id":142,"name":"aerodactyl","type":"pokemon"},{"id":143,"name":"snorlax","type":"pokemon"},{"id":144,"name":"articuno","type":"pokemon"},{"id":145,"name":"zapdos","type":"pokemon"},{"id":146,"name":"moltres","type":"pokemon"},{"id":147,"name":"dratini","type":"pokemon"},{"id":148,"name":"dragonair","type":"pokemon"},{"id":149,"name":"dragonite","type":"pokemon"},{"id":150,"name":"mewtwo","type":"pokemon"},{"id":151,"name":"mew","type":"pokemon"},{"id":152,"name":"chikorita","type":"pokemon"},{"id":153,"name":"bayleef","type":"pokemon"},{"id":154,"name":"meganium","type":"pokemon"},{"id":155,"name":"cyndaquil","type":"pokemon"},{"id":156,"name":"quilava","type":"pokemon"},{"id":157,"name":"typhlosion","type":"pokemon"},{"id":158,"name":"totodile","type":"pokemon"},{"id":159,"name":"croconaw","type":"pokemon"},{"id":160,"name":"feraligatr","type":"pokemon"},{"id":161,"name":"sentret","type":"pokemon"},{"id":162,"name":"furret","type":"pokemon"},{"id":163,"name":"hoothoot","type":"pokemon"},{"id":164,"name":"noctowl","type":"pokemon"},{"id":165,"name":"ledyba","type":"pokemon"},{"id":166,"name":"ledian","type":"pokemon"},{"id":167,"name":"spinarak","type":"pokemon"},{"id":168,"name":"ariados","type":"pokemon"},{"id":169,"name":"crobat","type":"pokemon"},{"id":170,"name":"chinchou","type":"pokemon"},{"id":171,"name":"lanturn","type":"pokemon"},{"id":172,"name":"pichu","type":"pokemon"},{"id":173,"name":"cleffa","type":"pokemon"},{"id":174,"name":"igglybuff","type":"pokemon"},{"id":175,"name":"togepi","type":"pokemon"},{"id":176,"name":"togetic","type":"pokemon"},{"id":177,"name":"natu","type":"pokemon"},{"id":178,"name":"xatu","type":"pokemon"},{"id":179,"name":"mareep","type":"pokemon"},{"id":180,"name":"flaaffy","type":"pokemon"},{"id":181,"name":"ampharos","type":"pokemon"},{"id":182,"name":"bellossom","type":"pokemon"},{"id":183,"name":"marill","type":"pokemon"},{"id":184,"name":"azumarill","type":"pokemon"},{"id":185,"name":"sudowoodo","type":"pokemon"},{"id":186,"name":"politoed","type":"pokemon"},{"id":187,"name":"hoppip","type":"pokemon"},{"id":188,"name":"skiploom","type":"pokemon"},{"id":189,"name":"jumpluff","type":"pokemon"},{"id":190,"name":"aipom","type":"pokemon"},{"id":191,"name":"sunkern","type":"pokemon"},{"id":192,"name":"sunflora","type":"pokemon"},{"id":193,"name":"yanma","type":"pokemon"},{"id":194,"name":"wooper","type":"pokemon"},{"id":195,"name":"quagsire","type":"pokemon"},{"id":196,"name":"espeon","type":"pokemon"},{"id":197,"name":"umbreon","type":"pokemon"},{"id":198,"name":"murkrow","type":"pokemon"},{"id":199,"name":"slowking","type":"pokemon"},{"id":200,"name":"misdreavus","type":"pokemon"},{"id":201,"name":"unown","type":"pokemon"},{"id":202,"name":"wobbuffet","type":"pokemon"},{"id":203,"name":"girafarig","type":"pokemon"},{"id":204,"name":"pineco","type":"pokemon"},{"id":205,"name":"forretress","type":"pokemon"},{"id":206,"name":"dunsparce","type":"pokemon"},{"id":207,"name":"gligar","type":"pokemon"},{"id":208,"name":"steelix","type":"pokemon"},{"id":209,"name":"snubbull","type":"pokemon"},{"id":210,"name":"granbull","type":"pokemon"},{"id":211,"name":"qwilfish","type":"pokemon"},{"id":212,"name":"scizor","type":"pokemon"},{"id":213,"name":"shuckle","type":"pokemon"},{"id":214,"name":"heracross","type":"pokemon"},{"id":215,"name":"sneasel","type":"pokemon"},{"id":216,"name":"teddiursa","type":"pokemon"},{"id":217,"name":"ursaring","type":"pokemon"},{"id":218,"name":"slugma","type":"pokemon"},{"id":219,"name":"magcargo","type":"pokemon"},{"id":220,"name":"swinub","type":"pokemon"},{"id":221,"name":"piloswine","type":"pokemon"},{"id":222,"name":"corsola","type":"pokemon"},{"id":223,"name":"remoraid","type":"pokemon"},{"id":224,"name":"octillery","type":"pokemon"},{"id":225,"name":"delibird","type":"pokemon"},{"id":226,"name":"mantine","type":"pokemon"},{"id":227,"name":"skarmory","type":"pokemon"},{"id":228,"name":"houndour","type":"pokemon"},{"id":229,"name":"houndoom","type":"pokemon"},{"id":230,"name":"kingdra","type":"pokemon"},{"id":231,"name":"phanpy","type":"pokemon"},{"id":232,"name":"donphan","type":"pokemon"},{"id":233,"name":"porygon2","type":"pokemon"},{"id":234,"name":"stantler","type":"pokemon"},{"id":235,"name":"smeargle","type":"pokemon"},{"id":236,"name":"tyrogue","type":"pokemon"},{"id":237,"name":"hitmontop","type":"pokemon"},{"id":238,"name":"smoochum","type":"pokemon"},{"id":239,"name":"elekid","type":"pokemon"},{"id":240,"name":"magby","type":"pokemon"},{"id":241,"name":"miltank","type":"pokemon"},{"id":242,"name":"blissey","type":"pokemon"},{"id":243,"name":"raikou","type":"pokemon"},{"id":244,"name":"entei","type":"pokemon"},{"id":245,"name":"suicune","type":"pokemon"},{"id":246,"name":"larvitar","type":"pokemon"},{"id":247,"name":"pupitar","type":"pokemon"},{"id":248,"name":"tyranitar","type":"pokemon"},{"id":249,"name":"lugia","type":"pokemon"},{"id":250,"name":"ho-oh","type":"pokemon"},{"id":251,"name":"celebi","type":"pokemon"},{"id":252,"name":"treecko","type":"pokemon"},{"id":253,"name":"grovyle","type":"pokemon"},{"id":254,"name":"sceptile","type":"pokemon"},{"id":255,"name":"torchic","type":"pokemon"},{"id":256,"name":"combusken","type":"pokemon"},{"id":257,"name":"blaziken","type":"pokemon"},{"id":258,"name":"mudkip","type":"pokemon"},{"id":259,"name":"marshtomp","type":"pokemon"},{"id":260,"name":"swampert","type":"pokemon"},{"id":261,"name":"poochyena","type":"pokemon"},{"id":262,"name":"mightyena","type":"pokemon"},{"id":263,"name":"zigzagoon","type":"pokemon"},{"id":264,"name":"linoone","type":"pokemon"},{"id":265,"name":"wurmple","type":"pokemon"},{"id":266,"name":"silcoon","type":"pokemon"},{"id":267,"name":"beautifly","type":"pokemon"},{"id":268,"name":"cascoon","type":"pokemon"},{"id":269,"name":"dustox","type":"pokemon"},{"id":270,"name":"lotad","type":"pokemon"},{"id":271,"name":"lombre","type":"pokemon"},{"id":272,"name":"ludicolo","type":"pokemon"},{"id":273,"name":"seedot","type":"pokemon"},{"id":274,"name":"nuzleaf","type":"pokemon"},{"id":275,"name":"shiftry","type":"pokemon"},{"id":276,"name":"taillow","type":"pokemon"},{"id":277,"name":"swellow","type":"pokemon"},{"id":278,"name":"wingull","type":"pokemon"},{"id":279,"name":"pelipper","type":"pokemon"},{"id":280,"name":"ralts","type":"pokemon"},{"id":281,"name":"kirlia","type":"pokemon"},{"id":282,"name":"gardevoir","type":"pokemon"},{"id":283,"name":"surskit","type":"pokemon"},{"id":284,"name":"masquerain","type":"pokemon"},{"id":285,"name":"shroomish","type":"pokemon"},{"id":286,"name":"breloom","type":"pokemon"},{"id":287,"name":"slakoth","type":"pokemon"},{"id":288,"name":"vigoroth","type":"pokemon"},{"id":289,"name":"slaking","type":"pokemon"},{"id":290,"name":"nincada","type":"pokemon"},{"id":291,"name":"ninjask","type":"pokemon"},{"id":292,"name":"shedinja","type":"pokemon"},{"id":293,"name":"whismur","type":"pokemon"},{"id":294,"name":"loudred","type":"pokemon"},{"id":295,"name":"exploud","type":"pokemon"},{"id":296,"name":"makuhita","type":"pokemon"},{"id":297,"name":"hariyama","type":"pokemon"},{"id":298,"name":"azurill","type":"pokemon"},{"id":299,"name":"nosepass","type":"pokemon"},{"id":300,"name":"skitty","type":"pokemon"},{"id":301,"name":"delcatty","type":"pokemon"},{"id":302,"name":"sableye","type":"pokemon"},{"id":303,"name":"mawile","type":"pokemon"},{"id":304,"name":"aron","type":"pokemon"},{"id":305,"name":"lairon","type":"pokemon"},{"id":306,"name":"aggron","type":"pokemon"},{"id":307,"name":"meditite","type":"pokemon"},{"id":308,"name":"medicham","type":"pokemon"},{"id":309,"name":"electrike","type":"pokemon"},{"id":310,"name":"manectric","type":"pokemon"},{"id":311,"name":"plusle","type":"pokemon"},{"id":312,"name":"minun","type":"pokemon"},{"id":313,"name":"volbeat","type":"pokemon"},{"id":314,"name":"illumise","type":"pokemon"},{"id":315,"name":"roselia","type":"pokemon"},{"id":316,"name":"gulpin","type":"pokemon"},{"id":317,"name":"swalot","type":"pokemon"},{"id":318,"name":"carvanha","type":"pokemon"},{"id":319,"name":"sharpedo","type":"pokemon"},{"id":320,"name":"wailmer","type":"pokemon"},{"id":321,"name":"wailord","type":"pokemon"},{"id":322,"name":"numel","type":"pokemon"},{"id":323,"name":"camerupt","type":"pokemon"},{"id":324,"name":"torkoal","type":"pokemon"},{"id":325,"name":"spoink","type":"pokemon"},{"id":326,"name":"grumpig","type":"pokemon"},{"id":327,"name":"spinda","type":"pokemon"},{"id":328,"name":"trapinch","type":"pokemon"},{"id":329,"name":"vibrava","type":"pokemon"},{"id":330,"name":"flygon","type":"pokemon"},{"id":331,"name":"cacnea","type":"pokemon"},{"id":332,"name":"cacturne","type":"pokemon"},{"id":333,"name":"swablu","type":"pokemon"},{"id":334,"name":"altaria","type":"pokemon"},{"id":335,"name":"zangoose","type":"pokemon"},{"id":336,"name":"seviper","type":"pokemon"},{"id":337,"name":"lunatone","type":"pokemon"},{"id":338,"name":"solrock","type":"pokemon"},{"id":339,"name":"barboach","type":"pokemon"},{"id":340,"name":"whiscash","type":"pokemon"},{"id":341,"name":"corphish","type":"pokemon"},{"id":342,"name":"crawdaunt","type":"pokemon"},{"id":343,"name":"baltoy","type":"pokemon"},{"id":344,"name":"claydol","type":"pokemon"},{"id":345,"name":"lileep","type":"pokemon"},{"id":346,"name":"cradily","type":"pokemon"},{"id":347,"name":"anorith","type":"pokemon"},{"id":348,"name":"armaldo","type":"pokemon"},{"id":349,"name":"feebas","type":"pokemon"},{"id":350,"name":"milotic","type":"pokemon"},{"id":351,"name":"castform","type":"pokemon"},{"id":352,"name":"kecleon","type":"pokemon"},{"id":353,"name":"shuppet","type":"pokemon"},{"id":354,"name":"banette","type":"pokemon"},{"id":355,"name":"duskull","type":"pokemon"},{"id":356,"name":"dusclops","type":"pokemon"},{"id":357,"name":"tropius","type":"pokemon"},{"id":358,"name":"chimecho","type":"pokemon"},{"id":359,"name":"absol","type":"pokemon"},{"id":360,"name":"wynaut","type":"pokemon"},{"id":361,"name":"snorunt","type":"pokemon"},{"id":362,"name":"glalie","type":"pokemon"},{"id":363,"name":"spheal","type":"pokemon"},{"id":364,"name":"sealeo","type":"pokemon"},{"id":365,"name":"walrein","type":"pokemon"},{"id":366,"name":"clamperl","type":"pokemon"},{"id":367,"name":"huntail","type":"pokemon"},{"id":368,"name":"gorebyss","type":"pokemon"},{"id":369,"name":"relicanth","type":"pokemon"},{"id":370,"name":"luvdisc","type":"pokemon"},{"id":371,"name":"bagon","type":"pokemon"},{"id":372,"name":"shelgon","type":"pokemon"},{"id":373,"name":"salamence","type":"pokemon"},{"id":374,"name":"beldum","type":"pokemon"},{"id":375,"name":"metang","type":"pokemon"},{"id":376,"name":"metagross","type":"pokemon"},{"id":377,"name":"regirock","type":"pokemon"},{"id":378,"name":"regice","type":"pokemon"},{"id":379,"name":"registeel","type":"pokemon"},{"id":380,"name":"latias","type":"pokemon"},{"id":381,"name":"latios","type":"pokemon"},{"id":382,"name":"kyogre","type":"pokemon"},{"id":383,"name":"groudon","type":"pokemon"},{"id":384,"name":"rayquaza","type":"pokemon"},{"id":385,"name":"jirachi","type":"pokemon"},{"id":386,"name":"deoxys","type":"pokemon"},{"id":387,"name":"turtwig","type":"pokemon"},{"id":388,"name":"grotle","type":"pokemon"},{"id":389,"name":"torterra","type":"pokemon"},{"id":390,"name":"chimchar","type":"pokemon"},{"id":391,"name":"monferno","type":"pokemon"},{"id":392,"name":"infernape","type":"pokemon"},{"id":393,"name":"piplup","type":"pokemon"},{"id":394,"name":"prinplup","type":"pokemon"},{"id":395,"name":"empoleon","type":"pokemon"},{"id":396,"name":"starly","type":"pokemon"},{"id":397,"name":"staravia","type":"pokemon"},{"id":398,"name":"staraptor","type":"pokemon"},{"id":399,"name":"bidoof","type":"pokemon"},{"id":400,"name":"bibarel","type":"pokemon"},{"id":401,"name":"kricketot","type":"pokemon"},{"id":402,"name":"kricketune","type":"pokemon"},{"id":403,"name":"shinx","type":"pokemon"},{"id":404,"name":"luxio","type":"pokemon"},{"id":405,"name":"luxray","type":"pokemon"},{"id":406,"name":"budew","type":"pokemon"},{"id":407,"name":"roserade","type":"pokemon"},{"id":408,"name":"cranidos","type":"pokemon"},{"id":409,"name":"rampardos","type":"pokemon"},{"id":410,"name":"shieldon","type":"pokemon"},{"id":411,"name":"bastiodon","type":"pokemon"},{"id":412,"name":"burmy","type":"pokemon"},{"id":413,"name":"wormadam","type":"pokemon"},{"id":414,"name":"mothim","type":"pokemon"},{"id":415,"name":"combee","type":"pokemon"},{"id":416,"name":"vespiquen","type":"pokemon"},{"id":417,"name":"pachirisu","type":"pokemon"},{"id":418,"name":"buizel","type":"pokemon"},{"id":419,"name":"floatzel","type":"pokemon"},{"id":420,"name":"cherubi","type":"pokemon"},{"id":421,"name":"cherrim","type":"pokemon"},{"id":422,"name":"shellos","type":"pokemon"},{"id":423,"name":"gastrodon","type":"pokemon"},{"id":424,"name":"ambipom","type":"pokemon"},{"id":425,"name":"drifloon","type":"pokemon"},{"id":426,"name":"drifblim","type":"pokemon"},{"id":427,"name":"buneary","type":"pokemon"},{"id":428,"name":"lopunny","type":"pokemon"},{"id":429,"name":"mismagius","type":"pokemon"},{"id":430,"name":"honchkrow","type":"pokemon"},{"id":431,"name":"glameow","type":"pokemon"},{"id":432,"name":"purugly","type":"pokemon"},{"id":433,"name":"chingling","type":"pokemon"},{"id":434,"name":"stunky","type":"pokemon"},{"id":435,"name":"skuntank","type":"pokemon"},{"id":436,"name":"bronzor","type":"pokemon"},{"id":437,"name":"bronzong","type":"pokemon"},{"id":438,"name":"bonsly","type":"pokemon"},{"id":439,"name":"mime-jr","type":"pokemon"},{"id":440,"name":"happiny","type":"pokemon"},{"id":441,"name":"chatot","type":"pokemon"},{"id":442,"name":"spiritomb","type":"pokemon"},{"id":443,"name":"gible","type":"pokemon"},{"id":444,"name":"gabite","type":"pokemon"},{"id":445,"name":"garchomp","type":"pokemon"},{"id":446,"name":"munchlax","type":"pokemon"},{"id":447,"name":"riolu","type":"pokemon"},{"id":448,"name":"lucario","type":"pokemon"},{"id":449,"name":"hippopotas","type":"pokemon"},{"id":450,"name":"hippowdon","type":"pokemon"},{"id":451,"name":"skorupi","type":"pokemon"},{"id":452,"name":"drapion","type":"pokemon"},{"id":453,"name":"croagunk","type":"pokemon"},{"id":454,"name":"toxicroak","type":"pokemon"},{"id":455,"name":"carnivine","type":"pokemon"},{"id":456,"name":"finneon","type":"pokemon"},{"id":457,"name":"lumineon","type":"pokemon"},{"id":458,"name":"mantyke","type":"pokemon"},{"id":459,"name":"snover","type":"pokemon"},{"id":460,"name":"abomasnow","type":"pokemon"},{"id":461,"name":"weavile","type":"pokemon"},{"id":462,"name":"magnezone","type":"pokemon"},{"id":463,"name":"lickilicky","type":"pokemon"},{"id":464,"name":"rhyperior","type":"pokemon"},{"id":465,"name":"tangrowth","type":"pokemon"},{"id":466,"name":"electivire","type":"pokemon"},{"id":467,"name":"magmortar","type":"pokemon"},{"id":468,"name":"togekiss","type":"pokemon"},{"id":469,"name":"yanmega","type":"pokemon"},{"id":470,"name":"leafeon","type":"pokemon"},{"id":471,"name":"glaceon","type":"pokemon"},{"id":472,"name":"gliscor","type":"pokemon"},{"id":473,"name":"mamoswine","type":"pokemon"},{"id":474,"name":"porygon-z","type":"pokemon"},{"id":475,"name":"gallade","type":"pokemon"},{"id":476,"name":"probopass","type":"pokemon"},{"id":477,"name":"dusknoir","type":"pokemon"},{"id":478,"name":"froslass","type":"pokemon"},{"id":479,"name":"rotom","type":"pokemon"},{"id":480,"name":"uxie","type":"pokemon"},{"id":481,"name":"mesprit","type":"pokemon"},{"id":482,"name":"azelf","type":"pokemon"},{"id":483,"name":"dialga","type":"pokemon"},{"id":484,"name":"palkia","type":"pokemon"},{"id":485,"name":"heatran","type":"pokemon"},{"id":486,"name":"regigigas","type":"pokemon"},{"id":487,"name":"giratina","type":"pokemon"},{"id":488,"name":"cresselia","type":"pokemon"},{"id":489,"name":"phione","type":"pokemon"},{"id":490,"name":"manaphy","type":"pokemon"},{"id":491,"name":"darkrai","type":"pokemon"},{"id":492,"name":"shaymin","type":"pokemon"},{"id":493,"name":"arceus","type":"pokemon"},{"id":494,"name":"victini","type":"pokemon"},{"id":495,"name":"snivy","type":"pokemon"},{"id":496,"name":"servine","type":"pokemon"},{"id":497,"name":"serperior","type":"pokemon"},{"id":498,"name":"tepig","type":"pokemon"},{"id":499,"name":"pignite","type":"pokemon"},{"id":500,"name":"emboar","type":"pokemon"},{"id":501,"name":"oshawott","type":"pokemon"},{"id":502,"name":"dewott","type":"pokemon"},{"id":503,"name":"samurott","type":"pokemon"},{"id":504,"name":"patrat","type":"pokemon"},{"id":505,"name":"watchog","type":"pokemon"},{"id":506,"name":"lillipup","type":"pokemon"},{"id":507,"name":"herdier","type":"pokemon"},{"id":508,"name":"stoutland","type":"pokemon"},{"id":509,"name":"purrloin","type":"pokemon"},{"id":510,"name":"liepard","type":"pokemon"},{"id":511,"name":"pansage","type":"pokemon"},{"id":512,"name":"simisage","type":"pokemon"},{"id":513,"name":"pansear","type":"pokemon"},{"id":514,"name":"simisear","type":"pokemon"},{"id":515,"name":"panpour","type":"pokemon"},{"id":516,"name":"simipour","type":"pokemon"},{"id":517,"name":"munna","type":"pokemon"},{"id":518,"name":"musharna","type":"pokemon"},{"id":519,"name":"pidove","type":"pokemon"},{"id":520,"name":"tranquill","type":"pokemon"},{"id":521,"name":"unfezant","type":"pokemon"},{"id":522,"name":"blitzle","type":"pokemon"},{"id":523,"name":"zebstrika","type":"pokemon"},{"id":524,"name":"roggenrola","type":"pokemon"},{"id":525,"name":"boldore","type":"pokemon"},{"id":526,"name":"gigalith","type":"pokemon"},{"id":527,"name":"woobat","type":"pokemon"},{"id":528,"name":"swoobat","type":"pokemon"},{"id":529,"name":"drilbur","type":"pokemon"},{"id":530,"name":"excadrill","type":"pokemon"},{"id":531,"name":"audino","type":"pokemon"},{"id":532,"name":"timburr","type":"pokemon"},{"id":533,"name":"gurdurr","type":"pokemon"},{"id":534,"name":"conkeldurr","type":"pokemon"},{"id":535,"name":"tympole","type":"pokemon"},{"id":536,"name":"palpitoad","type":"pokemon"},{"id":537,"name":"seismitoad","type":"pokemon"},{"id":538,"name":"throh","type":"pokemon"},{"id":539,"name":"sawk","type":"pokemon"},{"id":540,"name":"sewaddle","type":"pokemon"},{"id":541,"name":"swadloon","type":"pokemon"},{"id":542,"name":"leavanny","type":"pokemon"},{"id":543,"name":"venipede","type":"pokemon"},{"id":544,"name":"whirlipede","type":"pokemon"},{"id":545,"name":"scolipede","type":"pokemon"},{"id":546,"name":"cottonee","type":"pokemon"},{"id":547,"name":"whimsicott","type":"pokemon"},{"id":548,"name":"petilil","type":"pokemon"},{"id":549,"name":"lilligant","type":"pokemon"},{"id":550,"name":"basculin","type":"pokemon"},{"id":551,"name":"sandile","type":"pokemon"},{"id":552,"name":"krokorok","type":"pokemon"},{"id":553,"name":"krookodile","type":"pokemon"},{"id":554,"name":"darumaka","type":"pokemon"},{"id":555,"name":"darmanitan","type":"pokemon"},{"id":556,"name":"maractus","type":"pokemon"},{"id":557,"name":"dwebble","type":"pokemon"},{"id":558,"name":"crustle","type":"pokemon"},{"id":559,"name":"scraggy","type":"pokemon"},{"id":560,"name":"scrafty","type":"pokemon"},{"id":561,"name":"sigilyph","type":"pokemon"},{"id":562,"name":"yamask","type":"pokemon"},{"id":563,"name":"cofagrigus","type":"pokemon"},{"id":564,"name":"tirtouga","type":"pokemon"},{"id":565,"name":"carracosta","type":"pokemon"},{"id":566,"name":"archen","type":"pokemon"},{"id":567,"name":"archeops","type":"pokemon"},{"id":568,"name":"trubbish","type":"pokemon"},{"id":569,"name":"garbodor","type":"pokemon"},{"id":570,"name":"zorua","type":"pokemon"},{"id":571,"name":"zoroark","type":"pokemon"},{"id":572,"name":"minccino","type":"pokemon"},{"id":573,"name":"cinccino","type":"pokemon"},{"id":574,"name":"gothita","type":"pokemon"},{"id":575,"name":"gothorita","type":"pokemon"},{"id":576,"name":"gothitelle","type":"pokemon"},{"id":577,"name":"solosis","type":"pokemon"},{"id":578,"name":"duosion","type":"pokemon"},{"id":579,"name":"reuniclus","type":"pokemon"},{"id":580,"name":"ducklett","type":"pokemon"},{"id":581,"name":"swanna","type":"pokemon"},{"id":582,"name":"vanillite","type":"pokemon"},{"id":583,"name":"vanillish","type":"pokemon"},{"id":584,"name":"vanilluxe","type":"pokemon"},{"id":585,"name":"deerling","type":"pokemon"},{"id":586,"name":"sawsbuck","type":"pokemon"},{"id":587,"name":"emolga","type":"pokemon"},{"id":588,"name":"karrablast","type":"pokemon"},{"id":589,"name":"escavalier","type":"pokemon"},{"id":590,"name":"foongus","type":"pokemon"},{"id":591,"name":"amoonguss","type":"pokemon"},{"id":592,"name":"frillish","type":"pokemon"},{"id":593,"name":"jellicent","type":"pokemon"},{"id":594,"name":"alomomola","type":"pokemon"},{"id":595,"name":"joltik","type":"pokemon"},{"id":596,"name":"galvantula","type":"pokemon"},{"id":597,"name":"ferroseed","type":"pokemon"},{"id":598,"name":"ferrothorn","type":"pokemon"},{"id":599,"name":"klink","type":"pokemon"},{"id":600,"name":"klang","type":"pokemon"},{"id":601,"name":"klinklang","type":"pokemon"},{"id":602,"name":"tynamo","type":"pokemon"},{"id":603,"name":"eelektrik","type":"pokemon"},{"id":604,"name":"eelektross","type":"pokemon"},{"id":605,"name":"elgyem","type":"pokemon"},{"id":606,"name":"beheeyem","type":"pokemon"},{"id":607,"name":"litwick","type":"pokemon"},{"id":608,"name":"lampent","type":"pokemon"},{"id":609,"name":"chandelure","type":"pokemon"},{"id":610,"name":"axew","type":"pokemon"},{"id":611,"name":"fraxure","type":"pokemon"},{"id":612,"name":"haxorus","type":"pokemon"},{"id":613,"name":"cubchoo","type":"pokemon"},{"id":614,"name":"beartic","type":"pokemon"},{"id":615,"name":"cryogonal","type":"pokemon"},{"id":616,"name":"shelmet","type":"pokemon"},{"id":617,"name":"accelgor","type":"pokemon"},{"id":618,"name":"stunfisk","type":"pokemon"},{"id":619,"name":"mienfoo","type":"pokemon"},{"id":620,"name":"mienshao","type":"pokemon"},{"id":621,"name":"druddigon","type":"pokemon"},{"id":622,"name":"golett","type":"pokemon"},{"id":623,"name":"golurk","type":"pokemon"},{"id":624,"name":"pawniard","type":"pokemon"},{"id":625,"name":"bisharp","type":"pokemon"},{"id":626,"name":"bouffalant","type":"pokemon"},{"id":627,"name":"rufflet","type":"pokemon"},{"id":628,"name":"braviary","type":"pokemon"},{"id":629,"name":"vullaby","type":"pokemon"},{"id":630,"name":"mandibuzz","type":"pokemon"},{"id":631,"name":"heatmor","type":"pokemon"},{"id":632,"name":"durant","type":"pokemon"},{"id":633,"name":"deino","type":"pokemon"},{"id":634,"name":"zweilous","type":"pokemon"},{"id":635,"name":"hydreigon","type":"pokemon"},{"id":636,"name":"larvesta","type":"pokemon"},{"id":637,"name":"volcarona","type":"pokemon"},{"id":638,"name":"cobalion","type":"pokemon"},{"id":639,"name":"terrakion","type":"pokemon"},{"id":640,"name":"virizion","type":"pokemon"},{"id":641,"name":"tornadus","type":"pokemon"},{"id":642,"name":"thundurus","type":"pokemon"},{"id":643,"name":"reshiram","type":"pokemon"},{"id":644,"name":"zekrom","type":"pokemon"},{"id":645,"name":"landorus","type":"pokemon"},{"id":646,"name":"kyurem","type":"pokemon"},{"id":647,"name":"keldeo","type":"pokemon"},{"id":648,"name":"meloetta","type":"pokemon"},{"id":649,"name":"genesect","type":"pokemon"},{"id":650,"name":"chespin","type":"pokemon"},{"id":651,"name":"quilladin","type":"pokemon"},{"id":652,"name":"chesnaught","type":"pokemon"},{"id":653,"name":"fennekin","type":"pokemon"},{"id":654,"name":"braixen","type":"pokemon"},{"id":655,"name":"delphox","type":"pokemon"},{"id":656,"name":"froakie","type":"pokemon"},{"id":657,"name":"frogadier","type":"pokemon"},{"id":658,"name":"greninja","type":"pokemon"},{"id":659,"name":"bunnelby","type":"pokemon"},{"id":660,"name":"diggersby","type":"pokemon"},{"id":661,"name":"fletchling","type":"pokemon"},{"id":662,"name":"fletchinder","type":"pokemon"},{"id":663,"name":"talonflame","type":"pokemon"},{"id":664,"name":"scatterbug","type":"pokemon"},{"id":665,"name":"spewpa","type":"pokemon"},{"id":666,"name":"vivillon","type":"pokemon"},{"id":667,"name":"litleo","type":"pokemon"},{"id":668,"name":"pyroar","type":"pokemon"},{"id":669,"name":"flabebe","type":"pokemon"},{"id":670,"name":"floette","type":"pokemon"},{"id":671,"name":"florges","type":"pokemon"},{"id":672,"name":"skiddo","type":"pokemon"},{"id":673,"name":"gogoat","type":"pokemon"},{"id":674,"name":"pancham","type":"pokemon"},{"id":675,"name":"pangoro","type":"pokemon"},{"id":676,"name":"furfrou","type":"pokemon"},{"id":677,"name":"espurr","type":"pokemon"},{"id":678,"name":"meowstic","type":"pokemon"},{"id":679,"name":"honedge","type":"pokemon"},{"id":680,"name":"doublade","type":"pokemon"},{"id":681,"name":"aegislash","type":"pokemon"},{"id":682,"name":"spritzee","type":"pokemon"},{"id":683,"name":"aromatisse","type":"pokemon"},{"id":684,"name":"swirlix","type":"pokemon"},{"id":685,"name":"slurpuff","type":"pokemon"},{"id":686,"name":"inkay","type":"pokemon"},{"id":687,"name":"malamar","type":"pokemon"},{"id":688,"name":"binacle","type":"pokemon"},{"id":689,"name":"barbaracle","type":"pokemon"},{"id":690,"name":"skrelp","type":"pokemon"},{"id":691,"name":"dragalge","type":"pokemon"},{"id":692,"name":"clauncher","type":"pokemon"},{"id":693,"name":"clawitzer","type":"pokemon"},{"id":694,"name":"helioptile","type":"pokemon"},{"id":695,"name":"heliolisk","type":"pokemon"},{"id":696,"name":"tyrunt","type":"pokemon"},{"id":697,"name":"tyrantrum","type":"pokemon"},{"id":698,"name":"amaura","type":"pokemon"},{"id":699,"name":"aurorus","type":"pokemon"},{"id":700,"name":"sylveon","type":"pokemon"},{"id":701,"name":"hawlucha","type":"pokemon"},{"id":702,"name":"dedenne","type":"pokemon"},{"id":703,"name":"carbink","type":"pokemon"},{"id":704,"name":"goomy","type":"pokemon"},{"id":705,"name":"sliggoo","type":"pokemon"},{"id":706,"name":"goodra","type":"pokemon"},{"id":707,"name":"klefki","type":"pokemon"},{"id":708,"name":"phantump","type":"pokemon"},{"id":709,"name":"trevenant","type":"pokemon"},{"id":710,"name":"pumpkaboo","type":"pokemon"},{"id":711,"name":"gourgeist","type":"pokemon"},{"id":712,"name":"bergmite","type":"pokemon"},{"id":713,"name":"avalugg","type":"pokemon"},{"id":714,"name":"noibat","type":"pokemon"},{"id":715,"name":"noivern","type":"pokemon"},{"id":716,"name":"xerneas","type":"pokemon"},{"id":717,"name":"yveltal","type":"pokemon"},{"id":718,"name":"zygarde","type":"pokemon"},{"id":719,"name":"diancie","type":"pokemon"},{"id":720,"name":"hoopa","type":"pokemon"},{"id":721,"name":"volcanion","type":"pokemon"},{"id":722,"name":"rowlet","type":"pokemon"},{"id":723,"name":"dartrix","type":"pokemon"},{"id":724,"name":"decidueye","type":"pokemon"},{"id":725,"name":"litten","type":"pokemon"},{"id":726,"name":"torracat","type":"pokemon"},{"id":727,"name":"incineroar","type":"pokemon"},{"id":728,"name":"popplio","type":"pokemon"},{"id":729,"name":"brionne","type":"pokemon"},{"id":730,"name":"primarina","type":"pokemon"},{"id":731,"name":"pikipek","type":"pokemon"},{"id":732,"name":"trumbeak","type":"pokemon"},{"id":733,"name":"toucannon","type":"pokemon"},{"id":734,"name":"yungoos","type":"pokemon"},{"id":735,"name":"gumshoos","type":"pokemon"},{"id":736,"name":"grubbin","type":"pokemon"},{"id":737,"name":"charjabug","type":"pokemon"},{"id":738,"name":"vikavolt","type":"pokemon"},{"id":739,"name":"crabrawler","type":"pokemon"},{"id":740,"name":"crabominable","type":"pokemon"},{"id":741,"name":"oricorio","type":"pokemon"},{"id":742,"name":"cutiefly","type":"pokemon"},{"id":743,"name":"ribombee","type":"pokemon"},{"id":744,"name":"rockruff","type":"pokemon"},{"id":745,"name":"lycanroc","type":"pokemon"},{"id":746,"name":"wishiwashi","type":"pokemon"},{"id":747,"name":"mareanie","type":"pokemon"},{"id":748,"name":"toxapex","type":"pokemon"},{"id":749,"name":"mudbray","type":"pokemon"},{"id":750,"name":"mudsdale","type":"pokemon"},{"id":751,"name":"dewpider","type":"pokemon"},{"id":752,"name":"araquanid","type":"pokemon"},{"id":753,"name":"fomantis","type":"pokemon"},{"id":754,"name":"lurantis","type":"pokemon"},{"id":755,"name":"morelull","type":"pokemon"},{"id":756,"name":"shiinotic","type":"pokemon"},{"id":757,"name":"salandit","type":"pokemon"},{"id":758,"name":"salazzle","type":"pokemon"},{"id":759,"name":"stufful","type":"pokemon"},{"id":760,"name":"bewear","type":"pokemon"},{"id":761,"name":"bounsweet","type":"pokemon"},{"id":762,"name":"steenee","type":"pokemon"},{"id":763,"name":"tsareena","type":"pokemon"},{"id":764,"name":"comfey","type":"pokemon"},{"id":765,"name":"oranguru","type":"pokemon"},{"id":766,"name":"passimian","type":"pokemon"},{"id":767,"name":"wimpod","type":"pokemon"},{"id":768,"name":"golisopod","type":"pokemon"},{"id":769,"name":"sandygast","type":"pokemon"},{"id":770,"name":"palossand","type":"pokemon"},{"id":771,"name":"pyukumuku","type":"pokemon"},{"id":772,"name":"type-null","type":"pokemon"},{"id":773,"name":"silvally","type":"pokemon"},{"id":774,"name":"minior","type":"pokemon"},{"id":775,"name":"komala","type":"pokemon"},{"id":776,"name":"turtonator","type":"pokemon"},{"id":777,"name":"togedemaru","type":"pokemon"},{"id":778,"name":"mimikyu","type":"pokemon"},{"id":779,"name":"bruxish","type":"pokemon"},{"id":780,"name":"drampa","type":"pokemon"},{"id":781,"name":"dhelmise","type":"pokemon"},{"id":782,"name":"jangmo-o","type":"pokemon"},{"id":783,"name":"hakamo-o","type":"pokemon"},{"id":784,"name":"kommo-o","type":"pokemon"},{"id":785,"name":"tapu-koko","type":"pokemon"},{"id":786,"name":"tapu-lele","type":"pokemon"},{"id":787,"name":"tapu-bulu","type":"pokemon"},{"id":788,"name":"tapu-fini","type":"pokemon"},{"id":789,"name":"cosmog","type":"pokemon"},{"id":790,"name":"cosmoem","type":"pokemon"},{"id":791,"name":"solgaleo","type":"pokemon"},{"id":792,"name":"lunala","type":"pokemon"},{"id":793,"name":"nihilego","type":"pokemon"},{"id":794,"name":"buzzwole","type":"pokemon"},{"id":795,"name":"pheromosa","type":"pokemon"},{"id":796,"name":"xurkitree","type":"pokemon"},{"id":797,"name":"celesteela","type":"pokemon"},{"id":798,"name":"kartana","type":"pokemon"},{"id":799,"name":"guzzlord","type":"pokemon"},{"id":800,"name":"necrozma","type":"pokemon"},{"id":801,"name":"magearna","type":"pokemon"},{"id":802,"name":"marshadow","type":"pokemon"},{"id":1,"name":"pound","type":"move"},{"id":2,"name":"karate-chop","type":"move"},{"id":3,"name":"double-slap","type":"move"},{"id":4,"name":"comet-punch","type":"move"},{"id":5,"name":"mega-punch","type":"move"},{"id":6,"name":"pay-day","type":"move"},{"id":7,"name":"fire-punch","type":"move"},{"id":8,"name":"ice-punch","type":"move"},{"id":9,"name":"thunder-punch","type":"move"},{"id":10,"name":"scratch","type":"move"},{"id":11,"name":"vice-grip","type":"move"},{"id":12,"name":"guillotine","type":"move"},{"id":13,"name":"razor-wind","type":"move"},{"id":14,"name":"swords-dance","type":"move"},{"id":15,"name":"cut","type":"move"},{"id":16,"name":"gust","type":"move"},{"id":17,"name":"wing-attack","type":"move"},{"id":18,"name":"whirlwind","type":"move"},{"id":19,"name":"fly","type":"move"},{"id":20,"name":"bind","type":"move"},{"id":21,"name":"slam","type":"move"},{"id":22,"name":"vine-whip","type":"move"},{"id":23,"name":"stomp","type":"move"},{"id":24,"name":"double-kick","type":"move"},{"id":25,"name":"mega-kick","type":"move"},{"id":26,"name":"jump-kick","type":"move"},{"id":27,"name":"rolling-kick","type":"move"},{"id":28,"name":"sand-attack","type":"move"},{"id":29,"name":"headbutt","type":"move"},{"id":30,"name":"horn-attack","type":"move"},{"id":31,"name":"fury-attack","type":"move"},{"id":32,"name":"horn-drill","type":"move"},{"id":33,"name":"tackle","type":"move"},{"id":34,"name":"body-slam","type":"move"},{"id":35,"name":"wrap","type":"move"},{"id":36,"name":"take-down","type":"move"},{"id":37,"name":"thrash","type":"move"},{"id":38,"name":"double-edge","type":"move"},{"id":39,"name":"tail-whip","type":"move"},{"id":40,"name":"poison-sting","type":"move"},{"id":41,"name":"twineedle","type":"move"},{"id":42,"name":"pin-missile","type":"move"},{"id":43,"name":"leer","type":"move"},{"id":44,"name":"bite","type":"move"},{"id":45,"name":"growl","type":"move"},{"id":46,"name":"roar","type":"move"},{"id":47,"name":"sing","type":"move"},{"id":48,"name":"supersonic","type":"move"},{"id":49,"name":"sonic-boom","type":"move"},{"id":50,"name":"disable","type":"move"},{"id":51,"name":"acid","type":"move"},{"id":52,"name":"ember","type":"move"},{"id":53,"name":"flamethrower","type":"move"},{"id":54,"name":"mist","type":"move"},{"id":55,"name":"water-gun","type":"move"},{"id":56,"name":"hydro-pump","type":"move"},{"id":57,"name":"surf","type":"move"},{"id":58,"name":"ice-beam","type":"move"},{"id":59,"name":"blizzard","type":"move"},{"id":60,"name":"psybeam","type":"move"},{"id":61,"name":"bubble-beam","type":"move"},{"id":62,"name":"aurora-beam","type":"move"},{"id":63,"name":"hyper-beam","type":"move"},{"id":64,"name":"peck","type":"move"},{"id":65,"name":"drill-peck","type":"move"},{"id":66,"name":"submission","type":"move"},{"id":67,"name":"low-kick","type":"move"},{"id":68,"name":"counter","type":"move"},{"id":69,"name":"seismic-toss","type":"move"},{"id":70,"name":"strength","type":"move"},{"id":71,"name":"absorb","type":"move"},{"id":72,"name":"mega-drain","type":"move"},{"id":73,"name":"leech-seed","type":"move"},{"id":74,"name":"growth","type":"move"},{"id":75,"name":"razor-leaf","type":"move"},{"id":76,"name":"solar-beam","type":"move"},{"id":77,"name":"poison-powder","type":"move"},{"id":78,"name":"stun-spore","type":"move"},{"id":79,"name":"sleep-powder","type":"move"},{"id":80,"name":"petal-dance","type":"move"},{"id":81,"name":"string-shot","type":"move"},{"id":82,"name":"dragon-rage","type":"move"},{"id":83,"name":"fire-spin","type":"move"},{"id":84,"name":"thunder-shock","type":"move"},{"id":85,"name":"thunderbolt","type":"move"},{"id":86,"name":"thunder-wave","type":"move"},{"id":87,"name":"thunder","type":"move"},{"id":88,"name":"rock-throw","type":"move"},{"id":89,"name":"earthquake","type":"move"},{"id":90,"name":"fissure","type":"move"},{"id":91,"name":"dig","type":"move"},{"id":92,"name":"toxic","type":"move"},{"id":93,"name":"confusion","type":"move"},{"id":94,"name":"psychic","type":"move"},{"id":95,"name":"hypnosis","type":"move"},{"id":96,"name":"meditate","type":"move"},{"id":97,"name":"agility","type":"move"},{"id":98,"name":"quick-attack","type":"move"},{"id":99,"name":"rage","type":"move"},{"id":100,"name":"teleport","type":"move"},{"id":101,"name":"night-shade","type":"move"},{"id":102,"name":"mimic","type":"move"},{"id":103,"name":"screech","type":"move"},{"id":104,"name":"double-team","type":"move"},{"id":105,"name":"recover","type":"move"},{"id":106,"name":"harden","type":"move"},{"id":107,"name":"minimize","type":"move"},{"id":108,"name":"smokescreen","type":"move"},{"id":109,"name":"confuse-ray","type":"move"},{"id":110,"name":"withdraw","type":"move"},{"id":111,"name":"defense-curl","type":"move"},{"id":112,"name":"barrier","type":"move"},{"id":113,"name":"light-screen","type":"move"},{"id":114,"name":"haze","type":"move"},{"id":115,"name":"reflect","type":"move"},{"id":116,"name":"focus-energy","type":"move"},{"id":117,"name":"bide","type":"move"},{"id":118,"name":"metronome","type":"move"},{"id":119,"name":"mirror-move","type":"move"},{"id":120,"name":"self-destruct","type":"move"},{"id":121,"name":"egg-bomb","type":"move"},{"id":122,"name":"lick","type":"move"},{"id":123,"name":"smog","type":"move"},{"id":124,"name":"sludge","type":"move"},{"id":125,"name":"bone-club","type":"move"},{"id":126,"name":"fire-blast","type":"move"},{"id":127,"name":"waterfall","type":"move"},{"id":128,"name":"clamp","type":"move"},{"id":129,"name":"swift","type":"move"},{"id":130,"name":"skull-bash","type":"move"},{"id":131,"name":"spike-cannon","type":"move"},{"id":132,"name":"constrict","type":"move"},{"id":133,"name":"amnesia","type":"move"},{"id":134,"name":"kinesis","type":"move"},{"id":135,"name":"soft-boiled","type":"move"},{"id":136,"name":"high-jump-kick","type":"move"},{"id":137,"name":"glare","type":"move"},{"id":138,"name":"dream-eater","type":"move"},{"id":139,"name":"poison-gas","type":"move"},{"id":140,"name":"barrage","type":"move"},{"id":141,"name":"leech-life","type":"move"},{"id":142,"name":"lovely-kiss","type":"move"},{"id":143,"name":"sky-attack","type":"move"},{"id":144,"name":"transform","type":"move"},{"id":145,"name":"bubble","type":"move"},{"id":146,"name":"dizzy-punch","type":"move"},{"id":147,"name":"spore","type":"move"},{"id":148,"name":"flash","type":"move"},{"id":149,"name":"psywave","type":"move"},{"id":150,"name":"splash","type":"move"},{"id":151,"name":"acid-armor","type":"move"},{"id":152,"name":"crabhammer","type":"move"},{"id":153,"name":"explosion","type":"move"},{"id":154,"name":"fury-swipes","type":"move"},{"id":155,"name":"bonemerang","type":"move"},{"id":156,"name":"rest","type":"move"},{"id":157,"name":"rock-slide","type":"move"},{"id":158,"name":"hyper-fang","type":"move"},{"id":159,"name":"sharpen","type":"move"},{"id":160,"name":"conversion","type":"move"},{"id":161,"name":"tri-attack","type":"move"},{"id":162,"name":"super-fang","type":"move"},{"id":163,"name":"slash","type":"move"},{"id":164,"name":"substitute","type":"move"},{"id":165,"name":"struggle","type":"move"},{"id":166,"name":"sketch","type":"move"},{"id":167,"name":"triple-kick","type":"move"},{"id":168,"name":"thief","type":"move"},{"id":169,"name":"spider-web","type":"move"},{"id":170,"name":"mind-reader","type":"move"},{"id":171,"name":"nightmare","type":"move"},{"id":172,"name":"flame-wheel","type":"move"},{"id":173,"name":"snore","type":"move"},{"id":174,"name":"curse","type":"move"},{"id":175,"name":"flail","type":"move"},{"id":176,"name":"conversion-2","type":"move"},{"id":177,"name":"aeroblast","type":"move"},{"id":178,"name":"cotton-spore","type":"move"},{"id":179,"name":"reversal","type":"move"},{"id":180,"name":"spite","type":"move"},{"id":181,"name":"powder-snow","type":"move"},{"id":182,"name":"protect","type":"move"},{"id":183,"name":"mach-punch","type":"move"},{"id":184,"name":"scary-face","type":"move"},{"id":185,"name":"feint-attack","type":"move"},{"id":186,"name":"sweet-kiss","type":"move"},{"id":187,"name":"belly-drum","type":"move"},{"id":188,"name":"sludge-bomb","type":"move"},{"id":189,"name":"mud-slap","type":"move"},{"id":190,"name":"octazooka","type":"move"},{"id":191,"name":"spikes","type":"move"},{"id":192,"name":"zap-cannon","type":"move"},{"id":193,"name":"foresight","type":"move"},{"id":194,"name":"destiny-bond","type":"move"},{"id":195,"name":"perish-song","type":"move"},{"id":196,"name":"icy-wind","type":"move"},{"id":197,"name":"detect","type":"move"},{"id":198,"name":"bone-rush","type":"move"},{"id":199,"name":"lock-on","type":"move"},{"id":200,"name":"outrage","type":"move"},{"id":201,"name":"sandstorm","type":"move"},{"id":202,"name":"giga-drain","type":"move"},{"id":203,"name":"endure","type":"move"},{"id":204,"name":"charm","type":"move"},{"id":205,"name":"rollout","type":"move"},{"id":206,"name":"false-swipe","type":"move"},{"id":207,"name":"swagger","type":"move"},{"id":208,"name":"milk-drink","type":"move"},{"id":209,"name":"spark","type":"move"},{"id":210,"name":"fury-cutter","type":"move"},{"id":211,"name":"steel-wing","type":"move"},{"id":212,"name":"mean-look","type":"move"},{"id":213,"name":"attract","type":"move"},{"id":214,"name":"sleep-talk","type":"move"},{"id":215,"name":"heal-bell","type":"move"},{"id":216,"name":"return","type":"move"},{"id":217,"name":"present","type":"move"},{"id":218,"name":"frustration","type":"move"},{"id":219,"name":"safeguard","type":"move"},{"id":220,"name":"pain-split","type":"move"},{"id":221,"name":"sacred-fire","type":"move"},{"id":222,"name":"magnitude","type":"move"},{"id":223,"name":"dynamic-punch","type":"move"},{"id":224,"name":"megahorn","type":"move"},{"id":225,"name":"dragon-breath","type":"move"},{"id":226,"name":"baton-pass","type":"move"},{"id":227,"name":"encore","type":"move"},{"id":228,"name":"pursuit","type":"move"},{"id":229,"name":"rapid-spin","type":"move"},{"id":230,"name":"sweet-scent","type":"move"},{"id":231,"name":"iron-tail","type":"move"},{"id":232,"name":"metal-claw","type":"move"},{"id":233,"name":"vital-throw","type":"move"},{"id":234,"name":"morning-sun","type":"move"},{"id":235,"name":"synthesis","type":"move"},{"id":236,"name":"moonlight","type":"move"},{"id":237,"name":"hidden-power","type":"move"},{"id":238,"name":"cross-chop","type":"move"},{"id":239,"name":"twister","type":"move"},{"id":240,"name":"rain-dance","type":"move"},{"id":241,"name":"sunny-day","type":"move"},{"id":242,"name":"crunch","type":"move"},{"id":243,"name":"mirror-coat","type":"move"},{"id":244,"name":"psych-up","type":"move"},{"id":245,"name":"extreme-speed","type":"move"},{"id":246,"name":"ancient-power","type":"move"},{"id":247,"name":"shadow-ball","type":"move"},{"id":248,"name":"future-sight","type":"move"},{"id":249,"name":"rock-smash","type":"move"},{"id":250,"name":"whirlpool","type":"move"},{"id":251,"name":"beat-up","type":"move"},{"id":252,"name":"fake-out","type":"move"},{"id":253,"name":"uproar","type":"move"},{"id":254,"name":"stockpile","type":"move"},{"id":255,"name":"spit-up","type":"move"},{"id":256,"name":"swallow","type":"move"},{"id":257,"name":"heat-wave","type":"move"},{"id":258,"name":"hail","type":"move"},{"id":259,"name":"torment","type":"move"},{"id":260,"name":"flatter","type":"move"},{"id":261,"name":"will-o-wisp","type":"move"},{"id":262,"name":"memento","type":"move"},{"id":263,"name":"facade","type":"move"},{"id":264,"name":"focus-punch","type":"move"},{"id":265,"name":"smelling-salts","type":"move"},{"id":266,"name":"follow-me","type":"move"},{"id":267,"name":"nature-power","type":"move"},{"id":268,"name":"charge","type":"move"},{"id":269,"name":"taunt","type":"move"},{"id":270,"name":"helping-hand","type":"move"},{"id":271,"name":"trick","type":"move"},{"id":272,"name":"role-play","type":"move"},{"id":273,"name":"wish","type":"move"},{"id":274,"name":"assist","type":"move"},{"id":275,"name":"ingrain","type":"move"},{"id":276,"name":"superpower","type":"move"},{"id":277,"name":"magic-coat","type":"move"},{"id":278,"name":"recycle","type":"move"},{"id":279,"name":"revenge","type":"move"},{"id":280,"name":"brick-break","type":"move"},{"id":281,"name":"yawn","type":"move"},{"id":282,"name":"knock-off","type":"move"},{"id":283,"name":"endeavor","type":"move"},{"id":284,"name":"eruption","type":"move"},{"id":285,"name":"skill-swap","type":"move"},{"id":286,"name":"imprison","type":"move"},{"id":287,"name":"refresh","type":"move"},{"id":288,"name":"grudge","type":"move"},{"id":289,"name":"snatch","type":"move"},{"id":290,"name":"secret-power","type":"move"},{"id":291,"name":"dive","type":"move"},{"id":292,"name":"arm-thrust","type":"move"},{"id":293,"name":"camouflage","type":"move"},{"id":294,"name":"tail-glow","type":"move"},{"id":295,"name":"luster-purge","type":"move"},{"id":296,"name":"mist-ball","type":"move"},{"id":297,"name":"feather-dance","type":"move"},{"id":298,"name":"teeter-dance","type":"move"},{"id":299,"name":"blaze-kick","type":"move"},{"id":300,"name":"mud-sport","type":"move"},{"id":301,"name":"ice-ball","type":"move"},{"id":302,"name":"needle-arm","type":"move"},{"id":303,"name":"slack-off","type":"move"},{"id":304,"name":"hyper-voice","type":"move"},{"id":305,"name":"poison-fang","type":"move"},{"id":306,"name":"crush-claw","type":"move"},{"id":307,"name":"blast-burn","type":"move"},{"id":308,"name":"hydro-cannon","type":"move"},{"id":309,"name":"meteor-mash","type":"move"},{"id":310,"name":"astonish","type":"move"},{"id":311,"name":"weather-ball","type":"move"},{"id":312,"name":"aromatherapy","type":"move"},{"id":313,"name":"fake-tears","type":"move"},{"id":314,"name":"air-cutter","type":"move"},{"id":315,"name":"overheat","type":"move"},{"id":316,"name":"odor-sleuth","type":"move"},{"id":317,"name":"rock-tomb","type":"move"},{"id":318,"name":"silver-wind","type":"move"},{"id":319,"name":"metal-sound","type":"move"},{"id":320,"name":"grass-whistle","type":"move"},{"id":321,"name":"tickle","type":"move"},{"id":322,"name":"cosmic-power","type":"move"},{"id":323,"name":"water-spout","type":"move"},{"id":324,"name":"signal-beam","type":"move"},{"id":325,"name":"shadow-punch","type":"move"},{"id":326,"name":"extrasensory","type":"move"},{"id":327,"name":"sky-uppercut","type":"move"},{"id":328,"name":"sand-tomb","type":"move"},{"id":329,"name":"sheer-cold","type":"move"},{"id":330,"name":"muddy-water","type":"move"},{"id":331,"name":"bullet-seed","type":"move"},{"id":332,"name":"aerial-ace","type":"move"},{"id":333,"name":"icicle-spear","type":"move"},{"id":334,"name":"iron-defense","type":"move"},{"id":335,"name":"block","type":"move"},{"id":336,"name":"howl","type":"move"},{"id":337,"name":"dragon-claw","type":"move"},{"id":338,"name":"frenzy-plant","type":"move"},{"id":339,"name":"bulk-up","type":"move"},{"id":340,"name":"bounce","type":"move"},{"id":341,"name":"mud-shot","type":"move"},{"id":342,"name":"poison-tail","type":"move"},{"id":343,"name":"covet","type":"move"},{"id":344,"name":"volt-tackle","type":"move"},{"id":345,"name":"magical-leaf","type":"move"},{"id":346,"name":"water-sport","type":"move"},{"id":347,"name":"calm-mind","type":"move"},{"id":348,"name":"leaf-blade","type":"move"},{"id":349,"name":"dragon-dance","type":"move"},{"id":350,"name":"rock-blast","type":"move"},{"id":351,"name":"shock-wave","type":"move"},{"id":352,"name":"water-pulse","type":"move"},{"id":353,"name":"doom-desire","type":"move"},{"id":354,"name":"psycho-boost","type":"move"},{"id":355,"name":"roost","type":"move"},{"id":356,"name":"gravity","type":"move"},{"id":357,"name":"miracle-eye","type":"move"},{"id":358,"name":"wake-up-slap","type":"move"},{"id":359,"name":"hammer-arm","type":"move"},{"id":360,"name":"gyro-ball","type":"move"},{"id":361,"name":"healing-wish","type":"move"},{"id":362,"name":"brine","type":"move"},{"id":363,"name":"natural-gift","type":"move"},{"id":364,"name":"feint","type":"move"},{"id":365,"name":"pluck","type":"move"},{"id":366,"name":"tailwind","type":"move"},{"id":367,"name":"acupressure","type":"move"},{"id":368,"name":"metal-burst","type":"move"},{"id":369,"name":"u-turn","type":"move"},{"id":370,"name":"close-combat","type":"move"},{"id":371,"name":"payback","type":"move"},{"id":372,"name":"assurance","type":"move"},{"id":373,"name":"embargo","type":"move"},{"id":374,"name":"fling","type":"move"},{"id":375,"name":"psycho-shift","type":"move"},{"id":376,"name":"trump-card","type":"move"},{"id":377,"name":"heal-block","type":"move"},{"id":378,"name":"wring-out","type":"move"},{"id":379,"name":"power-trick","type":"move"},{"id":380,"name":"gastro-acid","type":"move"},{"id":381,"name":"lucky-chant","type":"move"},{"id":382,"name":"me-first","type":"move"},{"id":383,"name":"copycat","type":"move"},{"id":384,"name":"power-swap","type":"move"},{"id":385,"name":"guard-swap","type":"move"},{"id":386,"name":"punishment","type":"move"},{"id":387,"name":"last-resort","type":"move"},{"id":388,"name":"worry-seed","type":"move"},{"id":389,"name":"sucker-punch","type":"move"},{"id":390,"name":"toxic-spikes","type":"move"},{"id":391,"name":"heart-swap","type":"move"},{"id":392,"name":"aqua-ring","type":"move"},{"id":393,"name":"magnet-rise","type":"move"},{"id":394,"name":"flare-blitz","type":"move"},{"id":395,"name":"force-palm","type":"move"},{"id":396,"name":"aura-sphere","type":"move"},{"id":397,"name":"rock-polish","type":"move"},{"id":398,"name":"poison-jab","type":"move"},{"id":399,"name":"dark-pulse","type":"move"},{"id":400,"name":"night-slash","type":"move"},{"id":401,"name":"aqua-tail","type":"move"},{"id":402,"name":"seed-bomb","type":"move"},{"id":403,"name":"air-slash","type":"move"},{"id":404,"name":"x-scissor","type":"move"},{"id":405,"name":"bug-buzz","type":"move"},{"id":406,"name":"dragon-pulse","type":"move"},{"id":407,"name":"dragon-rush","type":"move"},{"id":408,"name":"power-gem","type":"move"},{"id":409,"name":"drain-punch","type":"move"},{"id":410,"name":"vacuum-wave","type":"move"},{"id":411,"name":"focus-blast","type":"move"},{"id":412,"name":"energy-ball","type":"move"},{"id":413,"name":"brave-bird","type":"move"},{"id":414,"name":"earth-power","type":"move"},{"id":415,"name":"switcheroo","type":"move"},{"id":416,"name":"giga-impact","type":"move"},{"id":417,"name":"nasty-plot","type":"move"},{"id":418,"name":"bullet-punch","type":"move"},{"id":419,"name":"avalanche","type":"move"},{"id":420,"name":"ice-shard","type":"move"},{"id":421,"name":"shadow-claw","type":"move"},{"id":422,"name":"thunder-fang","type":"move"},{"id":423,"name":"ice-fang","type":"move"},{"id":424,"name":"fire-fang","type":"move"},{"id":425,"name":"shadow-sneak","type":"move"},{"id":426,"name":"mud-bomb","type":"move"},{"id":427,"name":"psycho-cut","type":"move"},{"id":428,"name":"zen-headbutt","type":"move"},{"id":429,"name":"mirror-shot","type":"move"},{"id":430,"name":"flash-cannon","type":"move"},{"id":431,"name":"rock-climb","type":"move"},{"id":432,"name":"defog","type":"move"},{"id":433,"name":"trick-room","type":"move"},{"id":434,"name":"draco-meteor","type":"move"},{"id":435,"name":"discharge","type":"move"},{"id":436,"name":"lava-plume","type":"move"},{"id":437,"name":"leaf-storm","type":"move"},{"id":438,"name":"power-whip","type":"move"},{"id":439,"name":"rock-wrecker","type":"move"},{"id":440,"name":"cross-poison","type":"move"},{"id":441,"name":"gunk-shot","type":"move"},{"id":442,"name":"iron-head","type":"move"},{"id":443,"name":"magnet-bomb","type":"move"},{"id":444,"name":"stone-edge","type":"move"},{"id":445,"name":"captivate","type":"move"},{"id":446,"name":"stealth-rock","type":"move"},{"id":447,"name":"grass-knot","type":"move"},{"id":448,"name":"chatter","type":"move"},{"id":449,"name":"judgment","type":"move"},{"id":450,"name":"bug-bite","type":"move"},{"id":451,"name":"charge-beam","type":"move"},{"id":452,"name":"wood-hammer","type":"move"},{"id":453,"name":"aqua-jet","type":"move"},{"id":454,"name":"attack-order","type":"move"},{"id":455,"name":"defend-order","type":"move"},{"id":456,"name":"heal-order","type":"move"},{"id":457,"name":"head-smash","type":"move"},{"id":458,"name":"double-hit","type":"move"},{"id":459,"name":"roar-of-time","type":"move"},{"id":460,"name":"spacial-rend","type":"move"},{"id":461,"name":"lunar-dance","type":"move"},{"id":462,"name":"crush-grip","type":"move"},{"id":463,"name":"magma-storm","type":"move"},{"id":464,"name":"dark-void","type":"move"},{"id":465,"name":"seed-flare","type":"move"},{"id":466,"name":"ominous-wind","type":"move"},{"id":467,"name":"shadow-force","type":"move"},{"id":468,"name":"hone-claws","type":"move"},{"id":469,"name":"wide-guard","type":"move"},{"id":470,"name":"guard-split","type":"move"},{"id":471,"name":"power-split","type":"move"},{"id":472,"name":"wonder-room","type":"move"},{"id":473,"name":"psyshock","type":"move"},{"id":474,"name":"venoshock","type":"move"},{"id":475,"name":"autotomize","type":"move"},{"id":476,"name":"rage-powder","type":"move"},{"id":477,"name":"telekinesis","type":"move"},{"id":478,"name":"magic-room","type":"move"},{"id":479,"name":"smack-down","type":"move"},{"id":480,"name":"storm-throw","type":"move"},{"id":481,"name":"flame-burst","type":"move"},{"id":482,"name":"sludge-wave","type":"move"},{"id":483,"name":"quiver-dance","type":"move"},{"id":484,"name":"heavy-slam","type":"move"},{"id":485,"name":"synchronoise","type":"move"},{"id":486,"name":"electro-ball","type":"move"},{"id":487,"name":"soak","type":"move"},{"id":488,"name":"flame-charge","type":"move"},{"id":489,"name":"coil","type":"move"},{"id":490,"name":"low-sweep","type":"move"},{"id":491,"name":"acid-spray","type":"move"},{"id":492,"name":"foul-play","type":"move"},{"id":493,"name":"simple-beam","type":"move"},{"id":494,"name":"entrainment","type":"move"},{"id":495,"name":"after-you","type":"move"},{"id":496,"name":"round","type":"move"},{"id":497,"name":"echoed-voice","type":"move"},{"id":498,"name":"chip-away","type":"move"},{"id":499,"name":"clear-smog","type":"move"},{"id":500,"name":"stored-power","type":"move"},{"id":501,"name":"quick-guard","type":"move"},{"id":502,"name":"ally-switch","type":"move"},{"id":503,"name":"scald","type":"move"},{"id":504,"name":"shell-smash","type":"move"},{"id":505,"name":"heal-pulse","type":"move"},{"id":506,"name":"hex","type":"move"},{"id":507,"name":"sky-drop","type":"move"},{"id":508,"name":"shift-gear","type":"move"},{"id":509,"name":"circle-throw","type":"move"},{"id":510,"name":"incinerate","type":"move"},{"id":511,"name":"quash","type":"move"},{"id":512,"name":"acrobatics","type":"move"},{"id":513,"name":"reflect-type","type":"move"},{"id":514,"name":"retaliate","type":"move"},{"id":515,"name":"final-gambit","type":"move"},{"id":516,"name":"bestow","type":"move"},{"id":517,"name":"inferno","type":"move"},{"id":518,"name":"water-pledge","type":"move"},{"id":519,"name":"fire-pledge","type":"move"},{"id":520,"name":"grass-pledge","type":"move"},{"id":521,"name":"volt-switch","type":"move"},{"id":522,"name":"struggle-bug","type":"move"},{"id":523,"name":"bulldoze","type":"move"},{"id":524,"name":"frost-breath","type":"move"},{"id":525,"name":"dragon-tail","type":"move"},{"id":526,"name":"work-up","type":"move"},{"id":527,"name":"electroweb","type":"move"},{"id":528,"name":"wild-charge","type":"move"},{"id":529,"name":"drill-run","type":"move"},{"id":530,"name":"dual-chop","type":"move"},{"id":531,"name":"heart-stamp","type":"move"},{"id":532,"name":"horn-leech","type":"move"},{"id":533,"name":"sacred-sword","type":"move"},{"id":534,"name":"razor-shell","type":"move"},{"id":535,"name":"heat-crash","type":"move"},{"id":536,"name":"leaf-tornado","type":"move"},{"id":537,"name":"steamroller","type":"move"},{"id":538,"name":"cotton-guard","type":"move"},{"id":539,"name":"night-daze","type":"move"},{"id":540,"name":"psystrike","type":"move"},{"id":541,"name":"tail-slap","type":"move"},{"id":542,"name":"hurricane","type":"move"},{"id":543,"name":"head-charge","type":"move"},{"id":544,"name":"gear-grind","type":"move"},{"id":545,"name":"searing-shot","type":"move"},{"id":546,"name":"techno-blast","type":"move"},{"id":547,"name":"relic-song","type":"move"},{"id":548,"name":"secret-sword","type":"move"},{"id":549,"name":"glaciate","type":"move"},{"id":550,"name":"bolt-strike","type":"move"},{"id":551,"name":"blue-flare","type":"move"},{"id":552,"name":"fiery-dance","type":"move"},{"id":553,"name":"freeze-shock","type":"move"},{"id":554,"name":"ice-burn","type":"move"},{"id":555,"name":"snarl","type":"move"},{"id":556,"name":"icicle-crash","type":"move"},{"id":557,"name":"v-create","type":"move"},{"id":558,"name":"fusion-flare","type":"move"},{"id":559,"name":"fusion-bolt","type":"move"},{"id":560,"name":"flying-press","type":"move"},{"id":561,"name":"mat-block","type":"move"},{"id":562,"name":"belch","type":"move"},{"id":563,"name":"rototiller","type":"move"},{"id":564,"name":"sticky-web","type":"move"},{"id":565,"name":"fell-stinger","type":"move"},{"id":566,"name":"phantom-force","type":"move"},{"id":567,"name":"trick-or-treat","type":"move"},{"id":568,"name":"noble-roar","type":"move"},{"id":569,"name":"ion-deluge","type":"move"},{"id":570,"name":"parabolic-charge","type":"move"},{"id":571,"name":"forests-curse","type":"move"},{"id":572,"name":"petal-blizzard","type":"move"},{"id":573,"name":"freeze-dry","type":"move"},{"id":574,"name":"disarming-voice","type":"move"},{"id":575,"name":"parting-shot","type":"move"},{"id":576,"name":"topsy-turvy","type":"move"},{"id":577,"name":"draining-kiss","type":"move"},{"id":578,"name":"crafty-shield","type":"move"},{"id":579,"name":"flower-shield","type":"move"},{"id":580,"name":"grassy-terrain","type":"move"},{"id":581,"name":"misty-terrain","type":"move"},{"id":582,"name":"electrify","type":"move"},{"id":583,"name":"play-rough","type":"move"},{"id":584,"name":"fairy-wind","type":"move"},{"id":585,"name":"moonblast","type":"move"},{"id":586,"name":"boomburst","type":"move"},{"id":587,"name":"fairy-lock","type":"move"},{"id":588,"name":"kings-shield","type":"move"},{"id":589,"name":"play-nice","type":"move"},{"id":590,"name":"confide","type":"move"},{"id":591,"name":"diamond-storm","type":"move"},{"id":592,"name":"steam-eruption","type":"move"},{"id":593,"name":"hyperspace-hole","type":"move"},{"id":594,"name":"water-shuriken","type":"move"},{"id":595,"name":"mystical-fire","type":"move"},{"id":596,"name":"spiky-shield","type":"move"},{"id":597,"name":"aromatic-mist","type":"move"},{"id":598,"name":"eerie-impulse","type":"move"},{"id":599,"name":"venom-drench","type":"move"},{"id":600,"name":"powder","type":"move"},{"id":601,"name":"geomancy","type":"move"},{"id":602,"name":"magnetic-flux","type":"move"},{"id":603,"name":"happy-hour","type":"move"},{"id":604,"name":"electric-terrain","type":"move"},{"id":605,"name":"dazzling-gleam","type":"move"},{"id":606,"name":"celebrate","type":"move"},{"id":607,"name":"hold-hands","type":"move"},{"id":608,"name":"baby-doll-eyes","type":"move"},{"id":609,"name":"nuzzle","type":"move"},{"id":610,"name":"hold-back","type":"move"},{"id":611,"name":"infestation","type":"move"},{"id":612,"name":"power-up-punch","type":"move"},{"id":613,"name":"oblivion-wing","type":"move"},{"id":614,"name":"thousand-arrows","type":"move"},{"id":615,"name":"thousand-waves","type":"move"},{"id":616,"name":"lands-wrath","type":"move"},{"id":617,"name":"light-of-ruin","type":"move"},{"id":618,"name":"origin-pulse","type":"move"},{"id":619,"name":"precipice-blades","type":"move"},{"id":620,"name":"dragon-ascent","type":"move"},{"id":621,"name":"hyperspace-fury","type":"move"},{"id":622,"name":"breakneck-blitz--physical","type":"move"},{"id":623,"name":"breakneck-blitz--special","type":"move"},{"id":624,"name":"all-out-pummeling--physical","type":"move"},{"id":625,"name":"all-out-pummeling--special","type":"move"},{"id":626,"name":"supersonic-skystrike--physical","type":"move"},{"id":627,"name":"supersonic-skystrike--special","type":"move"},{"id":628,"name":"acid-downpour--physical","type":"move"},{"id":629,"name":"acid-downpour--special","type":"move"},{"id":630,"name":"tectonic-rage--physical","type":"move"},{"id":631,"name":"tectonic-rage--special","type":"move"},{"id":632,"name":"continental-crush--physical","type":"move"},{"id":633,"name":"continental-crush--special","type":"move"},{"id":634,"name":"savage-spin-out--physical","type":"move"},{"id":635,"name":"savage-spin-out--special","type":"move"},{"id":636,"name":"never-ending-nightmare--physical","type":"move"},{"id":637,"name":"never-ending-nightmare--special","type":"move"},{"id":638,"name":"corkscrew-crash--physical","type":"move"},{"id":639,"name":"corkscrew-crash--special","type":"move"},{"id":640,"name":"inferno-overdrive--physical","type":"move"},{"id":641,"name":"inferno-overdrive--special","type":"move"},{"id":642,"name":"hydro-vortex--physical","type":"move"},{"id":643,"name":"hydro-vortex--special","type":"move"},{"id":644,"name":"bloom-doom--physical","type":"move"},{"id":645,"name":"bloom-doom--special","type":"move"},{"id":646,"name":"gigavolt-havoc--physical","type":"move"},{"id":647,"name":"gigavolt-havoc--special","type":"move"},{"id":648,"name":"shattered-psyche--physical","type":"move"},{"id":649,"name":"shattered-psyche--special","type":"move"},{"id":650,"name":"subzero-slammer--physical","type":"move"},{"id":651,"name":"subzero-slammer--special","type":"move"},{"id":652,"name":"devastating-drake--physical","type":"move"},{"id":653,"name":"devastating-drake--special","type":"move"},{"id":654,"name":"black-hole-eclipse--physical","type":"move"},{"id":655,"name":"black-hole-eclipse--special","type":"move"},{"id":656,"name":"twinkle-tackle--physical","type":"move"},{"id":657,"name":"twinkle-tackle--special","type":"move"},{"id":658,"name":"catastropika","type":"move"},{"id":659,"name":"shore-up","type":"move"},{"id":660,"name":"first-impression","type":"move"},{"id":661,"name":"baneful-bunker","type":"move"},{"id":662,"name":"spirit-shackle","type":"move"},{"id":663,"name":"darkest-lariat","type":"move"},{"id":664,"name":"sparkling-aria","type":"move"},{"id":665,"name":"ice-hammer","type":"move"},{"id":666,"name":"floral-healing","type":"move"},{"id":667,"name":"high-horsepower","type":"move"},{"id":668,"name":"strength-sap","type":"move"},{"id":669,"name":"solar-blade","type":"move"},{"id":670,"name":"leafage","type":"move"},{"id":671,"name":"spotlight","type":"move"},{"id":672,"name":"toxic-thread","type":"move"},{"id":673,"name":"laser-focus","type":"move"},{"id":674,"name":"gear-up","type":"move"},{"id":675,"name":"throat-chop","type":"move"},{"id":676,"name":"pollen-puff","type":"move"},{"id":677,"name":"anchor-shot","type":"move"},{"id":678,"name":"psychic-terrain","type":"move"},{"id":679,"name":"lunge","type":"move"},{"id":680,"name":"fire-lash","type":"move"},{"id":681,"name":"power-trip","type":"move"},{"id":682,"name":"burn-up","type":"move"},{"id":683,"name":"speed-swap","type":"move"},{"id":684,"name":"smart-strike","type":"move"},{"id":685,"name":"purify","type":"move"},{"id":686,"name":"revelation-dance","type":"move"},{"id":687,"name":"core-enforcer","type":"move"},{"id":688,"name":"trop-kick","type":"move"},{"id":689,"name":"instruct","type":"move"},{"id":690,"name":"beak-blast","type":"move"},{"id":691,"name":"clanging-scales","type":"move"},{"id":692,"name":"dragon-hammer","type":"move"},{"id":693,"name":"brutal-swing","type":"move"},{"id":694,"name":"aurora-veil","type":"move"},{"id":695,"name":"sinister-arrow-raid","type":"move"},{"id":696,"name":"malicious-moonsault","type":"move"},{"id":697,"name":"oceanic-operetta","type":"move"},{"id":698,"name":"guardian-of-alola","type":"move"},{"id":699,"name":"soul-stealing-7-star-strike","type":"move"},{"id":700,"name":"stoked-sparksurfer","type":"move"},{"id":701,"name":"pulverizing-pancake","type":"move"},{"id":702,"name":"extreme-evoboost","type":"move"},{"id":703,"name":"genesis-supernova","type":"move"},{"id":704,"name":"shell-trap","type":"move"},{"id":705,"name":"fleur-cannon","type":"move"},{"id":706,"name":"psychic-fangs","type":"move"},{"id":707,"name":"stomping-tantrum","type":"move"},{"id":708,"name":"shadow-bone","type":"move"},{"id":709,"name":"accelerock","type":"move"},{"id":710,"name":"liquidation","type":"move"},{"id":711,"name":"prismatic-laser","type":"move"},{"id":712,"name":"spectral-thief","type":"move"},{"id":713,"name":"sunsteel-strike","type":"move"},{"id":714,"name":"moongeist-beam","type":"move"},{"id":715,"name":"tearful-look","type":"move"},{"id":716,"name":"zing-zap","type":"move"},{"id":717,"name":"natures-madness","type":"move"},{"id":718,"name":"multi-attack","type":"move"},{"id":719,"name":"10-000-000-volt-thunderbolt","type":"move"},{"id":10001,"name":"shadow-rush","type":"move"},{"id":10002,"name":"shadow-blast","type":"move"},{"id":10003,"name":"shadow-blitz","type":"move"},{"id":10004,"name":"shadow-bolt","type":"move"},{"id":10005,"name":"shadow-break","type":"move"},{"id":10006,"name":"shadow-chill","type":"move"},{"id":10007,"name":"shadow-end","type":"move"},{"id":10008,"name":"shadow-fire","type":"move"},{"id":10009,"name":"shadow-rave","type":"move"},{"id":10010,"name":"shadow-storm","type":"move"},{"id":10011,"name":"shadow-wave","type":"move"},{"id":10012,"name":"shadow-down","type":"move"},{"id":10013,"name":"shadow-half","type":"move"},{"id":10014,"name":"shadow-hold","type":"move"},{"id":10015,"name":"shadow-mist","type":"move"},{"id":10016,"name":"shadow-panic","type":"move"},{"id":10017,"name":"shadow-shed","type":"move"},{"id":10018,"name":"shadow-sky","type":"move"},{"id":1,"name":"stench","type":"ability"},{"id":2,"name":"drizzle","type":"ability"},{"id":3,"name":"speed-boost","type":"ability"},{"id":4,"name":"battle-armor","type":"ability"},{"id":5,"name":"sturdy","type":"ability"},{"id":6,"name":"damp","type":"ability"},{"id":7,"name":"limber","type":"ability"},{"id":8,"name":"sand-veil","type":"ability"},{"id":9,"name":"static","type":"ability"},{"id":10,"name":"volt-absorb","type":"ability"},{"id":11,"name":"water-absorb","type":"ability"},{"id":12,"name":"oblivious","type":"ability"},{"id":13,"name":"cloud-nine","type":"ability"},{"id":14,"name":"compound-eyes","type":"ability"},{"id":15,"name":"insomnia","type":"ability"},{"id":16,"name":"color-change","type":"ability"},{"id":17,"name":"immunity","type":"ability"},{"id":18,"name":"flash-fire","type":"ability"},{"id":19,"name":"shield-dust","type":"ability"},{"id":20,"name":"own-tempo","type":"ability"},{"id":21,"name":"suction-cups","type":"ability"},{"id":22,"name":"intimidate","type":"ability"},{"id":23,"name":"shadow-tag","type":"ability"},{"id":24,"name":"rough-skin","type":"ability"},{"id":25,"name":"wonder-guard","type":"ability"},{"id":26,"name":"levitate","type":"ability"},{"id":27,"name":"effect-spore","type":"ability"},{"id":28,"name":"synchronize","type":"ability"},{"id":29,"name":"clear-body","type":"ability"},{"id":30,"name":"natural-cure","type":"ability"},{"id":31,"name":"lightning-rod","type":"ability"},{"id":32,"name":"serene-grace","type":"ability"},{"id":33,"name":"swift-swim","type":"ability"},{"id":34,"name":"chlorophyll","type":"ability"},{"id":35,"name":"illuminate","type":"ability"},{"id":36,"name":"trace","type":"ability"},{"id":37,"name":"huge-power","type":"ability"},{"id":38,"name":"poison-point","type":"ability"},{"id":39,"name":"inner-focus","type":"ability"},{"id":40,"name":"magma-armor","type":"ability"},{"id":41,"name":"water-veil","type":"ability"},{"id":42,"name":"magnet-pull","type":"ability"},{"id":43,"name":"soundproof","type":"ability"},{"id":44,"name":"rain-dish","type":"ability"},{"id":45,"name":"sand-stream","type":"ability"},{"id":46,"name":"pressure","type":"ability"},{"id":47,"name":"thick-fat","type":"ability"},{"id":48,"name":"early-bird","type":"ability"},{"id":49,"name":"flame-body","type":"ability"},{"id":50,"name":"run-away","type":"ability"},{"id":51,"name":"keen-eye","type":"ability"},{"id":52,"name":"hyper-cutter","type":"ability"},{"id":53,"name":"pickup","type":"ability"},{"id":54,"name":"truant","type":"ability"},{"id":55,"name":"hustle","type":"ability"},{"id":56,"name":"cute-charm","type":"ability"},{"id":57,"name":"plus","type":"ability"},{"id":58,"name":"minus","type":"ability"},{"id":59,"name":"forecast","type":"ability"},{"id":60,"name":"sticky-hold","type":"ability"},{"id":61,"name":"shed-skin","type":"ability"},{"id":62,"name":"guts","type":"ability"},{"id":63,"name":"marvel-scale","type":"ability"},{"id":64,"name":"liquid-ooze","type":"ability"},{"id":65,"name":"overgrow","type":"ability"},{"id":66,"name":"blaze","type":"ability"},{"id":67,"name":"torrent","type":"ability"},{"id":68,"name":"swarm","type":"ability"},{"id":69,"name":"rock-head","type":"ability"},{"id":70,"name":"drought","type":"ability"},{"id":71,"name":"arena-trap","type":"ability"},{"id":72,"name":"vital-spirit","type":"ability"},{"id":73,"name":"white-smoke","type":"ability"},{"id":74,"name":"pure-power","type":"ability"},{"id":75,"name":"shell-armor","type":"ability"},{"id":76,"name":"air-lock","type":"ability"},{"id":77,"name":"tangled-feet","type":"ability"},{"id":78,"name":"motor-drive","type":"ability"},{"id":79,"name":"rivalry","type":"ability"},{"id":80,"name":"steadfast","type":"ability"},{"id":81,"name":"snow-cloak","type":"ability"},{"id":82,"name":"gluttony","type":"ability"},{"id":83,"name":"anger-point","type":"ability"},{"id":84,"name":"unburden","type":"ability"},{"id":85,"name":"heatproof","type":"ability"},{"id":86,"name":"simple","type":"ability"},{"id":87,"name":"dry-skin","type":"ability"},{"id":88,"name":"download","type":"ability"},{"id":89,"name":"iron-fist","type":"ability"},{"id":90,"name":"poison-heal","type":"ability"},{"id":91,"name":"adaptability","type":"ability"},{"id":92,"name":"skill-link","type":"ability"},{"id":93,"name":"hydration","type":"ability"},{"id":94,"name":"solar-power","type":"ability"},{"id":95,"name":"quick-feet","type":"ability"},{"id":96,"name":"normalize","type":"ability"},{"id":97,"name":"sniper","type":"ability"},{"id":98,"name":"magic-guard","type":"ability"},{"id":99,"name":"no-guard","type":"ability"},{"id":100,"name":"stall","type":"ability"},{"id":101,"name":"technician","type":"ability"},{"id":102,"name":"leaf-guard","type":"ability"},{"id":103,"name":"klutz","type":"ability"},{"id":104,"name":"mold-breaker","type":"ability"},{"id":105,"name":"super-luck","type":"ability"},{"id":106,"name":"aftermath","type":"ability"},{"id":107,"name":"anticipation","type":"ability"},{"id":108,"name":"forewarn","type":"ability"},{"id":109,"name":"unaware","type":"ability"},{"id":110,"name":"tinted-lens","type":"ability"},{"id":111,"name":"filter","type":"ability"},{"id":112,"name":"slow-start","type":"ability"},{"id":113,"name":"scrappy","type":"ability"},{"id":114,"name":"storm-drain","type":"ability"},{"id":115,"name":"ice-body","type":"ability"},{"id":116,"name":"solid-rock","type":"ability"},{"id":117,"name":"snow-warning","type":"ability"},{"id":118,"name":"honey-gather","type":"ability"},{"id":119,"name":"frisk","type":"ability"},{"id":120,"name":"reckless","type":"ability"},{"id":121,"name":"multitype","type":"ability"},{"id":122,"name":"flower-gift","type":"ability"},{"id":123,"name":"bad-dreams","type":"ability"},{"id":124,"name":"pickpocket","type":"ability"},{"id":125,"name":"sheer-force","type":"ability"},{"id":126,"name":"contrary","type":"ability"},{"id":127,"name":"unnerve","type":"ability"},{"id":128,"name":"defiant","type":"ability"},{"id":129,"name":"defeatist","type":"ability"},{"id":130,"name":"cursed-body","type":"ability"},{"id":131,"name":"healer","type":"ability"},{"id":132,"name":"friend-guard","type":"ability"},{"id":133,"name":"weak-armor","type":"ability"},{"id":134,"name":"heavy-metal","type":"ability"},{"id":135,"name":"light-metal","type":"ability"},{"id":136,"name":"multiscale","type":"ability"},{"id":137,"name":"toxic-boost","type":"ability"},{"id":138,"name":"flare-boost","type":"ability"},{"id":139,"name":"harvest","type":"ability"},{"id":140,"name":"telepathy","type":"ability"},{"id":141,"name":"moody","type":"ability"},{"id":142,"name":"overcoat","type":"ability"},{"id":143,"name":"poison-touch","type":"ability"},{"id":144,"name":"regenerator","type":"ability"},{"id":145,"name":"big-pecks","type":"ability"},{"id":146,"name":"sand-rush","type":"ability"},{"id":147,"name":"wonder-skin","type":"ability"},{"id":148,"name":"analytic","type":"ability"},{"id":149,"name":"illusion","type":"ability"},{"id":150,"name":"imposter","type":"ability"},{"id":151,"name":"infiltrator","type":"ability"},{"id":152,"name":"mummy","type":"ability"},{"id":153,"name":"moxie","type":"ability"},{"id":154,"name":"justified","type":"ability"},{"id":155,"name":"rattled","type":"ability"},{"id":156,"name":"magic-bounce","type":"ability"},{"id":157,"name":"sap-sipper","type":"ability"},{"id":158,"name":"prankster","type":"ability"},{"id":159,"name":"sand-force","type":"ability"},{"id":160,"name":"iron-barbs","type":"ability"},{"id":161,"name":"zen-mode","type":"ability"},{"id":162,"name":"victory-star","type":"ability"},{"id":163,"name":"turboblaze","type":"ability"},{"id":164,"name":"teravolt","type":"ability"},{"id":165,"name":"aroma-veil","type":"ability"},{"id":166,"name":"flower-veil","type":"ability"},{"id":167,"name":"cheek-pouch","type":"ability"},{"id":168,"name":"protean","type":"ability"},{"id":169,"name":"fur-coat","type":"ability"},{"id":170,"name":"magician","type":"ability"},{"id":171,"name":"bulletproof","type":"ability"},{"id":172,"name":"competitive","type":"ability"},{"id":173,"name":"strong-jaw","type":"ability"},{"id":174,"name":"refrigerate","type":"ability"},{"id":175,"name":"sweet-veil","type":"ability"},{"id":176,"name":"stance-change","type":"ability"},{"id":177,"name":"gale-wings","type":"ability"},{"id":178,"name":"mega-launcher","type":"ability"},{"id":179,"name":"grass-pelt","type":"ability"},{"id":180,"name":"symbiosis","type":"ability"},{"id":181,"name":"tough-claws","type":"ability"},{"id":182,"name":"pixilate","type":"ability"},{"id":183,"name":"gooey","type":"ability"},{"id":184,"name":"aerilate","type":"ability"},{"id":185,"name":"parental-bond","type":"ability"},{"id":186,"name":"dark-aura","type":"ability"},{"id":187,"name":"fairy-aura","type":"ability"},{"id":188,"name":"aura-break","type":"ability"},{"id":189,"name":"primordial-sea","type":"ability"},{"id":190,"name":"desolate-land","type":"ability"},{"id":191,"name":"delta-stream","type":"ability"},{"id":192,"name":"stamina","type":"ability"},{"id":193,"name":"wimp-out","type":"ability"},{"id":194,"name":"emergency-exit","type":"ability"},{"id":195,"name":"water-compaction","type":"ability"},{"id":196,"name":"merciless","type":"ability"},{"id":197,"name":"shields-down","type":"ability"},{"id":198,"name":"stakeout","type":"ability"},{"id":199,"name":"water-bubble","type":"ability"},{"id":200,"name":"steelworker","type":"ability"},{"id":201,"name":"berserk","type":"ability"},{"id":202,"name":"slush-rush","type":"ability"},{"id":203,"name":"long-reach","type":"ability"},{"id":204,"name":"liquid-voice","type":"ability"},{"id":205,"name":"triage","type":"ability"},{"id":206,"name":"galvanize","type":"ability"},{"id":207,"name":"surge-surfer","type":"ability"},{"id":208,"name":"schooling","type":"ability"},{"id":209,"name":"disguise","type":"ability"},{"id":210,"name":"battle-bond","type":"ability"},{"id":211,"name":"power-construct","type":"ability"},{"id":212,"name":"corrosion","type":"ability"},{"id":213,"name":"comatose","type":"ability"},{"id":214,"name":"queenly-majesty","type":"ability"},{"id":215,"name":"innards-out","type":"ability"},{"id":216,"name":"dancer","type":"ability"},{"id":217,"name":"battery","type":"ability"},{"id":218,"name":"fluffy","type":"ability"},{"id":219,"name":"dazzling","type":"ability"},{"id":220,"name":"soul-heart","type":"ability"},{"id":221,"name":"tangling-hair","type":"ability"},{"id":222,"name":"receiver","type":"ability"},{"id":223,"name":"power-of-alchemy","type":"ability"},{"id":224,"name":"beast-boost","type":"ability"},{"id":225,"name":"rks-system","type":"ability"},{"id":226,"name":"electric-surge","type":"ability"},{"id":227,"name":"psychic-surge","type":"ability"},{"id":228,"name":"misty-surge","type":"ability"},{"id":229,"name":"grassy-surge","type":"ability"},{"id":230,"name":"full-metal-body","type":"ability"},{"id":231,"name":"shadow-shield","type":"ability"},{"id":232,"name":"prism-armor","type":"ability"},{"id":10001,"name":"mountaineer","type":"ability"},{"id":10002,"name":"wave-rider","type":"ability"},{"id":10003,"name":"skater","type":"ability"},{"id":10004,"name":"thrust","type":"ability"},{"id":10005,"name":"perception","type":"ability"},{"id":10006,"name":"parry","type":"ability"},{"id":10007,"name":"instinct","type":"ability"},{"id":10008,"name":"dodge","type":"ability"},{"id":10009,"name":"jagged-edge","type":"ability"},{"id":10010,"name":"frostbite","type":"ability"},{"id":10011,"name":"tenacity","type":"ability"},{"id":10012,"name":"pride","type":"ability"},{"id":10013,"name":"deep-sleep","type":"ability"},{"id":10014,"name":"power-nap","type":"ability"},{"id":10015,"name":"spirit","type":"ability"},{"id":10016,"name":"warm-blanket","type":"ability"},{"id":10017,"name":"gulp","type":"ability"},{"id":10018,"name":"herbivore","type":"ability"},{"id":10019,"name":"sandpit","type":"ability"},{"id":10020,"name":"hot-blooded","type":"ability"},{"id":10021,"name":"medic","type":"ability"},{"id":10022,"name":"life-force","type":"ability"},{"id":10023,"name":"lunchbox","type":"ability"},{"id":10024,"name":"nurse","type":"ability"},{"id":10025,"name":"melee","type":"ability"},{"id":10026,"name":"sponge","type":"ability"},{"id":10027,"name":"bodyguard","type":"ability"},{"id":10028,"name":"hero","type":"ability"},{"id":10029,"name":"last-bastion","type":"ability"},{"id":10030,"name":"stealth","type":"ability"},{"id":10031,"name":"vanguard","type":"ability"},{"id":10032,"name":"nomad","type":"ability"},{"id":10033,"name":"sequence","type":"ability"},{"id":10034,"name":"grass-cloak","type":"ability"},{"id":10035,"name":"celebrate","type":"ability"},{"id":10036,"name":"lullaby","type":"ability"},{"id":10037,"name":"calming","type":"ability"},{"id":10038,"name":"daze","type":"ability"},{"id":10039,"name":"frighten","type":"ability"},{"id":10040,"name":"interference","type":"ability"},{"id":10041,"name":"mood-maker","type":"ability"},{"id":10042,"name":"confidence","type":"ability"},{"id":10043,"name":"fortune","type":"ability"},{"id":10044,"name":"bonanza","type":"ability"},{"id":10045,"name":"explode","type":"ability"},{"id":10046,"name":"omnipotent","type":"ability"},{"id":10047,"name":"share","type":"ability"},{"id":10048,"name":"black-hole","type":"ability"},{"id":10049,"name":"shadow-dash","type":"ability"},{"id":10050,"name":"sprint","type":"ability"},{"id":10051,"name":"disgust","type":"ability"},{"id":10052,"name":"high-rise","type":"ability"},{"id":10053,"name":"climber","type":"ability"},{"id":10054,"name":"flame-boost","type":"ability"},{"id":10055,"name":"aqua-boost","type":"ability"},{"id":10056,"name":"run-up","type":"ability"},{"id":10057,"name":"conqueror","type":"ability"},{"id":10058,"name":"shackle","type":"ability"},{"id":10059,"name":"decoy","type":"ability"},{"id":10060,"name":"shield","type":"ability"},{"id":1,"name":"master-ball","type":"item"},{"id":2,"name":"ultra-ball","type":"item"},{"id":3,"name":"great-ball","type":"item"},{"id":4,"name":"poke-ball","type":"item"},{"id":5,"name":"safari-ball","type":"item"},{"id":6,"name":"net-ball","type":"item"},{"id":7,"name":"dive-ball","type":"item"},{"id":8,"name":"nest-ball","type":"item"},{"id":9,"name":"repeat-ball","type":"item"},{"id":10,"name":"timer-ball","type":"item"},{"id":11,"name":"luxury-ball","type":"item"},{"id":12,"name":"premier-ball","type":"item"},{"id":13,"name":"dusk-ball","type":"item"},{"id":14,"name":"heal-ball","type":"item"},{"id":15,"name":"quick-ball","type":"item"},{"id":16,"name":"cherish-ball","type":"item"},{"id":17,"name":"potion","type":"item"},{"id":18,"name":"antidote","type":"item"},{"id":19,"name":"burn-heal","type":"item"},{"id":20,"name":"ice-heal","type":"item"},{"id":21,"name":"awakening","type":"item"},{"id":22,"name":"paralyze-heal","type":"item"},{"id":23,"name":"full-restore","type":"item"},{"id":24,"name":"max-potion","type":"item"},{"id":25,"name":"hyper-potion","type":"item"},{"id":26,"name":"super-potion","type":"item"},{"id":27,"name":"full-heal","type":"item"},{"id":28,"name":"revive","type":"item"},{"id":29,"name":"max-revive","type":"item"},{"id":30,"name":"fresh-water","type":"item"},{"id":31,"name":"soda-pop","type":"item"},{"id":32,"name":"lemonade","type":"item"},{"id":33,"name":"moomoo-milk","type":"item"},{"id":34,"name":"energy-powder","type":"item"},{"id":35,"name":"energy-root","type":"item"},{"id":36,"name":"heal-powder","type":"item"},{"id":37,"name":"revival-herb","type":"item"},{"id":38,"name":"ether","type":"item"},{"id":39,"name":"max-ether","type":"item"},{"id":40,"name":"elixir","type":"item"},{"id":41,"name":"max-elixir","type":"item"},{"id":42,"name":"lava-cookie","type":"item"},{"id":43,"name":"berry-juice","type":"item"},{"id":44,"name":"sacred-ash","type":"item"},{"id":45,"name":"hp-up","type":"item"},{"id":46,"name":"protein","type":"item"},{"id":47,"name":"iron","type":"item"},{"id":48,"name":"carbos","type":"item"},{"id":49,"name":"calcium","type":"item"},{"id":50,"name":"rare-candy","type":"item"},{"id":51,"name":"pp-up","type":"item"},{"id":52,"name":"zinc","type":"item"},{"id":53,"name":"pp-max","type":"item"},{"id":54,"name":"old-gateau","type":"item"},{"id":55,"name":"guard-spec","type":"item"},{"id":56,"name":"dire-hit","type":"item"},{"id":57,"name":"x-attack","type":"item"},{"id":58,"name":"x-defense","type":"item"},{"id":59,"name":"x-speed","type":"item"},{"id":60,"name":"x-accuracy","type":"item"},{"id":61,"name":"x-sp-atk","type":"item"},{"id":62,"name":"x-sp-def","type":"item"},{"id":63,"name":"poke-doll","type":"item"},{"id":64,"name":"fluffy-tail","type":"item"},{"id":65,"name":"blue-flute","type":"item"},{"id":66,"name":"yellow-flute","type":"item"},{"id":67,"name":"red-flute","type":"item"},{"id":68,"name":"black-flute","type":"item"},{"id":69,"name":"white-flute","type":"item"},{"id":70,"name":"shoal-salt","type":"item"},{"id":71,"name":"shoal-shell","type":"item"},{"id":72,"name":"red-shard","type":"item"},{"id":73,"name":"blue-shard","type":"item"},{"id":74,"name":"yellow-shard","type":"item"},{"id":75,"name":"green-shard","type":"item"},{"id":76,"name":"super-repel","type":"item"},{"id":77,"name":"max-repel","type":"item"},{"id":78,"name":"escape-rope","type":"item"},{"id":79,"name":"repel","type":"item"},{"id":80,"name":"sun-stone","type":"item"},{"id":81,"name":"moon-stone","type":"item"},{"id":82,"name":"fire-stone","type":"item"},{"id":83,"name":"thunder-stone","type":"item"},{"id":84,"name":"water-stone","type":"item"},{"id":85,"name":"leaf-stone","type":"item"},{"id":86,"name":"tiny-mushroom","type":"item"},{"id":87,"name":"big-mushroom","type":"item"},{"id":88,"name":"pearl","type":"item"},{"id":89,"name":"big-pearl","type":"item"},{"id":90,"name":"stardust","type":"item"},{"id":91,"name":"star-piece","type":"item"},{"id":92,"name":"nugget","type":"item"},{"id":93,"name":"heart-scale","type":"item"},{"id":94,"name":"honey","type":"item"},{"id":95,"name":"growth-mulch","type":"item"},{"id":96,"name":"damp-mulch","type":"item"},{"id":97,"name":"stable-mulch","type":"item"},{"id":98,"name":"gooey-mulch","type":"item"},{"id":99,"name":"root-fossil","type":"item"},{"id":100,"name":"claw-fossil","type":"item"},{"id":101,"name":"helix-fossil","type":"item"},{"id":102,"name":"dome-fossil","type":"item"},{"id":103,"name":"old-amber","type":"item"},{"id":104,"name":"armor-fossil","type":"item"},{"id":105,"name":"skull-fossil","type":"item"},{"id":106,"name":"rare-bone","type":"item"},{"id":107,"name":"shiny-stone","type":"item"},{"id":108,"name":"dusk-stone","type":"item"},{"id":109,"name":"dawn-stone","type":"item"},{"id":110,"name":"oval-stone","type":"item"},{"id":111,"name":"odd-keystone","type":"item"},{"id":112,"name":"adamant-orb","type":"item"},{"id":113,"name":"lustrous-orb","type":"item"},{"id":114,"name":"grass-mail","type":"item"},{"id":115,"name":"flame-mail","type":"item"},{"id":116,"name":"bubble-mail","type":"item"},{"id":117,"name":"bloom-mail","type":"item"},{"id":118,"name":"tunnel-mail","type":"item"},{"id":119,"name":"steel-mail","type":"item"},{"id":120,"name":"heart-mail","type":"item"},{"id":121,"name":"snow-mail","type":"item"},{"id":122,"name":"space-mail","type":"item"},{"id":123,"name":"air-mail","type":"item"},{"id":124,"name":"mosaic-mail","type":"item"},{"id":125,"name":"brick-mail","type":"item"},{"id":126,"name":"cheri-berry","type":"item"},{"id":127,"name":"chesto-berry","type":"item"},{"id":128,"name":"pecha-berry","type":"item"},{"id":129,"name":"rawst-berry","type":"item"},{"id":130,"name":"aspear-berry","type":"item"},{"id":131,"name":"leppa-berry","type":"item"},{"id":132,"name":"oran-berry","type":"item"},{"id":133,"name":"persim-berry","type":"item"},{"id":134,"name":"lum-berry","type":"item"},{"id":135,"name":"sitrus-berry","type":"item"},{"id":136,"name":"figy-berry","type":"item"},{"id":137,"name":"wiki-berry","type":"item"},{"id":138,"name":"mago-berry","type":"item"},{"id":139,"name":"aguav-berry","type":"item"},{"id":140,"name":"iapapa-berry","type":"item"},{"id":141,"name":"razz-berry","type":"item"},{"id":142,"name":"bluk-berry","type":"item"},{"id":143,"name":"nanab-berry","type":"item"},{"id":144,"name":"wepear-berry","type":"item"},{"id":145,"name":"pinap-berry","type":"item"},{"id":146,"name":"pomeg-berry","type":"item"},{"id":147,"name":"kelpsy-berry","type":"item"},{"id":148,"name":"qualot-berry","type":"item"},{"id":149,"name":"hondew-berry","type":"item"},{"id":150,"name":"grepa-berry","type":"item"},{"id":151,"name":"tamato-berry","type":"item"},{"id":152,"name":"cornn-berry","type":"item"},{"id":153,"name":"magost-berry","type":"item"},{"id":154,"name":"rabuta-berry","type":"item"},{"id":155,"name":"nomel-berry","type":"item"},{"id":156,"name":"spelon-berry","type":"item"},{"id":157,"name":"pamtre-berry","type":"item"},{"id":158,"name":"watmel-berry","type":"item"},{"id":159,"name":"durin-berry","type":"item"},{"id":160,"name":"belue-berry","type":"item"},{"id":161,"name":"occa-berry","type":"item"},{"id":162,"name":"passho-berry","type":"item"},{"id":163,"name":"wacan-berry","type":"item"},{"id":164,"name":"rindo-berry","type":"item"},{"id":165,"name":"yache-berry","type":"item"},{"id":166,"name":"chople-berry","type":"item"},{"id":167,"name":"kebia-berry","type":"item"},{"id":168,"name":"shuca-berry","type":"item"},{"id":169,"name":"coba-berry","type":"item"},{"id":170,"name":"payapa-berry","type":"item"},{"id":171,"name":"tanga-berry","type":"item"},{"id":172,"name":"charti-berry","type":"item"},{"id":173,"name":"kasib-berry","type":"item"},{"id":174,"name":"haban-berry","type":"item"},{"id":175,"name":"colbur-berry","type":"item"},{"id":176,"name":"babiri-berry","type":"item"},{"id":177,"name":"chilan-berry","type":"item"},{"id":178,"name":"liechi-berry","type":"item"},{"id":179,"name":"ganlon-berry","type":"item"},{"id":180,"name":"salac-berry","type":"item"},{"id":181,"name":"petaya-berry","type":"item"},{"id":182,"name":"apicot-berry","type":"item"},{"id":183,"name":"lansat-berry","type":"item"},{"id":184,"name":"starf-berry","type":"item"},{"id":185,"name":"enigma-berry","type":"item"},{"id":186,"name":"micle-berry","type":"item"},{"id":187,"name":"custap-berry","type":"item"},{"id":188,"name":"jaboca-berry","type":"item"},{"id":189,"name":"rowap-berry","type":"item"},{"id":190,"name":"bright-powder","type":"item"},{"id":191,"name":"white-herb","type":"item"},{"id":192,"name":"macho-brace","type":"item"},{"id":193,"name":"exp-share","type":"item"},{"id":194,"name":"quick-claw","type":"item"},{"id":195,"name":"soothe-bell","type":"item"},{"id":196,"name":"mental-herb","type":"item"},{"id":197,"name":"choice-band","type":"item"},{"id":198,"name":"kings-rock","type":"item"},{"id":199,"name":"silver-powder","type":"item"},{"id":200,"name":"amulet-coin","type":"item"},{"id":201,"name":"cleanse-tag","type":"item"},{"id":202,"name":"soul-dew","type":"item"},{"id":203,"name":"deep-sea-tooth","type":"item"},{"id":204,"name":"deep-sea-scale","type":"item"},{"id":205,"name":"smoke-ball","type":"item"},{"id":206,"name":"everstone","type":"item"},{"id":207,"name":"focus-band","type":"item"},{"id":208,"name":"lucky-egg","type":"item"},{"id":209,"name":"scope-lens","type":"item"},{"id":210,"name":"metal-coat","type":"item"},{"id":211,"name":"leftovers","type":"item"},{"id":212,"name":"dragon-scale","type":"item"},{"id":213,"name":"light-ball","type":"item"},{"id":214,"name":"soft-sand","type":"item"},{"id":215,"name":"hard-stone","type":"item"},{"id":216,"name":"miracle-seed","type":"item"},{"id":217,"name":"black-glasses","type":"item"},{"id":218,"name":"black-belt","type":"item"},{"id":219,"name":"magnet","type":"item"},{"id":220,"name":"mystic-water","type":"item"},{"id":221,"name":"sharp-beak","type":"item"},{"id":222,"name":"poison-barb","type":"item"},{"id":223,"name":"never-melt-ice","type":"item"},{"id":224,"name":"spell-tag","type":"item"},{"id":225,"name":"twisted-spoon","type":"item"},{"id":226,"name":"charcoal","type":"item"},{"id":227,"name":"dragon-fang","type":"item"},{"id":228,"name":"silk-scarf","type":"item"},{"id":229,"name":"up-grade","type":"item"},{"id":230,"name":"shell-bell","type":"item"},{"id":231,"name":"sea-incense","type":"item"},{"id":232,"name":"lax-incense","type":"item"},{"id":233,"name":"lucky-punch","type":"item"},{"id":234,"name":"metal-powder","type":"item"},{"id":235,"name":"thick-club","type":"item"},{"id":236,"name":"stick","type":"item"},{"id":237,"name":"red-scarf","type":"item"},{"id":238,"name":"blue-scarf","type":"item"},{"id":239,"name":"pink-scarf","type":"item"},{"id":240,"name":"green-scarf","type":"item"},{"id":241,"name":"yellow-scarf","type":"item"},{"id":242,"name":"wide-lens","type":"item"},{"id":243,"name":"muscle-band","type":"item"},{"id":244,"name":"wise-glasses","type":"item"},{"id":245,"name":"expert-belt","type":"item"},{"id":246,"name":"light-clay","type":"item"},{"id":247,"name":"life-orb","type":"item"},{"id":248,"name":"power-herb","type":"item"},{"id":249,"name":"toxic-orb","type":"item"},{"id":250,"name":"flame-orb","type":"item"},{"id":251,"name":"quick-powder","type":"item"},{"id":252,"name":"focus-sash","type":"item"},{"id":253,"name":"zoom-lens","type":"item"},{"id":254,"name":"metronome","type":"item"},{"id":255,"name":"iron-ball","type":"item"},{"id":256,"name":"lagging-tail","type":"item"},{"id":257,"name":"destiny-knot","type":"item"},{"id":258,"name":"black-sludge","type":"item"},{"id":259,"name":"icy-rock","type":"item"},{"id":260,"name":"smooth-rock","type":"item"},{"id":261,"name":"heat-rock","type":"item"},{"id":262,"name":"damp-rock","type":"item"},{"id":263,"name":"grip-claw","type":"item"},{"id":264,"name":"choice-scarf","type":"item"},{"id":265,"name":"sticky-barb","type":"item"},{"id":266,"name":"power-bracer","type":"item"},{"id":267,"name":"power-belt","type":"item"},{"id":268,"name":"power-lens","type":"item"},{"id":269,"name":"power-band","type":"item"},{"id":270,"name":"power-anklet","type":"item"},{"id":271,"name":"power-weight","type":"item"},{"id":272,"name":"shed-shell","type":"item"},{"id":273,"name":"big-root","type":"item"},{"id":274,"name":"choice-specs","type":"item"},{"id":275,"name":"flame-plate","type":"item"},{"id":276,"name":"splash-plate","type":"item"},{"id":277,"name":"zap-plate","type":"item"},{"id":278,"name":"meadow-plate","type":"item"},{"id":279,"name":"icicle-plate","type":"item"},{"id":280,"name":"fist-plate","type":"item"},{"id":281,"name":"toxic-plate","type":"item"},{"id":282,"name":"earth-plate","type":"item"},{"id":283,"name":"sky-plate","type":"item"},{"id":284,"name":"mind-plate","type":"item"},{"id":285,"name":"insect-plate","type":"item"},{"id":286,"name":"stone-plate","type":"item"},{"id":287,"name":"spooky-plate","type":"item"},{"id":288,"name":"draco-plate","type":"item"},{"id":289,"name":"dread-plate","type":"item"},{"id":290,"name":"iron-plate","type":"item"},{"id":291,"name":"odd-incense","type":"item"},{"id":292,"name":"rock-incense","type":"item"},{"id":293,"name":"full-incense","type":"item"},{"id":294,"name":"wave-incense","type":"item"},{"id":295,"name":"rose-incense","type":"item"},{"id":296,"name":"luck-incense","type":"item"},{"id":297,"name":"pure-incense","type":"item"},{"id":298,"name":"protector","type":"item"},{"id":299,"name":"electirizer","type":"item"},{"id":300,"name":"magmarizer","type":"item"},{"id":301,"name":"dubious-disc","type":"item"},{"id":302,"name":"reaper-cloth","type":"item"},{"id":303,"name":"razor-claw","type":"item"},{"id":304,"name":"razor-fang","type":"item"},{"id":305,"name":"tm01","type":"item"},{"id":306,"name":"tm02","type":"item"},{"id":307,"name":"tm03","type":"item"},{"id":308,"name":"tm04","type":"item"},{"id":309,"name":"tm05","type":"item"},{"id":310,"name":"tm06","type":"item"},{"id":311,"name":"tm07","type":"item"},{"id":312,"name":"tm08","type":"item"},{"id":313,"name":"tm09","type":"item"},{"id":314,"name":"tm10","type":"item"},{"id":315,"name":"tm11","type":"item"},{"id":316,"name":"tm12","type":"item"},{"id":317,"name":"tm13","type":"item"},{"id":318,"name":"tm14","type":"item"},{"id":319,"name":"tm15","type":"item"},{"id":320,"name":"tm16","type":"item"},{"id":321,"name":"tm17","type":"item"},{"id":322,"name":"tm18","type":"item"},{"id":323,"name":"tm19","type":"item"},{"id":324,"name":"tm20","type":"item"},{"id":325,"name":"tm21","type":"item"},{"id":326,"name":"tm22","type":"item"},{"id":327,"name":"tm23","type":"item"},{"id":328,"name":"tm24","type":"item"},{"id":329,"name":"tm25","type":"item"},{"id":330,"name":"tm26","type":"item"},{"id":331,"name":"tm27","type":"item"},{"id":332,"name":"tm28","type":"item"},{"id":333,"name":"tm29","type":"item"},{"id":334,"name":"tm30","type":"item"},{"id":335,"name":"tm31","type":"item"},{"id":336,"name":"tm32","type":"item"},{"id":337,"name":"tm33","type":"item"},{"id":338,"name":"tm34","type":"item"},{"id":339,"name":"tm35","type":"item"},{"id":340,"name":"tm36","type":"item"},{"id":341,"name":"tm37","type":"item"},{"id":342,"name":"tm38","type":"item"},{"id":343,"name":"tm39","type":"item"},{"id":344,"name":"tm40","type":"item"},{"id":345,"name":"tm41","type":"item"},{"id":346,"name":"tm42","type":"item"},{"id":347,"name":"tm43","type":"item"},{"id":348,"name":"tm44","type":"item"},{"id":349,"name":"tm45","type":"item"},{"id":350,"name":"tm46","type":"item"},{"id":351,"name":"tm47","type":"item"},{"id":352,"name":"tm48","type":"item"},{"id":353,"name":"tm49","type":"item"},{"id":354,"name":"tm50","type":"item"},{"id":355,"name":"tm51","type":"item"},{"id":356,"name":"tm52","type":"item"},{"id":357,"name":"tm53","type":"item"},{"id":358,"name":"tm54","type":"item"},{"id":359,"name":"tm55","type":"item"},{"id":360,"name":"tm56","type":"item"},{"id":361,"name":"tm57","type":"item"},{"id":362,"name":"tm58","type":"item"},{"id":363,"name":"tm59","type":"item"},{"id":364,"name":"tm60","type":"item"},{"id":365,"name":"tm61","type":"item"},{"id":366,"name":"tm62","type":"item"},{"id":367,"name":"tm63","type":"item"},{"id":368,"name":"tm64","type":"item"},{"id":369,"name":"tm65","type":"item"},{"id":370,"name":"tm66","type":"item"},{"id":371,"name":"tm67","type":"item"},{"id":372,"name":"tm68","type":"item"},{"id":373,"name":"tm69","type":"item"},{"id":374,"name":"tm70","type":"item"},{"id":375,"name":"tm71","type":"item"},{"id":376,"name":"tm72","type":"item"},{"id":377,"name":"tm73","type":"item"},{"id":378,"name":"tm74","type":"item"},{"id":379,"name":"tm75","type":"item"},{"id":380,"name":"tm76","type":"item"},{"id":381,"name":"tm77","type":"item"},{"id":382,"name":"tm78","type":"item"},{"id":383,"name":"tm79","type":"item"},{"id":384,"name":"tm80","type":"item"},{"id":385,"name":"tm81","type":"item"},{"id":386,"name":"tm82","type":"item"},{"id":387,"name":"tm83","type":"item"},{"id":388,"name":"tm84","type":"item"},{"id":389,"name":"tm85","type":"item"},{"id":390,"name":"tm86","type":"item"},{"id":391,"name":"tm87","type":"item"},{"id":392,"name":"tm88","type":"item"},{"id":393,"name":"tm89","type":"item"},{"id":394,"name":"tm90","type":"item"},{"id":395,"name":"tm91","type":"item"},{"id":396,"name":"tm92","type":"item"},{"id":397,"name":"hm01","type":"item"},{"id":398,"name":"hm02","type":"item"},{"id":399,"name":"hm03","type":"item"},{"id":400,"name":"hm04","type":"item"},{"id":401,"name":"hm05","type":"item"},{"id":402,"name":"hm06","type":"item"},{"id":403,"name":"hm07","type":"item"},{"id":404,"name":"hm08","type":"item"},{"id":405,"name":"explorer-kit","type":"item"},{"id":406,"name":"loot-sack","type":"item"},{"id":407,"name":"rule-book","type":"item"},{"id":408,"name":"poke-radar","type":"item"},{"id":409,"name":"point-card","type":"item"},{"id":410,"name":"journal","type":"item"},{"id":411,"name":"seal-case","type":"item"},{"id":412,"name":"fashion-case","type":"item"},{"id":413,"name":"seal-bag","type":"item"},{"id":414,"name":"pal-pad","type":"item"},{"id":415,"name":"works-key","type":"item"},{"id":416,"name":"old-charm","type":"item"},{"id":417,"name":"galactic-key","type":"item"},{"id":418,"name":"red-chain","type":"item"},{"id":419,"name":"town-map","type":"item"},{"id":420,"name":"vs-seeker","type":"item"},{"id":421,"name":"coin-case","type":"item"},{"id":422,"name":"old-rod","type":"item"},{"id":423,"name":"good-rod","type":"item"},{"id":424,"name":"super-rod","type":"item"},{"id":425,"name":"sprayduck","type":"item"},{"id":426,"name":"poffin-case","type":"item"},{"id":427,"name":"bicycle","type":"item"},{"id":428,"name":"suite-key","type":"item"},{"id":429,"name":"oaks-letter","type":"item"},{"id":430,"name":"lunar-wing","type":"item"},{"id":431,"name":"member-card","type":"item"},{"id":432,"name":"azure-flute","type":"item"},{"id":433,"name":"ss-ticket","type":"item"},{"id":434,"name":"contest-pass","type":"item"},{"id":435,"name":"magma-stone","type":"item"},{"id":436,"name":"parcel","type":"item"},{"id":437,"name":"coupon-1","type":"item"},{"id":438,"name":"coupon-2","type":"item"},{"id":439,"name":"coupon-3","type":"item"},{"id":440,"name":"storage-key","type":"item"},{"id":441,"name":"secret-potion","type":"item"},{"id":442,"name":"griseous-orb","type":"item"},{"id":443,"name":"vs-recorder","type":"item"},{"id":444,"name":"gracidea","type":"item"},{"id":445,"name":"secret-key","type":"item"},{"id":446,"name":"apricorn-box","type":"item"},{"id":447,"name":"berry-pots","type":"item"},{"id":448,"name":"squirt-bottle","type":"item"},{"id":449,"name":"lure-ball","type":"item"},{"id":450,"name":"level-ball","type":"item"},{"id":451,"name":"moon-ball","type":"item"},{"id":452,"name":"heavy-ball","type":"item"},{"id":453,"name":"fast-ball","type":"item"},{"id":454,"name":"friend-ball","type":"item"},{"id":455,"name":"love-ball","type":"item"},{"id":456,"name":"park-ball","type":"item"},{"id":457,"name":"sport-ball","type":"item"},{"id":458,"name":"red-apricorn","type":"item"},{"id":459,"name":"blue-apricorn","type":"item"},{"id":460,"name":"yellow-apricorn","type":"item"},{"id":461,"name":"green-apricorn","type":"item"},{"id":462,"name":"pink-apricorn","type":"item"},{"id":463,"name":"white-apricorn","type":"item"},{"id":464,"name":"black-apricorn","type":"item"},{"id":465,"name":"dowsing-machine","type":"item"},{"id":466,"name":"rage-candy-bar","type":"item"},{"id":467,"name":"red-orb","type":"item"},{"id":468,"name":"blue-orb","type":"item"},{"id":469,"name":"jade-orb","type":"item"},{"id":470,"name":"enigma-stone","type":"item"},{"id":471,"name":"unown-report","type":"item"},{"id":472,"name":"blue-card","type":"item"},{"id":473,"name":"slowpoke-tail","type":"item"},{"id":474,"name":"clear-bell","type":"item"},{"id":475,"name":"card-key","type":"item"},{"id":476,"name":"basement-key","type":"item"},{"id":477,"name":"red-scale","type":"item"},{"id":478,"name":"lost-item","type":"item"},{"id":479,"name":"pass","type":"item"},{"id":480,"name":"machine-part","type":"item"},{"id":481,"name":"silver-wing","type":"item"},{"id":482,"name":"rainbow-wing","type":"item"},{"id":483,"name":"mystery-egg","type":"item"},{"id":484,"name":"gb-sounds","type":"item"},{"id":485,"name":"tidal-bell","type":"item"},{"id":486,"name":"data-card-01","type":"item"},{"id":487,"name":"data-card-02","type":"item"},{"id":488,"name":"data-card-03","type":"item"},{"id":489,"name":"data-card-04","type":"item"},{"id":490,"name":"data-card-05","type":"item"},{"id":491,"name":"data-card-06","type":"item"},{"id":492,"name":"data-card-07","type":"item"},{"id":493,"name":"data-card-08","type":"item"},{"id":494,"name":"data-card-09","type":"item"},{"id":495,"name":"data-card-10","type":"item"},{"id":496,"name":"data-card-11","type":"item"},{"id":497,"name":"data-card-12","type":"item"},{"id":498,"name":"data-card-13","type":"item"},{"id":499,"name":"data-card-14","type":"item"},{"id":500,"name":"data-card-15","type":"item"},{"id":501,"name":"data-card-16","type":"item"},{"id":502,"name":"data-card-17","type":"item"},{"id":503,"name":"data-card-18","type":"item"},{"id":504,"name":"data-card-19","type":"item"},{"id":505,"name":"data-card-20","type":"item"},{"id":506,"name":"data-card-21","type":"item"},{"id":507,"name":"data-card-22","type":"item"},{"id":508,"name":"data-card-23","type":"item"},{"id":509,"name":"data-card-24","type":"item"},{"id":510,"name":"data-card-25","type":"item"},{"id":511,"name":"data-card-26","type":"item"},{"id":512,"name":"data-card-27","type":"item"},{"id":513,"name":"lock-capsule","type":"item"},{"id":514,"name":"photo-album","type":"item"},{"id":515,"name":"orange-mail","type":"item"},{"id":516,"name":"harbor-mail","type":"item"},{"id":517,"name":"glitter-mail","type":"item"},{"id":518,"name":"mech-mail","type":"item"},{"id":519,"name":"wood-mail","type":"item"},{"id":520,"name":"wave-mail","type":"item"},{"id":521,"name":"bead-mail","type":"item"},{"id":522,"name":"shadow-mail","type":"item"},{"id":523,"name":"tropic-mail","type":"item"},{"id":524,"name":"dream-mail","type":"item"},{"id":525,"name":"fab-mail","type":"item"},{"id":526,"name":"retro-mail","type":"item"},{"id":527,"name":"mach-bike","type":"item"},{"id":528,"name":"acro-bike","type":"item"},{"id":529,"name":"wailmer-pail","type":"item"},{"id":530,"name":"devon-goods","type":"item"},{"id":531,"name":"soot-sack","type":"item"},{"id":532,"name":"pokeblock-case","type":"item"},{"id":533,"name":"letter","type":"item"},{"id":534,"name":"eon-ticket","type":"item"},{"id":535,"name":"scanner","type":"item"},{"id":536,"name":"go-goggles","type":"item"},{"id":537,"name":"meteorite","type":"item"},{"id":538,"name":"rm-1-key","type":"item"},{"id":539,"name":"rm-2-key","type":"item"},{"id":540,"name":"rm-4-key","type":"item"},{"id":541,"name":"rm-6-key","type":"item"},{"id":542,"name":"devon-scope","type":"item"},{"id":543,"name":"oaks-parcel","type":"item"},{"id":544,"name":"poke-flute","type":"item"},{"id":545,"name":"bike-voucher","type":"item"},{"id":546,"name":"gold-teeth","type":"item"},{"id":547,"name":"lift-key","type":"item"},{"id":548,"name":"silph-scope","type":"item"},{"id":549,"name":"fame-checker","type":"item"},{"id":550,"name":"tm-case","type":"item"},{"id":551,"name":"berry-pouch","type":"item"},{"id":552,"name":"teachy-tv","type":"item"},{"id":553,"name":"tri-pass","type":"item"},{"id":554,"name":"rainbow-pass","type":"item"},{"id":555,"name":"tea","type":"item"},{"id":556,"name":"mysticticket","type":"item"},{"id":557,"name":"auroraticket","type":"item"},{"id":558,"name":"powder-jar","type":"item"},{"id":559,"name":"ruby","type":"item"},{"id":560,"name":"sapphire","type":"item"},{"id":561,"name":"magma-emblem","type":"item"},{"id":562,"name":"old-sea-map","type":"item"},{"id":563,"name":"douse-drive","type":"item"},{"id":564,"name":"shock-drive","type":"item"},{"id":565,"name":"burn-drive","type":"item"},{"id":566,"name":"chill-drive","type":"item"},{"id":567,"name":"sweet-heart","type":"item"},{"id":568,"name":"greet-mail","type":"item"},{"id":569,"name":"favored-mail","type":"item"},{"id":570,"name":"rsvp-mail","type":"item"},{"id":571,"name":"thanks-mail","type":"item"},{"id":572,"name":"inquiry-mail","type":"item"},{"id":573,"name":"like-mail","type":"item"},{"id":574,"name":"reply-mail","type":"item"},{"id":575,"name":"bridge-mail-s","type":"item"},{"id":576,"name":"bridge-mail-d","type":"item"},{"id":577,"name":"bridge-mail-t","type":"item"},{"id":578,"name":"bridge-mail-v","type":"item"},{"id":579,"name":"bridge-mail-m","type":"item"},{"id":580,"name":"prism-scale","type":"item"},{"id":581,"name":"eviolite","type":"item"},{"id":582,"name":"float-stone","type":"item"},{"id":583,"name":"rocky-helmet","type":"item"},{"id":584,"name":"air-balloon","type":"item"},{"id":585,"name":"red-card","type":"item"},{"id":586,"name":"ring-target","type":"item"},{"id":587,"name":"binding-band","type":"item"},{"id":588,"name":"absorb-bulb","type":"item"},{"id":589,"name":"cell-battery","type":"item"},{"id":590,"name":"eject-button","type":"item"},{"id":591,"name":"fire-gem","type":"item"},{"id":592,"name":"water-gem","type":"item"},{"id":593,"name":"electric-gem","type":"item"},{"id":594,"name":"grass-gem","type":"item"},{"id":595,"name":"ice-gem","type":"item"},{"id":596,"name":"fighting-gem","type":"item"},{"id":597,"name":"poison-gem","type":"item"},{"id":598,"name":"ground-gem","type":"item"},{"id":599,"name":"flying-gem","type":"item"},{"id":600,"name":"psychic-gem","type":"item"},{"id":601,"name":"bug-gem","type":"item"},{"id":602,"name":"rock-gem","type":"item"},{"id":603,"name":"ghost-gem","type":"item"},{"id":604,"name":"dark-gem","type":"item"},{"id":605,"name":"steel-gem","type":"item"},{"id":606,"name":"health-wing","type":"item"},{"id":607,"name":"muscle-wing","type":"item"},{"id":608,"name":"resist-wing","type":"item"},{"id":609,"name":"genius-wing","type":"item"},{"id":610,"name":"clever-wing","type":"item"},{"id":611,"name":"swift-wing","type":"item"},{"id":612,"name":"pretty-wing","type":"item"},{"id":613,"name":"cover-fossil","type":"item"},{"id":614,"name":"plume-fossil","type":"item"},{"id":615,"name":"liberty-pass","type":"item"},{"id":616,"name":"pass-orb","type":"item"},{"id":617,"name":"dream-ball","type":"item"},{"id":618,"name":"poke-toy","type":"item"},{"id":619,"name":"prop-case","type":"item"},{"id":620,"name":"dragon-skull","type":"item"},{"id":621,"name":"balm-mushroom","type":"item"},{"id":622,"name":"big-nugget","type":"item"},{"id":623,"name":"pearl-string","type":"item"},{"id":624,"name":"comet-shard","type":"item"},{"id":625,"name":"relic-copper","type":"item"},{"id":626,"name":"relic-silver","type":"item"},{"id":627,"name":"relic-gold","type":"item"},{"id":628,"name":"relic-vase","type":"item"},{"id":629,"name":"relic-band","type":"item"},{"id":630,"name":"relic-statue","type":"item"},{"id":631,"name":"relic-crown","type":"item"},{"id":632,"name":"casteliacone","type":"item"},{"id":633,"name":"dire-hit-2","type":"item"},{"id":634,"name":"x-speed-2","type":"item"},{"id":635,"name":"x-sp-atk-2","type":"item"},{"id":636,"name":"x-sp-def-2","type":"item"},{"id":637,"name":"x-defense-2","type":"item"},{"id":638,"name":"x-attack-2","type":"item"},{"id":639,"name":"x-accuracy-2","type":"item"},{"id":640,"name":"x-speed-3","type":"item"},{"id":641,"name":"x-sp-atk-3","type":"item"},{"id":642,"name":"x-sp-def-3","type":"item"},{"id":643,"name":"x-defense-3","type":"item"},{"id":644,"name":"x-attack-3","type":"item"},{"id":645,"name":"x-accuracy-3","type":"item"},{"id":646,"name":"x-speed-6","type":"item"},{"id":647,"name":"x-sp-atk-6","type":"item"},{"id":648,"name":"x-sp-def-6","type":"item"},{"id":649,"name":"x-defense-6","type":"item"},{"id":650,"name":"x-attack-6","type":"item"},{"id":651,"name":"x-accuracy-6","type":"item"},{"id":652,"name":"ability-urge","type":"item"},{"id":653,"name":"item-drop","type":"item"},{"id":654,"name":"item-urge","type":"item"},{"id":655,"name":"reset-urge","type":"item"},{"id":656,"name":"dire-hit-3","type":"item"},{"id":657,"name":"light-stone","type":"item"},{"id":658,"name":"dark-stone","type":"item"},{"id":659,"name":"tm93","type":"item"},{"id":660,"name":"tm94","type":"item"},{"id":661,"name":"tm95","type":"item"},{"id":662,"name":"xtransceiver","type":"item"},{"id":663,"name":"god-stone","type":"item"},{"id":664,"name":"gram-1","type":"item"},{"id":665,"name":"gram-2","type":"item"},{"id":666,"name":"gram-3","type":"item"},{"id":668,"name":"dragon-gem","type":"item"},{"id":669,"name":"normal-gem","type":"item"},{"id":670,"name":"medal-box","type":"item"},{"id":671,"name":"dna-splicers","type":"item"},{"id":673,"name":"permit","type":"item"},{"id":674,"name":"oval-charm","type":"item"},{"id":675,"name":"shiny-charm","type":"item"},{"id":676,"name":"plasma-card","type":"item"},{"id":677,"name":"grubby-hanky","type":"item"},{"id":678,"name":"colress-machine","type":"item"},{"id":679,"name":"dropped-item","type":"item"},{"id":681,"name":"reveal-glass","type":"item"},{"id":682,"name":"weakness-policy","type":"item"},{"id":683,"name":"assault-vest","type":"item"},{"id":684,"name":"pixie-plate","type":"item"},{"id":685,"name":"ability-capsule","type":"item"},{"id":686,"name":"whipped-dream","type":"item"},{"id":687,"name":"sachet","type":"item"},{"id":688,"name":"luminous-moss","type":"item"},{"id":689,"name":"snowball","type":"item"},{"id":690,"name":"safety-goggles","type":"item"},{"id":691,"name":"rich-mulch","type":"item"},{"id":692,"name":"surprise-mulch","type":"item"},{"id":693,"name":"boost-mulch","type":"item"},{"id":694,"name":"amaze-mulch","type":"item"},{"id":695,"name":"gengarite","type":"item"},{"id":696,"name":"gardevoirite","type":"item"},{"id":697,"name":"ampharosite","type":"item"},{"id":698,"name":"venusaurite","type":"item"},{"id":699,"name":"charizardite-x","type":"item"},{"id":700,"name":"blastoisinite","type":"item"},{"id":701,"name":"mewtwonite-x","type":"item"},{"id":702,"name":"mewtwonite-y","type":"item"},{"id":703,"name":"blazikenite","type":"item"},{"id":704,"name":"medichamite","type":"item"},{"id":705,"name":"houndoominite","type":"item"},{"id":706,"name":"aggronite","type":"item"},{"id":707,"name":"banettite","type":"item"},{"id":708,"name":"tyranitarite","type":"item"},{"id":709,"name":"scizorite","type":"item"},{"id":710,"name":"pinsirite","type":"item"},{"id":711,"name":"aerodactylite","type":"item"},{"id":712,"name":"lucarionite","type":"item"},{"id":713,"name":"abomasite","type":"item"},{"id":714,"name":"kangaskhanite","type":"item"},{"id":715,"name":"gyaradosite","type":"item"},{"id":716,"name":"absolite","type":"item"},{"id":717,"name":"charizardite-y","type":"item"},{"id":718,"name":"alakazite","type":"item"},{"id":719,"name":"heracronite","type":"item"},{"id":720,"name":"mawilite","type":"item"},{"id":721,"name":"manectite","type":"item"},{"id":722,"name":"garchompite","type":"item"},{"id":723,"name":"roseli-berry","type":"item"},{"id":724,"name":"kee-berry","type":"item"},{"id":725,"name":"maranga-berry","type":"item"},{"id":726,"name":"discount-coupon","type":"item"},{"id":727,"name":"strange-souvenir","type":"item"},{"id":728,"name":"lumiose-galette","type":"item"},{"id":729,"name":"jaw-fossil","type":"item"},{"id":730,"name":"sail-fossil","type":"item"},{"id":731,"name":"fairy-gem","type":"item"},{"id":732,"name":"adventure-rules","type":"item"},{"id":733,"name":"elevator-key","type":"item"},{"id":734,"name":"holo-caster","type":"item"},{"id":735,"name":"honor-of-kalos","type":"item"},{"id":736,"name":"intriguing-stone","type":"item"},{"id":737,"name":"lens-case","type":"item"},{"id":738,"name":"looker-ticket","type":"item"},{"id":739,"name":"mega-ring","type":"item"},{"id":740,"name":"power-plant-pass","type":"item"},{"id":741,"name":"profs-letter","type":"item"},{"id":742,"name":"roller-skates","type":"item"},{"id":743,"name":"sprinklotad","type":"item"},{"id":744,"name":"tmv-pass","type":"item"},{"id":745,"name":"tm96","type":"item"},{"id":746,"name":"tm97","type":"item"},{"id":747,"name":"tm98","type":"item"},{"id":748,"name":"tm99","type":"item"},{"id":749,"name":"tm100","type":"item"},{"id":760,"name":"latiasite","type":"item"},{"id":761,"name":"latiosite","type":"item"},{"id":762,"name":"common-stone","type":"item"},{"id":763,"name":"makeup-bag","type":"item"},{"id":764,"name":"travel-trunk","type":"item"},{"id":765,"name":"shalour-sable","type":"item"},{"id":768,"name":"mega-charm","type":"item"},{"id":769,"name":"mega-glove","type":"item"},{"id":770,"name":"devon-parts","type":"item"},{"id":772,"name":"pokeblock-kit","type":"item"},{"id":773,"name":"key-to-room-1","type":"item"},{"id":774,"name":"key-to-room-2","type":"item"},{"id":775,"name":"key-to-room-4","type":"item"},{"id":776,"name":"key-to-room-6","type":"item"},{"id":779,"name":"devon-scuba-gear","type":"item"},{"id":780,"name":"contest-costume--jacket","type":"item"},{"id":782,"name":"magma-suit","type":"item"},{"id":783,"name":"aqua-suit","type":"item"},{"id":784,"name":"pair-of-tickets","type":"item"},{"id":785,"name":"mega-bracelet","type":"item"},{"id":786,"name":"mega-pendant","type":"item"},{"id":787,"name":"mega-glasses","type":"item"},{"id":788,"name":"mega-anchor","type":"item"},{"id":789,"name":"mega-stickpin","type":"item"},{"id":790,"name":"mega-tiara","type":"item"},{"id":791,"name":"mega-anklet","type":"item"},{"id":793,"name":"swampertite","type":"item"},{"id":794,"name":"sceptilite","type":"item"},{"id":795,"name":"sablenite","type":"item"},{"id":796,"name":"altarianite","type":"item"},{"id":797,"name":"galladite","type":"item"},{"id":798,"name":"audinite","type":"item"},{"id":799,"name":"metagrossite","type":"item"},{"id":800,"name":"sharpedonite","type":"item"},{"id":801,"name":"slowbronite","type":"item"},{"id":802,"name":"steelixite","type":"item"},{"id":803,"name":"pidgeotite","type":"item"},{"id":804,"name":"glalitite","type":"item"},{"id":805,"name":"diancite","type":"item"},{"id":806,"name":"prison-bottle","type":"item"},{"id":807,"name":"mega-cuff","type":"item"},{"id":808,"name":"cameruptite","type":"item"},{"id":809,"name":"lopunnite","type":"item"},{"id":810,"name":"salamencite","type":"item"},{"id":811,"name":"beedrillite","type":"item"},{"id":814,"name":"key-stone","type":"item"},{"id":815,"name":"meteorite-shard","type":"item"},{"id":816,"name":"eon-flute","type":"item"},{"id":817,"name":"normalium-z--held","type":"item"},{"id":818,"name":"firium-z--held","type":"item"},{"id":819,"name":"waterium-z--held","type":"item"},{"id":820,"name":"electrium-z--held","type":"item"},{"id":821,"name":"grassium-z--held","type":"item"},{"id":822,"name":"icium-z--held","type":"item"},{"id":823,"name":"fightinium-z--held","type":"item"},{"id":824,"name":"poisonium-z--held","type":"item"},{"id":825,"name":"groundium-z--held","type":"item"},{"id":826,"name":"flyinium-z--held","type":"item"},{"id":827,"name":"psychium-z--held","type":"item"},{"id":828,"name":"buginium-z--held","type":"item"},{"id":829,"name":"rockium-z--held","type":"item"},{"id":830,"name":"ghostium-z--held","type":"item"},{"id":831,"name":"dragonium-z--held","type":"item"},{"id":832,"name":"darkinium-z--held","type":"item"},{"id":833,"name":"steelium-z--held","type":"item"},{"id":834,"name":"fairium-z--held","type":"item"},{"id":835,"name":"pikanium-z--held","type":"item"},{"id":836,"name":"bottle-cap","type":"item"},{"id":837,"name":"gold-bottle-cap","type":"item"},{"id":838,"name":"z-ring","type":"item"},{"id":839,"name":"decidium-z--held","type":"item"},{"id":840,"name":"incinium-z--held","type":"item"},{"id":841,"name":"primarium-z--held","type":"item"},{"id":842,"name":"tapunium-z--held","type":"item"},{"id":843,"name":"marshadium-z--held","type":"item"},{"id":844,"name":"aloraichium-z--held","type":"item"},{"id":845,"name":"snorlium-z--held","type":"item"},{"id":846,"name":"eevium-z--held","type":"item"},{"id":847,"name":"mewnium-z--held","type":"item"},{"id":877,"name":"pikashunium-z--held","type":"item"},{"id":878,"name":"forage-bag","type":"item"},{"id":879,"name":"fishing-rod","type":"item"},{"id":880,"name":"professors-mask","type":"item"},{"id":881,"name":"festival-ticket","type":"item"},{"id":882,"name":"sparkling-stone","type":"item"},{"id":883,"name":"adrenaline-orb","type":"item"},{"id":884,"name":"zygarde-cube","type":"item"},{"id":885,"name":"ice-stone","type":"item"},{"id":886,"name":"ride-pager","type":"item"},{"id":887,"name":"beast-ball","type":"item"},{"id":888,"name":"big-malasada","type":"item"},{"id":889,"name":"red-nectar","type":"item"},{"id":890,"name":"yellow-nectar","type":"item"},{"id":891,"name":"pink-nectar","type":"item"},{"id":892,"name":"purple-nectar","type":"item"},{"id":893,"name":"sun-flute","type":"item"},{"id":894,"name":"moon-flute","type":"item"},{"id":895,"name":"enigmatic-card","type":"item"},{"id":896,"name":"terrain-extender","type":"item"},{"id":897,"name":"protective-pads","type":"item"},{"id":898,"name":"electric-seed","type":"item"},{"id":899,"name":"psychic-seed","type":"item"},{"id":900,"name":"misty-seed","type":"item"},{"id":901,"name":"grassy-seed","type":"item"},{"id":902,"name":"fighting-memory","type":"item"},{"id":903,"name":"flying-memory","type":"item"},{"id":904,"name":"poison-memory","type":"item"},{"id":905,"name":"ground-memory","type":"item"},{"id":906,"name":"rock-memory","type":"item"},{"id":907,"name":"bug-memory","type":"item"},{"id":908,"name":"ghost-memory","type":"item"},{"id":909,"name":"steel-memory","type":"item"},{"id":910,"name":"fire-memory","type":"item"},{"id":911,"name":"water-memory","type":"item"},{"id":912,"name":"grass-memory","type":"item"},{"id":913,"name":"electric-memory","type":"item"},{"id":914,"name":"psychic-memory","type":"item"},{"id":915,"name":"ice-memory","type":"item"},{"id":916,"name":"dragon-memory","type":"item"},{"id":917,"name":"dark-memory","type":"item"},{"id":918,"name":"fairy-memory","type":"item"}]
+
+/***/ }),
+/* 124 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+
+var _react = __webpack_require__(0);
+
+var _react2 = _interopRequireDefault(_react);
+
+var _DexItem = __webpack_require__(125);
+
+var _DexItem2 = _interopRequireDefault(_DexItem);
+
+var _Components = __webpack_require__(2);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+var DexItem = function DexItem(props) {
+    console.log(props);
+    var item = props.data;
+    var flavor_text = item.flavor_text,
+        effect_entries = item.effect_entries,
+        category = item.category,
+        cost = item.cost,
+        fling_effect = item.fling_effect,
+        fling_power = item.fling_power,
+        machine = item.machine;
+
+    var name = item.name.replace('-', ' ').replace(/\b(\w)/g, function (m) {
+        return m.toUpperCase();
+    });
+    var itemData = [['Category', _react2.default.createElement(_Components.PokeLink, { name: category, type: 'glossary' })], ['Cost', cost], ['Fling power', fling_power], ['Fling effect', fling_effect], ['TM', machine ? _react2.default.createElement(_Components.PokeLink, { id: machine.id, name: machine.name, type: 'move' }) : '-']];
+
+    var held_by = null;
+    if (item.pokemon.length) {
+        held_by = _react2.default.createElement(
+            'div',
+            { className: _DexItem2.default.section },
+            _react2.default.createElement(
+                'h5',
+                null,
+                name,
+                ' can be found on'
+            ),
+            _react2.default.createElement(_Components.PokeTable, { listItem: _Components.PokelistItem, data: item.pokemon, headers: 'pokelist' })
+        );
+    }
+
+    return _react2.default.createElement(
+        'div',
+        null,
+        _react2.default.createElement(
+            'h3',
+            null,
+            'Item: ',
+            name
+        ),
+        _react2.default.createElement(
+            'div',
+            { className: _DexItem2.default.about },
+            _react2.default.createElement(
+                'p',
+                null,
+                _react2.default.createElement(
+                    'span',
+                    { className: _DexItem2.default.keyword },
+                    'Pokedex: '
+                ),
+                _react2.default.createElement(
+                    'em',
+                    null,
+                    flavor_text
+                )
+            ),
+            _react2.default.createElement(
+                'p',
+                null,
+                _react2.default.createElement(
+                    'span',
+                    { className: _DexItem2.default.keyword },
+                    'Short description: '
+                ),
+                _react2.default.createElement(
+                    'em',
+                    null,
+                    effect_entries.short_effect
+                )
+            ),
+            _react2.default.createElement(
+                'p',
+                null,
+                _react2.default.createElement(
+                    'span',
+                    { className: _DexItem2.default.keyword },
+                    'Description: '
+                ),
+                _react2.default.createElement(
+                    'em',
+                    null,
+                    effect_entries.effect
+                )
+            )
+        ),
+        _react2.default.createElement(
+            'div',
+            { className: _DexItem2.default.about },
+            _react2.default.createElement(_Components.DataTable, { data: itemData })
+        ),
+        held_by
+    );
+};
+
+exports.default = DexItem;
+
+/***/ }),
+/* 125 */
+/***/ (function(module, exports) {
+
+// removed by extract-text-webpack-plugin
+module.exports = {"section":"DexItem__section___3UILua","about":"DexItem__about___dJq3gx","keyword":"DexItem__keyword___3vLIp3","button":"DexItem__button___pMeqso"};
+
+/***/ }),
+/* 126 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+
+var _react = __webpack_require__(0);
+
+var _react2 = _interopRequireDefault(_react);
+
+var _DexMove = __webpack_require__(127);
+
+var _DexMove2 = _interopRequireDefault(_DexMove);
+
+var _Components = __webpack_require__(2);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+var createPokemonList = function createPokemonList(pokeArr, learnBy) {
+    if (!pokeArr.length) {
+        return null;
+    }
+    return _react2.default.createElement(
+        'div',
+        { className: _DexMove2.default.section },
+        _react2.default.createElement(
+            'h5',
+            null,
+            'List of pokemons that can learn this move by ',
+            learnBy,
+            '.'
+        ),
+        _react2.default.createElement(_Components.PokeTable, { headers: 'pokelist', data: pokeArr, listItem: _Components.PokelistItem })
+    );
+};
+
+var createTMLink = function createTMLink(machine) {
+    var name = machine.name.toUpperCase();
+    return _react2.default.createElement(_Components.PokeLink, { id: machine.id, name: name, type: 'item' });
+};
+
+var addEffectChance = function addEffectChance(descr, chance) {
+    return descr.replace('$effect_chance', chance);
+};
+
+var DexMove = function DexMove(props) {
+    var move = props.data;
+    console.log(move);
+    var _move$pokemon = move.pokemon,
+        egg = _move$pokemon.egg,
+        machine = _move$pokemon.machine,
+        tutor = _move$pokemon.tutor,
+        level_up = _move$pokemon.level_up;
+
+    var name = move.name.replace(/\b(\w)/g, function (m) {
+        return m.toUpperCase();
+    });
+    var moveData = [['Damage Class', _react2.default.createElement(_Components.MoveClass, { data: move.damage_class })], ['Power', move.power], ['PP', move.pp], ['Accuracy', move.accuracy], ['Priority', move.priority], ['Effect Chance', move.effect_chance ? move.effect_chance : '-'], ['TM', move.machine ? createTMLink(move.machine) : '-']];
+    var effectShort = addEffectChance(move.effect_entries.short_effect, move.effect_chance);
+    var effect = addEffectChance(move.effect_entries.effect, move.effect_chance);
+
+    return _react2.default.createElement(
+        'div',
+        null,
+        _react2.default.createElement(
+            'h3',
+            null,
+            'Move: ',
+            name
+        ),
+        _react2.default.createElement(
+            'div',
+            { className: _DexMove2.default.about },
+            _react2.default.createElement(
+                'p',
+                null,
+                _react2.default.createElement(
+                    'span',
+                    { className: _DexMove2.default.keyword },
+                    'Pokedex: '
+                ),
+                _react2.default.createElement(
+                    'em',
+                    null,
+                    move.flavor_text
+                )
+            ),
+            _react2.default.createElement(
+                'p',
+                null,
+                _react2.default.createElement(
+                    'span',
+                    { className: _DexMove2.default.keyword },
+                    'Short description: '
+                ),
+                _react2.default.createElement(
+                    'em',
+                    null,
+                    effectShort
+                )
+            ),
+            _react2.default.createElement(
+                'p',
+                null,
+                _react2.default.createElement(
+                    'span',
+                    { className: _DexMove2.default.keyword },
+                    'Description: '
+                ),
+                _react2.default.createElement(
+                    'em',
+                    null,
+                    effect
+                )
+            )
+        ),
+        _react2.default.createElement(
+            'div',
+            { className: _DexMove2.default.about },
+            _react2.default.createElement(
+                'h5',
+                null,
+                'Move stats'
+            ),
+            _react2.default.createElement(_Components.DataTable, { data: moveData })
+        ),
+        createPokemonList(egg, 'breeding'),
+        createPokemonList(level_up, 'level'),
+        createPokemonList(machine, 'TM'),
+        createPokemonList(tutor, 'tutor')
+    );
+};
+
+exports.default = DexMove;
+
+/***/ }),
+/* 127 */
+/***/ (function(module, exports) {
+
+// removed by extract-text-webpack-plugin
+module.exports = {"section":"DexMove__section___14z5RS","about":"DexMove__about___2BNXEf","keyword":"DexMove__keyword___Qlwx0l","button":"DexMove__button___3W0nJr"};
+
+/***/ }),
+/* 128 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+
+var _react = __webpack_require__(0);
+
+var _react2 = _interopRequireDefault(_react);
+
+var _DexPokemon = __webpack_require__(129);
+
+var _DexPokemon2 = _interopRequireDefault(_DexPokemon);
+
+var _Components = __webpack_require__(2);
+
+var _Components2 = __webpack_require__(130);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+var mapAbilities = function mapAbilities(abilities) {
+    return abilities.sort(function (a, b) {
+        return a.slot - b.slot;
+    }).map(function (e) {
+        var id = e.id;
+        var name = e.name;
+        var infoText = e.is_hidden ? '(hidden)' : null;
+        return _react2.default.createElement(_Components.PokeLink, { key: name,
+            name: name, id: id,
+            info: infoText, type: 'ability' });
+    });
+};
+
+var mapEggGroups = function mapEggGroups(egg) {
+    return egg.map(function (e) {
+        return _react2.default.createElement(_Components.PokeLink, { key: e.id, name: e.name, id: e.id, type: 'egg_group' });
+    });
+};
+
+var getStats = function getStats(stats) {
+    var statsObj = {};
+    stats.forEach(function (el) {
+        statsObj[el.stat.name] = el.base_stat;
+    });
+    return statsObj;
+};
+
+var mapHeldItems = function mapHeldItems(heldItemsArr) {
+    if (!heldItemsArr.length) {
+        return '-';
+    }
+    return heldItemsArr.map(function (item) {
+        return _react2.default.createElement(_Components.PokeLink, { key: item.id,
+            id: item.id,
+            name: item.name,
+            info: item.rarity + '%',
+            type: 'item' });
+    });
+};
+
+var getMoveList = function getMoveList(moveArr, method) {
+    if (!moveArr.length) {
+        return null;
+    }
+    return _react2.default.createElement(
+        'div',
+        { className: _DexPokemon2.default.section },
+        _react2.default.createElement(
+            'h5',
+            null,
+            'Moves learned by ',
+            method
+        ),
+        _react2.default.createElement(_Components.PokeTable, { headers: 'movelist', listItem: _Components.MovelistItem, data: moveArr })
+    );
+};
+
+var DexPokemon = function DexPokemon(props) {
+    var data = props.data;
+    var _data$stats = data.stats,
+        hp = _data$stats.hp,
+        speed = _data$stats.speed,
+        special_attack = _data$stats.special_attack,
+        special_defense = _data$stats.special_defense,
+        attack = _data$stats.attack,
+        defense = _data$stats.defense;
+
+    var catchValue = (hp.base * data.capture_rate / (3 * hp.base) / 2.55).toFixed(1);
+    var pokedexData = [['Pokedex No', data.id], ['Type', _react2.default.createElement(_Components.PokeType, { type: data.types })], ['Height', (data.height * 0.1).toFixed(1) + ' m'], ['Weight', (data.weight * 0.1).toFixed(1) + ' kg'], ['Abilities', mapAbilities(data.abilities)], ['Held Items', mapHeldItems(data.held_items)]];
+    var genderRate = 'Genderless';
+    if (data.gender_rate > 0) {
+        genderRate = '\u2642 ' + (8 - data.gender_rate) * 12.5 + '%\n\u2640 ' + data.gender_rate * 12.5 + '%';
+    }
+    var breedTrainData = [['Catch rate', data.capture_rate + ' (' + catchValue + '% at max HP)'], ['Base EXP', data.base_experience], ['Growth rate', data.growth_rate], ['Egg groups', mapEggGroups(data.egg_groups)], ['Gender', genderRate], ['Egg cycles', data.hatch_counter]];
+    var statsData = [hp.base, attack.base, defense.base, special_attack.base, special_defense.base, speed.base];
+    var prevId = data.id - 1 ? data.id - 1 : 802;
+    var nextId = data.id + 1 < 803 ? data.id + 1 : 1;
+    var navBtns = [_react2.default.createElement(_Components.PokeLink, { key: 'prev', name: '← #' + prevId, id: prevId, type: 'pokemon' }), _react2.default.createElement(_Components.PokeLink, { key: 'next', name: '#' + nextId + ' →', id: nextId, type: 'pokemon' })];
+    return _react2.default.createElement(
+        'div',
+        null,
+        _react2.default.createElement(
+            'div',
+            { className: _DexPokemon2.default.nav },
+            navBtns,
+            _react2.default.createElement(
+                'h3',
+                { className: _DexPokemon2.default.dexTitle },
+                'Pokemon: ',
+                data.name.replace(/\b(\w)/g, function (m) {
+                    return m.toUpperCase();
+                })
+            )
+        ),
+        _react2.default.createElement(
+            'div',
+            { className: _DexPokemon2.default.showcase },
+            _react2.default.createElement(_Components.PokeImg, { id: data.id, cl: 'md' }),
+            _react2.default.createElement(
+                'span',
+                { className: _DexPokemon2.default.flavorText },
+                data.flavor_text
+            )
+        ),
+        _react2.default.createElement(_Components2.PokeForm, { data: data.forms, id: data.id }),
+        _react2.default.createElement(_Components2.PokeEvo, { data: data.evolution_chain, id: data.id }),
+        _react2.default.createElement(
+            'div',
+            { className: _DexPokemon2.default.info },
+            _react2.default.createElement(
+                'div',
+                { className: _DexPokemon2.default.dataSection },
+                _react2.default.createElement(
+                    'h5',
+                    null,
+                    'Pokedex Data'
+                ),
+                _react2.default.createElement(_Components.DataTable, { data: pokedexData })
+            ),
+            _react2.default.createElement(
+                'div',
+                { className: _DexPokemon2.default.dataSection },
+                _react2.default.createElement(
+                    'h5',
+                    null,
+                    'Training & Breeding'
+                ),
+                _react2.default.createElement(_Components.DataTable, { data: breedTrainData })
+            )
+        ),
+        _react2.default.createElement(
+            'div',
+            { className: _DexPokemon2.default.about },
+            _react2.default.createElement(
+                'h5',
+                null,
+                'Base stats'
+            ),
+            _react2.default.createElement(_Components2.PokeStats, { data: statsData })
+        ),
+        _react2.default.createElement(
+            'div',
+            { className: _DexPokemon2.default.about },
+            _react2.default.createElement(_Components.DamageRelations, { type: data.types })
+        ),
+        getMoveList(data.moves.level_up, 'level up'),
+        getMoveList(data.moves.egg, 'breeding'),
+        getMoveList(data.moves.machine, 'TM'),
+        getMoveList(data.moves.tutor, 'tutor')
+    );
+};
+
+exports.default = DexPokemon;
+
+/***/ }),
+/* 129 */
+/***/ (function(module, exports) {
+
+// removed by extract-text-webpack-plugin
+module.exports = {"section":"DexPokemon__section___1tkI20","about":"DexPokemon__about___3KZZ2H","flexWrapper":"DexPokemon__flexWrapper___27fWVD","showcase":"DexPokemon__showcase___35BRG5","info":"DexPokemon__info___1bKQKg","keyword":"DexPokemon__keyword___3Gf5oZ","button":"DexPokemon__button___3usWVe","nav":"DexPokemon__nav___3wAcO9","flavorText":"DexPokemon__flavorText___277gss","dataSection":"DexPokemon__dataSection___hsI3el"};
+
+/***/ }),
+/* 130 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+exports.PokeForm = exports.PokeStats = exports.PokeEvo = undefined;
+
+var _PokeEvo = __webpack_require__(131);
+
+var _PokeEvo2 = _interopRequireDefault(_PokeEvo);
+
+var _PokeStats = __webpack_require__(133);
+
+var _PokeStats2 = _interopRequireDefault(_PokeStats);
+
+var _PokeForm = __webpack_require__(135);
+
+var _PokeForm2 = _interopRequireDefault(_PokeForm);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+exports.PokeEvo = _PokeEvo2.default;
+exports.PokeStats = _PokeStats2.default;
+exports.PokeForm = _PokeForm2.default;
+
+/***/ }),
+/* 131 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+
+var _react = __webpack_require__(0);
+
+var _react2 = _interopRequireDefault(_react);
+
+var _PokeEvo = __webpack_require__(132);
+
+var _PokeEvo2 = _interopRequireDefault(_PokeEvo);
+
+var _Components = __webpack_require__(2);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+var getEvolutions = function getEvolutions(chain, arr) {
+    var allEvoArr = [];
+    var mapEvolutions = function mapEvolutions(evoChain, arrToPush, i) {
+        var id = evoChain.species.id;
+        arrToPush.push({
+            index: i,
+            id: id,
+            name: evoChain.species.name,
+            details: evoChain.evolution_details
+        });
+        evoChain.evolves_to.map(function (evolvesTo) {
+            mapEvolutions(evolvesTo, allEvoArr, i + 1);
+        });
+    };
+    mapEvolutions(chain, allEvoArr, 0);
+    var evolutions = [];
+    allEvoArr.forEach(function (evo) {
+        var i = evo.index;
+        var step = evolutions[i] ? evolutions[i] : [];
+        step.push(evo);
+        evolutions[i] = step;
+    });
+    return evolutions;
+};
+
+var mapEvoDetails = function mapEvoDetails(details) {
+    if (!details) return null;
+    var detailArr = [];
+    if (details.trigger === 'trade') {
+        detailArr.push(_react2.default.createElement(
+            'div',
+            { key: 'trade' },
+            'Trade'
+        ));
+    }
+    if (details.min_level) {
+        detailArr.push(_react2.default.createElement(
+            'div',
+            { key: 'lvl' },
+            'Lvl: ',
+            details.min_level
+        ));
+    }
+    if (details.min_beauty) {
+        detailArr.push(_react2.default.createElement(
+            'div',
+            { key: 'beauty' },
+            'Beauty: ',
+            details.min_beauty
+        ));
+    }
+    if (details.time_of_day.length) {
+        detailArr.push(_react2.default.createElement(
+            'div',
+            { key: 'time' },
+            details.time_of_day.replace(/\b(\w)/g, function (m) {
+                return m.toUpperCase();
+            })
+        ));
+    }
+    if (details.gender) {
+        detailArr.push(_react2.default.createElement(
+            'div',
+            { key: 'gender' },
+            details.gender === 2 ? '♂' : '♀'
+        ));
+    }
+    if (details.relative_physical_stats !== null) {
+        switch (details.relative_physical_stats) {
+            case 0:
+                detailArr.push(_react2.default.createElement(
+                    'div',
+                    { key: 'phys' },
+                    'Att = Def'
+                ));
+                break;
+            case 1:
+                detailArr.push(_react2.default.createElement(
+                    'div',
+                    { key: 'phys' },
+                    'Att > Def'
+                ));
+                break;
+            default:
+                detailArr.push(_react2.default.createElement(
+                    'div',
+                    { key: 'phys' },
+                    'Att < Def'
+                ));
+        }
+    }
+    if (details.needs_overworld_rain) {
+        detailArr.push(_react2.default.createElement(
+            'div',
+            { key: 'rain' },
+            'Rain in overworld'
+        ));
+    }
+    if (details.turn_upside_down) {
+        detailArr.push(_react2.default.createElement(
+            'div',
+            { key: 'turn' },
+            'Turn upside down'
+        ));
+    }
+    if (details.item) {
+        var id = details.item.id;
+        var name = details.item.name.replace(/\b(\w)/g, function (m) {
+            return m.toUpperCase();
+        });
+        detailArr.push(_react2.default.createElement(
+            'div',
+            { key: 'item' },
+            'Use ',
+            _react2.default.createElement(_Components.PokeLink, { id: id, name: name, type: 'item' })
+        ));
+    }
+    if (details.known_move_type) {
+        var _id = details.known_move_type.id;
+        var _name = details.known_move_type.name.replace(/\b(\w)/g, function (m) {
+            return m.toUpperCase();
+        });
+        detailArr.push(_react2.default.createElement(
+            'div',
+            { key: 'moveType' },
+            'Knows ',
+            _react2.default.createElement(_Components.PokeLink, { id: _id, name: _name, type: 'type' }),
+            ' move'
+        ));
+    }
+    if (details.min_affection) {
+        detailArr.push(_react2.default.createElement(
+            'div',
+            { key: 'affection' },
+            'Affection: ',
+            details.min_affection
+        ));
+    }
+    if (details.party_type) {
+        var _id2 = details.party_type.id;
+        var _name2 = details.party_type.name.replace(/\b(\w)/g, function (m) {
+            return m.toUpperCase();
+        });
+        detailArr.push(_react2.default.createElement(
+            'div',
+            { key: 'partyType' },
+            'With ',
+            _react2.default.createElement(_Components.PokeLink, { id: _id2, name: _name2, type: 'type' }),
+            ' pokemon in party.'
+        ));
+    }
+    if (details.trade_species) {
+        var _id3 = details.trade_species.id;
+        var _name3 = details.trade_species.name.replace(/\b(\w)/g, function (m) {
+            return m.toUpperCase();
+        });
+        detailArr.push(_react2.default.createElement(
+            'div',
+            { key: 'tradeSpec' },
+            'For ',
+            _react2.default.createElement(_Components.PokeLink, { id: _id3, name: _name3, type: 'pokemon' })
+        ));
+    }
+    if (details.party_species) {
+        var _id4 = details.party_species.id;
+        var _name4 = details.party_species.name.replace(/\b(\w)/g, function (m) {
+            return m.toUpperCase();
+        });
+        detailArr.push(_react2.default.createElement(
+            'div',
+            { key: 'partySpec' },
+            'With ',
+            _react2.default.createElement(_Components.PokeLink, { id: _id4, name: _name4, type: 'pokemon' }),
+            ' in party'
+        ));
+    }
+    if (details.min_happiness) {
+        detailArr.push(_react2.default.createElement(
+            'div',
+            { key: 'happiness' },
+            'Happiness: ',
+            details.min_happiness
+        ));
+    }
+    if (details.held_item) {
+        var _id5 = details.held_item.id;
+        var _name5 = details.held_item.name.replace(/\b(\w)/g, function (m) {
+            return m.toUpperCase();
+        });
+        detailArr.push(_react2.default.createElement(
+            'div',
+            { key: 'heldItem' },
+            'Has ',
+            _react2.default.createElement(_Components.PokeLink, { id: _id5, name: _name5, type: 'item' })
+        ));
+    }
+    if (details.known_move) {
+        var _id6 = details.known_move.id;
+        var _name6 = details.known_move.name.replace(/\b(\w)/g, function (m) {
+            return m.toUpperCase();
+        });
+        detailArr.push(_react2.default.createElement(
+            'div',
+            { key: 'move' },
+            'Knows ',
+            _react2.default.createElement(_Components.PokeLink, { id: _id6, name: _name6, type: 'move' })
+        ));
+    }
+    if (details.location) {
+        var _name7 = details.location.replace(/\b(\w)/g, function (m) {
+            return m.toUpperCase();
+        });
+        detailArr.push(_react2.default.createElement(
+            'div',
+            { key: 'location' },
+            'Near ',
+            _react2.default.createElement(_Components.PokeLink, { id: 0, name: _name7, type: 'glossary' })
+        ));
+    }
+    return _react2.default.createElement(
+        'div',
+        { key: details, className: _PokeEvo2.default.details },
+        detailArr
+    );
+};
+
+var parseEvo = function parseEvo(evolutions, id) {
+    return evolutions.map(function (evo, i) {
+        return _react2.default.createElement(
+            'div',
+            { key: i, className: _PokeEvo2.default.row },
+            evo.map(function (poke) {
+                var details = i ? _react2.default.createElement(
+                    'div',
+                    { className: _PokeEvo2.default.arrow },
+                    mapEvoDetails(poke.details)
+                ) : null;
+                var pokeImg = _react2.default.createElement(
+                    _Components.PokeLink,
+                    { name: poke.name, id: poke.id, type: 'pokemon' },
+                    _react2.default.createElement(_Components.PokeImg, { id: poke.id })
+                );
+                if (id === poke.id) {
+                    pokeImg = _react2.default.createElement(_Components.PokeImg, { id: poke.id });
+                }
+                return _react2.default.createElement(
+                    'div',
+                    { className: _PokeEvo2.default.item, key: poke.id },
+                    details,
+                    pokeImg
+                );
+            })
+        );
+    });
+};
+
+var PokeEvo = function PokeEvo(props) {
+    var _props$data = props.data,
+        chain = _props$data.chain,
+        id = _props$data.id;
+
+    if (props.id > 802) return null;
+    var evolutions = getEvolutions(chain, evolutions);
+    if (evolutions.length < 2) return null;
+    console.log(evolutions);
+    return _react2.default.createElement(
+        'div',
+        { className: _PokeEvo2.default.evolution },
+        parseEvo(evolutions, props.id)
+    );
+};
+
+exports.default = PokeEvo;
+
+/***/ }),
+/* 132 */
+/***/ (function(module, exports) {
+
+// removed by extract-text-webpack-plugin
+module.exports = {"section":"PokeEvo__section___3HGH6Q","about":"PokeEvo__about___26OW4Y","evolution":"PokeEvo__evolution___XlF5Lq","keyword":"PokeEvo__keyword___1ovlXj","button":"PokeEvo__button___2vW5IH","row":"PokeEvo__row___34QO03","item":"PokeEvo__item___2YZeaz","arrow":"PokeEvo__arrow___1S27fg","details":"PokeEvo__details___2yEb98"};
+
+/***/ }),
+/* 133 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+
+var _react = __webpack_require__(0);
+
+var _react2 = _interopRequireDefault(_react);
+
+var _PokeStats = __webpack_require__(134);
+
+var _PokeStats2 = _interopRequireDefault(_PokeStats);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+var mapData = function mapData(statArr) {
+    var maxStats = [255, 181, 230, 173, 230, 160];
+    var statText = ['HP', 'Attack', 'Defense', 'Sp. Attack', 'Sp. Defense', 'Speed'];
+    return statArr.map(function (e, i) {
+        var max = maxStats[i];
+        var width = Math.min(~~(e / max * 100), 100);
+        var rg = [200 - ~~(width * 1.5), 100 + ~~(width * 1.4)];
+        var style = {
+            width: width + '%',
+            backgroundColor: 'rgb(' + rg[0] + ', ' + rg[1] + ', 0)'
+        };
+        return _react2.default.createElement(
+            'div',
+            { key: statText[i], className: _PokeStats2.default.row },
+            statText[i],
+            _react2.default.createElement(
+                'div',
+                { className: _PokeStats2.default.bar, style: style },
+                e
+            )
+        );
+    });
+};
+
+var PokeStats = function PokeStats(props) {
+    return _react2.default.createElement(
+        'div',
+        null,
+        mapData(props.data)
+    );
+};
+
+exports.default = PokeStats;
+
+/***/ }),
+/* 134 */
+/***/ (function(module, exports) {
+
+// removed by extract-text-webpack-plugin
+module.exports = {"section":"PokeStats__section___18SXs_","about":"PokeStats__about___YzHQe5","keyword":"PokeStats__keyword___374j-h","button":"PokeStats__button___ZAfoZc","row":"PokeStats__row___OSULaT","bar":"PokeStats__bar___3aBnF0"};
+
+/***/ }),
+/* 135 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+
+var _react = __webpack_require__(0);
+
+var _react2 = _interopRequireDefault(_react);
+
+var _PokeForm = __webpack_require__(136);
+
+var _PokeForm2 = _interopRequireDefault(_PokeForm);
+
+var _Components = __webpack_require__(2);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+var mapPokeForms = function mapPokeForms(data, id) {
+    return data.filter(function (f) {
+        return f.id !== id;
+    }).map(function (f) {
+        return _react2.default.createElement(
+            'div',
+            { key: f.id, className: _PokeForm2.default.item },
+            _react2.default.createElement(
+                _Components.PokeLink,
+                { name: f.name, id: f.id, type: 'pokemon' },
+                _react2.default.createElement(_Components.PokeImg, { id: f.id })
+            )
+        );
+    });
+};
+
+var PokeForm = function PokeForm(props) {
+    var id = props.id,
+        data = props.data;
+
+    if (data.length < 2) {
+        return null;
+    }
+    return _react2.default.createElement(
+        'div',
+        { className: _PokeForm2.default.wrapper },
+        mapPokeForms(data, id)
+    );
+};
+
+exports.default = PokeForm;
+
+/***/ }),
+/* 136 */
+/***/ (function(module, exports) {
+
+// removed by extract-text-webpack-plugin
+module.exports = {"section":"PokeForm__section___3L5pEE","about":"PokeForm__about___25DmsU","wrapper":"PokeForm__wrapper___2cgWIR","keyword":"PokeForm__keyword___1a0WFA","button":"PokeForm__button___3v42QJ","item":"PokeForm__item___1il4ff"};
+
+/***/ }),
+/* 137 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+
+var _react = __webpack_require__(0);
+
+var _react2 = _interopRequireDefault(_react);
+
+var _DexType = __webpack_require__(138);
+
+var _DexType2 = _interopRequireDefault(_DexType);
+
+var _Components = __webpack_require__(2);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+var DexType = function DexType(props) {
+    var _props$data = props.data,
+        name = _props$data.name,
+        damage = _props$data.damage,
+        pokemon = _props$data.pokemon,
+        moves = _props$data.moves;
+
+    return _react2.default.createElement(
+        'div',
+        null,
+        _react2.default.createElement(
+            'h3',
+            null,
+            'Type: ',
+            name.slice(0, 1).toUpperCase() + name.slice(1)
+        ),
+        _react2.default.createElement(
+            'div',
+            { className: _DexType2.default.about },
+            _react2.default.createElement(
+                'h5',
+                null,
+                'Damage effectiveness.'
+            ),
+            _react2.default.createElement(
+                'p',
+                null,
+                'Ofense damage effectiveness chart shows how effective is ',
+                name,
+                ' type attack against other types. Number below type is the number that multiplies the damage when types are considered in damage output calculation.'
+            ),
+            _react2.default.createElement(
+                'p',
+                null,
+                'Defense damage chart shows how effective are other type attacks against ',
+                name,
+                ' type pokemon. For example: 0.5 stands for 50% of total damage is received and this means attack is not very effective against ',
+                name,
+                ' type pokemon.'
+            )
+        ),
+        _react2.default.createElement(
+            'div',
+            { className: _DexType2.default.about },
+            _react2.default.createElement(_Components.DamageRelations, { offense: true, type: [props.data] })
+        ),
+        _react2.default.createElement(
+            'div',
+            { className: _DexType2.default.section },
+            _react2.default.createElement(
+                'h5',
+                null,
+                'There are ',
+                pokemon.length,
+                ' ',
+                name,
+                ' type pokemons.'
+            ),
+            _react2.default.createElement(_Components.PokeTable, { headers: 'pokelist', data: pokemon, listItem: _Components.PokelistItem })
+        ),
+        _react2.default.createElement(
+            'div',
+            { className: _DexType2.default.section },
+            _react2.default.createElement(
+                'h5',
+                null,
+                'There are ',
+                moves.length,
+                ' ',
+                name,
+                ' type moves.'
+            ),
+            _react2.default.createElement(_Components.PokeTable, { headers: 'movelist', data: moves, listItem: _Components.MovelistItem })
+        )
+    );
+};
+
+exports.default = DexType;
+
+/***/ }),
+/* 138 */
+/***/ (function(module, exports) {
+
+// removed by extract-text-webpack-plugin
+module.exports = {"section":"DexType__section___3YgcKH","about":"DexType__about___2j9W3R","keyword":"DexType__keyword___66ipGK","button":"DexType__button___2o-m3L"};
+
+/***/ }),
+/* 139 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+var _react = __webpack_require__(0);
+
+var _react2 = _interopRequireDefault(_react);
+
+var _reactRedux = __webpack_require__(3);
+
+var _PokeTable = __webpack_require__(33);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+var Pokelist = function (_React$Component) {
+    _inherits(Pokelist, _React$Component);
+
+    function Pokelist() {
+        _classCallCheck(this, Pokelist);
+
+        return _possibleConstructorReturn(this, (Pokelist.__proto__ || Object.getPrototypeOf(Pokelist)).apply(this, arguments));
+    }
+
+    _createClass(Pokelist, [{
+        key: 'render',
+        value: function render() {
+            var data = this.props.data;
+            var list = _react2.default.createElement(_PokeTable.PokeTable, { headers: 'pokelist', listItem: _PokeTable.PokelistItem, data: data });
+            return _react2.default.createElement(
+                'div',
+                null,
+                list
+            );
+        }
+    }]);
+
+    return Pokelist;
+}(_react2.default.Component);
+
+var mapStateToProps = function mapStateToProps(state) {
+    return {
+        data: state.pokelist.data
+    };
+};
+
+exports.default = (0, _reactRedux.connect)(mapStateToProps)(Pokelist);
+
+/***/ }),
+/* 140 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+
+var _redux = __webpack_require__(15);
+
+var _Reducers = __webpack_require__(141);
+
+var _Reducers2 = _interopRequireDefault(_Reducers);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+var Store = (0, _redux.createStore)(_Reducers2.default);
+Store.subscribe(function () {
+    console.log('### STATE -> ', Store.getState());
+});
+
+exports.default = Store;
+
+/***/ }),
+/* 141 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+
+var _redux = __webpack_require__(15);
+
+var _pageReducer = __webpack_require__(142);
 
 var _pageReducer2 = _interopRequireDefault(_pageReducer);
 
-var _listReducer = __webpack_require__(123);
+var _listReducer = __webpack_require__(143);
 
 var _listReducer2 = _interopRequireDefault(_listReducer);
 
@@ -27210,7 +27871,7 @@ var reducer = (0, _redux.combineReducers)({
 exports.default = reducer;
 
 /***/ }),
-/* 122 */
+/* 142 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -27222,13 +27883,14 @@ Object.defineProperty(exports, "__esModule", {
 
 var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
 
-var _actionTypes = __webpack_require__(19);
+var _actionTypes = __webpack_require__(17);
 
 var initialState = {
     currentPage: 'home',
     dexItemType: null,
     dexItemId: null,
-    dexItemData: null
+    dexItemData: null,
+    dexItemDataType: null
 };
 
 var pageReducer = function pageChangeReducer() {
@@ -27253,7 +27915,8 @@ var pageReducer = function pageChangeReducer() {
             });
         case _actionTypes.PAGE_UPDATE_DEX_DATA:
             return _extends({}, state, {
-                dexItemData: action.payload
+                dexItemData: action.payload,
+                dexItemDataType: action.dataType
             });
         default:
             return state;
@@ -27263,7 +27926,7 @@ var pageReducer = function pageChangeReducer() {
 exports.default = pageReducer;
 
 /***/ }),
-/* 123 */
+/* 143 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -27275,11 +27938,10 @@ Object.defineProperty(exports, "__esModule", {
 
 var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
 
-var _actionTypes = __webpack_require__(19);
+var _actionTypes = __webpack_require__(17);
 
 var initialState = {
-    length: 100,
-    data: []
+    data: null
 };
 
 var listReducer = function pokemonListReducer() {
@@ -27287,18 +27949,9 @@ var listReducer = function pokemonListReducer() {
     var action = arguments[1];
 
     switch (action.type) {
-        case _actionTypes.LIST_SET_LENGTH:
-            if (state.length === 721) {
-                console.log('LENGTH REACHED MAX VALUE ', state);
-                return state;
-            }
-            var lengthToSet = action.payload > 721 ? 721 : action.payload;
-            return _extends({}, state, {
-                length: lengthToSet
-            });
         case _actionTypes.LIST_UPDATE_DATA:
             return _extends({}, state, {
-                data: action.payload
+                data: Object.values(action.payload)
             });
         default:
             return state;
@@ -27308,10 +27961,11 @@ var listReducer = function pokemonListReducer() {
 exports.default = listReducer;
 
 /***/ }),
-/* 124 */
+/* 144 */
 /***/ (function(module, exports) {
 
 // removed by extract-text-webpack-plugin
+module.exports = {"ie7":"main__ie7___XX95XI","ie6":"main__ie6___2E9Psy","clickable":"main__clickable___1c2b4a","clearfix":"main__clearfix___3F0pTI","section":"main__section___34U_cv","about":"main__about___2qkciW","keyword":"main__keyword___3IPRSF","button":"main__button___3qyJm3"};
 
 /***/ })
 /******/ ]);

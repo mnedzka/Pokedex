@@ -1,14 +1,16 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import { updateDexData } from 'Actions/actions.js';
-import DexType from './Components/DexType/DexType.jsx';
-import DexHome from './Components/DexHome/DexHome.jsx';
-import DexPokemon from './Components/DexPokemon/DexPokemon.jsx';
-import DexAbility from './Components/DexAbility/DexAbility.jsx';
-import DexMove from './Components/DexMove/DexMove.jsx';
-import DexEgg from './Components/DexEgg/DexEgg.jsx';
-import DexGlossary from './Components/DexGlossary/DexGlossary.jsx';
-import DexItem from './Components/DexItem/DexItem.jsx';
+import { updateDexData } from 'Actions';
+import {
+    DexAbility,
+    DexEgg,
+    DexWiki,
+    DexHome,
+    DexItem,
+    DexMove,
+    DexPokemon,
+    DexType,
+} from './Components';
 
 class Pokedex extends React.Component {
     render () {
@@ -27,8 +29,8 @@ class Pokedex extends React.Component {
                 return <DexItem data={this.props.data} />
             case 'pokedex':
                 return <DexHome />;
-            case 'glossary':
-                return <DexGlossary />;
+            case 'wiki':
+                return <DexWiki type={this.props.id} />;
             default:
                 return 'SUMTING WONG';
         }
@@ -39,6 +41,7 @@ const mapStateToProps = state => {
     return {
         type : state.page.dexItemType,
         data : state.page.dexItemData,
+        id : state.page.dexItemId,
     };
 };
 

@@ -1,7 +1,7 @@
 // COLORS
 $scene_background: rgb(25, 25, 45);
-$background: rgb(38, 45, 75);
-$background_light: rgb(55, 55, 90);
+$background: rgb(35, 40, 65);
+$background_light: rgb(45, 50, 85);
 $red: rgb(204, 50, 75);
 $red_light: rgb(230, 76, 101);
 $blue: rgb(50, 50, 120);
@@ -10,6 +10,7 @@ $highlight_green: rgb(17, 168, 171);
 $highlight_blue: rgb(79, 196, 245);
 $green: rgb(45, 155, 125);
 $wedgewood: rgb(78, 127, 158);
+$grey: rgb(100, 100, 150);
 
 
 // Layout
@@ -65,14 +66,14 @@ $typeColors: (
     margin-bottom: 1rem;
     border-radius: $border_radius;
 
-    &:nth-last-of-type() {
+    &:last-of-type {
         margin-bottom: 0;
     }
 }
 
 .about {
     @extend .section;
-    background-color: $blue;
+    background-color: $background_light;
 }
 
 
@@ -81,23 +82,10 @@ $typeColors: (
     color: rgb(105, 220, 215);
 }
 
-// Data/Stat Table
-.statTable {
-    border-collapse: collapse;
-    width: 90%;
-    margin: 0 auto;
-
-    td {
-        vertical-align: middle;
-        padding: 0.25rem 0.5rem;
-        border-bottom: 1px solid rgb(100, 100, 150);
-
-        &:nth-child(even) {
-            text-align: left;
-        }
-
-        &:nth-child(odd) {
-            text-align: right;
-        }
-    }
+// Text-Button
+.button {
+    border: none;
+    background: none;
+    padding: 0;
+    color: white;
 }

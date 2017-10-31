@@ -1,0 +1,14 @@
+@import '~/../src/styles/partials/_variables.scss';
+
+.filter {
+    @extend .section;
+    text-align: center;
+
+    select {
+        margin-left: 0.25rem;
+        padding: 0.25rem 0.5rem;
+        background-color: $scene_background;
+        border: none;
+        color: white;
+    }
+}

@@ -1,15 +1,8 @@
 import React from 'react';
 import Styles from './Menu.scss';
-import MenuItem from '../MenuItem/MenuItem.jsx';
+import { MenuItem } from '../';
 
 class Menu extends React.Component {
-    shouldComponentUpdate (nextProps) {
-        if (nextProps === this.props) {
-            return false;
-        }
-        return true;
-    }
-
     render () {
         return <div className={Styles.wrapper}>
             <MenuItem text="Home" />

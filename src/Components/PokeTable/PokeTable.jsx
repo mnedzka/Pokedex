@@ -1,7 +1,9 @@
 import React from 'react';
 import Styles from './PokeTable.scss';
-import PokelistItem from './Components/PokelistItem/PokelistItem.jsx';
-import MovelistItem from './Components/MovelistItem/MovelistItem.jsx';
+import {
+    PokelistItem,
+    MovelistItem,
+} from './Components';
 
 class PokeTable extends React.Component {
     constructor (props) {
@@ -12,34 +14,34 @@ class PokeTable extends React.Component {
             this.props.data[0].level_learned_at) {
             hasLvl = true;
         }
-        this.headers = {
-            pokelist : [
-                ['', false],
-                ['#', true],
-                ['Name', false],
-                ['Type', false],
-                ['HP', true],
-                ['Attack', true],
-                ['Defense', true],
-                ['Special Attack', true],
-                ['Special Defense', true],
-                ['Speed', true],
-            ],
-            movelist : [
-                ['#', true],
-                ['Name', false],
-                ['Lvl', hasLvl ? true : false],
-                ['Power', true],
-                ['PP', true],
-                ['Accuracy', true],
-                ['Class', false],
-                ['Type', false],
-            ],
-        };
+        const pokeHeaders = [
+            ['', false],
+            ['#', true],
+            ['Name', false],
+            ['Type', false],
+            ['HP', true],
+            ['Attack', true],
+            ['Defense', true],
+            ['Special Attack', true],
+            ['Special Defense', true],
+            ['Speed', true],
+        ];
+        const moveHeaders = [
+            ['#', true],
+            ['Name', false],
+            ['Lvl', hasLvl ? true : false],
+            ['Power', true],
+            ['PP', true],
+            ['Accuracy', true],
+            ['Class', false],
+            ['Type', false],
+        ];
+        const isPoke = this.props.headers === 'pokelist';
+        this.headers = isPoke ? pokeHeaders : moveHeaders;
         this.state = {
             sortBy : hasLvl ? 'level_learned_at' : 'id',
             sortDir : 1,
-            length : 50,
+            length : isPoke ? 50 : 25,
         };
     }
 
@@ -62,12 +64,17 @@ class PokeTable extends React.Component {
         const mX = event.screenX;
         const width = wrapper.clientWidth;
         const totalWidth = wrapper.scrollWidth;
+        let previousX = null;
         if (width === totalWidth) {
             return;
         }
         const currentScroll = wrapper.scrollLeft;
         const handleMouseMove = ev => {
             const mmoveX = ev.screenX;
+            if (Math.abs(previousX - mmoveX) < 3) {
+                return;
+            }
+            previousX = mmoveX;
             wrapper.scrollLeft = currentScroll + (totalWidth - width) * ((mX - mmoveX) / (width >> 1));
         }
         const handleMouseUp = ev => {
@@ -115,27 +122,25 @@ class PokeTable extends React.Component {
     };
 
     render () {
-        let data = this.props.data.slice(0, this.state.length);
-        if (!data.length) {
+        if (!this.props.data.length) {
             return null;
         }
         const sortBy = this.state.sortBy;
-        data = data.sort((a, b) => {
+        const data = this.props.data.sort((a, b) => {
             if (this.state.sortDir === 1) {
                 return a[sortBy] - b[sortBy];
             } else {
                 return b[sortBy] - a[sortBy];
             }
-        });
+        }).slice(0, this.state.length);
         const Item = this.props.listItem;
         const listContent = data.map((el, i) => {
             return <Item key={el.name} data={el} />
         });
-        let headers = this.headers[this.props.headers];
         let showMore = null;
         if (this.state.length < this.props.data.length) {
             showMore = <tr>
-                <td colSpan={headers.length}>
+                <td colSpan={this.headers.length}>
                     <button onClick={this.handleShowMoreClick}
                             className={Styles.more}>
                         Show More
@@ -146,7 +151,7 @@ class PokeTable extends React.Component {
         return <div className={Styles.wrapper} onMouseDown={this.handleMouseDown}>
             <table className={Styles.table}>
                 <thead className={Styles.thead}>
-                    {this.createHeaders(headers)}
+                    {this.createHeaders(this.headers)}
                 </thead>
                 <tbody className={Styles.tbody}>
                     {listContent}

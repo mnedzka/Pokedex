@@ -1,6 +1,6 @@
 import React from 'react';
 import Styles from './Layout.scss';
-import Menu from './Components/Menu/Menu.jsx';
+import { Menu } from './Components';
 
 
 class Layout extends React.Component {

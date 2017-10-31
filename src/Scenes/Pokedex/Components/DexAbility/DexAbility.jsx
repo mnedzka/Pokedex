@@ -3,12 +3,15 @@ import Styles from './DexAbility.scss';
 import {
     PokeTable,
     PokelistItem,
-} from 'Components/PokeTable/PokeTable.jsx';
+} from 'Components';
+import {
+    formatName,
+} from 'src/utils.js';
 
 export default class DexAbility extends React.Component {
     render () {
         const ability = this.props.data;
-        const name = ability.name.replace(/\b(\w)/g, m => m.toUpperCase());
+        const name = formatName(ability.name);
         return <div>
             <h3>Ability: {name}</h3>
             <div className={Styles.about}>

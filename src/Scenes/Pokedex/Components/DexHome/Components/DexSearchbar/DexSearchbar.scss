@@ -1,11 +1,37 @@
 @import '~/../src/styles/partials/_variables.scss';
 
-.row {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
 .wrapper {
     text-align: center;
+}
+
+.input {
+    width: 100%;
+    max-width: 20rem;
+    background-color: $scene_background;
+    border: 1px solid $background_light;
+    color: white;
+    padding: 0.25rem;
+}
+
+.row {
+    width: 100%;
+    max-width: 20rem;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+
+    &:last-of-type {
+        border-bottom: thin solid rgb(100, 100, 150);
+    }
+}
+
+.icon {
+    width: 1.5rem;
+    margin-right: 0.25rem;
+}
+
+.info,
+.info:hover,
+.info:focus {
+    font-weight: normal;
 }

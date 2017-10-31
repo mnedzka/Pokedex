@@ -1,0 +1,10 @@
+@import '~/../src/styles/partials/_variables.scss';
+
+.wrapper {
+    @extend .about;
+    text-align: center;
+
+    img {
+        max-width: 80%;
+    }
+}

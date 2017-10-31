@@ -1,36 +1,25 @@
 import React from 'react';
 import Styles from './DexItem.scss';
-import PokeLink from 'Components/PokeLink/PokeLink.jsx';
 import {
+    DataTable,
+    PokeLink,
     PokeTable,
     PokelistItem,
-} from 'Components/PokeTable/PokeTable.jsx';
-
-const createTable = dataArr => {
-    const rows = dataArr.map((e, i) => {
-        const val = e[1] ? e[1] : '-';
-        return <tr key={i}>
-            <td>{e[0]}</td>
-            <td>{val}</td>
-        </tr>
-    });
-    return <table className={Styles.statTable}>
-        <tbody>
-            {rows}
-        </tbody>
-    </table>;
-};
+} from 'Components';
+import {
+    formatName,
+} from 'src/utils.js';
 
 const DexItem = props => {
     console.log(props);
     const item = props.data;
     const {flavor_text, effect_entries, category, cost, fling_effect, fling_power, machine} = item;
-    const name = item.name.replace('-', ' ').replace(/\b(\w)/g, m => m.toUpperCase());
-    const table = [
-        ['Category', <PokeLink name={category} type="glossary" />],
+    const name = formatName(item.name);
+    const itemData = [
+        ['Category', <PokeLink id="item" name={category} type="wiki" />],
         ['Cost', cost],
-        ['Fling power', fling_power ? fling_power : '-'],
-        ['Fling effect', fling_effect ? fling_effect : '-'],
+        ['Fling power', fling_power],
+        ['Fling effect', fling_effect],
         ['TM', machine ? <PokeLink id={machine.id} name={machine.name} type="move" /> : '-']
     ];
 
@@ -59,7 +48,7 @@ const DexItem = props => {
             </p>
         </div>
         <div className={Styles.about}>
-            {createTable(table)}
+            <DataTable data={itemData} />
         </div>
         {held_by}
     </div>;

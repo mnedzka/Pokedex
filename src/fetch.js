@@ -93,8 +93,11 @@ class FetchWrapper {
             return data;
         })
         .catch(e => {
+            if (this.__isAborted) {
+                return null;
+            }
             console.warn(e);
-            return null;
+            return;
         });
     }
 
@@ -179,11 +182,14 @@ export default class PokeCache {
                 data.moves = data.moves.map(mov => localMoves.find(el => el.id === mov));
             } else {
                 for (let i in data.moves) {
-                    data.moves[i] = data.moves[i].map(mov => {
-                        if (typeof mov === 'number') {
-                            return localMoves.find(el => el.id === mov);
+                    data.moves[i] = data.moves[i].map(m => {
+                        if (typeof m === 'number') {
+                            return localMoves.find(el => el.id === m);
                         }
-                        return localMoves.find(el => el.id === mov.id);
+                        return {
+                            ...localMoves.find(el => el.id === m.id),
+                            ...m,
+                        };
                     });
                 }
             }

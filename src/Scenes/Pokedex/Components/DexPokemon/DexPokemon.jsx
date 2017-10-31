@@ -1,15 +1,22 @@
 import React from 'react';
 import Styles from './DexPokemon.scss';
-import PokeImg from 'Components/PokeImg/PokeImg.jsx';
-import PokeType from 'Components/PokeType/PokeType.jsx';
-import PokeLink from 'Components/PokeLink/PokeLink.jsx';
-import DamageRelations from 'Components/DamageRelations/DamageRelations.jsx';
-import PokeStats from './Components/PokeStats/PokeStats.jsx';
-import PokeEvo from './Components/PokeEvo/PokeEvo.jsx';
 import {
+    PokeImg,
+    PokeType,
+    PokeLink,
+    DamageRelations,
+    DataTable,
     PokeTable,
     MovelistItem,
-} from 'Components/PokeTable/PokeTable.jsx';
+} from 'Components';
+import {
+    PokeStats,
+    PokeEvo,
+    PokeForm,
+} from './Components';
+import {
+    formatName,
+} from 'src/utils.js';
 
 const mapAbilities = abilities => {
     return abilities.sort((a, b) => a.slot - b.slot).map(e => {
@@ -28,38 +35,12 @@ const mapEggGroups = egg => {
     });
 };
 
-const getStats = stats => {
-    let statsObj = {};
-    stats.forEach(el => {
-        statsObj[el.stat.name] = el.base_stat;
-    });
-    return statsObj;
-};
-
 const mapHeldItems = heldItemsArr => {
     if (!heldItemsArr.length) {
         return '-';
     }
-    return heldItemsArr.map(item => {
-        return <PokeLink key={item.id}
-                    id={item.id}
-                    name={item.name}
-                    info={`${item.rarity}%`}
-                    type="item" />
-    });
-};
-
-const createTable = data => {
-    return <table className={Styles.statTable}>
-        <tbody>
-            {data.map(el => {
-                return <tr key={el[0]}>
-                    <td>{el[0]}</td>
-                    <td>{el[1]}</td>
-                </tr>;
-            })}
-        </tbody>
-    </table>;
+    return heldItemsArr.map(item => <PokeLink key={item.id} id={item.id} name={item.name}
+        info={`${item.rarity}%`} type="item" />);
 };
 
 const getMoveList = (moveArr, method) => {
@@ -72,26 +53,10 @@ const getMoveList = (moveArr, method) => {
     </div>;
 };
 
-const mapPokemonForms = (forms, id) => {
-    if (forms.length < 2) {
-        return null;
-    }
-    const otherForms = forms.filter(f => f.id !== id).map(f => {
-        return <PokeLink key={f.id} name={f.name} id={f.id} type="pokemon">
-            <PokeImg id={f.id} />
-        </PokeLink>;
-    });
-    return <div className={Styles.forms}>
-        <h5>Other forms</h5>
-        {otherForms}
-    </div>;
-};
-
 const DexPokemon = props => {
     const data = props.data;
     const {hp, speed, special_attack, special_defense, attack, defense} = data.stats;
     const catchValue = (hp.base * data.capture_rate / (3 * hp.base) / 2.55).toFixed(1);
-
     const pokedexData = [
         ['Pokedex No', data.id],
         ['Type', <PokeType type={data.types} />],
@@ -107,7 +72,7 @@ const DexPokemon = props => {
     const breedTrainData = [
         ['Catch rate', `${data.capture_rate} (${catchValue}% at max HP)`],
         ['Base EXP', data.base_experience],
-        ['Growth rate', data.growth_rate],
+        ['Growth rate', <PokeLink id="experience" name={data.growth_rate} type="wiki" />],
         ['Egg groups', mapEggGroups(data.egg_groups)],
         ['Gender', genderRate],
         ['Egg cycles', data.hatch_counter],
@@ -120,36 +85,42 @@ const DexPokemon = props => {
         special_defense.base,
         speed.base,
     ];
-
+    const prevId = data.id - 1 ? data.id - 1 : 802;
+    const nextId = data.id + 1 < 803 ? data.id + 1 : 1;
+    const navBtns = [
+        <PokeLink key="prev" name={'← #' + prevId} id={prevId} type="pokemon" />,
+        <PokeLink key="next" name={'#' + nextId + ' →'} id={nextId} type="pokemon" />,
+    ];
     return <div>
-        <h3>
-            Pokemon: {data.name.replace(/\b(\w)/g, m => m.toUpperCase())}
-        </h3>
+        <div className={Styles.nav}>
+            {navBtns}
+            <h3 className={Styles.dexTitle}>Pokemon: {formatName(data.name)}</h3>
+        </div>
         <div className={Styles.showcase}>
             <PokeImg id={data.id} cl="md" />
             <span className={Styles.flavorText}>
                 {data.flavor_text}
             </span>
         </div>
-        {mapPokemonForms(data.forms, data.id)}
+        <PokeForm data={data.forms} id={data.id} />
         <PokeEvo data={data.evolution_chain} id={data.id} />
         <div className={Styles.info}>
             <div className={Styles.dataSection}>
                 <h5>Pokedex Data</h5>
-                {createTable(pokedexData)}
+                <DataTable data={pokedexData} />
             </div>
             <div className={Styles.dataSection}>
                 <h5>Training &amp; Breeding</h5>
-                {createTable(breedTrainData)}
+                <DataTable data={breedTrainData} />
             </div>
         </div>
         <div className={Styles.about}>
             <h5>Base stats</h5>
             <PokeStats data={statsData} />
         </div>
-        <div className={Styles.about}>
+        {<div className={Styles.about}>
             <DamageRelations type={data.types} />
-        </div>
+        </div>}
         {getMoveList(data.moves.level_up, 'level up')}
         {getMoveList(data.moves.egg, 'breeding')}
         {getMoveList(data.moves.machine, 'TM')}

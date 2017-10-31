@@ -1,7 +1,7 @@
 import React from 'react';
 import Styles from './MenuItem.scss';
 import { connect } from 'react-redux';
-import { changePage } from 'Actions/actions.js';
+import { changePage } from 'Actions';
 
 class MenuItem extends React.Component {
     shouldComponentUpdate (nextProps) {
@@ -13,16 +13,15 @@ class MenuItem extends React.Component {
 
     handleClickEvent = (ev) => {
         const page = this.props.text.toLowerCase();
-        if (this.props.page !== page || this.props.dexItemType !== 'pokedex') {
+        if (this.props.page !== page ||
+           (this.props.dexItemType !== 'pokedex' && this.props.page === 'pokedex')) {
             this.props.onMenuItemClick(page);
         }
     }
 
     render () {
-        return <button
-            className={Styles.item}
-            disabled={this.props.disabled}
-            onClick={this.handleClickEvent}>
+        return <button className={Styles.item} onClick={this.handleClickEvent}
+                disabled={this.props.disabled}>
             {this.props.text}
         </button>;
     }

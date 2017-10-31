@@ -1,15 +1,20 @@
 import React from 'react';
+import PokeCache from 'src/fetch.js';
 import { connect } from 'react-redux';
+import { Loader } from 'Components';
 import {
+    changePage,
     updateDexData,
     updateData,
-} from 'Actions/actions.js';
-import PokeCache from 'src/fetch.js';
-import Home from 'Scenes/Home/Home.jsx';
-import Pokedex from 'Scenes/Pokedex/Pokedex.jsx';
-import Pokelist from 'Scenes/Pokelist/Pokelist.jsx';
-import Layout from 'Scenes/Layout/Layout.jsx';
-import Loader from 'Components/Loader/Loader.jsx';
+} from 'Actions';
+import {
+    Compare,
+    Home,
+    Layout,
+    NotFound,
+    Pokedex,
+    Pokelist,
+} from 'Scenes';
 
 class App extends React.Component {
     constructor () {
@@ -25,8 +30,11 @@ class App extends React.Component {
         };
         const req = this.fetch.get(body);
         req.then(data => {
-            if (data === null) {
-                return;
+            if (!data) {
+                if (data === null) {
+                    return;
+                }
+                return this.props.fetchFail('404');
             }
             console.log('## FETCHED ##');
             console.log(data);
@@ -40,11 +48,10 @@ class App extends React.Component {
     };
 
     isFetchNeeded = () => {
-        const type = this.props.page.dexItemType;
-        const id = this.props.page.dexItemId;
-        const data = this.props.page.dexItemData;
-        const dataType = this.props.page.dexItemDataType;
-        const {dexItemType, dexItemId, dexItemData, dexItemDataType} = this.props.page;
+        const {dexItemType, dexItemId, dexItemData, dexItemDataType, currentPage} = this.props.page;
+        if (currentPage === '404') {
+            return false;
+        }
         if (!dexItemData) {
             console.warn('No data');
             return true;
@@ -78,13 +85,17 @@ class App extends React.Component {
         }
         if (page.currentPage === 'pokedex') {
             title = 'Pokedex';
-            const noDataReq = ['pokedex', 'glossary'];
+            const noDataReq = ['pokedex', 'wiki'];
             if (!noDataReq.includes(page.dexItemType) && this.isFetchNeeded()) {
                 console.log('FETCH NEEDED');
                 this.getData();
             } else {
                 Content = Pokedex;
             }
+        }
+        if (page.currentPage === '404') {
+            title = 'Sorry!';
+            Content = NotFound;
         }
         return <Layout title={title}>
             <Content />
@@ -103,6 +114,7 @@ const mapDispatchToProps = dispatch => {
     return {
         updateDex : (data, type) => dispatch(updateDexData(data, type)),
         updateList : data => dispatch(updateData(data)),
+        fetchFail : page => dispatch(changePage(page)),
     };
 };
 

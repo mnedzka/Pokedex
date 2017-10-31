@@ -5,16 +5,34 @@
     display: flex;
 }
 
+.nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    div:last-of-type {
+        order: 1;
+    }
+
+    @media screen and (max-width: 520px) {
+        flex-wrap: wrap;
+        h3 {
+            width: 100%;
+            order: 2;
+        }
+    }
+}
+
 .showcase {
     @extend .flexWrapper;
     align-items: center;
     background-color: $blue_light;
-}
 
-.forms {
-    @extend .section;
-    text-align: center;
-    background-color: $blue;
+    @media screen and (max-width: 520px) {
+        justify-content: center;
+        flex-wrap: wrap;
+        padding-bottom: 1.5rem;
+    }
 }
 
 .info {
@@ -22,7 +40,7 @@
     flex-wrap: wrap;
     align-items: flex-start;
     justify-content: space-around;
-    background-color: $blue;
+    background-color: $background_light;
 }
 
 .flavorText {

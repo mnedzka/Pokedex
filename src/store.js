@@ -1,5 +1,5 @@
 import { createStore } from 'redux';
-import reducer from './Reducers/reducer.js';
+import reducer from './Reducers';
 
 let Store = createStore(reducer);
 Store.subscribe(() => {

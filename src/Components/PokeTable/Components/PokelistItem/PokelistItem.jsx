@@ -1,7 +1,9 @@
 import React from 'react';
-import PokeType from 'Components/PokeType/PokeType.jsx';
-import PokeLink from 'Components/PokeLink/PokeLink.jsx';
-import PokeImg from 'Components/PokeImg/PokeImg.jsx';
+import {
+    PokeType,
+    PokeLink,
+    PokeImg,
+} from 'Components';
 
 export default class PokelistItem extends React.Component {
     shouldComponentUpdate (nextProps) {

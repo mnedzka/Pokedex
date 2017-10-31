@@ -1,8 +1,10 @@
 import React from 'react';
 import Styles from './MovelistItem.scss';
-import PokeType from 'Components/PokeType/PokeType.jsx';
-import PokeLink from 'Components/PokeLink/PokeLink.jsx';
-import MoveClass from 'Components/MoveClass/MoveClass.jsx';
+import {
+    PokeType,
+    PokeLink,
+    MoveClass,
+} from 'Components';
 
 export default class MovelistItem extends React.Component {
     shouldComponentUpdate (nextProps) {

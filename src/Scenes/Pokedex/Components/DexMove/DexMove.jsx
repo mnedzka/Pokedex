@@ -1,27 +1,16 @@
 import React from 'react';
-import PokeType from 'Components/PokeType/PokeType.jsx';
-import MoveClass from 'Components/MoveClass/MoveClass.jsx';
-import PokeLink from 'Components/PokeLink/PokeLink.jsx';
 import Styles from './DexMove.scss';
 import {
+    DataTable,
+    PokeType,
+    MoveClass,
+    PokeLink,
     PokeTable,
     PokelistItem,
-} from 'Components/PokeTable/PokeTable.jsx';
-
-const createTable = dataArr => {
-    const rows = dataArr.map((e, i) => {
-        const val = e[1] ? e[1] : '-';
-        return <tr key={i}>
-            <td>{e[0]}</td>
-            <td>{val}</td>
-        </tr>
-    });
-    return <table className={Styles.statTable}>
-        <tbody>
-            {rows}
-        </tbody>
-    </table>;
-};
+} from 'Components';
+import {
+    formatName,
+} from 'src/utils.js';
 
 const createPokemonList = (pokeArr, learnBy) => {
     if (!pokeArr.length) {
@@ -38,20 +27,27 @@ const createTMLink = machine => {
     return <PokeLink id={machine.id} name={name} type="item" />;
 };
 
+const addEffectChance = (descr, chance) => {
+    return descr.replace('$effect_chance', chance);
+};
+
 const DexMove = props => {
     const move = props.data;
     console.log(move);
     const {egg, machine, tutor, level_up} = move.pokemon;
-    const name = move.name.replace(/\b(\w)/g, m => m.toUpperCase());
+    const name = formatName(move.name);
     const moveData = [
         ['Damage Class', <MoveClass data={move.damage_class} />],
         ['Power', move.power],
         ['PP', move.pp],
         ['Accuracy', move.accuracy],
         ['Priority', move.priority],
-        ['Effect Chance', move.effect_chance],
+        ['Effect Chance', move.effect_chance ? move.effect_chance : '-'],
         ['TM', move.machine ? createTMLink(move.machine) : '-'],
     ];
+    const effectShort = addEffectChance(move.effect_entries.short_effect, move.effect_chance);
+    const effect = addEffectChance(move.effect_entries.effect, move.effect_chance);
+
     return <div>
         <h3>Move: {name}</h3>
         <div className={Styles.about}>
@@ -61,16 +57,16 @@ const DexMove = props => {
             </p>
             <p>
                 <span className={Styles.keyword}>Short description: </span>
-                <em>{move.effect_entries.short_effect}</em>
+                <em>{effectShort}</em>
             </p>
             <p>
                 <span className={Styles.keyword}>Description: </span>
-                <em>{move.effect_entries.effect}</em>
+                <em>{effect}</em>
             </p>
         </div>
         <div className={Styles.about}>
             <h5>Move stats</h5>
-            {createTable(moveData)}
+            <DataTable data={moveData} />
         </div>
         {createPokemonList(egg, 'breeding')}
         {createPokemonList(level_up, 'level')}
