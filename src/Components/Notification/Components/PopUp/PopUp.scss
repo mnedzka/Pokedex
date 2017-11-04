@@ -1,0 +1,43 @@
+@import '~/../src/styles/partials/_variables.scss';
+
+.popup {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 2rem;
+    padding: 0 0.5rem;
+    border-radius: $border_radius;
+    transition: all 0.3s ease-in;
+    // animation: show 3s;
+}
+
+.add,
+.remove {
+    @extend .popup;
+}
+
+.add {
+    background-color: $blue_light;
+}
+
+.remove {
+    background-color: $red_light;
+}
+
+@keyframes show {
+    0% {
+        left: -10rem;
+    }
+    25% {
+        left: 0;
+    }
+    75% {
+        left: 0;
+    }
+    100% {
+        left: -10rem;
+    }
+}

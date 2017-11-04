@@ -1,21 +1,20 @@
 import React from 'react';
 import Styles from './PokeTable.scss';
+import { connect } from 'react-redux';
 import {
     PokelistItem,
     MovelistItem,
 } from './Components';
 
-class PokeTable extends React.Component {
+class PokeTableComponent extends React.Component {
     constructor (props) {
         super(props);
         let hasLvl = false;
-        if (this.props.data.length &&
-            this.props.data[0].hasOwnProperty('level_learned_at') &&
-            this.props.data[0].level_learned_at) {
+        if (this.props.data.length && this.props.data[0].hasOwnProperty('level_learned_at')) {
             hasLvl = true;
         }
         const pokeHeaders = [
-            ['', false],
+            ['Compare', false],
             ['#', true],
             ['Name', false],
             ['Type', false],
@@ -135,7 +134,8 @@ class PokeTable extends React.Component {
         }).slice(0, this.state.length);
         const Item = this.props.listItem;
         const listContent = data.map((el, i) => {
-            return <Item key={el.name} data={el} />
+            const selected = this.props.compare.find(p => p.id === el.id);
+            return <Item key={el.name} data={el} selected={selected ? true : false} compare={this.props.compare} />
         });
         let showMore = null;
         if (this.state.length < this.props.data.length) {
@@ -161,6 +161,14 @@ class PokeTable extends React.Component {
         </div>;
     }
 }
+
+const mapStateToProps = state => {
+    return {
+        compare : state.compare.pokemon,
+    };
+};
+
+const PokeTable = connect(mapStateToProps)(PokeTableComponent);
 
 export {
     PokeTable,

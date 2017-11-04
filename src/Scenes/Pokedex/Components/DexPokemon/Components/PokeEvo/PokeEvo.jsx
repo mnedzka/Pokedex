@@ -4,9 +4,7 @@ import {
     PokeImg,
     PokeLink,
 } from 'Components';
-import {
-    formatName,
-} from 'src/utils.js';
+import { formatName } from 'src/utils';
 
 const getEvolutions = (chain, arr) => {
     const allEvoArr = [];
@@ -144,7 +142,7 @@ const parseEvo = (evolutions, id) => {
         return <div key={i} className={Styles.row}>{
             evo.map(poke => {
                 let details = i ? <div className={Styles.arrow}>{mapEvoDetails(poke.details)}</div> : null;
-                let pokeImg = <PokeLink name={poke.name} id={poke.id} type="pokemon" role="evolution">
+                let pokeImg = <PokeLink name={poke.name} id={poke.id} type="pokemon" role="thumbnail">
                     <PokeImg id={poke.id} />
                 </PokeLink>;
                 if (id === poke.id) {

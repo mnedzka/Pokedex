@@ -2,15 +2,23 @@
 
 .main {
     border-collapse: collapse;
-    width: 90%;
     margin: 0 auto;
-    max-width: 25rem;
 
-    td {
+    td,
+    th {
         vertical-align: middle;
         padding: 0.25rem 0.5rem;
         border-bottom: 1px solid $grey;
+        text-align: left;
+    }
+}
 
+.default {
+    @extend .main;
+    width: 90%;
+    max-width: 25rem;
+
+    td {
         &:nth-child(even) {
             text-align: left;
         }
@@ -19,4 +27,8 @@
             text-align: right;
         }
     }
+}
+
+.compare {
+    @extend .main;
 }

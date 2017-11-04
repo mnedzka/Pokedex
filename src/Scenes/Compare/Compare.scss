@@ -1,0 +1,20 @@
+@import '~/../src/styles/partials/_variables.scss';
+
+.show,
+.hide {
+    @extend .button;
+    display: block;
+    margin: 0 auto;
+    padding: 0.5rem;
+    background-color: $blue_light;
+    border-radius: $border_radius;
+
+    &[disabled] {
+        background-color: $grey;
+        cursor: default;
+    }
+}
+
+.hide {
+    background-color: $red;
+}

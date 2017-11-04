@@ -1,0 +1,9 @@
+@import '~/../src/styles/partials/_variables.scss';
+
+.wrapper {
+    text-align: center;
+
+    canvas {
+        cursor: pointer;
+    }
+}

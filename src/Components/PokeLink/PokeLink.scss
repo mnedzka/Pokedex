@@ -4,9 +4,9 @@
     position: relative;
 }
 
-
 .redirect {
     @extend .button;
+    transition: all 0.3s;
 
     &:hover,
     &:focus {
@@ -21,8 +21,33 @@
     }
 }
 
+.thumbnail {
+    @extend .wrapper;
+
+    .redirect {
+        border-radius: 50%;;
+
+        &:hover,
+        &:focus {
+            background: $background;
+            border-radius: 50%;
+        }
+    }
+    .redirect:focus {
+        outline: none;
+        box-shadow: 0 0 0 2px $highlight_blue;
+    }
+}
+
 .search {
+    background-color: $scene-background;
+    border-left: 1px solid $background_light;
+    border-right: 1px solid $background_light;
     width: 100%;
+
+    &:last-of-type {
+        border-bottom: 1px solid $background_light;
+    }
 
     .redirect {
         width: 100%;
@@ -39,6 +64,11 @@
     }
 }
 
+.name {
+    display: inline-block;
+    text-align: left;
+}
+
 .infoText {
     font-size: 0.75rem;
 }
@@ -47,11 +77,12 @@
     position: absolute;
     visibility: hidden;
     opacity: 0;
-    background: $blue;
-    bottom: 0;
+    background: $red;
+    top: 85%;
     left: 0;
     right: 0;
     text-align: center;
     transition: all 0.3s;
     pointer-events: none;
+    border-radius: $border_radius;
 }

@@ -53,28 +53,45 @@ const getMoveList = (moveArr, method) => {
     </div>;
 };
 
+const getGenderRate = rate => {
+    if (rate) {
+        return `♂ ${(8 - rate) * 12.5}%\n♀ ${rate * 12.5}%`;
+    }
+    return 'Genderless';
+};
+
+const getCaptureRate = (hp, rate) => {
+    const catchValueAtMaxHp = (hp * rate / (3 * hp) / 2.55).toFixed(1);
+    return `${rate} (${catchValueAtMaxHp}% at max HP)`;
+};
+
+const createNavBtns = id => {
+    const prev = id - 1 ? id - 1 : 802;
+    const next = id + 1 < 803 ? id + 1 : 1;
+    return [
+        <PokeLink key="prev" name={'← #' + prev} id={prev} type="pokemon" />,
+        <PokeLink key="next" name={'#' + next + ' →'} id={next} type="pokemon" />,
+    ];
+};
+
 const DexPokemon = props => {
     const data = props.data;
     const {hp, speed, special_attack, special_defense, attack, defense} = data.stats;
-    const catchValue = (hp.base * data.capture_rate / (3 * hp.base) / 2.55).toFixed(1);
     const pokedexData = [
         ['Pokedex No', data.id],
         ['Type', <PokeType type={data.types} />],
         ['Height', `${(data.height * 0.1).toFixed(1)} m`],
         ['Weight', `${(data.weight * 0.1).toFixed(1)} kg`],
-        ['Abilities', mapAbilities(data.abilities)],
-        ['Held Items', mapHeldItems(data.held_items)],
+        ['Ability', mapAbilities(data.abilities)],
+        ['Held Item', mapHeldItems(data.held_items)],
     ];
-    let genderRate = 'Genderless';
-    if (data.gender_rate > 0) {
-        genderRate = `♂ ${(8 - data.gender_rate) * 12.5}%\n♀ ${data.gender_rate * 12.5}%`
-    }
+
     const breedTrainData = [
-        ['Catch rate', `${data.capture_rate} (${catchValue}% at max HP)`],
+        ['Catch rate', getCaptureRate(hp.base, data.capture_rate)],
         ['Base EXP', data.base_experience],
         ['Growth rate', <PokeLink id="experience" name={data.growth_rate} type="wiki" />],
         ['Egg groups', mapEggGroups(data.egg_groups)],
-        ['Gender', genderRate],
+        ['Gender', getGenderRate(data.gender_rate)],
         ['Egg cycles', data.hatch_counter],
     ];
     const statsData = [
@@ -85,12 +102,7 @@ const DexPokemon = props => {
         special_defense.base,
         speed.base,
     ];
-    const prevId = data.id - 1 ? data.id - 1 : 802;
-    const nextId = data.id + 1 < 803 ? data.id + 1 : 1;
-    const navBtns = [
-        <PokeLink key="prev" name={'← #' + prevId} id={prevId} type="pokemon" />,
-        <PokeLink key="next" name={'#' + nextId + ' →'} id={nextId} type="pokemon" />,
-    ];
+    const navBtns = createNavBtns(data.id);
     return <div>
         <div className={Styles.nav}>
             {navBtns}

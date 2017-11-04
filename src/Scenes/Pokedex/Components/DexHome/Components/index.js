@@ -1,5 +1,5 @@
-import DexSearchbar from './DexSearchbar/DexSearchbar';
+import DexResult from './DexResult/DexResult';
 
 export {
-    DexSearchbar,
+    DexResult,
 }

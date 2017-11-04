@@ -1,6 +1,6 @@
 import {
     LIST_UPDATE_DATA,
- } from 'Actions/actionTypes.js';
+ } from 'Actions/actionTypes';
 
 const initialState = {
     data : null,

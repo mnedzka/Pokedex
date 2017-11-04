@@ -1,9 +1,20 @@
+.image {
+    transition: all 0.3s;
+}
+
 .sm {
+    @extend .image;
     width: 75px;
     min-width: 45px;
 }
 .md {
+    @extend .image;
     width: 50%;
     min-width: 200px;
     background: radial-gradient(closest-side at 50% 90%, rgb(35, 50, 75) 15%, transparent)
+}
+
+.fit {
+    @extend .image;
+    width: 100%;
 }

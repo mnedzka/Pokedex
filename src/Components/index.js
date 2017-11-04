@@ -1,3 +1,4 @@
+import CompareLink from './CompareLink/CompareLink';
 import DamageRelations from './DamageRelations/DamageRelations';
 import DataTable from './DataTable/DataTable';
 import Loader from './Loader/Loader';
@@ -10,8 +11,11 @@ import {
     MovelistItem,
 } from './PokeTable/PokeTable';
 import PokeType from './PokeType/PokeType';
+import Searchbar from './Searchbar/Searchbar';
+import Notification from './Notification/Notification';
 
 export {
+    CompareLink,
     DamageRelations,
     DataTable,
     Loader,
@@ -22,4 +26,6 @@ export {
     PokelistItem,
     MovelistItem,
     PokeType,
+    Searchbar,
+    Notification,
 }

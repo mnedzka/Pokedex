@@ -6,6 +6,17 @@ import { updateData } from 'Actions';
 import Store from './store.js';
 import PokeCache from './fetch.js';
 
+//
+//
+window._compare = id => {
+    Store.dispatch({type : 'COMPARE_ADD_ITEM', payload: id});
+};
+window._comp = d => {
+    Store.dispatch({type : 'COMPARE_UPDATE_DATA', payload: d});
+};
+//
+//
+
 const onLoad = function onDomConentLoaded () {
     // Remove unnecessary Event Listener
     document.removeEventListener('DOMContentLoaded', onLoad);

@@ -1,0 +1,106 @@
+@import '~/../src/styles/partials/_variables.scss';
+
+
+.compare,
+.loading,
+.ready,
+.limit {
+    @extend .button;
+
+    &:hover {
+        .name {
+            font-weight: bold;
+        }
+    }
+}
+
+.search {
+    background-color: $scene_background;
+    border-left: 1px solid $background_light;
+    border-right: 1px solid $background_light;
+
+    &:last-of-type {
+        border-bottom: 1px solid $background_light;
+    }
+
+    .compare {
+        width: 100%;
+        padding: 0.25rem;
+        text-align: left;
+
+        &:hover {
+            box-shadow: 0 0 1px $grey;
+        }
+
+        img {
+            vertical-align: text-bottom;
+        }
+    }
+}
+
+.wrapper {
+    position: relative;
+
+    .compare,
+    .loading,
+    .ready,
+    .limit {
+        border-radius: 50%;
+        padding: 1rem;
+        transition: all 0.3s;
+
+        &:hover,
+        &:focus {
+            .remove,
+            .add {
+                right: 70%;
+            }
+        }
+
+        &:focus {
+            outline: none;
+            box-shadow: 0 0 0 3px $highlight_blue;
+        }
+    }
+    .limit {
+        pointer-events: none;
+    }
+}
+
+.wrapper {
+    .ready,
+    .loading {
+        &:hover,
+        &:focus {
+            background-color: $red;
+        }
+    }
+
+    .ready {
+        background-color: $blue_light;
+    }
+
+    .compare {
+        &:hover,
+        &:focus {
+            background-color: $blue_light;
+        }
+    }
+
+    .loading {
+        background-color: $grey;
+    }
+}
+
+.infoText {
+    font-size: 0.75rem;
+}
+
+.remove,
+.add {
+    position: absolute;
+    left: 0;
+    right: 75%;
+    top: 0;
+    transition: all 0.3s;
+}

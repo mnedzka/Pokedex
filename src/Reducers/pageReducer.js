@@ -2,7 +2,7 @@ import {
     PAGE_CHANGE,
     PAGE_SHOW_IN_DEX,
     PAGE_UPDATE_DEX_DATA,
-} from 'Actions/actionTypes.js';
+} from 'Actions/actionTypes';
 
 const initialState = {
     currentPage : 'home',
@@ -21,6 +21,7 @@ const pageReducer = function pageChangeReducer (state = initialState, action) {
                 ...state,
                 currentPage : action.payload,
                 dexItemType : action.payload,
+                dexItemId : null,
             };
         case PAGE_SHOW_IN_DEX:
             window.__fetchlist.ab();

@@ -2,9 +2,7 @@ import React from 'react';
 import Styles from './PokeLink.scss';
 import { connect } from 'react-redux';
 import { showInPokedex } from 'Actions';
-import {
-    formatName,
-} from 'src/utils.js';
+import { formatName } from 'src/utils';
 
 class PokeLink extends React.Component {
     shouldComponentUpdate (nextProps) {
@@ -29,7 +27,7 @@ class PokeLink extends React.Component {
     };
 
     createTooltip = name => {
-        if (this.props.role === 'evolution') {
+        if (this.props.role === 'thumbnail') {
             return <span className={Styles.tooltip}>{name}</span>;
         }
         return null;
@@ -37,7 +35,7 @@ class PokeLink extends React.Component {
 
     createContent = name => {
         if (this.props.hasOwnProperty('children')) {
-            if (this.props.role === 'searchResult') {
+            if (this.props.role === 'search') {
                 return <span>
                     {this.props.children}
                     <span className={Styles.name}>{name}</span>
@@ -51,7 +49,7 @@ class PokeLink extends React.Component {
 
     render () {
         const name = formatName(this.props.name);
-        const role = this.props.role === 'searchResult' ? 'search' : 'wrapper';
+        const role = this.props.role ? this.props.role : 'wrapper';
         return <div className={Styles[role]}>
             <button onClick={this.handlePokeLinkClick}
                     className={Styles.redirect}>

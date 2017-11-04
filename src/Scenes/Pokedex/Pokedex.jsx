@@ -28,7 +28,7 @@ class Pokedex extends React.Component {
             case 'item':
                 return <DexItem data={this.props.data} />
             case 'pokedex':
-                return <DexHome />;
+                return <DexHome data={this.props.data} />;
             case 'wiki':
                 return <DexWiki type={this.props.id} />;
             default:

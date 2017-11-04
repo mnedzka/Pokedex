@@ -1,8 +1,11 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import Styles from './DexHome.scss';
-import { PokeLink } from 'Components';
-import { DexSearchbar } from './Components';
+import {
+    PokeLink,
+    Searchbar,
+} from 'Components';
+import { DexResult } from './Components';
 
 export default class DexHome extends React.Component {
     render () {
@@ -17,7 +20,9 @@ export default class DexHome extends React.Component {
                 </ul>
             </div>
             <div className={Styles.section}>
-                <DexSearchbar />
+                <h5>Search</h5>
+                <p>Use Pokemon, Move, Ability, Item name or type '#&lt;Number&gt;' to search Pokemon by pokedex number.</p>
+                <Searchbar data={this.props.data} item={DexResult} />
             </div>
         </div>;
     }

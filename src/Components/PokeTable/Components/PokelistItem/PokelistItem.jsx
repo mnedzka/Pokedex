@@ -3,11 +3,14 @@ import {
     PokeType,
     PokeLink,
     PokeImg,
+    CompareLink,
 } from 'Components';
 
 export default class PokelistItem extends React.Component {
     shouldComponentUpdate (nextProps) {
-        if ( this.props.data === nextProps.data ) {
+        const isDataEqual = this.props.data === nextProps.data;
+        const isSelectEqual = this.props.selected === nextProps.selected;
+        if (isDataEqual && isSelectEqual) {
             return false;
         } else {
             return true;
@@ -17,10 +20,13 @@ export default class PokelistItem extends React.Component {
     render () {
         const {
             id, name, types, hp, attack, speed, defense, special_attack, special_defense
-         } = this.props.data;
+        } = this.props.data;
+        const selected = this.props.selected;
         return <tr>
             <td>
-                <PokeImg id={id} />
+                <CompareLink id={id} ready={selected ? true : null} remove={this.props.selected} name={name} pokemon={this.props.compare} notify={true}>
+                    <PokeImg id={id} />
+                </CompareLink>
             </td>
             <td>
                 {id}

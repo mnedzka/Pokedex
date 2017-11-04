@@ -6,6 +6,7 @@ import {
     changePage,
     updateDexData,
     updateData,
+    updateCompare,
 } from 'Actions';
 import {
     Compare,
@@ -15,6 +16,9 @@ import {
     Pokedex,
     Pokelist,
 } from 'Scenes';
+import {
+    Notification,
+} from 'Components';
 
 class App extends React.Component {
     constructor () {
@@ -22,11 +26,11 @@ class App extends React.Component {
         this.fetch = new PokeCache();
     }
 
-    getData = () => {
+    getData = (id, type) => {
         const page = this.props.page;
         const body = {
-            type : page.dexItemType,
-            id : page.dexItemId,
+            type : type ? type : page.dexItemType,
+            id : id ? id : page.dexItemId,
         };
         const req = this.fetch.get(body);
         req.then(data => {
@@ -40,9 +44,19 @@ class App extends React.Component {
             console.log(data);
             console.log('## ## ##');
             if (page.currentPage === 'pokelist') {
-                this.props.updateList(data);
-            } else {
-                this.props.updateDex(data, page.dexItemType);
+                return this.props.updateList(data);
+            }
+            if (page.currentPage === 'compare') {
+                return this.props.updateCompare(data);
+            }
+            return this.props.updateDex(data, page.dexItemType);
+        });
+    };
+
+    getCompData = (pokemons, data) => {
+        pokemons.forEach((poke, i) => {
+            if (!data[i] || data[i].id !== poke.id) {
+                this.getData(poke.id, 'pokemon');
             }
         });
     };
@@ -56,7 +70,7 @@ class App extends React.Component {
             console.warn('No data');
             return true;
         }
-        if (dexItemData.id !== dexItemId) {
+        if (dexItemData.hasOwnProperty('id') && dexItemData.id !== dexItemId) {
             console.warn('Data.id is not equal to props.dexItemId');
             return true;
         }
@@ -68,7 +82,7 @@ class App extends React.Component {
     };
 
     render () {
-        const {page, list} = this.props;
+        const {page, list, compare} = this.props;
         let Content = Loader;
         let title = null;
         if (page.currentPage === 'pokelist') {
@@ -85,7 +99,7 @@ class App extends React.Component {
         }
         if (page.currentPage === 'pokedex') {
             title = 'Pokedex';
-            const noDataReq = ['pokedex', 'wiki'];
+            const noDataReq = ['wiki'];
             if (!noDataReq.includes(page.dexItemType) && this.isFetchNeeded()) {
                 console.log('FETCH NEEDED');
                 this.getData();
@@ -93,12 +107,21 @@ class App extends React.Component {
                 Content = Pokedex;
             }
         }
+        if (page.currentPage === 'compare') {
+            const comp = this.props.compare;
+            if (!comp.pokemon.every(e => comp.pokemon.find(p => p.id === e))) {
+                this.getCompData(comp.pokemon, comp.data);
+            }
+            title = 'Compare';
+            Content = Compare;
+        }
         if (page.currentPage === '404') {
             title = 'Sorry!';
             Content = NotFound;
         }
         return <Layout title={title}>
             <Content />
+            <Notification data={compare.notification} />
         </Layout>;
     }
 }
@@ -107,6 +130,7 @@ const mapStateToProps = state => {
     return {
         page : state.page,
         list : state.pokelist,
+        compare : state.compare,
     };
 };
 
@@ -115,6 +139,7 @@ const mapDispatchToProps = dispatch => {
         updateDex : (data, type) => dispatch(updateDexData(data, type)),
         updateList : data => dispatch(updateData(data)),
         fetchFail : page => dispatch(changePage(page)),
+        updateCompare : data => dispatch(updateCompare(data)),
     };
 };
 

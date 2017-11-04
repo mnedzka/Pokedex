@@ -1,0 +1,22 @@
+@import '~/../src/styles/partials/_variables.scss';
+
+.search {
+    max-width: 20rem;
+    margin: 0 auto;
+    position: relative;
+    z-index: 100;
+}
+
+.input {
+    width: 100%;
+    background-color: $scene_background;
+    border: 1px solid $background_light;
+    color: white;
+    padding: 0.25rem;
+}
+
+.absolute {
+    position: absolute;
+    left: 0;
+    right: 0;
+}

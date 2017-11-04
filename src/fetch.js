@@ -37,7 +37,7 @@ class FetchWrapper {
             window.__fetchlist.rm(this.__id);
             const {data, moves, evolution} = d;
             const localData = loadStorage(this.__nam) || [];
-            if (this.__nam === 'pokelist') {
+            if (this.__nam === 'pokelist' || this.__nam === 'pokedex') {
                 if (Array.isArray(localData)) this.setStorage(this.__nam, data);
                 return data;
             }
@@ -114,8 +114,10 @@ export default class PokeCache {
     get (reqBody = {}) {
         const {type = 'pokelist', id = 0, storedMoves = [], storedEvo = []} = reqBody;
         console.log(reqBody);
+        window.xxx ? window.xxx++ : window.xxx = 0;
+        if (window.xxx) return;
         const storedData = loadStorage(type);
-        if (storedData && type === 'pokelist') {
+        if (storedData && (type === 'pokelist' || type === 'pokedex')) {
             return Promise.resolve(storedData);
         }
         const match = storedData ? storedData.find(e => e.id === id) : false;

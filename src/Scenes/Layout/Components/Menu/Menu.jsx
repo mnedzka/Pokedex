@@ -8,7 +8,7 @@ class Menu extends React.Component {
             <MenuItem text="Home" />
             <MenuItem text="Pokelist" />
             <MenuItem text="Pokedex" />
-            <MenuItem text="Compare" disabled />
+            <MenuItem text="Compare" />
         </div>;
     }
 }
