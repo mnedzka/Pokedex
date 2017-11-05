@@ -11,8 +11,7 @@ export default class LevelUpMoves extends React.Component {
         const tableData = {
             headers : ['Lvl'],
             data : [],
-        };
-        const levels = [];
+        }
         data.forEach((pokemon, i) => {
             tableData.headers.push(formatName(pokemon.name));
             pokemon.moves.level_up.forEach(move => {
@@ -34,8 +33,9 @@ export default class LevelUpMoves extends React.Component {
 
     render () {
         const data = this.extractData(this.props.data);
-        return <div>
-            <DataTable data={data.data} headers={data.headers} compare={true} />
+        return <div className={Styles.about}>
+            <h5>Moves learned by level up</h5>
+            <DataTable data={data.data} headers={data.headers} compare />
         </div>;
     }
 }

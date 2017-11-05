@@ -7,43 +7,30 @@ import {
 const initialState = {
     data : [],
     pokemon : [],
-    notification : null,
+    notification : false,
 };
 
 const compareReducer = function compareComponentReducer (state = initialState, action) {
     switch (action.type) {
         case COMPARE_ADD_ITEM:
             const pokes = state.pokemon.slice();
-            const newPoke = {
+            if (pokes.length > 3) pokes.shift();
+            pokes.push({
                 id : action.payload,
                 name : action.name,
-            };
-            if (pokes.length > 3) pokes.shift();
-            pokes.push(newPoke);
+            });
             pokes.sort((a, b) => a.id - b.id);
-            const addNotify = !action.notify ? state.notification : {
-                pokeID : action.payload,
-                name : action.name,
-                add : true,
-                id : `${action.payload}${action.name}1`,
-            };
             return {
                 ...state,
                 pokemon : pokes,
-                notification : addNotify,
+                notification : action.notify,
             };
         case COMPARE_REMOVE_ITEM:
             const filtered = state.pokemon.filter(e => e.id !== action.payload);
-            const removeNotify = !action.notify ? state.notification : {
-                pokeID : action.payload,
-                name : action.name,
-                add : false,
-                id : `${action.payload}${action.name}0`,
-            };
             return {
                 ...state,
                 pokemon : filtered,
-                notification : removeNotify,
+                notification : action.notify,
             };
         case COMPARE_UPDATE_DATA:
             const d = [];

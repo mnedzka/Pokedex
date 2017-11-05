@@ -1,33 +1,33 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import App from './App.jsx';
+import App from './App';
 import { Provider } from 'react-redux';
 import { updateData } from 'Actions';
-import Store from './store.js';
-import PokeCache from './fetch.js';
+import { log } from 'src/utils';
+import Store from './store';
+import PokeCache from './fetch';
 
 //
 //
-window._compare = id => {
-    Store.dispatch({type : 'COMPARE_ADD_ITEM', payload: id});
+window.__log = (text = '', data = '', bg = 'darkblue', col = 'white') => {
+    console.log(`%c ${text} \n`, `background: ${bg}; color: ${col};`, data);
 };
-window._comp = d => {
-    Store.dispatch({type : 'COMPARE_UPDATE_DATA', payload: d});
-};
+const storageSize = (JSON.stringify(localStorage).length * 2 / 1024 / 1024).toFixed(2) + ' MB';
+__log('localStorage size', storageSize, 'darkred');
+Store.subscribe(() => {
+    __log('State', Store.getState());
+});
 //
 //
 
 const onLoad = function onDomConentLoaded () {
-    // Remove unnecessary Event Listener
     document.removeEventListener('DOMContentLoaded', onLoad);
-    // Add global object that will handle fetch requests
     window.__fetchlist = {
         list : [],
         ab : function () {
             this.list.forEach(e => {
                 e.abort();
             });
-            this.list = [];
         },
         ad : function (inst) {
             this.list.push(inst);
@@ -35,46 +35,41 @@ const onLoad = function onDomConentLoaded () {
         rm : function (id) {
             this.list = this.list.filter(e => e.__id !== id);
         },
+        has : function (reqID) {
+            const req = this.list.find(f => f.__reqID === reqID);
+            if (req) {
+                req.__isAborted = false;
+                return true;
+            }
+            return false;
+        }
     };
-    // Load pokelist data
     new PokeCache().get().then(d => Store.dispatch(updateData(d)));
-    // ReactDOM render
     ReactDOM.render(
         <Provider store={Store}>
             <App />
         </Provider>,
         document.querySelector('#app')
     );
-    // Greet Console Readers
-    console.log(`
-    ░░░░░░░░░░░░▄▄▄▄▄▄▄▄▄▄▄▄▄░░░░░░░░░░░░
-    ░░░░░░▄▄████▀▀▀▀▀░░░░░░▀▀█▄▄░░░░░░░░░
-    ░░░▄██▀▀░░░░░░░░░░░░░░░░░░▀██▄░░░░░░░
-    ░░▄█▀░░░░░░░░░░░░░░░░░░░░░░░░▀█▄░░░░░
-    ░██░░░░░░░░░░░░░░░░░░░░░░░░░░░▀█▄░░░░
-    ██░░░░░░░░░░░░░░░░░░░░░░░░░░░░░▀█▄░░░
-    ██░░░░░░░░░░░░░░░░░░░░░░░░░▄▄▄░░▀█░░░
-    █░░░░░░░░░░░░░░░░░░░░░░░░░░▀██▄░░██░░
-    █░░░░░████░░░░░░░░░░░░░░░░░░░░░░░░█▄░
-    █░░░░░▀▀▀█░░░░░░░░░░░░░░░░░░░░░░░░██░
-    █░░░░░░░░░░░░░░░░░░░░░░░▄▄▄▄█████▀░█▄
-    █░░░░░░░░░░▄▄▄▄▄██████▀▀▀▀▀▀░░░░░░░██
-    █░░░░▄█████▀▀▀▀▀░▄▄▄████░░░░░░░░░░░██
-    ██░░░░░░░░░░░░░░░░▀░░░░░░░░░░░░░░░░██
-    ▀█▄░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░█▀
-    ░▀█░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░▄█░
-    ░░██░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░██░
-    ░░░██░░░░░░░░░░░░░░░░░░░░░░░░░░░░▄█░░
-    ░░░░▀██▄░░░░░░░░░░░░░░░░░░░░░░▄▄█▀░░░
-    ░░░░░░▀██▄░░░░░░░░░░░░░░░░░▄▄█▀░░░░░░
-    ░░░░░░░░░▀██▄░░░░░░░░░░░▄▄█▀░░░░░░░░░
-    ░░░░░░░░░░░░▀██▄▄▄▄▄▄▄▄█▀░░░░░░░░░░░░
-    ░░░░░░░░░░░░░░░░░░█░░░░░░░░░░░░░░░░░░
-    ░░░░░░░░░░░░░░░░░░█░░░░░░░░░░░░░░░░░░
-    ░░░░░░░░░░░░░░░░░░█░░░░░░░░░░░░░░░░░░
-    ░░░░░░░░░░░░░░░░░░█░░░░░░░░░░░░░░░░░░
-    ░░░░░░░░░░░░░░░░░░█░░░░░░░░░░░░░░░░░░
-    ░░░░░░░░░░░░░░░░░░█░░░░░░░░░░░░░░░░░░`);
+    __log(`░░░░░░░░░░░░░░░░░░░░░░░░░░░░
+░░░░░░░░░░░░░▄▄▄▄▄▄▄░░░░░░░░░
+░░░░░░░░░▄▀▀▀░░░░░░░▀▄░░░░░░░
+░░░░░░░▄▀░░░░░░░░░░░░▀▄░░░░░░
+░░░░░░▄▀░░░░░░░░░░▄▀▀▄▀▄░░░░░
+░░░░▄▀░░░░░░░░░░▄▀░░██▄▀▄░░░░
+░░░▄▀░░▄▀▀▀▄░░░░█░░░▀▀░█▀▄░░░
+░░░█░░█▄▄░░░█░░░▀▄░░░░░▐░█░░░
+░░▐▌░░█▀▀░░▄▀░░░░░▀▄▄▄▄▀░░█░░
+░░▐▌░░█░░░▄▀░░░░░░░░░░░░░░█░░
+░░▐▌░░░▀▀▀░░░░░░░░░░░░░░░░▐▌░
+░░▐▌░░░░░░░░░░░░░░░▄░░░░░░▐▌░
+░░▐▌░░░░░░░░░▄░░░░░█░░░░░░▐▌░
+░░░█░░░░░░░░░▀█▄░░▄█░░░░░░▐▌░
+░░░▐▌░░░░░░░░░░▀▀▀▀░░░░░░░▐▌░
+░░░░█░░░░░░░░░░░░░░░░░░░░░█░░
+░░░░▐▌▀▄░░░░░░░░░░░░░░░░░▐▌░░
+░░░░░█░░▀░░░░░░░░░░░░░░░░▀░░░
+░░░░░░░░░░░░░░░░░░░░░░░░░░░░`, undefined, 'white', 'black');
 }
 
 document.addEventListener('DOMContentLoaded', onLoad);

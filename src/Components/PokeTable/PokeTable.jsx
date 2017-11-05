@@ -44,7 +44,7 @@ class PokeTableComponent extends React.Component {
         };
     }
 
-    setSorting = sortBy => {
+    changeSorting = sortBy => {
         this.setState({
             sortBy : sortBy,
             sortDir : this.state.sortDir * (-1),
@@ -60,7 +60,7 @@ class PokeTableComponent extends React.Component {
             }
         }
         const wrapper = t;
-        const mX = event.screenX;
+        const posX = event.screenX;
         const width = wrapper.clientWidth;
         const totalWidth = wrapper.scrollWidth;
         let previousX = null;
@@ -69,12 +69,12 @@ class PokeTableComponent extends React.Component {
         }
         const currentScroll = wrapper.scrollLeft;
         const handleMouseMove = ev => {
-            const mmoveX = ev.screenX;
-            if (Math.abs(previousX - mmoveX) < 3) {
+            const moveX = ev.screenX;
+            if (Math.abs(previousX - moveX) < 3) {
                 return;
             }
-            previousX = mmoveX;
-            wrapper.scrollLeft = currentScroll + (totalWidth - width) * ((mX - mmoveX) / (width >> 1));
+            previousX = moveX;
+            wrapper.scrollLeft = currentScroll + (totalWidth - width) * ((posX - moveX) / (width >> 1));
         }
         const handleMouseUp = ev => {
             window.removeEventListener('mouseup', handleMouseUp);
@@ -91,21 +91,18 @@ class PokeTableComponent extends React.Component {
     };
 
     createHeaders = headerArray => {
-        const th = [];
-        for (let [i, el] of headerArray.entries()) {
-            let sortBy = el[0].toLowerCase().replace(' ', '_');
-            if (el[0] === '#') {
-                sortBy = 'id';
-            } else if (el[0] === 'Lvl') {
-                sortBy = 'level_learned_at';
-            }
-            let cName = null;
-            let callback = null;
+        const headers = [];
+        headerArray.forEach((head, i) => {
+            let sort = head[0].toLowerCase().replace(' ', '_');
+            if (sort === '#') sort = 'id';
+            else if (sort === 'Lvl') sort = 'level_learned_at';
+            let className = null;
+            let clickCallback = null;
             let sortDirectionText = null;
-            if (el[1]) {
-                cName = Styles.sort;
-                callback = () => {this.setSorting(sortBy)};
-                if (this.state.sortBy === sortBy) {
+            if (head[1]) {
+                className = Styles.sort;
+                clickCallback = () => {this.changeSorting(sort)};
+                if (this.state.sortBy === sort) {
                     if (this.state.sortDir === 1) {
                         sortDirectionText = '↓';
                     } else {
@@ -113,49 +110,49 @@ class PokeTableComponent extends React.Component {
                     }
                 }
             }
-            th.push(<th key={i} className={cName} onClick={callback}>
-                {el[0]}{sortDirectionText}
+            headers.push(<th key={i} className={className} onClick={clickCallback}>
+                {head[0]}{sortDirectionText}
             </th>);
+        });
+        return <tr>{headers}</tr>;
+    };
+
+    createContent = contentData => {
+        const { Item, compare, data } = this.props;
+        const { length } = this.state;
+        const content = contentData.map((el, i) => {
+            const selected = compare.find(poke => poke.id === el.id);
+            return <Item key={el.name} data={el}
+                    selected={selected ? true : false} compare={compare} />;
+        });
+        if (length < data.length) {
+            content.push(<tr key="showmore">
+                <td colSpan={this.headers.length}>
+                    <button onClick={this.handleShowMoreClick} className={Styles.more}>
+                        Show More
+                    </button>
+                </td>
+            </tr>);
         }
-        return <tr>{th}</tr>;
+        return content;
     };
 
     render () {
-        if (!this.props.data.length) {
-            return null;
-        }
-        const sortBy = this.state.sortBy;
+        const { sortBy, sortDir = 1, length} = this.state;
         const data = this.props.data.sort((a, b) => {
-            if (this.state.sortDir === 1) {
+            if (sortDir === 1) {
                 return a[sortBy] - b[sortBy];
             } else {
                 return b[sortBy] - a[sortBy];
             }
-        }).slice(0, this.state.length);
-        const Item = this.props.listItem;
-        const listContent = data.map((el, i) => {
-            const selected = this.props.compare.find(p => p.id === el.id);
-            return <Item key={el.name} data={el} selected={selected ? true : false} compare={this.props.compare} />
-        });
-        let showMore = null;
-        if (this.state.length < this.props.data.length) {
-            showMore = <tr>
-                <td colSpan={this.headers.length}>
-                    <button onClick={this.handleShowMoreClick}
-                            className={Styles.more}>
-                        Show More
-                    </button>
-                </td>
-            </tr>;
-        }
+        }).slice(0, length);
         return <div className={Styles.wrapper} onMouseDown={this.handleMouseDown}>
             <table className={Styles.table}>
                 <thead className={Styles.thead}>
                     {this.createHeaders(this.headers)}
                 </thead>
                 <tbody className={Styles.tbody}>
-                    {listContent}
-                    {showMore}
+                    {this.createContent(data)}
                 </tbody>
             </table>
         </div>;

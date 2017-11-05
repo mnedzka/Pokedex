@@ -29,19 +29,22 @@ export default class Notification extends React.Component {
     }
 
     componentWillReceiveProps (nextProps) {
+        if (!nextProps.data || nextProps.data === this.props.data) {
+            return;
+        }
         let notify = this.state.notifications.slice();
         const isAdded = notify.find(n => n.id === nextProps.data.id && !n.dead);
-        if (!nextProps.data || isAdded || nextProps.data === this.props.data) return;
-        if (notify.every(n => n.dead)) notify = [];
-        const newItem = {
+        if (isAdded) return;
+        notify = notify.every(n => n.dead) ? [] : notify;
+        const popUp = {
             ...nextProps.data,
             dead : false,
             kill : setTimeout(() => {
-                clearTimeout(newItem.kill);
-                this.terminateNotification(newItem);
+                clearTimeout(popUp.kill);
+                this.terminateNotification(popUp);
             }, 3000),
         };
-        notify.push(newItem);
+        notify.push(popUp);
         this.setState({
             notifications : notify,
         });

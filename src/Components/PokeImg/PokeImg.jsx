@@ -10,11 +10,9 @@ export default class PokeImg extends React.Component {
     }
 
     getSrc (id) {
-        // #TODO
         if (id > 649) {
             return './resources/icons/not_ready.svg';
         }
-        // #TODO
         const bundleID = ~~(id / 10);
         let pokeID = id.toString();
         if (pokeID.length === 1) {
@@ -26,8 +24,8 @@ export default class PokeImg extends React.Component {
     }
 
     render () {
-        const cl = this.props.cl ? this.props.cl : 'sm';
-        const url = this.getSrc(this.props.id);
-        return <img className={Styles[cl]} src={url} />;
+        const { id , size = 'sm'} = this.props;
+        const url = this.getSrc(id);
+        return <img className={Styles[size]} src={url} />;
     }
 }

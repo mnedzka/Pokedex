@@ -14,15 +14,18 @@ const mapData = statArr => {
         };
         return <div key={statText[i]} className={Styles.row}>
             {statText[i]}
-            <div className={Styles.bar} style={style}>
-                {e}
+            <div className={Styles.bar}>
+                <div className={Styles.stat} style={style}>
+                    {e}
+                </div>
             </div>
         </div>;
     });
 };
 
 const PokeStats = props => {
-    return <div>
+    return <div className={Styles.about}>
+        <h5>Base stats</h5>
         {mapData(props.data)}
     </div>;
 };

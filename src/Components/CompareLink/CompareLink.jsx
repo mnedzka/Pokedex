@@ -1,18 +1,17 @@
 import React from 'react';
 import Styles from './CompareLink.scss';
 import { connect } from 'react-redux';
+import { formatName } from 'src/utils';
 import {
     addCompare,
     removeCompare,
 } from 'Actions';
-import { formatName } from 'src/utils';
 
 class CompareLink extends React.Component {
     shouldComponentUpdate (nextProps) {
         const isReadyEqual = this.props.ready === nextProps.ready;
         const isRemoveEqual = this.props.remove === nextProps.remove;
-        const compareEqual = this.props.pokemon === nextProps.pokemon;
-        if (isReadyEqual && isRemoveEqual && compareEqual) {
+        if (isReadyEqual && isRemoveEqual) {
             return false;
         }
         return true;
@@ -20,23 +19,20 @@ class CompareLink extends React.Component {
 
     handleClick = ev => {
         const { id, name, notify = false } = this.props;
-        if (this.props.hasOwnProperty('click')) {
+        if (this.props.hasOwnProperty('click') && typeof this.props.click === 'function') {
             this.props.click();
         }
         if (this.props.remove) {
             return this.props.removeCompare(id, name, notify);
         }
         if (this.props.pokemon.find(p => p.id === id)) {
-            return alert('blabla this pokemon has been already added');
+            return alert(`${formatName(name)} is already added.`);
         }
-        // if (this.props.pokemon.length > 3) {
-        //     return alert('BLA BLA TO MANY POKEMONs');
-        // }
         return this.props.addCompare(id, name, notify);
     };
 
-    createContent = (name, role) => {
-        if (role === 'search') {
+    createContent = name => {
+        if (this.props.info) {
             return <span>
                 {this.props.children}
                 <span className={Styles.name}>{name}</span>
@@ -60,20 +56,22 @@ class CompareLink extends React.Component {
     };
 
     render () {
-        const role = this.props.role ? this.props.role : 'wrapper';
-        let ready = 'compare';
+        const role = this.props.info ? 'search' : 'wrapper';
+        let readyState;
         switch (this.props.ready) {
             case false:
-                ready = 'loading';
+                readyState = 'loading';
                 break;
             case true:
-                ready = 'ready';
+                readyState = 'ready';
                 break;
+            default:
+                readyState = 'compare';
         }
         const name = formatName(this.props.name);
         return <div className={Styles[role]}>
-            <button onClick={this.handleClick} className={Styles[ready]}>
-                {this.createContent(name, this.props.role)}
+            <button onClick={this.handleClick} className={Styles[readyState]}>
+                {this.createContent(name)}
             </button>
         </div>;
     }
@@ -81,8 +79,8 @@ class CompareLink extends React.Component {
 
 const mapDispatchToProps = dispatch => {
     return {
-        addCompare : (id, name, role) => dispatch(addCompare(id, name, role)),
-        removeCompare : (id, name, role) => dispatch(removeCompare(id, name, role)),
+        addCompare : (id, name, notify) => dispatch(addCompare(id, name, notify)),
+        removeCompare : (id, name, notify) => dispatch(removeCompare(id, name, notify)),
     };
 };
 

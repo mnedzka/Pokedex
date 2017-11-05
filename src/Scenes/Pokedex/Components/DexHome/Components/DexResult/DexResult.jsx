@@ -6,10 +6,10 @@ import {
 
 export default class DexResult extends React.Component {
     render () {
-        const res = this.props.data;
-        const info = res.type === 'pokemon' ? `#${res.id}` : `(${res.type})`;
-        return <PokeLink id={res.id} name={res.name} type={res.type} info={info} role="search">
-            <img className={Styles.icon} src={`./resources/icons/${res.type}.svg`} />
+        const result = this.props.data;
+        const info = result.type === 'pokemon' ? `#${result.id}` : `(${result.type})`;
+        return <PokeLink id={result.id} name={result.name} type={result.type} info={info} role="search">
+            <img className={Styles.icon} src={`./resources/icons/${result.type}.svg`} />
         </PokeLink>;
     }
 }

@@ -60,7 +60,7 @@ $typeColors: (
   fairy: rgb(232, 152, 232),
 );
 
-// Base page content wrapper
+// Base style classes
 .section {
     padding: 0.5rem;
     margin-bottom: 1rem;
@@ -76,13 +76,10 @@ $typeColors: (
     background-color: $background_light;
 }
 
-
-// Explanation keyword
 .keyword {
     color: rgb(105, 220, 215);
 }
 
-// Text-Button
 .button {
     border: none;
     background: none;

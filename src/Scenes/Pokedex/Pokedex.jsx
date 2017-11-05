@@ -14,25 +14,26 @@ import {
 
 class Pokedex extends React.Component {
     render () {
-        switch (this.props.type) {
+        const { type, data, id } = this.props;
+        switch (type) {
             case 'type':
-                return <DexType data={this.props.data} />;
+                return <DexType data={data} />;
             case 'pokemon':
-                return <DexPokemon data={this.props.data} />;
+                return <DexPokemon data={data} />;
             case 'move':
-                return <DexMove data={this.props.data} />;
+                return <DexMove data={data} />;
             case 'ability':
-                return <DexAbility data={this.props.data} />;
+                return <DexAbility data={data} />;
             case 'egg_group':
-                return <DexEgg data={this.props.data} />;
+                return <DexEgg data={data} />;
             case 'item':
-                return <DexItem data={this.props.data} />
+                return <DexItem data={data} />
             case 'pokedex':
-                return <DexHome data={this.props.data} />;
+                return <DexHome data={data} />;
             case 'wiki':
-                return <DexWiki type={this.props.id} />;
+                return <DexWiki type={id} />;
             default:
-                return 'SUMTING WONG';
+                return `Error => requested page type (${type}) not found`;
         }
     }
 }

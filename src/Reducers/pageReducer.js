@@ -15,8 +15,6 @@ const initialState = {
 const pageReducer = function pageChangeReducer (state = initialState, action) {
     switch (action.type) {
         case PAGE_CHANGE:
-            window.__fetchlist.ab();
-            window.scrollTo(0, 0);
             return {
                 ...state,
                 currentPage : action.payload,
@@ -24,8 +22,6 @@ const pageReducer = function pageChangeReducer (state = initialState, action) {
                 dexItemId : null,
             };
         case PAGE_SHOW_IN_DEX:
-            window.__fetchlist.ab();
-            window.scrollTo(0, 0);
             return {
                 ...state,
                 currentPage : 'pokedex',

@@ -130,25 +130,25 @@ const createMultiplierTable = (typeArr, dir) => {
 };
 
 const parseMultiplierTable = multiTable => {
-    const typeMultiMap = multiTable.map((el, i) => {
-        const cName = el.multi.toString().replace('.', '');
+    const damageRelations = multiTable.map((type, i) => {
+        const cName = type.multi.toString().replace('.', '');
         return <div key={i} className={Styles.dmgRelItem}>
-            <PokeType type={[el]} />
+            <PokeType type={[type]} />
             <span className={Styles[`x${cName}`]}>
-                {el.multi}
+                {type.multi}
             </span>
         </div>;
     });
     return <div className={Styles.dmgRel}>
-        {typeMultiMap}
+        {damageRelations}
     </div>;
 };
 
 const DamageRelations = props => {
+    let { type, offense = false } = props;
     let infoDef = <p>How effective are moves of given types against this pokemon</p>;
     let defense = createMultiplierTable(props.type, 'from');
-    let offense = null;
-    if (props.hasOwnProperty('offense')) {
+    if (offense) {
         offense = createMultiplierTable(props.type, 'to');
     }
     return <div className={Styles.wrapper}>

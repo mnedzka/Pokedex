@@ -7,10 +7,10 @@ import {
 
 class CompareResult extends React.Component {
     render () {
-        const {name, id} = this.props.data;
+        const { name, id } = this.props.data;
         const info = `#${id}`;
         return <CompareLink click={this.props.click}
-                name={name} id={id} info={info} role="search" pokemon={this.props.compare}>
+                name={name} id={id} info={info} pokemon={this.props.compare}>
             <img className={Styles.icon} src="./resources/icons/pokemon.svg" />
         </CompareLink>;
     }

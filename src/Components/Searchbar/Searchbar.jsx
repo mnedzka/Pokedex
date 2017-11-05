@@ -159,19 +159,19 @@ export default class Searchbar extends React.Component {
     }
 
     render () {
-        const abs = this.props.absolute;
-        const Item = this.props.item;
-        const results = this.state.results.map(r => {
+        const { Item, absolute = false } = this.props;
+        const { input, results } = this.state;
+        const searchResults = results.map(r => {
             return <Item click={this.emptyResults} key={r.name + r.id} data={r} />
         });
         return <div>
             <div className={Styles.search}>
                 <input className={Styles.input}
                     onChange={this.handleInputChange}
-                    value={this.state.input}
+                    value={input}
                     placeholder="Enter name or #ID" type="text" />
-                <div className={abs ? Styles.absolute : null}>
-                    {results}
+                <div className={absolute ? Styles.absolute : null}>
+                    {searchResults}
                 </div>
             </div>
         </div>;

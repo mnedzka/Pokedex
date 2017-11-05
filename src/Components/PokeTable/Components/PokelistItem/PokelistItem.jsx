@@ -12,19 +12,19 @@ export default class PokelistItem extends React.Component {
         const isSelectEqual = this.props.selected === nextProps.selected;
         if (isDataEqual && isSelectEqual) {
             return false;
-        } else {
-            return true;
         }
+        return true;
     }
 
     render () {
         const {
             id, name, types, hp, attack, speed, defense, special_attack, special_defense
         } = this.props.data;
-        const selected = this.props.selected;
+        const { compare, selected } = this.props;
         return <tr>
             <td>
-                <CompareLink id={id} ready={selected ? true : null} remove={this.props.selected} name={name} pokemon={this.props.compare} notify={true}>
+                <CompareLink id={id} ready={selected ? true : null}
+                    remove={selected} name={name} pokemon={compare} notify={true}>
                     <PokeImg id={id} />
                 </CompareLink>
             </td>

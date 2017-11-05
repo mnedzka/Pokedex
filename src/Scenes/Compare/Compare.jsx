@@ -37,14 +37,15 @@ class Compare extends React.Component {
     };
 
     render () {
-        const {pokemon, data, list} = this.props;
+        const { pokemon, data, list } = this.props;
+        const { showCompare } = this.state;
         const isFetchDone = pokemon.length ? pokemon.every(p => data.find(e => e.id === p.id)) : true;
         const isReady = pokemon.length > 1 ? pokemon.every(p => data.find(e => e.id === p.id)) : false;
-        const btnClass = this.state.showCompare ? 'hide' : 'show';
         const validData = pokemon.map(p => data.find(d => d.id === p.id)).filter(d => d);
         let btn = <Loader />;
         if (isFetchDone) {
-            let btnText = this.state.showCompare && pokemon.length > 1 ? 'Hide' : 'Compare';
+            const btnText = showCompare && pokemon.length > 1 ? 'Hide' : 'Compare';
+            const btnClass = showCompare ? 'hide' : 'show';
             btn = <button className={Styles[btnClass]}
                 onClick={this.handleBtnClick} disabled={!isReady}>
                 {btnText}
@@ -57,36 +58,24 @@ class Compare extends React.Component {
             </div>;
         }
         let info = null;
-        let charts = null;
-        let lvlMoves = null;
-        let moves = null;
-        if (this.state.showCompare) {
-            charts = <div className={Styles.about}>
-                <Charts data={validData} />
-            </div>;
-            info = <div className={Styles.about}>
+        if (showCompare) {
+            info = <div>
                 <Info data={validData} />
-            </div>;
-            lvlMoves = <div className={Styles.about}>
+                <Charts data={validData} />
                 <LevelUpMoves data={validData} />
-            </div>;
-            moves = <div className={Styles.about}>
                 <Moves data={validData} />
             </div>;
         }
 
         return <div>
             <div className={Styles.about}>
-                <Searchbar data={list} item={CompareResult} absolute={true} />
+                <Searchbar data={list} Item={CompareResult} absolute={true} />
             </div>
             {showcase}
             <div className={Styles.section}>
                 {btn}
             </div>
             {info}
-            {charts}
-            {lvlMoves}
-            {moves}
         </div>;
     }
 }

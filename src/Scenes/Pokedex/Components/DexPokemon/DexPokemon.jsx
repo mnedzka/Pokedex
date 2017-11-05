@@ -1,5 +1,6 @@
 import React from 'react';
 import Styles from './DexPokemon.scss';
+import { formatName } from 'src/utils';
 import {
     PokeImg,
     PokeType,
@@ -14,33 +15,27 @@ import {
     PokeEvo,
     PokeForm,
 } from './Components';
-import {
-    formatName,
-} from 'src/utils.js';
 
 const mapAbilities = abilities => {
-    return abilities.sort((a, b) => a.slot - b.slot).map(e => {
-        const id = e.id;
-        const name = e.name;
-        const infoText = e.is_hidden ? '(hidden)' : null;
-        return <PokeLink key={name}
-                name={name} id={id}
+    return abilities.sort((a, b) => a.slot - b.slot).map(el => {
+        const id = el.id;
+        const name = el.name;
+        const infoText = el.is_hidden ? '(hidden)' : null;
+        return <PokeLink key={name} name={name} id={id}
                 info={infoText} type="ability" />
     });
 };
 
 const mapEggGroups = egg => {
-    return egg.map(e => {
-        return <PokeLink key={e.id} name={e.name} id={e.id} type="egg_group" />;
+    return egg.map(el => {
+        return <PokeLink key={el.id} name={el.name} id={el.id} type="egg_group" />;
     });
 };
 
 const mapHeldItems = heldItemsArr => {
-    if (!heldItemsArr.length) {
-        return '-';
-    }
-    return heldItemsArr.map(item => <PokeLink key={item.id} id={item.id} name={item.name}
-        info={`${item.rarity}%`} type="item" />);
+    if (!heldItemsArr.length) return;
+    return heldItemsArr.map(item => <PokeLink key={item.id} id={item.id}
+        name={item.name} info={`${item.rarity}%`} type="item" />);
 };
 
 const getMoveList = (moveArr, method) => {
@@ -49,7 +44,7 @@ const getMoveList = (moveArr, method) => {
     }
     return <div className={Styles.section}>
         <h5>Moves learned by {method}</h5>
-        <PokeTable headers="movelist" listItem={MovelistItem} data={moveArr} />
+        <PokeTable headers="movelist" Item={MovelistItem} data={moveArr} />
     </div>;
 };
 
@@ -76,7 +71,7 @@ const createNavBtns = id => {
 
 const DexPokemon = props => {
     const data = props.data;
-    const {hp, speed, special_attack, special_defense, attack, defense} = data.stats;
+    const { hp, speed, special_attack, special_defense, attack, defense } = data.stats;
     const pokedexData = [
         ['Pokedex No', data.id],
         ['Type', <PokeType type={data.types} />],
@@ -85,7 +80,6 @@ const DexPokemon = props => {
         ['Ability', mapAbilities(data.abilities)],
         ['Held Item', mapHeldItems(data.held_items)],
     ];
-
     const breedTrainData = [
         ['Catch rate', getCaptureRate(hp.base, data.capture_rate)],
         ['Base EXP', data.base_experience],
@@ -102,14 +96,14 @@ const DexPokemon = props => {
         special_defense.base,
         speed.base,
     ];
-    const navBtns = createNavBtns(data.id);
+
     return <div>
         <div className={Styles.nav}>
-            {navBtns}
+            {createNavBtns(data.id)}
             <h3 className={Styles.dexTitle}>Pokemon: {formatName(data.name)}</h3>
         </div>
         <div className={Styles.showcase}>
-            <PokeImg id={data.id} cl="md" />
+            <PokeImg id={data.id} size="md" />
             <span className={Styles.flavorText}>
                 {data.flavor_text}
             </span>
@@ -126,13 +120,8 @@ const DexPokemon = props => {
                 <DataTable data={breedTrainData} />
             </div>
         </div>
-        <div className={Styles.about}>
-            <h5>Base stats</h5>
-            <PokeStats data={statsData} />
-        </div>
-        {<div className={Styles.about}>
-            <DamageRelations type={data.types} />
-        </div>}
+        <PokeStats data={statsData} />
+        <DamageRelations type={data.types} />
         {getMoveList(data.moves.level_up, 'level up')}
         {getMoveList(data.moves.egg, 'breeding')}
         {getMoveList(data.moves.machine, 'TM')}

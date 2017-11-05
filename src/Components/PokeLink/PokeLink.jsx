@@ -6,7 +6,7 @@ import { formatName } from 'src/utils';
 
 class PokeLink extends React.Component {
     shouldComponentUpdate (nextProps) {
-        if (nextProps === this.props) {
+        if (nextProps.id === this.props.id) {
             return false;
         }
         return true;
@@ -19,14 +19,10 @@ class PokeLink extends React.Component {
         });
     };
 
-    createInfo = () => {
-        if (!this.props.role && this.props.hasOwnProperty('info') && this.props.info) {
+    createInfo = name => {
+        if (!this.props.role && this.props.info) {
             return <span className={Styles.infoText}>{' ' + this.props.info}</span>;
         }
-        return null;
-    };
-
-    createTooltip = name => {
         if (this.props.role === 'thumbnail') {
             return <span className={Styles.tooltip}>{name}</span>;
         }
@@ -48,22 +44,21 @@ class PokeLink extends React.Component {
     };
 
     render () {
+        const { role = 'wrapper' } = this.props;
         const name = formatName(this.props.name);
-        const role = this.props.role ? this.props.role : 'wrapper';
         return <div className={Styles[role]}>
             <button onClick={this.handlePokeLinkClick}
                     className={Styles.redirect}>
                 {this.createContent(name)}
             </button>
-            {this.createTooltip(name)}
-            {this.createInfo()}
+            {this.createInfo(name)}
         </div>;
     }
 }
 
 const mapDispatchToProps = dispatch => {
     return {
-        redirect : (data) => dispatch(showInPokedex(data)),
+        redirect : data => dispatch(showInPokedex(data)),
     };
 };
 

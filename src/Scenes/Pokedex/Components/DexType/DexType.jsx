@@ -1,5 +1,6 @@
 import React from 'react';
 import Styles from './DexType.scss';
+import { formatName } from 'src/utils';
 import {
     DamageRelations,
     PokeTable,
@@ -8,10 +9,10 @@ import {
 } from 'Components';
 
 const DexType = props => {
-    const {name, damage, pokemon, moves} = props.data;
+    const { name, damage, pokemon, moves } = props.data;
     return <div>
         <h3>
-            Type: {name.slice(0, 1).toUpperCase() + name.slice(1)}
+            Type: {formatName(name)}
         </h3>
         <div className={Styles.about}>
             <h5>Damage effectiveness.</h5>
@@ -22,20 +23,18 @@ const DexType = props => {
                 Defense damage chart shows how effective are other type attacks against {name} type pokemon. For example: 0.5 stands for 50% of total damage is received and this means attack is not very effective against {name} type pokemon.
             </p>
         </div>
-        <div className={Styles.about}>
-            <DamageRelations offense type={[props.data]} />
+        <DamageRelations offense type={[props.data]} />
+        <div className={Styles.section}>
+            <h5>
+                There is {pokemon.length} {name} type pokemons
+            </h5>
+            <PokeTable headers="pokelist" data={pokemon} Item={PokelistItem} />
         </div>
         <div className={Styles.section}>
             <h5>
-                There are {pokemon.length} {name} type pokemons.
+                There is {moves.length} {name} type moves
             </h5>
-            <PokeTable headers="pokelist" data={pokemon} listItem={PokelistItem} />
-        </div>
-        <div className={Styles.section}>
-            <h5>
-                There are {moves.length} {name} type moves.
-            </h5>
-            <PokeTable headers="movelist" data={moves} listItem={MovelistItem} />
+            <PokeTable headers="movelist" data={moves} Item={MovelistItem} />
         </div>
     </div>;
 }

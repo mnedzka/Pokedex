@@ -10,10 +10,10 @@ export default class MoveClass extends React.Component {
     }
 
     render () {
-    const cl = this.props.data;
+    const type = this.props.data;
     return <span className={Styles.center}>
-        <span className={Styles[cl]}>
-            {cl.replace(/\b(\w)/g, m => m.toUpperCase())}
+        <span className={Styles[type]}>
+            {type.replace(/\b(\w)/g, m => m.toUpperCase())}
         </span>
     </span>
     }

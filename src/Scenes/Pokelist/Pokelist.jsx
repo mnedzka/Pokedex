@@ -27,7 +27,7 @@ class Pokelist extends React.Component {
             };
             return p.types.some(t => t.name === this.state.typeFilter);
         });
-        const list = <PokeTable headers="pokelist" listItem={PokelistItem} data={data} />;
+        const list = <PokeTable headers="pokelist" Item={PokelistItem} data={data} />;
         return <div>
             <div className={Styles.filter}>
                 <label>

@@ -1,6 +1,4 @@
-import {
-    LIST_UPDATE_DATA,
- } from 'Actions/actionTypes';
+import { LIST_UPDATE_DATA } from 'Actions/actionTypes';
 
 const initialState = {
     data : null,

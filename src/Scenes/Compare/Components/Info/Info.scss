@@ -1,5 +1,6 @@
 @import '~/../src/styles/partials/_variables.scss';
 
 .wrapper {
+    @extend .about;
     overflow-x: auto;
 }

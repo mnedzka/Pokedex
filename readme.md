@@ -12,6 +12,7 @@
 
 ##### ToDo:
 - [ ] &nbsp;&nbsp;&nbsp;Style components
+- [ ] &nbsp;&nbsp;&nbsp;Wiki
 - [ ] &nbsp;&nbsp;&nbsp;Optimise images and icons
 - [ ] &nbsp;&nbsp;&nbsp;Missing images and icons
 - [ ] &nbsp;&nbsp;&nbsp;Pokemon sprites

@@ -31,4 +31,10 @@
 
 .compare {
     @extend .main;
+    width: 100%;
+
+    th,
+    tr:nth-of-type(even) {
+        background-color: rgba($background, 0.5);
+    }
 }

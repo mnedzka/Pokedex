@@ -16,7 +16,7 @@ class Home extends React.Component {
             <div className={Styles.section}>
                 <h5>Important notice!</h5>
                 <p>
-                    Evolution tree is still not completed, in some cases what you see is a simplified reflection of data available on websties mentioned above. Also many icons and images are missing.
+                    Evolution tree is not completed yet, in some cases what you see is a simplified reflection of data available on websties mentioned above. Also many icons and images are missing.
                 </p>
             </div>
         </div>

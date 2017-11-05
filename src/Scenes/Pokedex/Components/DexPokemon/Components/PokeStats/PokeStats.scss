@@ -10,6 +10,14 @@
 }
 
 .bar {
+    text-align: right;
+    border-radius: 0.125rem $border_radius $border_radius 0.125rem;
+    border: thin solid $grey;
+    background-color: rgba($grey, 0.25);
+}
+
+.stat {
     text-align: center;
     border-radius: 0.125rem $border_radius $border_radius 0.125rem;
+    min-width: 1rem;
 }

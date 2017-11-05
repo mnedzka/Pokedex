@@ -2,7 +2,6 @@ import {
     PAGE_CHANGE,
     PAGE_SHOW_IN_DEX,
     PAGE_UPDATE_DEX_DATA,
-    PAGE_BACK,
     LIST_UPDATE_DATA,
     COMPARE_ADD_ITEM,
     COMPARE_REMOVE_ITEM,
@@ -11,6 +10,8 @@ import {
 
 // STORE.PAGE
 const changePage = function changeCurrentPage (newPage) {
+    window.__fetchlist.ab();
+    window.scrollTo(0, 0);
     return {
         type : PAGE_CHANGE,
         payload : newPage,
@@ -18,6 +19,8 @@ const changePage = function changeCurrentPage (newPage) {
 };
 
 const showInPokedex = function showInfoInPokedexPage (pokedexPageData) {
+    window.__fetchlist.ab();
+    window.scrollTo(0, 0);
     return {
         type : PAGE_SHOW_IN_DEX,
         payload : pokedexPageData,
@@ -42,22 +45,32 @@ const updateData = function updatePokemonListData (data) {
 
 // STORE.COMPARE
 const addCompare = function addPokemonToCompare (id, name, notify) {
-    const showNotification = notify ? true : false;
+    const notification = !notify ? false : {
+        pokeID : id,
+        add : true,
+        id : `${id}${name}1`,
+        name,
+    };
     return {
         type : COMPARE_ADD_ITEM,
         payload : id,
         name : name,
-        notify : showNotification,
+        notify : notification,
     };
 };
 
 const removeCompare = function removePokemonFromCompare (id, name, notify) {
-    const showNotification = notify ? true : false;
+    const notification = !notify ? false : {
+        pokeID : id,
+        add : false,
+        id : `${id}${name}0`,
+        name,
+    };
     return {
         type : COMPARE_REMOVE_ITEM,
         payload : id,
         name : name,
-        notify : showNotification,
+        notify : notification,
     };
 };
 

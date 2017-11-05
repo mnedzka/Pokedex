@@ -16,7 +16,7 @@ const mapPokeForms = (data, id) => {
 };
 
 const PokeForm = props => {
-    const {id, data} = props;
+    const { id, data } = props;
     if (data.length < 2) {
         return null;
     }

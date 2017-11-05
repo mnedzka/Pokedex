@@ -12,17 +12,18 @@ import {
     formatName,
 } from 'src/utils.js';
 
-const createPokemonList = (pokeArr, learnBy) => {
-    if (!pokeArr.length) {
+const createPokemonList = (pokemon, learnBy, name) => {
+    if (!pokemon.length) {
         return null;
     }
     return <div className={Styles.section}>
-        <h5>List of pokemons that can learn this move by {learnBy}.</h5>
-        <PokeTable headers="pokelist" data={pokeArr} listItem={PokelistItem} />
+        <h5>{pokemon.length} Pokemons can learn {name} by {learnBy}</h5>
+        <PokeTable headers="pokelist" data={pokemon} Item={PokelistItem} />
     </div>;
 };
 
 const createTMLink = machine => {
+    if (!machine) return;
     const name = machine.name.toUpperCase();
     return <PokeLink id={machine.id} name={name} type="item" />;
 };
@@ -33,8 +34,7 @@ const addEffectChance = (descr, chance) => {
 
 const DexMove = props => {
     const move = props.data;
-    console.log(move);
-    const {egg, machine, tutor, level_up} = move.pokemon;
+    const { egg, machine, tutor, level_up } = move.pokemon;
     const name = formatName(move.name);
     const moveData = [
         ['Damage Class', <MoveClass data={move.damage_class} />],
@@ -42,12 +42,11 @@ const DexMove = props => {
         ['PP', move.pp],
         ['Accuracy', move.accuracy],
         ['Priority', move.priority],
-        ['Effect Chance', move.effect_chance ? move.effect_chance : '-'],
-        ['TM', move.machine ? createTMLink(move.machine) : '-'],
+        ['Effect Chance', move.effect_chance],
+        ['TM', createTMLink(move.machine)],
     ];
     const effectShort = addEffectChance(move.effect_entries.short_effect, move.effect_chance);
     const effect = addEffectChance(move.effect_entries.effect, move.effect_chance);
-
     return <div>
         <h3>Move: {name}</h3>
         <div className={Styles.about}>
@@ -65,13 +64,12 @@ const DexMove = props => {
             </p>
         </div>
         <div className={Styles.about}>
-            <h5>Move stats</h5>
             <DataTable data={moveData} />
         </div>
-        {createPokemonList(egg, 'breeding')}
-        {createPokemonList(level_up, 'level')}
-        {createPokemonList(machine, 'TM')}
-        {createPokemonList(tutor, 'tutor')}
+        {createPokemonList(egg, 'breeding', name)}
+        {createPokemonList(level_up, 'level up', name)}
+        {createPokemonList(machine, 'TM', name)}
+        {createPokemonList(tutor, 'tutor', name)}
     </div>;
 }
 

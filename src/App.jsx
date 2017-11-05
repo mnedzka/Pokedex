@@ -2,6 +2,7 @@ import React from 'react';
 import PokeCache from 'src/fetch.js';
 import { connect } from 'react-redux';
 import { Loader } from 'Components';
+import { Notification } from 'Components';
 import {
     changePage,
     updateDexData,
@@ -16,9 +17,6 @@ import {
     Pokedex,
     Pokelist,
 } from 'Scenes';
-import {
-    Notification,
-} from 'Components';
 
 class App extends React.Component {
     constructor () {
@@ -27,12 +25,13 @@ class App extends React.Component {
     }
 
     getData = (id, type) => {
-        const page = this.props.page;
-        const body = {
+        const { page } = this.props;
+        const reqBody = {
             type : type ? type : page.dexItemType,
             id : id ? id : page.dexItemId,
         };
-        const req = this.fetch.get(body);
+        const reqID = `${reqBody.type}${reqBody.id}`;
+        const req = this.fetch.get(reqBody, reqID);
         req.then(data => {
             if (!data) {
                 if (data === null) {
@@ -40,9 +39,7 @@ class App extends React.Component {
                 }
                 return this.props.fetchFail('404');
             }
-            console.log('## FETCHED ##');
-            console.log(data);
-            console.log('## ## ##');
+            __log('Fetched Data', data, 'blue');
             if (page.currentPage === 'pokelist') {
                 return this.props.updateList(data);
             }
@@ -55,34 +52,28 @@ class App extends React.Component {
 
     getCompData = (pokemons, data) => {
         pokemons.forEach((poke, i) => {
-            if (!data[i] || data[i].id !== poke.id) {
+            if (!(data[i] && data[i].id === poke.id)) {
                 this.getData(poke.id, 'pokemon');
             }
         });
     };
 
     isFetchNeeded = () => {
-        const {dexItemType, dexItemId, dexItemData, dexItemDataType, currentPage} = this.props.page;
+        const { dexItemType, dexItemId, dexItemData, dexItemDataType, currentPage } = this.props.page;
         if (currentPage === '404') {
             return false;
         }
-        if (!dexItemData) {
-            console.warn('No data');
+        if (!dexItemData || dexItemType !== dexItemDataType) {
             return true;
         }
         if (dexItemData.hasOwnProperty('id') && dexItemData.id !== dexItemId) {
-            console.warn('Data.id is not equal to props.dexItemId');
-            return true;
-        }
-        if (dexItemType !== dexItemDataType) {
-            console.warn('DexItemType not equal DexItemDataType');
             return true;
         }
         return false;
     };
 
     render () {
-        const {page, list, compare} = this.props;
+        const { page, list, compare } = this.props;
         let Content = Loader;
         let title = null;
         if (page.currentPage === 'pokelist') {
@@ -101,16 +92,16 @@ class App extends React.Component {
             title = 'Pokedex';
             const noDataReq = ['wiki'];
             if (!noDataReq.includes(page.dexItemType) && this.isFetchNeeded()) {
-                console.log('FETCH NEEDED');
                 this.getData();
             } else {
                 Content = Pokedex;
             }
         }
         if (page.currentPage === 'compare') {
-            const comp = this.props.compare;
-            if (!comp.pokemon.every(e => comp.pokemon.find(p => p.id === e))) {
-                this.getCompData(comp.pokemon, comp.data);
+            const { pokemon, data } = this.props.compare;
+            const dataReady = pokemon.every(poke => data.find(d => d.id === poke.id));
+            if (!dataReady) {
+                this.getCompData(pokemon, data);
             }
             title = 'Compare';
             Content = Compare;

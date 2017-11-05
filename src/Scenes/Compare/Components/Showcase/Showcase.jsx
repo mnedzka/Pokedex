@@ -13,7 +13,7 @@ export default class Showcase extends React.Component {
             const pokemon = this.props.pokemon.find(e => e.id === p.id);
             return <div key={p.id}  className={Styles.item}>
                 <CompareLink id={p.id} remove={true} ready={isDataReady} name={pokemon.name} click={this.props.click}>
-                    <PokeImg cl="fit" id={p.id} />
+                    <PokeImg size="fill" id={p.id} />
                 </CompareLink>
                 <PokeLink id={p.id} name={pokemon.name} type="pokemon" />
             </div>}

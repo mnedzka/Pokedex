@@ -10,38 +10,39 @@ export default class MovelistItem extends React.Component {
     shouldComponentUpdate (nextProps) {
         if ( this.props.data === nextProps.data ) {
             return false;
-        } else {
-            return true;
         }
+        return true;
     }
 
     render () {
-        const move = this.props.data;
+        const {
+            id, name, level_learned_at = false, power, pp, accuracy, damage_class, types
+        } = this.props.data;
         return <tr>
             <td>
-                {move.id}
+                {id}
             </td>
             <td>
-                <PokeLink name={move.name} id={move.id} type="move" />
+                <PokeLink name={name} id={id} type="move" />
             </td>
             <td>
-                {move.level_learned_at || '-'}
+                {level_learned_at || '-'}
             </td>
             <td>
-                {move.power || '-'}
+                {power || '-'}
             </td>
             <td>
-                {move.pp || '-'}
+                {pp || '-'}
             </td>
             <td>
-                {move.accuracy || '-'}
+                {accuracy || '-'}
             </td>
             <td>
-                <MoveClass data={move.damage_class} />
+                <MoveClass data={damage_class} />
             </td>
             <td>
                 <span className={Styles.center}>
-                    <PokeType type={move.types} />
+                    <PokeType type={types} />
                 </span>
             </td>
         </tr>;

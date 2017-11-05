@@ -2,6 +2,7 @@ import React from 'react';
 import Styles from './PokeType.scss';
 import { connect } from 'react-redux';
 import { showInPokedex } from 'Actions';
+import { formatName } from 'src/utils';
 
 class PokeType extends React.Component {
     shouldComponentUpdate (nextProps) {
@@ -19,12 +20,11 @@ class PokeType extends React.Component {
     };
 
     render () {
-        return this.props.type.map((el, i) => {
-            const name = el.name;
-            const text = name.replace(/\b(\w)/g, m => m.toUpperCase());
+        return this.props.type.map((type, i) => {
+            const text = formatName(type.name);
             return <span key={i}
-                className={Styles[name]}
-                onClick={() => this.handleClick(el.id)}>
+                className={Styles[type.name]}
+                onClick={() => this.handleClick(type.id)}>
                 {text}
             </span>;
         });
@@ -33,7 +33,7 @@ class PokeType extends React.Component {
 
 const mapDispatchToProps = dispatch => {
     return {
-        redirect : (data) => dispatch(showInPokedex(data)),
+        redirect : data => dispatch(showInPokedex(data)),
     };
 };
 

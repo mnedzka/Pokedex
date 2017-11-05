@@ -1,12 +1,10 @@
 import React from 'react';
 import Styles from './DexAbility.scss';
+import { formatName } from 'src/utils.js';
 import {
     PokeTable,
     PokelistItem,
 } from 'Components';
-import {
-    formatName,
-} from 'src/utils.js';
 
 export default class DexAbility extends React.Component {
     render () {
@@ -29,8 +27,8 @@ export default class DexAbility extends React.Component {
                 </p>
             </div>
             <div>
-                <h5>Pokemons with {name} ability</h5>
-                <PokeTable listItem={PokelistItem} data={ability.pokemon} headers="pokelist" />
+                <h5>There is {ability.pokemon.length} Pokemons with {name} ability</h5>
+                <PokeTable Item={PokelistItem} data={ability.pokemon} headers="pokelist" />
             </div>
         </div>;
     }

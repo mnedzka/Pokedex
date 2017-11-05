@@ -30,12 +30,33 @@ export default class Moves extends React.Component {
         return tableData;
     };
 
+    createTables = data => {
+        const tables = [];
+        for (let i in data) {
+            if (i === 'headers' || !data[i].length) continue;
+            let learnedBy;
+            switch (i) {
+                case 'egg':
+                    learnedBy = 'breeding';
+                    break;
+                case 'machine':
+                    learnedBy = 'TM';
+                    break;
+                default:
+                    learnedBy = 'Tutor';
+            }
+            tables.push(<div key={i}>
+                <h5>Moves learned by {learnedBy}</h5>
+                <DataTable headers={data.headers} data={data[i]} compare />
+            </div>);
+        }
+        return tables;
+    };
+
     render () {
         const data = this.extractData(this.props.data);
-        return <div>
-            <DataTable headers={data.headers} data={data.egg} compare={true} />
-            <DataTable headers={data.headers} data={data.machine} compare={true} />
-            <DataTable headers={data.headers} data={data.tutor} compare={true} />
+        return <div className={Styles.about}>
+            {this.createTables(data)}
         </div>;
     }
 }

@@ -158,11 +158,10 @@ const parseEvo = (evolutions, id) => {
 };
 
 const PokeEvo = props => {
-    const {chain, id} = props.data;
+    const { chain, id } = props.data;
     if (props.id > 802) return null;
     const evolutions = getEvolutions(chain, evolutions);
     if (evolutions.length < 2) return null;
-    console.log(evolutions);
     return <div className={Styles.evolution}>
         {parseEvo(evolutions, props.id)}
     </div>;
