@@ -52,14 +52,7 @@ class PokeTableComponent extends React.Component {
     };
 
     handleMouseDown = event => {
-        let t = event.target;
-        while (!/PokeTable__wrapper/.test(t.className)) {
-            t = t.parentElement;
-            if (/Layout/.test(t.className)) {
-                return;
-            }
-        }
-        const wrapper = t;
+        const wrapper = this.wrapper;
         const posX = event.screenX;
         const width = wrapper.clientWidth;
         const totalWidth = wrapper.scrollWidth;
@@ -146,7 +139,7 @@ class PokeTableComponent extends React.Component {
                 return b[sortBy] - a[sortBy];
             }
         }).slice(0, length);
-        return <div className={Styles.wrapper} onMouseDown={this.handleMouseDown}>
+        return <div className={Styles.wrapper} ref={w => this.wrapper = w} onMouseDown={this.handleMouseDown}>
             <table className={Styles.table}>
                 <thead className={Styles.thead}>
                     {this.createHeaders(this.headers)}
