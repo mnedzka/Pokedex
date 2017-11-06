@@ -1,12 +1,17 @@
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const path = require('path');
+const dev = require('./webpack.dev.js');
+const prod = require('./webpack.prod.js');
+const production = process.argv.indexOf('-p') !== -1;
+const plugins = production ? prod.plugins : dev.plugins;
+const styleRules = production ? prod.style : dev.style;
 
 module.exports = {
     entry: ['./src/index.jsx', './src/styles/main.scss'],
     output: {
         filename: 'app.js'
     },
-    watch: true,
+    watch: !production,
     module: {
         rules: [
 
@@ -18,28 +23,7 @@ module.exports = {
                     options: { presets: ['env', 'stage-2', 'react'] },
                 }],
             },
-
-            {
-                test: /\.(sass|scss)$/,
-                use: ExtractTextPlugin.extract({
-                    fallback: 'style-loader',
-                    use: [
-                        {
-                            loader: 'css-loader',
-                            options: {
-                                minimize: false,
-                                modules: true,
-                                importLoaders: 2,
-                                localIdentName: '[name]__[local]___[hash:base64:6]',
-                                url: false,
-                            },
-                        },
-                        {
-                            loader: 'sass-loader',
-                        },
-                    ],
-                }),
-            },
+            styleRules,
         ]
 
     },
@@ -57,11 +41,5 @@ module.exports = {
         extensions: ['.js', '.jsx'],
     },
 
-    plugins: [
-        new ExtractTextPlugin({
-            filename: 'app.css',
-            allChunks: true,
-        }),
-    ],
-
+    plugins,
 };
