@@ -11,6 +11,9 @@
         border-bottom: 1px solid $grey;
         text-align: left;
     }
+    tr:last-of-type td {
+        border-bottom: none;
+    }
 }
 
 .default {
@@ -33,8 +36,29 @@
     @extend .main;
     width: 100%;
 
-    th,
+    th {
+        background-color: rgba($background, 0.75);
+
+        &:first-of-type {
+            border-top-left-radius: $border_radius;
+        }
+
+        &:last-of-type {
+            border-top-right-radius: $border_radius;
+        }
+    }
+
     tr:nth-of-type(even) {
         background-color: rgba($background, 0.5);
+    }
+
+    tr:last-of-type {
+        td:first-of-type {
+            border-bottom-left-radius: $border_radius;
+        }
+
+        td:last-of-type {
+            border-bottom-right-radius: $border_radius;
+        }
     }
 }

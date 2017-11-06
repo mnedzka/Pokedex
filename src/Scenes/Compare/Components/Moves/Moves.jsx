@@ -9,7 +9,7 @@ import {
 export default class Moves extends React.Component {
     extractData = data => {
         const tableData = {
-            headers : [''],
+            headers : ['Move'],
             egg : [],
             machine : [],
             tutor :  [],
@@ -45,7 +45,7 @@ export default class Moves extends React.Component {
                 default:
                     learnedBy = 'Tutor';
             }
-            tables.push(<div key={i}>
+            tables.push(<div key={i} className={Styles.section}>
                 <h5>Moves learned by {learnedBy}</h5>
                 <DataTable headers={data.headers} data={data[i]} compare />
             </div>);

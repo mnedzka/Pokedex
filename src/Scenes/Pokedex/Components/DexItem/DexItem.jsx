@@ -33,7 +33,7 @@ const DexItem = props => {
         ['Category', <PokeLink id="item" name={category} type="wiki" />],
         ['Cost', cost],
         ['Fling power', fling_power],
-        ['Fling effect', <PokeLink id="item" name={fling_effect} type="wiki" />],
+        ['Fling effect', fling_effect ? <PokeLink id="item" name={fling_effect} type="wiki" /> : false],
         ['TM', createMachineLink(machine)]
     ];
     return <div>
