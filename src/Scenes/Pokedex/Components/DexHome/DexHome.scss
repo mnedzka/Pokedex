@@ -1,1 +1,16 @@
 @import '~/../src/styles/partials/_variables.scss';
+
+.header {
+    padding: 0.5rem;
+}
+
+.list {
+    display: inline;
+    padding-left: 0.5rem;
+
+    li {
+        display: inline-block;
+        list-style: none;
+        margin-right: 0.5rem;
+    }
+}

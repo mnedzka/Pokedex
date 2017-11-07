@@ -130,21 +130,9 @@ export default class Searchbar extends React.Component {
     };
 
     handleOutsideClick = ev => {
-        if (this.state.input.length) {
-            let t = event.target;
-            while (!/Searchbar/.test(t.className)) {
-                t = t.parentElement;
-                if (/Layout/.test(t.className)) {
-                    t = undefined;
-                    break;
-                }
-            }
-            if (!t) {
-                return this.setState({
-                    input : '',
-                    results : [],
-                });
-            }
+        const inside = this.wrapper.contains(ev.target);
+        if (this.state.input.length && !inside) {
+            return this.emptyResults();
         }
     };
 
@@ -165,7 +153,7 @@ export default class Searchbar extends React.Component {
             return <Item click={this.emptyResults} key={r.name + r.id} data={r} />
         });
         return <div>
-            <div className={Styles.search}>
+            <div className={Styles.search} ref={e => this.wrapper = e}>
                 <input className={Styles.input}
                     onChange={this.handleInputChange}
                     value={input}

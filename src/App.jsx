@@ -40,7 +40,7 @@ class App extends React.Component {
                 return this.props.fetchFail('404');
             }
             __log('Fetched Data', data, 'blue');
-            if (page.currentPage === 'pokelist') {
+            if (reqBody.type === 'pokelist') {
                 return this.props.updateList(data);
             }
             if (page.currentPage === 'compare') {
@@ -72,44 +72,60 @@ class App extends React.Component {
         return false;
     };
 
-    render () {
+    createContent = () => {
         const { page, list, compare } = this.props;
         let Content = Loader;
-        let title = null;
-        if (page.currentPage === 'pokelist') {
-            title = 'Pokelist';
-            if (!list.data) {
-                this.getData();
-            } else {
-                Content = Pokelist;
-            }
+        let title = 'Home';
+        switch (page.currentPage) {
+            case '404':
+                title = 'Sorry!';
+                Content = NotFound;
+                break;
+            case 'pokelist':
+                title = 'Pokelist';
+                if (!list.data) {
+                    this.getData();
+                } else {
+                    Content = Pokelist;
+                }
+                break;
+            case 'home':
+                title = 'Home';
+                Content = Home;
+                break;
+            case 'pokedex':
+                title = 'Pokedex';
+                const noDataReq = ['wiki'];
+                if (!noDataReq.includes(page.dexItemType) && this.isFetchNeeded()) {
+                    this.getData();
+                } else {
+                    Content = Pokedex;
+                }
+                break;
+            case 'compare':
+                title = 'Compare';
+                const { pokemon, data } = this.props.compare;
+                const dataReady = pokemon.every(poke => data.find(d => d.id === poke.id));
+                if (!dataReady) {
+                    this.getCompData(pokemon, data);
+                }
+                if (!list.data) {
+                    this.getData('compare', 'pokelist');
+                } else {
+                    Content = Compare;
+                }
+                break;
         }
-        if (page.currentPage === 'home') {
-            Content = Home;
-            title = 'Home';
-        }
-        if (page.currentPage === 'pokedex') {
-            title = 'Pokedex';
-            const noDataReq = ['wiki'];
-            if (!noDataReq.includes(page.dexItemType) && this.isFetchNeeded()) {
-                this.getData();
-            } else {
-                Content = Pokedex;
-            }
-        }
-        if (page.currentPage === 'compare') {
-            const { pokemon, data } = this.props.compare;
-            const dataReady = pokemon.every(poke => data.find(d => d.id === poke.id));
-            if (!dataReady) {
-                this.getCompData(pokemon, data);
-            }
-            title = 'Compare';
-            Content = Compare;
-        }
-        if (page.currentPage === '404') {
-            title = 'Sorry!';
-            Content = NotFound;
-        }
+        return {
+            Content,
+            title,
+        };
+    };
+
+    render () {
+        const { page, list, compare } = this.props;
+        const current = page.currentPage;
+        const { Content, title } = this.createContent();
         return <Layout title={title}>
             <Content />
             <Notification data={compare.notification} />
