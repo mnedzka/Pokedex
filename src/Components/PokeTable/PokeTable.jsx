@@ -112,21 +112,11 @@ class PokeTableComponent extends React.Component {
 
     createContent = contentData => {
         const { Item, compare, data } = this.props;
-        const { length } = this.state;
         const content = contentData.map((el, i) => {
             const selected = compare.find(poke => poke.id === el.id);
             return <Item key={el.name} data={el}
                     selected={selected ? true : false} compare={compare} />;
         });
-        if (length < data.length) {
-            content.push(<tr key="showmore">
-                <td colSpan={this.headers.length}>
-                    <button onClick={this.handleShowMoreClick} className={Styles.more}>
-                        Show More
-                    </button>
-                </td>
-            </tr>);
-        }
         return content;
     };
 
@@ -139,15 +129,24 @@ class PokeTableComponent extends React.Component {
                 return b[sortBy] - a[sortBy];
             }
         }).slice(0, length);
-        return <div className={Styles.wrapper} ref={w => this.wrapper = w} onMouseDown={this.handleMouseDown}>
-            <table className={Styles.table}>
-                <thead className={Styles.thead}>
-                    {this.createHeaders(this.headers)}
-                </thead>
-                <tbody className={Styles.tbody}>
-                    {this.createContent(data)}
-                </tbody>
-            </table>
+        let showMore = null;
+        if (length < this.props.data.length) {
+            showMore = <button onClick={this.handleShowMoreClick} className={Styles.more}>
+                Show More
+            </button>;
+        }
+        return <div>
+            <div className={Styles.wrapper} ref={w => this.wrapper = w} onMouseDown={this.handleMouseDown}>
+                <table className={Styles.table}>
+                    <thead className={Styles.thead}>
+                        {this.createHeaders(this.headers)}
+                    </thead>
+                    <tbody className={Styles.tbody}>
+                        {this.createContent(data)}
+                    </tbody>
+                </table>
+            </div>
+            {showMore}
         </div>;
     }
 }

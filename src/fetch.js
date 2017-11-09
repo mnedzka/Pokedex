@@ -126,7 +126,6 @@ class FetchWrapper extends Storage {
 export default class PokeCache extends Storage {
     get (reqBody = {}, reqID) {
         const {type = 'pokelist', id = 0, storedMoves = [], storedEvo = []} = reqBody;
-        __log('Requested Resource', reqBody, 'green');
         const isFetchAlive = window.__fetchlist.has(reqID);
         if (isFetchAlive) {
             return Promise.resolve(null);
@@ -164,7 +163,6 @@ export default class PokeCache extends Storage {
                 storedEvo,
             }),
         };
-        __log('Request Body', options, 'purple');
         return this.__fetchData(url, options, type, reqID);
     }
 

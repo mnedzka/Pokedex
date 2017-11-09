@@ -11,6 +11,7 @@
  - [Chart.js](http://www.chartjs.org/)
 
 ##### ToDo:
+- [ ] &nbsp;&nbsp;&nbsp;Fix chart for mobile
 - [ ] &nbsp;&nbsp;&nbsp;Style components
 - [ ] &nbsp;&nbsp;&nbsp;Optimise images and icons
 - [ ] &nbsp;&nbsp;&nbsp;Missing images and icons

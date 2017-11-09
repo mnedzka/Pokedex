@@ -2,6 +2,13 @@
     display: block;
 }
 
+.icon {
+    @extend .image;
+    max-width: 100%;
+    width: 3rem;
+    min-width: 1rem;
+}
+
 .sm {
     @extend .image;
     width: 75px;

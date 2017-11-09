@@ -4,6 +4,7 @@ import { formatName } from 'src/utils';
 import {
     PokeLink,
     DataTable,
+    PokeImg,
 } from 'Components';
 
 export default class LevelUpMoves extends React.Component {
@@ -13,7 +14,7 @@ export default class LevelUpMoves extends React.Component {
             data : [],
         }
         data.forEach((pokemon, i) => {
-            tableData.headers.push(formatName(pokemon.name));
+            tableData.headers.push(<PokeImg id={pokemon.id} size="icon" />);
             pokemon.moves.level_up.forEach(move => {
                 const lvl = move.level_learned_at;
                 if (!tableData.data[lvl]) {
@@ -35,7 +36,9 @@ export default class LevelUpMoves extends React.Component {
         const data = this.extractData(this.props.data);
         return <div className={Styles.about}>
             <h5>Moves learned by level up</h5>
-            <DataTable data={data.data} headers={data.headers} compare />
+            <div className={Styles.tableWrapper}>
+                <DataTable data={data.data} headers={data.headers} compare />
+            </div>
         </div>;
     }
 }

@@ -4,6 +4,7 @@ import { formatName } from 'src/utils';
 import {
     PokeLink,
     DataTable,
+    PokeImg,
 } from 'Components';
 
 export default class Moves extends React.Component {
@@ -15,7 +16,7 @@ export default class Moves extends React.Component {
             tutor :  [],
         };
         data.forEach((pokemon, i) => {
-            tableData.headers.push(formatName(pokemon.name));
+            tableData.headers.push(<PokeImg id={pokemon.id} size="icon" />);
             for (let prop in pokemon.moves) {
                 if (prop === 'level_up') continue;
                 pokemon.moves[prop].forEach(move => {
@@ -47,7 +48,9 @@ export default class Moves extends React.Component {
             }
             tables.push(<div key={i} className={Styles.section}>
                 <h5>Moves learned by {learnedBy}</h5>
-                <DataTable headers={data.headers} data={data[i]} compare />
+                <div className={Styles.tableWrapper}>
+                    <DataTable headers={data.headers} data={data[i]} compare />
+                </div>
             </div>);
         }
         return tables;

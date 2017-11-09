@@ -12,11 +12,6 @@ import PokeCache from './fetch';
 window.__log = (text = '', data = '', bg = 'darkblue', col = 'white') => {
     console.log(`%c ${text} \n`, `background: ${bg}; color: ${col};`, data);
 };
-const storageSize = (JSON.stringify(localStorage).length * 2 / 1024 / 1024).toFixed(2) + ' MB';
-__log('localStorage size', storageSize, 'darkred');
-Store.subscribe(() => {
-    __log('State', Store.getState());
-});
 //
 //
 
@@ -44,7 +39,7 @@ const onLoad = function onDomConentLoaded () {
             return false;
         }
     };
-    new PokeCache().get().then(d => Store.dispatch(updateData(d)));
+    new PokeCache().get(undefined, 'pokelistnull').then(d => Store.dispatch(updateData(d)));
     ReactDOM.render(
         <Provider store={Store}>
             <App />

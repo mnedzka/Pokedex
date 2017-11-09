@@ -39,7 +39,6 @@ class App extends React.Component {
                 }
                 return this.props.fetchFail('404');
             }
-            __log('Fetched Data', data, 'blue');
             if (reqBody.type === 'pokelist') {
                 return this.props.updateList(data);
             }
@@ -110,7 +109,7 @@ class App extends React.Component {
                     this.getCompData(pokemon, data);
                 }
                 if (!list.data) {
-                    this.getData('compare', 'pokelist');
+                    this.getData(null, 'pokelist');
                 } else {
                     Content = Compare;
                 }

@@ -4,6 +4,7 @@ import {
     PokeType,
     PokeLink,
     DataTable,
+    PokeImg,
 } from 'Components';
 import { formatName } from 'src/utils';
 
@@ -46,7 +47,7 @@ export default class Info extends React.Component {
         };
         data.forEach((pokemon, i) => {
             const ind = i + 1;
-            tableData.headers.push(formatName(pokemon.name));
+            tableData.headers.push(<PokeImg id={pokemon.id} size="icon" />);
             tableData.data[0][ind] = <PokeType type={pokemon.types} />;
             tableData.data[1][ind] = this.mapAbilities(pokemon.abilities);
             tableData.data[2][ind] = this.mapEggGroups(pokemon.egg_groups);
