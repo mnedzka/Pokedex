@@ -8,7 +8,7 @@ import {
 const mapPokeForms = (data, id) => {
     return data.filter(f => f.id !== id).map(f => {
         return <div key={f.id} className={Styles.item}>
-            <PokeLink name={f.name} id={f.id} type="pokemon">
+            <PokeLink name={f.name} id={f.id} type="pokemon" role="thumbnail">
                 <PokeImg id={f.id} />
             </PokeLink>
         </div>;
@@ -21,6 +21,7 @@ const PokeForm = props => {
         return null;
     }
     return <div className={Styles.wrapper}>
+        <h5>Other forms of this Pokemon</h5>
         {mapPokeForms(data, id)}
     </div>;
 };

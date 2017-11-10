@@ -29,7 +29,6 @@
 
         &:hover,
         &:focus {
-            background: $background;
             border-radius: 50%;
         }
     }
@@ -58,8 +57,19 @@
             box-shadow: 0 0 1px $grey;
         }
 
-        img {
-            vertical-align: text-bottom;
+        &:focus,
+        &:hover {
+            svg {
+                fill: rgb(180, 255, 255);
+            }
+        }
+
+        svg {
+            vertical-align: bottom;
+            width: 1.5rem;
+            margin-right: 0.25rem;
+            display: inline-block;
+            fill: rgb(255, 255, 255);
         }
     }
 }

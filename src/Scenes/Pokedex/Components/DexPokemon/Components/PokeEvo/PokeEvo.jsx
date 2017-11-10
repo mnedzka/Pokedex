@@ -142,12 +142,10 @@ const parseEvo = (evolutions, id) => {
         return <div key={i} className={Styles.row}>{
             evo.map(poke => {
                 let details = i ? <div className={Styles.arrow}>{mapEvoDetails(poke.details)}</div> : null;
-                let pokeImg = <PokeLink name={poke.name} id={poke.id} type="pokemon" role="thumbnail">
+                let dis = id === poke.id ? true : null;
+                let pokeImg = <PokeLink name={poke.name} id={poke.id} type="pokemon" role="thumbnail" disabled={dis}>
                     <PokeImg id={poke.id} />
                 </PokeLink>;
-                if (id === poke.id) {
-                    pokeImg = <PokeImg id={poke.id} />;
-                }
                 return <div className={Styles.item} key={poke.id}>
                     {details}
                     {pokeImg}

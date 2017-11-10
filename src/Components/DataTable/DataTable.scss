@@ -37,8 +37,6 @@
     width: 100%;
 
     th {
-        background-color: rgba($background, 0.75);
-
         &:first-of-type {
             border-top-left-radius: $border_radius;
         }
@@ -48,7 +46,7 @@
         }
     }
 
-    tr:nth-of-type(even) {
+    tbody tr:nth-of-type(odd) {
         background-color: rgba($background, 0.5);
     }
 

@@ -39,19 +39,17 @@ class CompareLink extends React.Component {
                 <span className={Styles.infoText}>{' ' + this.props.info}</span>
             </span>;
         }
-        let icon = null;
+        let iconClassName = 'add';
         if (this.props.remove) {
-            icon = <span className={Styles.remove}>
-                <img src="./resources/icons/remove.svg" />
-            </span>;
-        } else {
-            icon = <span className={Styles.add}>
-                <img src="./resources/icons/add.svg" />
-            </span>
+            iconClassName = 'remove';
         }
         return <span>
             {this.props.children}
-            {icon}
+            <span className={Styles[iconClassName]}>
+                <svg role="img" viewBox="0 0 512 512">
+                    <use xlinkHref="./resources/icons/icons.svg#compare" />
+                </svg>
+            </span>
         </span>;
     };
 

@@ -17,7 +17,7 @@ export default class Charts extends React.Component {
         };
     }
 
-    handleChartClick = ev => {
+    handleClick = ev => {
         const stats = [
             'hp',
             'attack',
@@ -73,49 +73,42 @@ export default class Charts extends React.Component {
     render () {
         const chartData = this.getChartData(this.props.data);
         const options = {
-            animation : {
-                onComplete : pie => {
-                    const chart = pie.chart;
-                    const tooltips = chart.tooltip._active;
-                    if (Array.isArray(tooltips) && tooltips.length) return;
-                    const ctx = chart.ctx;
-                    ctx.font = '20px ubuntulight';
-                    chart.config.data.datasets.forEach(dataset => {
-                        dataset.data.forEach((_data, i) => {
-                            const _meta = Object.values(dataset._meta).slice().shift();
-                            const model = _meta.data[i]._model;
-                            const midRad = model.outerRadius / 2;
-                            const midAngle = model.startAngle + (model.endAngle - model.startAngle) / 2;
-                            const posX = midRad * Math.cos(midAngle) - 10;
-                            const posY = midRad * Math.sin(midAngle);
-                            ctx.fillStyle = '#fff';
-                            ctx.fillText(_data, model.x + posX, model.y + posY);
-                        });
-                    });
-                },
-            },
             legend : {
                 labels : {
                     fontColor : '#fff',
                     fontSize : 14,
                     fontFamily : 'ubuntulight',
+                    generateLabels: chart => {
+                        const data = chart.data;
+                        if (data.labels.length && data.datasets.length) {
+                            return data.labels.map((label, i) => {
+                                const meta = chart.getDatasetMeta(0);
+                                const ds = data.datasets[0];
+                                const arc = meta.data[i];
+                                const arcOpts = chart.options.elements.arc;
+                                const fill = data.datasets[arc._datasetIndex].backgroundColor[arc._index];
+                                const value = data.datasets[arc._datasetIndex].data[arc._index];
+                                return {
+                                    text: `${label} ${value}`,
+                                    fillStyle: fill,
+                                    index: i
+                                };
+                            });
+                        }
+                        return [];
+                    },
                 },
             },
             tooltips : {
                 bodyFontSize : 16,
-                callbacks : {
-                    label : (tooltipItem, data) => {
-                        const { index, datasetIndex } = tooltipItem;
-                        return `${data.labels[index]} - ${data.datasets[datasetIndex].data[index]}`;
-                    },
-                },
             },
-            onClick : this.handleChartClick,
         };
         return <div className={Styles.wrapper}>
             <h5>Stat: {formatName(this.state.currentStat)}</h5>
-            <p>Click on chart to change displayed stat.</p>
             <Pie data={chartData} options={options} />
+            <button onClick={this.handleClick} className={Styles.change}>
+                Change Stat
+            </button>
         </div>;
     }
 }

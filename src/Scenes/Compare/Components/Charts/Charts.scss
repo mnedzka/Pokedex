@@ -8,3 +8,11 @@
         cursor: pointer;
     }
 }
+
+.change {
+    @extend .button;
+    background-color: $blue_light;
+    margin-top: 1rem;
+    padding: 0.5rem;
+    border-radius: $border_radius;
+}

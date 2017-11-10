@@ -1,5 +1,4 @@
 import React from 'react';
-import Styles from './CompareResult.scss';
 import { connect } from 'react-redux';
 import {
     CompareLink,
@@ -11,7 +10,9 @@ class CompareResult extends React.Component {
         const info = `#${id}`;
         return <CompareLink click={this.props.click}
                 name={name} id={id} info={info} pokemon={this.props.compare}>
-            <img className={Styles.icon} src="./resources/icons/pokemon.svg" />
+            <svg role="img" viewBox="0 0 512 512">
+                <use xlinkHref="./resources/icons/icons.svg#pokemon" />
+            </svg>
         </CompareLink>;
     }
 }

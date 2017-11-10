@@ -146,7 +146,7 @@ const parseMultiplierTable = multiTable => {
 
 const DamageRelations = props => {
     let { type, offense = false } = props;
-    let infoDef = <p>How effective are moves of given types against this pokemon</p>;
+    let infoDef = <p>How effective are moves of given types against this pokemon (abilities not taken into account).</p>;
     let defense = createMultiplierTable(props.type, 'from');
     if (offense) {
         offense = createMultiplierTable(props.type, 'to');

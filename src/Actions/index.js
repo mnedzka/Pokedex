@@ -48,7 +48,7 @@ const addCompare = function addPokemonToCompare (id, name, notify) {
     const notification = !notify ? false : {
         pokeID : id,
         add : true,
-        id : `${id}${name}1`,
+        id : `${name}add`,
         name,
     };
     return {
@@ -63,7 +63,7 @@ const removeCompare = function removePokemonFromCompare (id, name, notify) {
     const notification = !notify ? false : {
         pokeID : id,
         add : false,
-        id : `${id}${name}0`,
+        id : `${name}remove`,
         name,
     };
     return {

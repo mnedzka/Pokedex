@@ -50,7 +50,7 @@ export default class PokeImg extends React.Component {
 
     getSrc (id) {
         if (id > 649) {
-            return './resources/icons/not_ready.svg';
+            return './resources/icons/unknown.svg';
         }
         const bundleID = ~~(id / 10);
         let pokeID = id.toString();

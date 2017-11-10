@@ -1,7 +1,14 @@
 @import '~/../src/styles/partials/_variables.scss';
 
-.tableWrapper {
+.wrapper {
+    margin-bottom: 1rem;
+    border-radius: $border_radius;
+    background-color: $background_light;
     overflow-x: auto;
+
+    &:last-of-type {
+        margin-bottom: 0;
+    }
 
     span {
         text-align: left;

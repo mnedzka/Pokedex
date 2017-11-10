@@ -9,7 +9,7 @@ class NotFound extends React.Component {
     render () {
         return <div className={Styles.wrapper}>
             <div>
-                <img src="./resources/pokemon/404.svg" />
+                <img src="./resources/icons/404.svg" />
             </div>
             Request failed.
             <PokeLink name="Retry?" id={this.props.id} type={this.props.type} />

@@ -31,8 +31,19 @@
             box-shadow: 0 0 1px $grey;
         }
 
-        img {
-            vertical-align: text-bottom;
+        &:focus,
+        &:hover {
+            svg {
+                fill: rgb(180, 255, 255);
+            }
+        }
+
+        svg {
+            vertical-align: bottom;
+            width: 1.5rem;
+            margin-right: 0.25rem;
+            display: inline-block;
+            fill: rgb(255, 255, 255);
         }
     }
 }
@@ -102,4 +113,20 @@
     right: 75%;
     top: 0;
     transition: all 0.3s;
+
+    svg {
+        vertical-align: bottom;
+        width: 100%;
+        display: inline-block;
+        fill: rgb(45, 155, 155);
+        transition: all 0.3s;
+    }
+}
+
+.remove {
+    transform: rotateZ(45deg);
+
+    svg {
+        fill: rgb(204, 50, 75);
+    }
 }

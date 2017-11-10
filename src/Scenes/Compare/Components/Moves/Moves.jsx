@@ -41,14 +41,14 @@ export default class Moves extends React.Component {
                     learnedBy = 'breeding';
                     break;
                 case 'machine':
-                    learnedBy = 'TM';
+                    learnedBy = 'Machine';
                     break;
                 default:
                     learnedBy = 'Tutor';
             }
-            tables.push(<div key={i} className={Styles.section}>
+            tables.push(<div key={i}>
                 <h5>Moves learned by {learnedBy}</h5>
-                <div className={Styles.tableWrapper}>
+                <div className={Styles.wrapper}>
                     <DataTable headers={data.headers} data={data[i]} compare />
                 </div>
             </div>);
@@ -58,7 +58,7 @@ export default class Moves extends React.Component {
 
     render () {
         const data = this.extractData(this.props.data);
-        return <div className={Styles.about}>
+        return <div>
             {this.createTables(data)}
         </div>;
     }

@@ -10,13 +10,13 @@ class Home extends React.Component {
                     Pokedex is a digital encyclopedia created by Profesor Oak to help trainers in Pokemon world. It gives information about all Pokemons that are contained in its database.
                 </p>
                 <p>
-                    Informations you can find here are simplified data published via <a className={Styles.link} href="https://pokeapi.co">PokeApi</a> and on <a className={Styles.link} href="https://bulbapedia.bulbagarden.net">Bulbapedia</a>.
+                    Informations you can find here have been published via <a className={Styles.link} href="https://pokeapi.co">PokeApi</a> and on <a className={Styles.link} href="https://bulbapedia.bulbagarden.net">Bulbapedia</a>.
                 </p>
             </div>
             <div className={Styles.section}>
                 <h5>Important notice!</h5>
                 <p>
-                    Evolution tree is not completed yet, in some cases what you see is a simplified reflection of data available on websties mentioned above. Also many icons and images are missing.
+                    Pokemons images from 6th to 7th generation and for all items are missing.
                 </p>
             </div>
         </div>

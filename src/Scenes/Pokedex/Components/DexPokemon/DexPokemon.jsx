@@ -96,7 +96,6 @@ const DexPokemon = props => {
         special_defense.base,
         speed.base,
     ];
-
     return <div>
         <div className={Styles.nav}>
             {createNavBtns(data.id)}
@@ -124,8 +123,8 @@ const DexPokemon = props => {
         <DamageRelations type={data.types} />
         {getMoveList(data.moves.level_up, 'level up')}
         {getMoveList(data.moves.egg, 'breeding')}
-        {getMoveList(data.moves.machine, 'TM')}
-        {getMoveList(data.moves.tutor, 'tutor')}
+        {getMoveList(data.moves.machine, 'Machine')}
+        {getMoveList(data.moves.tutor, 'Tutor')}
     </div>;
 };
 

@@ -34,9 +34,9 @@ export default class LevelUpMoves extends React.Component {
 
     render () {
         const data = this.extractData(this.props.data);
-        return <div className={Styles.about}>
+        return <div>
             <h5>Moves learned by level up</h5>
-            <div className={Styles.tableWrapper}>
+            <div className={Styles.wrapper}>
                 <DataTable data={data.data} headers={data.headers} compare />
             </div>
         </div>;

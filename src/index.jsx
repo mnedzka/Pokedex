@@ -7,14 +7,6 @@ import { log } from 'src/utils';
 import Store from './store';
 import PokeCache from './fetch';
 
-//
-//
-window.__log = (text = '', data = '', bg = 'darkblue', col = 'white') => {
-    console.log(`%c ${text} \n`, `background: ${bg}; color: ${col};`, data);
-};
-//
-//
-
 const onLoad = function onDomConentLoaded () {
     document.removeEventListener('DOMContentLoaded', onLoad);
     window.__fetchlist = {
@@ -46,7 +38,7 @@ const onLoad = function onDomConentLoaded () {
         </Provider>,
         document.querySelector('#app')
     );
-    __log(`░░░░░░░░░░░░░░░░░░░░░░░░░░░░
+    console.log(`%c░░░░░░░░░░░░░░░░░░░░░░░░░░░░░
 ░░░░░░░░░░░░░▄▄▄▄▄▄▄░░░░░░░░░
 ░░░░░░░░░▄▀▀▀░░░░░░░▀▄░░░░░░░
 ░░░░░░░▄▀░░░░░░░░░░░░▀▄░░░░░░
@@ -64,7 +56,7 @@ const onLoad = function onDomConentLoaded () {
 ░░░░█░░░░░░░░░░░░░░░░░░░░░█░░
 ░░░░▐▌▀▄░░░░░░░░░░░░░░░░░▐▌░░
 ░░░░░█░░▀░░░░░░░░░░░░░░░░▀░░░
-░░░░░░░░░░░░░░░░░░░░░░░░░░░░`, undefined, 'white', 'black');
+░░░░░░░░░░░░░░░░░░░░░░░░░░░░░`, 'background: white; color: black;');
 }
 
 document.addEventListener('DOMContentLoaded', onLoad);

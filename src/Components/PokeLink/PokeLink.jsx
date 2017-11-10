@@ -44,11 +44,12 @@ class PokeLink extends React.Component {
     };
 
     render () {
-        const { role = 'wrapper' } = this.props;
+        const { role = 'wrapper', disabled } = this.props;
         const name = formatName(this.props.name);
         return <div className={Styles[role]}>
-            <button onClick={this.handlePokeLinkClick}
-                    className={Styles.redirect}>
+            <button onClick={disabled ? null : this.handlePokeLinkClick}
+                    className={Styles.redirect}
+                    disabled={disabled}>
                 {this.createContent(name)}
             </button>
             {this.createInfo(name)}

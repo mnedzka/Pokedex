@@ -86,4 +86,8 @@ $typeColors: (
     padding: 0;
     color: white;
     user-select: none;
+
+    &[disabled] {
+        cursor: default;
+    }
 }
