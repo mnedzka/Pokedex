@@ -1,14 +1,12 @@
 import React from 'react';
 import Styles from './DexItem.scss';
+import { formatName } from 'src/utils.js';
 import {
     DataTable,
     PokeLink,
     PokeTable,
     PokelistItem,
 } from 'Components';
-import {
-    formatName,
-} from 'src/utils.js';
 
 const createMachineLink = machine => {
     if (!machine) return;

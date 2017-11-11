@@ -13,32 +13,35 @@ class PokeLink extends React.Component {
     }
 
     handlePokeLinkClick = () => {
-        return this.props.redirect({
-            type : this.props.type,
-            id : this.props.id,
+        const { redirect, type, id } = this.props;
+        return redirect({
+            id,
+            type,
         });
     };
 
     createInfo = name => {
-        if (!this.props.role && this.props.info) {
-            return <span className={Styles.infoText}>{' ' + this.props.info}</span>;
+        const { role, info } = this.props;
+        if (!role && info) {
+            return <span className={Styles.infoText}>{' ' + info}</span>;
         }
-        if (this.props.role === 'thumbnail') {
+        if (role === 'thumbnail') {
             return <span className={Styles.tooltip}>{name}</span>;
         }
         return null;
     };
 
     createContent = name => {
-        if (this.props.hasOwnProperty('children')) {
-            if (this.props.role === 'search') {
+        const { children, role, info } = this.props;
+        if (children) {
+            if (role === 'search') {
                 return <span>
-                    {this.props.children}
+                    {children}
                     <span className={Styles.name}>{name}</span>
-                    <span className={Styles.infoText}>{' ' + this.props.info}</span>
+                    <span className={Styles.infoText}>{' ' + info}</span>
                 </span>;
             }
-            return this.props.children;
+            return children;
         }
         return <span className={Styles.name}>{name}</span>;
     };
@@ -57,10 +60,8 @@ class PokeLink extends React.Component {
     }
 }
 
-const mapDispatchToProps = dispatch => {
-    return {
-        redirect : data => dispatch(showInPokedex(data)),
-    };
-};
+const mapDispatchToProps = dispatch => ({
+    redirect : data => dispatch(showInPokedex(data)),
+});
 
 export default connect(null, mapDispatchToProps)(PokeLink)

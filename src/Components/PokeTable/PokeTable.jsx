@@ -9,10 +9,8 @@ import {
 class PokeTableComponent extends React.Component {
     constructor (props) {
         super(props);
-        let hasLvl = false;
-        if (this.props.data.length && this.props.data[0].hasOwnProperty('level_learned_at')) {
-            hasLvl = true;
-        }
+        const data = this.props.data;
+        let hasLevelValues = data.length && data[0].hasOwnProperty('level_learned_at');
         const pokeHeaders = [
             ['Compare', false],
             ['#', true],
@@ -28,7 +26,7 @@ class PokeTableComponent extends React.Component {
         const moveHeaders = [
             ['#', true],
             ['Name', false],
-            ['Lvl', hasLvl ? true : false],
+            ['Lvl', hasLevelValues ? true : false],
             ['Power', true],
             ['PP', true],
             ['Accuracy', true],
@@ -38,15 +36,16 @@ class PokeTableComponent extends React.Component {
         const isPoke = this.props.headers === 'pokelist';
         this.headers = isPoke ? pokeHeaders : moveHeaders;
         this.state = {
-            sortBy : hasLvl ? 'level_learned_at' : 'id',
+            sortBy : hasLevelValues ? 'level_learned_at' : 'id',
             sortDir : 1,
             length : isPoke ? 50 : 25,
+            increaseBy : isPoke ? 50 : 25,
         };
     }
 
     changeSorting = sortBy => {
         this.setState({
-            sortBy : sortBy,
+            sortBy,
             sortDir : this.state.sortDir * (-1),
         });
     };
@@ -79,13 +78,12 @@ class PokeTableComponent extends React.Component {
 
     handleShowMoreClick = () => {
         this.setState({
-            length : this.state.length + 50,
+            length : this.state.length + this.state.increaseBy,
         });
     };
 
     createHeaders = headerArray => {
-        const headers = [];
-        headerArray.forEach((head, i) => {
+        const headers = headerArray.map((head, i) => {
             let sort = head[0].toLowerCase().replace(' ', '_');
             if (sort === '#') sort = 'id';
             else if (sort === 'Lvl') sort = 'level_learned_at';
@@ -103,9 +101,9 @@ class PokeTableComponent extends React.Component {
                     }
                 }
             }
-            headers.push(<th key={i} className={className} onClick={clickCallback}>
+            return <th key={i} className={className} onClick={clickCallback}>
                 {head[0]}{sortDirectionText}
-            </th>);
+            </th>;
         });
         return <tr>{headers}</tr>;
     };
@@ -151,11 +149,9 @@ class PokeTableComponent extends React.Component {
     }
 }
 
-const mapStateToProps = state => {
-    return {
-        compare : state.compare.pokemon,
-    };
-};
+const mapStateToProps = state => ({
+    compare : state.compare.pokemon,
+});
 
 const PokeTable = connect(mapStateToProps)(PokeTableComponent);
 

@@ -1,11 +1,10 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import App from './App';
-import { Provider } from 'react-redux';
-import { updateData } from 'Actions';
-import { log } from 'src/utils';
 import Store from './store';
 import PokeCache from './fetch';
+import { Provider } from 'react-redux';
+import { updateData } from 'Actions';
 
 const onLoad = function onDomConentLoaded () {
     document.removeEventListener('DOMContentLoaded', onLoad);

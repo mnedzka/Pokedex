@@ -8,7 +8,7 @@ const DataTable = props => {
     const headers = !props.headers ? null : <tr>
         {props.headers.map((h, i) => <th key={i}>{h}</th>)}
     </tr>;
-    const role = props.compare ? 'compare' : 'default';
+    const role = props.compare ? 'compare' : 'wrapper';
     return <table className={Styles[role]}>
         <thead>
             {headers}

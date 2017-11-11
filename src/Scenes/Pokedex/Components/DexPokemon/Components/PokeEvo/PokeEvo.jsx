@@ -1,10 +1,10 @@
 import React from 'react';
 import Styles from './PokeEvo.scss';
+import { formatName } from 'src/utils';
 import {
     PokeImg,
     PokeLink,
 } from 'Components';
-import { formatName } from 'src/utils';
 
 const getEvolutions = (chain, arr) => {
     const allEvoArr = [];

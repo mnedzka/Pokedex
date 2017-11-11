@@ -38,18 +38,14 @@ class Pokedex extends React.Component {
     }
 }
 
-const mapStateToProps = state => {
-    return {
-        type : state.page.dexItemType,
-        data : state.page.dexItemData,
-        id : state.page.dexItemId,
-    };
-};
+const mapStateToProps = state => ({
+    type : state.page.dexItemType,
+    data : state.page.dexItemData,
+    id : state.page.dexItemId,
+});
 
-const mapDispatchToProps = dispatch => {
-    return {
-        update : (data) => dispatch(updateDexData(data)),
-    };
-};
+const mapDispatchToProps = dispatch => ({
+    update : (data) => dispatch(updateDexData(data)),
+});
 
 export default connect(mapStateToProps, mapDispatchToProps)(Pokedex)

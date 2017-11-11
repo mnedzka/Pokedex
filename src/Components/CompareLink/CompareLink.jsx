@@ -18,33 +18,36 @@ class CompareLink extends React.Component {
     }
 
     handleClick = ev => {
-        const { id, name, notify = false } = this.props;
-        if (this.props.hasOwnProperty('click') && typeof this.props.click === 'function') {
-            this.props.click();
+        const {
+            id, name, remove, notify = false, click, removeCompare, addCompare, pokemon
+        } = this.props;
+        if (click && typeof click === 'function') {
+            click();
         }
-        if (this.props.remove) {
-            return this.props.removeCompare(id, name, notify);
+        if (remove) {
+            return removeCompare(id, name, notify);
         }
-        if (this.props.pokemon.find(p => p.id === id)) {
+        if (pokemon.find(p => p.id === id)) {
             return alert(`${formatName(name)} is already added.`);
         }
-        return this.props.addCompare(id, name, notify);
+        return addCompare(id, name, notify);
     };
 
     createContent = name => {
-        if (this.props.info) {
+        const { info, children, remove } = this.props;
+        if (info) {
             return <span>
-                {this.props.children}
+                {children}
                 <span className={Styles.name}>{name}</span>
-                <span className={Styles.infoText}>{' ' + this.props.info}</span>
+                <span className={Styles.infoText}>{' ' + info}</span>
             </span>;
         }
         let iconClassName = 'add';
-        if (this.props.remove) {
+        if (remove) {
             iconClassName = 'remove';
         }
         return <span>
-            {this.props.children}
+            {children}
             <span className={Styles[iconClassName]}>
                 <svg role="img" viewBox="0 0 512 512">
                     <use xlinkHref="./resources/icons/icons.svg#compare" />
@@ -75,11 +78,9 @@ class CompareLink extends React.Component {
     }
 }
 
-const mapDispatchToProps = dispatch => {
-    return {
-        addCompare : (id, name, notify) => dispatch(addCompare(id, name, notify)),
-        removeCompare : (id, name, notify) => dispatch(removeCompare(id, name, notify)),
-    };
-};
+const mapDispatchToProps = dispatch => ({
+    addCompare : (id, name, notify) => dispatch(addCompare(id, name, notify)),
+    removeCompare : (id, name, notify) => dispatch(removeCompare(id, name, notify)),
+});
 
 export default connect(null, mapDispatchToProps)(CompareLink)

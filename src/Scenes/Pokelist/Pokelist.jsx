@@ -4,7 +4,7 @@ import { connect } from 'react-redux';
 import {
     PokeTable,
     PokelistItem,
-} from 'Components/PokeTable/PokeTable.jsx';
+} from 'Components';
 
 class Pokelist extends React.Component {
     constructor () {
@@ -62,10 +62,8 @@ class Pokelist extends React.Component {
     }
 }
 
-const mapStateToProps = state => {
-    return {
-        data : state.pokelist.data,
-    };
-};
+const mapStateToProps = state => ({
+    data : state.pokelist.data,
+});
 
 export default connect(mapStateToProps)(Pokelist)

@@ -12,10 +12,10 @@ class MenuItem extends React.Component {
     }
 
     handleClickEvent = (ev) => {
-        const page = this.props.text.toLowerCase();
-        if (this.props.page !== page ||
-           (this.props.dexItemType !== 'pokedex' && this.props.page === 'pokedex')) {
-            this.props.onMenuItemClick(page);
+        const { page, dexItemType, text, onMenuItemClick } = this.props;
+        const pageName = text.toLowerCase();
+        if (page !== pageName || (dexItemType !== 'pokedex' && page === 'pokedex')) {
+            onMenuItemClick(pageName);
         }
     }
 
@@ -27,17 +27,13 @@ class MenuItem extends React.Component {
     }
 }
 
-const mapStateToProps = state => {
-    return {
-        page : state.page.currentPage,
-        dexItemType : state.page.dexItemType,
-    };
-};
+const mapStateToProps = state => ({
+    page : state.page.currentPage,
+    dexItemType : state.page.dexItemType,
+});
 
-const mapDispatchToProps = (dispatch) => {
-    return {
-        onMenuItemClick : (page) => dispatch(changePage(page)),
-    };
-};
+const mapDispatchToProps = (dispatch) => ({
+    onMenuItemClick : (page) => dispatch(changePage(page)),
+});
 
 export default connect(mapStateToProps, mapDispatchToProps)(MenuItem)

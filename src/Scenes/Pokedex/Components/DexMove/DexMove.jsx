@@ -1,5 +1,6 @@
 import React from 'react';
 import Styles from './DexMove.scss';
+import { formatName } from 'src/utils.js';
 import {
     DataTable,
     PokeType,
@@ -8,9 +9,6 @@ import {
     PokeTable,
     PokelistItem,
 } from 'Components';
-import {
-    formatName,
-} from 'src/utils.js';
 
 const createPokemonList = (pokemon, learnBy, name) => {
     if (!pokemon.length) {

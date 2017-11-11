@@ -14,8 +14,8 @@ class PokeType extends React.Component {
 
     handleClick = id => {
         return this.props.redirect({
+            id,
             type : 'type',
-            id : id,
         });
     };
 
@@ -31,10 +31,8 @@ class PokeType extends React.Component {
     }
 }
 
-const mapDispatchToProps = dispatch => {
-    return {
-        redirect : data => dispatch(showInPokedex(data)),
-    };
-};
+const mapDispatchToProps = dispatch => ({
+    redirect : data => dispatch(showInPokedex(data)),
+});
 
 export default connect(null, mapDispatchToProps)(PokeType);

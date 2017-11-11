@@ -1,9 +1,7 @@
 import React from 'react';
 import Styles from './NotFound.scss';
 import { connect } from 'react-redux';
-import {
-    PokeLink,
-} from 'Components';
+import { PokeLink } from 'Components';
 
 class NotFound extends React.Component {
     render () {
@@ -17,11 +15,9 @@ class NotFound extends React.Component {
     }
 }
 
-const mapStateToProps = state => {
-    return {
-        id : state.page.dexItemId,
-        type : state.page.dexItemType,
-    };
-};
+const mapStateToProps = state => ({
+    id : state.page.dexItemId,
+    type : state.page.dexItemType,
+});
 
 export default connect(mapStateToProps)(NotFound)

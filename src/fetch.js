@@ -125,7 +125,7 @@ class FetchWrapper extends Storage {
 
 export default class PokeCache extends Storage {
     get (reqBody = {}, reqID) {
-        const {type = 'pokelist', id = 0, storedMoves = [], storedEvo = []} = reqBody;
+        const { type = 'pokelist', id = 0, storedMoves = [], storedEvo = [] } = reqBody;
         const isFetchAlive = window.__fetchlist.has(reqID);
         if (isFetchAlive) {
             return Promise.resolve(null);
@@ -163,16 +163,17 @@ export default class PokeCache extends Storage {
                 storedEvo,
             }),
         };
-        return this.__fetchData(url, options, type, reqID);
+        return this.fetchData(url, options, type, reqID);
     }
 
-    __fetchData (url, options, resourceName, reqID) {
+    fetchData (url, options, resourceName, reqID) {
         const f = new FetchWrapper(url, options, resourceName, reqID);
         window.__fetchlist.ad(f);
         return f.get();
     }
 
-    collectData (data, localMoves, localEvo) {
+    collectData (item, localMoves, localEvo) {
+        const data = {...item};
         if (data.hasOwnProperty('pokemon')) {
             const localPoke = this.loadStorage('pokelist');
             if (Array.isArray(data.pokemon)) {

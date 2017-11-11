@@ -46,30 +46,30 @@ const updateData = function updatePokemonListData (data) {
 // STORE.COMPARE
 const addCompare = function addPokemonToCompare (id, name, notify) {
     const notification = !notify ? false : {
+        name,
         pokeID : id,
         add : true,
         id : `${name}add`,
-        name,
     };
     return {
+        name,
         type : COMPARE_ADD_ITEM,
         payload : id,
-        name : name,
         notify : notification,
     };
 };
 
 const removeCompare = function removePokemonFromCompare (id, name, notify) {
     const notification = !notify ? false : {
+        name,
         pokeID : id,
         add : false,
         id : `${name}remove`,
-        name,
     };
     return {
+        name,
         type : COMPARE_REMOVE_ITEM,
         payload : id,
-        name : name,
         notify : notification,
     };
 };

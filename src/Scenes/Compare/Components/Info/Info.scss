@@ -4,4 +4,8 @@
     @extend .about;
     padding: 0;
     overflow-x: auto;
+
+    span {
+        text-align: left;
+    }
 }

@@ -2,8 +2,7 @@
 
 .compare,
 .loading,
-.ready,
-.limit {
+.ready {
     @extend .button;
 
     &:hover {
@@ -53,8 +52,7 @@
 
     .compare,
     .loading,
-    .ready,
-    .limit {
+    .ready {
         border-radius: 50%;
         padding: 1rem;
         transition: all 0.3s;
@@ -72,12 +70,7 @@
             box-shadow: 0 0 0 3px $highlight_blue;
         }
     }
-    .limit {
-        pointer-events: none;
-    }
-}
 
-.wrapper {
     .ready,
     .loading {
         &:hover,

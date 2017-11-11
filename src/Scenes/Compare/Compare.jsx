@@ -80,12 +80,10 @@ class Compare extends React.Component {
     }
 }
 
-const mapStateToProps = state => {
-    return {
-        pokemon : state.compare.pokemon,
-        data : state.compare.data,
-        list : state.pokelist.data,
-    };
-};
+const mapStateToProps = state => ({
+    pokemon : state.compare.pokemon,
+    data : state.compare.data,
+    list : state.pokelist.data,
+});
 
-export default connect(mapStateToProps)(Compare);
+export default connect(mapStateToProps)(Compare)

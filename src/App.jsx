@@ -103,7 +103,7 @@ class App extends React.Component {
                 break;
             case 'compare':
                 title = 'Compare';
-                const { pokemon, data } = this.props.compare;
+                const { pokemon, data } = compare;
                 const dataReady = pokemon.every(poke => data.find(d => d.id === poke.id));
                 if (!dataReady) {
                     this.getCompData(pokemon, data);
@@ -122,8 +122,7 @@ class App extends React.Component {
     };
 
     render () {
-        const { page, list, compare } = this.props;
-        const current = page.currentPage;
+        const { compare } = this.props;
         const { Content, title } = this.createContent();
         return <Layout title={title}>
             <Content />
@@ -132,21 +131,18 @@ class App extends React.Component {
     }
 }
 
-const mapStateToProps = state => {
-    return {
-        page : state.page,
-        list : state.pokelist,
-        compare : state.compare,
-    };
-};
+const mapStateToProps = state => ({
+    page : state.page,
+    list : state.pokelist,
+    compare : state.compare,
+});
 
-const mapDispatchToProps = dispatch => {
-    return {
-        updateDex : (data, type) => dispatch(updateDexData(data, type)),
-        updateList : data => dispatch(updateData(data)),
-        fetchFail : page => dispatch(changePage(page)),
-        updateCompare : data => dispatch(updateCompare(data)),
-    };
-};
+const mapDispatchToProps = dispatch => ({
+    updateDex : (data, type) => dispatch(updateDexData(data, type)),
+    updateList : data => dispatch(updateData(data)),
+    fetchFail : page => dispatch(changePage(page)),
+    updateCompare : data => dispatch(updateCompare(data)),
+});
+
 
 export default connect(mapStateToProps, mapDispatchToProps)(App)

@@ -1,6 +1,6 @@
 import React from 'react';
 import Styles from './DamageRelations.scss';
-import dmg_rel from './TypeDamage.js';
+import dmg_rel from './TypeDamage';
 import {
     Loader,
     PokeType,

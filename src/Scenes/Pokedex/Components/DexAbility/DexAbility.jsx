@@ -6,30 +6,31 @@ import {
     PokelistItem,
 } from 'Components';
 
-export default class DexAbility extends React.Component {
-    render () {
-        const ability = this.props.data;
-        const name = formatName(ability.name);
-        return <div>
-            <h3>Ability: {name}</h3>
-            <div className={Styles.about}>
-                <p>
-                    <span className={Styles.keyword}>Pokedex: </span>
-                    <em>{ability.flavor_text}</em>
-                </p>
-                <p>
-                    <span className={Styles.keyword}>Short description: </span>
-                    <em>{ability.effect_entries.short_effect}</em>
-                </p>
-                <p>
-                    <span className={Styles.keyword}>Description: </span>
-                    <em>{ability.effect_entries.effect}</em>
-                </p>
-            </div>
-            <div>
-                <h5>There is {ability.pokemon.length} Pokemons with {name} ability</h5>
-                <PokeTable Item={PokelistItem} data={ability.pokemon} headers="pokelist" />
-            </div>
-        </div>;
-    }
-}
+const Ability = props => {
+    const ability = props.data;
+    const { flavor_text, effect_entries, pokemon } = ability;
+    const name = formatName(ability.name);
+    return <div>
+        <h3>Ability: {name}</h3>
+        <div className={Styles.about}>
+            <p>
+                <span className={Styles.keyword}>Pokedex: </span>
+                <em>{flavor_text}</em>
+            </p>
+            <p>
+                <span className={Styles.keyword}>Short description: </span>
+                <em>{effect_entries.short_effect}</em>
+            </p>
+            <p>
+                <span className={Styles.keyword}>Description: </span>
+                <em>{effect_entries.effect}</em>
+            </p>
+        </div>
+        <div>
+            <h5>There is {pokemon.length} Pokemons with {name} ability</h5>
+            <PokeTable Item={PokelistItem} data={pokemon} headers="pokelist" />
+        </div>
+    </div>;
+};
+
+export default Ability

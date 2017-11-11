@@ -11,13 +11,12 @@ export default class Notification extends React.Component {
     }
 
     terminateNotification = notification => {
-        const notify = this.state.notifications.slice();
-        const next = notify.map(n => {
+        const notify = this.state.notifications.slice().map(n => {
             if (n.id === notification.id) return {...n, dead : true};
             return n;
         });
         this.setState({
-            notifications : next,
+            notifications : notify,
         });
     }
 

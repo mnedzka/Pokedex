@@ -1,6 +1,6 @@
 @import '~/../src/styles/partials/_variables.scss';
 
-.main {
+.default {
     border-collapse: collapse;
     margin: 0 auto;
 
@@ -16,8 +16,8 @@
     }
 }
 
-.default {
-    @extend .main;
+.wrapper {
+    @extend .default;
     width: 90%;
     max-width: 25rem;
 
@@ -33,7 +33,7 @@
 }
 
 .compare {
-    @extend .main;
+    @extend .default;
     width: 100%;
 
     th {

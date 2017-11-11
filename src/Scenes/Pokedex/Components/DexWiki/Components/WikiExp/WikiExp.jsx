@@ -1,9 +1,8 @@
 import React from 'react';
 import Styles from './WikiExp.scss';
 
-export default class WikiExp extends React.Component {
-    render () {
-        return <div className={Styles.section}>
+const WikiExp = props => {
+    return <div className={Styles.section}>
         <h5>Experience</h5>
         <p>
             <span className={Styles.keyword}>Experience Points </span>
@@ -33,5 +32,6 @@ export default class WikiExp extends React.Component {
                 <span className={Styles.keyword}>Fluctuating </span>- introduced in Generation III and a direct opposite to the Erratic group, the Fluctuating experience group contains the Pokémon which grow the slowest of all, reaching level 100 with a whopping 1,640,000 experience points. It is also, unsurprisingly, the smallest of the experience groups, containing only 14 species. </li>
         </ul>
     </div>;
-    }
 }
+
+export default WikiExp
