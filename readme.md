@@ -11,7 +11,7 @@
  - [Chart.js](http://www.chartjs.org/)
 
 ##### ToDo:
+- [ ] &nbsp;&nbsp;&nbsp;Add Routing
 - [ ] &nbsp;&nbsp;&nbsp;Missing images and icons
 - [ ] &nbsp;&nbsp;&nbsp;Pokemon sprites
 - [ ] &nbsp;&nbsp;&nbsp;Move data to Database
-- [ ] &nbsp;&nbsp;&nbsp;Add Routing

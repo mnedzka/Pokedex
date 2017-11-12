@@ -16,7 +16,7 @@ class Home extends React.Component {
             <div className={Styles.section}>
                 <h5>Important notice!</h5>
                 <p>
-                    Pokemons images from 6th to 7th generation and for all items are missing.
+                    Images of Pokemons from 6th to 7th generation and images of all items are missing.
                 </p>
             </div>
         </div>

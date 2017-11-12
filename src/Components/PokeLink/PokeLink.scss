@@ -2,6 +2,10 @@
 
 .wrapper {
     position: relative;
+
+    .name {
+        border-bottom: thin solid white;
+    }
 }
 
 .redirect {

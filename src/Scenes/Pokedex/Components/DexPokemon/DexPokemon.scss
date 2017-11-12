@@ -24,7 +24,10 @@
 }
 
 .showcase {
-    @extend .flexWrapper;
+    padding: 0.5rem;
+    margin-bottom: 1rem;
+    border-radius: $border_radius;
+    display: flex;
     align-items: center;
     background-color: $blue_light;
 
@@ -47,6 +50,9 @@
     margin: 0 2rem;
     font-style: italic;
     position: relative;
+    padding: 1rem 0.5rem;
+    border-radius: $border_radius;
+    background-color: rgba($background_light, 0.8);
 
     &::after {
         content: 'Pokedex';
@@ -72,3 +78,20 @@
     }
 }
 
+@each $type in $types {
+    .#{$type} {
+        @extend .showcase;
+        background-color: map-get($typeColors, $type);
+    }
+}
+
+@each $type in $types {
+    @each $secondary in $types {
+        @if ($type != $secondary) {
+            .#{$type}#{$secondary} {
+                @extend .showcase;
+                background: linear-gradient(map-get($typeColors, $type) 50%, map-get($typeColors, $secondary) 50%);
+            }
+        }
+    }
+}

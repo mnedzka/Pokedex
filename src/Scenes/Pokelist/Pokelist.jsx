@@ -11,7 +11,10 @@ class Pokelist extends React.Component {
         super();
         this.state = {
             typeFilter : 'true',
+            length : 25,
         };
+        this.updated = false;
+        this.height;
     }
 
     handleSelectChange = ev => {
@@ -20,14 +23,47 @@ class Pokelist extends React.Component {
         });
     };
 
+    handlePageScroll = ev => {
+        const { length } = this.state;
+        if (length > 800) return;
+        const { clientHeight, offsetTop } = this.wrapper;
+        const { scrollY, innerHeight } = window;
+        const delta = clientHeight - scrollY - innerHeight;
+        if (!this.height) this.height = clientHeight;
+        if (delta < 0 && !this.updated) {
+            this.updated = true;
+            return this.setState({
+                length : length + 25,
+            });
+        }
+        if (delta - offsetTop > this.height) {
+            return this.setState({
+                length : length - 25,
+            });
+        }
+    };
+
+    componentDidUpdate () {
+        this.updated = false;
+    }
+
+    componentDidMount () {
+        document.addEventListener('scroll', this.handlePageScroll);
+    }
+
+    componentWillUnmount () {
+        document.removeEventListener('scroll', this.handlePageScroll);
+    }
+
     render () {
+        const { length } = this.state;
         const data = this.props.data.slice().filter(p => {
             if (this.state.typeFilter === 'true') {
                 return p;
             };
             return p.types.some(t => t.name === this.state.typeFilter);
         });
-        const list = <PokeTable headers="pokelist" Item={PokelistItem} data={data} />;
+        const list = <PokeTable headers="pokelist" Item={PokelistItem} data={data} forceMaxLen={length} />;
         return <div>
             <div className={Styles.filter}>
                 <label>
@@ -55,7 +91,7 @@ class Pokelist extends React.Component {
                     </select>
                 </label>
             </div>
-            <div className={Styles.section}>
+            <div className={Styles.section} ref={el => this.wrapper = el}>
                 {list}
             </div>
         </div>;

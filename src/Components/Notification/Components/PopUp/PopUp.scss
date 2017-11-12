@@ -25,3 +25,13 @@
 .remove {
     background-color: $red_light;
 }
+
+.limit {
+    font-weight: bold;
+    margin: 0 0.5rem;
+}
+
+.full {
+    @extend .limit;
+    color: $yellow;
+}

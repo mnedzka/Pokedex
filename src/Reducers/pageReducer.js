@@ -6,10 +6,10 @@ import {
 
 const initialState = {
     currentPage : 'home',
-    dexItemType : null,
-    dexItemId : null,
-    dexItemData : null,
-    dexItemDataType : null,
+    dexItemType : undefined,
+    dexItemId : undefined,
+    dexItemData : undefined,
+    dexItemDataType : undefined,
 };
 
 const pageReducer = function pageChangeReducer (state = initialState, action) {
@@ -19,7 +19,7 @@ const pageReducer = function pageChangeReducer (state = initialState, action) {
                 ...state,
                 currentPage : action.payload,
                 dexItemType : action.payload,
-                dexItemId : null,
+                dexItemId : undefined,
             };
         case PAGE_SHOW_IN_DEX:
             return {

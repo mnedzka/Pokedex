@@ -30,7 +30,7 @@ const onLoad = function onDomConentLoaded () {
             return false;
         }
     };
-    new PokeCache().get(undefined, 'pokelistnull').then(d => Store.dispatch(updateData(d)));
+    new PokeCache().get(undefined, 'pokelistundefined').then(d => Store.dispatch(updateData(d)));
     ReactDOM.render(
         <Provider store={Store}>
             <App />

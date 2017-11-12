@@ -5,9 +5,10 @@ import {
     WikiExp,
     WikiItem,
     WikiPoke,
+    WikiMove,
 } from './Components';
 
-const DexGlossary = props => {
+const DexWiki = props => {
     switch (props.type) {
         case 'item':
             return <WikiItem />;
@@ -15,9 +16,11 @@ const DexGlossary = props => {
             return <WikiEvo />;
         case 'experience':
             return <WikiExp />;
+        case 'move':
+            return <WikiMove />;
         default:
             return <WikiPoke />
     }
 };
 
-export default DexGlossary
+export default DexWiki

@@ -1,5 +1,9 @@
 @import '~/../src/styles/partials/_variables.scss';
 
+.marginBottom {
+    margin-bottom: 0.5rem;
+}
+
 .link {
     &:link,
     &:hover,

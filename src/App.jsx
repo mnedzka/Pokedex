@@ -97,6 +97,8 @@ class App extends React.Component {
                 const noDataReq = ['wiki'];
                 if (!noDataReq.includes(page.dexItemType) && this.isFetchNeeded()) {
                     this.getData();
+                } else if (!list.data) {
+                    this.getData(undefined, 'pokelist');
                 } else {
                     Content = Pokedex;
                 }
@@ -126,7 +128,7 @@ class App extends React.Component {
         const { Content, title } = this.createContent();
         return <Layout title={title}>
             <Content />
-            <Notification data={compare.notification} />
+            <Notification data={compare.notification} pokemon={compare.pokemon} />
         </Layout>;
     }
 }

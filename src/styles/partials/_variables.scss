@@ -8,6 +8,7 @@ $blue: rgb(50, 50, 120);
 $blue_light: rgb(45, 155, 155);
 $highlight_green: rgb(17, 168, 171);
 $highlight_blue: rgb(79, 196, 245);
+$yellow: rgb(252, 177, 80);
 $green: rgb(45, 155, 125);
 $wedgewood: rgb(78, 127, 158);
 $grey: rgb(100, 100, 150);
@@ -90,4 +91,21 @@ $typeColors: (
     &[disabled] {
         cursor: default;
     }
+}
+
+.paragraph {
+    margin: 1rem 0;
+    line-height: 1.25rem;
+    padding: 0.5rem;
+    border-radius: $border_radius;
+    background-color: $background_light;
+}
+
+.sub {
+    display: block;
+    margin-top: 0.5rem;
+}
+
+.inline {
+    display: inline-block;
 }

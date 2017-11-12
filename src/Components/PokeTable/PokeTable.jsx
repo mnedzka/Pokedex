@@ -119,7 +119,9 @@ class PokeTableComponent extends React.Component {
     };
 
     render () {
-        const { sortBy, sortDir = 1, length} = this.state;
+        const { sortBy, sortDir = 1 } = this.state;
+        const { forceMaxLen } = this.props;
+        const length = forceMaxLen ? forceMaxLen : this.state.length;
         const data = this.props.data.sort((a, b) => {
             if (sortDir === 1) {
                 return a[sortBy] - b[sortBy];
@@ -128,7 +130,7 @@ class PokeTableComponent extends React.Component {
             }
         }).slice(0, length);
         let showMore = null;
-        if (length < this.props.data.length) {
+        if (!forceMaxLen && length < this.props.data.length) {
             showMore = <button onClick={this.handleShowMoreClick} className={Styles.more}>
                 Show More
             </button>;

@@ -53,8 +53,9 @@ export default class Notification extends React.Component {
 
     render () {
         let alive = 0;
+        const { pokemon } = this.props;
         const popups = this.state.notifications.map((n, i) => {
-            return <PopUp key={i} top={n.dead ? -1 : alive++} data={n} />
+            return <PopUp key={i} top={n.dead ? -1 : alive++} data={n} len={pokemon.length} />
         });
         return <div className={Styles.wrapper}>
             {popups}

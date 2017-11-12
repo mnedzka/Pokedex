@@ -14,7 +14,7 @@ import {
 
 class Pokedex extends React.Component {
     render () {
-        const { type, data, id } = this.props;
+        const { type, data, id, list } = this.props;
         switch (type) {
             case 'type':
                 return <DexType data={data} />;
@@ -28,10 +28,10 @@ class Pokedex extends React.Component {
                 return <DexEgg data={data} />;
             case 'item':
                 return <DexItem data={data} />
-            case 'pokedex':
-                return <DexHome data={data} />;
             case 'wiki':
                 return <DexWiki type={id} />;
+            case 'pokedex':
+                return <DexHome data={data} list={list} />;
             default:
                 return `Error => requested page type (${type}) not found`;
         }
@@ -42,6 +42,7 @@ const mapStateToProps = state => ({
     type : state.page.dexItemType,
     data : state.page.dexItemData,
     id : state.page.dexItemId,
+    list : state.pokelist.data,
 });
 
 const mapDispatchToProps = dispatch => ({

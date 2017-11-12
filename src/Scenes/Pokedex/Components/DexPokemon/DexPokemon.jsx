@@ -61,7 +61,7 @@ const getCaptureRate = (hp, rate) => {
 };
 
 const createNavBtns = id => {
-    const prev = id - 1 ? id - 1 : 802;
+    const prev = id < 803 && id - 1 ? id - 1 : 802;
     const next = id + 1 < 803 ? id + 1 : 1;
     return [
         <PokeLink key="prev" name={'← #' + prev} id={prev} type="pokemon" />,
@@ -96,12 +96,14 @@ const DexPokemon = props => {
         special_defense.base,
         speed.base,
     ];
+    const showcaseStyle = data.types.reduce((acc, t) => acc + t.name, '');
+    console.log(showcaseStyle);
     return <div>
         <div className={Styles.nav}>
             {createNavBtns(data.id)}
             <h3 className={Styles.dexTitle}>Pokemon: {formatName(data.name)}</h3>
         </div>
-        <div className={Styles.showcase}>
+        <div className={Styles[showcaseStyle]}>
             <PokeImg id={data.id} size="md" />
             <span className={Styles.flavorText}>
                 {data.flavor_text}
@@ -123,8 +125,8 @@ const DexPokemon = props => {
         <DamageRelations type={data.types} />
         {getMoveList(data.moves.level_up, 'level up')}
         {getMoveList(data.moves.egg, 'breeding')}
-        {getMoveList(data.moves.machine, 'Machine')}
-        {getMoveList(data.moves.tutor, 'Tutor')}
+        {getMoveList(data.moves.machine, 'TM/HM')}
+        {getMoveList(data.moves.tutor, 'Tutoring')}
     </div>;
 };
 

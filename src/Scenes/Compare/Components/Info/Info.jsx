@@ -48,9 +48,9 @@ const extractData = data => {
         const ind = i + 1;
         tableData.headers.push(<PokeImg id={pokemon.id} size="icon" />);
         tableData.data[0][ind] = <PokeType type={pokemon.types} />;
-        tableData.data[1][ind] = this.mapAbilities(pokemon.abilities);
-        tableData.data[2][ind] = this.mapEggGroups(pokemon.egg_groups);
-        tableData.data[3][ind] = this.getGenderRate(pokemon.gender_rate);
+        tableData.data[1][ind] = mapAbilities(pokemon.abilities);
+        tableData.data[2][ind] = mapEggGroups(pokemon.egg_groups);
+        tableData.data[3][ind] = getGenderRate(pokemon.gender_rate);
         tableData.data[4][ind] = pokemon.base_experience;
         tableData.data[5][ind] = pokemon.capture_rate;
     });

@@ -157,7 +157,7 @@ export default class Searchbar extends React.Component {
                 <input className={Styles.input}
                     onChange={this.handleInputChange}
                     value={input}
-                    placeholder="Enter name or #ID" type="text"
+                    placeholder="Enter name or #<ID>" type="text"
                     ref={e => this.input = e} />
                 <div className={absolute ? Styles.absolute : null}>
                     {searchResults}

@@ -4,14 +4,14 @@ import Styles from './WikiItem.scss';
 const WikiItem = props => {
     return <div className={Styles.section}>
         <h5>Item</h5>
-        <p>
+        <div className={Styles.paragraph}>
             <span className={Styles.keyword}>Category </span>
             - since Gen. II items are divided into categories to help with overall organization. These categories have varied between games.
-        </p>
-        <p>
+        </div>
+        <div className={Styles.paragraph}>
             <span className={Styles.keyword}>Fling Effect </span>
             - effect of Fling move when holding specified item. Fling move will fail if user has no held item. After using Fling the item is consumed.
-        </p>
+        </div>
         <h5>Item Categories</h5>
         <ul>
             <li>

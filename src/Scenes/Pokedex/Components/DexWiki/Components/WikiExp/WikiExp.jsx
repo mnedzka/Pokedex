@@ -4,14 +4,14 @@ import Styles from './WikiExp.scss';
 const WikiExp = props => {
     return <div className={Styles.section}>
         <h5>Experience</h5>
-        <p>
+        <div className={Styles.paragraph}>
             <span className={Styles.keyword}>Experience Points </span>
             - indication of how much Pokemon has battled. After a certain amount of experience points pokemon will grow up to level 100. In the core series games, experience is normally gained by all Pokemon who have been sent out against an opponent's Pokemon, divided evenly among them.
-        </p>
-        <p>
+        </div>
+        <div className={Styles.paragraph}>
             <span className={Styles.keyword}>Growth Rate </span>
             - the amount of experience points a Pokémon has is tied directly to its level. Though the amount varies depending on species, always remaining consistent throughout an evolutionary family, a given amount of experience points will always set a Pokémon at the corresponding level. Wild Pokémon of any level will always have the base amount of experience required to reach that level when caught, as will Pokémon hatched from Eggs. All Pokémon fall into one of six experience groups. The main difference between these experience groups is the amount of experience points required to reach level 100, and thus, the amount required to reach each level.
-        </p>
+        </div>
         <h5>Growth Rate Groups</h5>
         <ul>
             <li>

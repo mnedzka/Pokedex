@@ -19,7 +19,7 @@
 }
 .md {
     @extend .image;
-    width: 50%;
+    width: 40%;
     min-width: 200px;
     min-height: 200px;
     background: radial-gradient(closest-side at 50% 90%, rgb(35, 50, 75) 15%, transparent)
@@ -28,5 +28,4 @@
 .fill {
     @extend .image;
     width: 100%;
-    height: 100%;
 }
