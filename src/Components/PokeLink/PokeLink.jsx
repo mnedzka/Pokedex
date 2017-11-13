@@ -1,24 +1,15 @@
 import React from 'react';
 import Styles from './PokeLink.scss';
-import { connect } from 'react-redux';
-import { showInPokedex } from 'Actions';
+import { Link } from 'react-router-dom';
 import { formatName } from 'src/utils';
 
-class PokeLink extends React.Component {
+export default class PokeLink extends React.Component {
     shouldComponentUpdate (nextProps) {
         if (nextProps.id === this.props.id) {
             return false;
         }
         return true;
     }
-
-    handlePokeLinkClick = () => {
-        const { redirect, type, id } = this.props;
-        return redirect({
-            id,
-            type,
-        });
-    };
 
     createInfo = name => {
         const { role, info } = this.props;
@@ -47,21 +38,15 @@ class PokeLink extends React.Component {
     };
 
     render () {
-        const { role = 'wrapper', disabled } = this.props;
-        const name = formatName(this.props.name);
+        const { role = 'wrapper', disabled, id, name, type } = this.props;
+        const displayName = formatName(name);
+        const path = `/pokedex/${type}/${id}`;
+        const style = disabled ? 'disabled' : 'redirect';
         return <div className={Styles[role]}>
-            <button onClick={disabled ? null : this.handlePokeLinkClick}
-                    className={Styles.redirect}
-                    disabled={disabled}>
-                {this.createContent(name)}
-            </button>
-            {this.createInfo(name)}
+            <Link to={path} className={Styles[style]}>
+                {this.createContent(displayName)}
+            </Link>
+            {this.createInfo(displayName)}
         </div>;
     }
 }
-
-const mapDispatchToProps = dispatch => ({
-    redirect : data => dispatch(showInPokedex(data)),
-});
-
-export default connect(null, mapDispatchToProps)(PokeLink)

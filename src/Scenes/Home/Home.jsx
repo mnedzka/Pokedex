@@ -10,7 +10,7 @@ class Home extends React.Component {
                     Pokedex is a digital encyclopedia created by Profesor Oak to help trainers in Pokemon world. It gives information about all Pokemons that are contained in its database.
                 </p>
                 <p>
-                    Informations you can find here have been published via <a className={Styles.link} href="https://pokeapi.co">PokeApi</a> and on <a className={Styles.link} href="https://bulbapedia.bulbagarden.net">Bulbapedia</a>.
+                    Informations you can find here have been published via <a className={Styles.link} href="https://pokeapi.co" target="_blank">PokeApi</a> and on <a className={Styles.link} href="https://bulbapedia.bulbagarden.net" target="_blank">Bulbapedia</a>.
                 </p>
             </div>
             <div className={Styles.section}>

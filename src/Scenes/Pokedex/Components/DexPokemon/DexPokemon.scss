@@ -52,7 +52,7 @@
     position: relative;
     padding: 1rem 0.5rem;
     border-radius: $border_radius;
-    background-color: rgba($background_light, 0.8);
+    background-color: rgba(0, 0, 0, 0.65);
 
     &::after {
         content: 'Pokedex';

@@ -1,5 +1,6 @@
 ## Pokedex
 > Small Pokedex aplication, uses data provided by PokeApi (see credits), stored in Google Cloud Storage.
+> [Live](https://krnik.github.io/Pokedex/)
 
 #### Credits
  - [PokeApi](https://pokeapi.co/)
@@ -11,7 +12,6 @@
  - [Chart.js](http://www.chartjs.org/)
 
 ##### ToDo:
-- [ ] &nbsp;&nbsp;&nbsp;Add Routing
 - [ ] &nbsp;&nbsp;&nbsp;Missing images and icons
 - [ ] &nbsp;&nbsp;&nbsp;Pokemon sprites
 - [ ] &nbsp;&nbsp;&nbsp;Move data to Database

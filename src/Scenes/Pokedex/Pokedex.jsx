@@ -1,6 +1,5 @@
 import React from 'react';
-import { connect } from 'react-redux';
-import { updateDexData } from 'Actions';
+import { NotFound } from 'Scenes';
 import {
     DexAbility,
     DexEgg,
@@ -12,10 +11,11 @@ import {
     DexType,
 } from './Components';
 
-class Pokedex extends React.Component {
+export default class Pokedex extends React.Component {
     render () {
-        const { type, data, id, list } = this.props;
-        switch (type) {
+        const { dexItemType, dexItemId } = this.props.page;
+        const { data, list } = this.props;
+        switch (dexItemType) {
             case 'type':
                 return <DexType data={data} />;
             case 'pokemon':
@@ -29,24 +29,11 @@ class Pokedex extends React.Component {
             case 'item':
                 return <DexItem data={data} />
             case 'wiki':
-                return <DexWiki type={id} />;
+                return <DexWiki type={dexItemId} />;
             case 'pokedex':
                 return <DexHome data={data} list={list} />;
             default:
-                return `Error => requested page type (${type}) not found`;
+                return <NotFound />;
         }
     }
 }
-
-const mapStateToProps = state => ({
-    type : state.page.dexItemType,
-    data : state.page.dexItemData,
-    id : state.page.dexItemId,
-    list : state.pokelist.data,
-});
-
-const mapDispatchToProps = dispatch => ({
-    update : (data) => dispatch(updateDexData(data)),
-});
-
-export default connect(mapStateToProps, mapDispatchToProps)(Pokedex)

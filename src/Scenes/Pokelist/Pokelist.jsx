@@ -1,12 +1,11 @@
 import React from 'react';
 import Styles from './Pokelist.scss';
-import { connect } from 'react-redux';
 import {
     PokeTable,
     PokelistItem,
 } from 'Components';
 
-class Pokelist extends React.Component {
+export default class Pokelist extends React.Component {
     constructor () {
         super();
         this.state = {
@@ -97,9 +96,3 @@ class Pokelist extends React.Component {
         </div>;
     }
 }
-
-const mapStateToProps = state => ({
-    data : state.pokelist.data,
-});
-
-export default connect(mapStateToProps)(Pokelist)

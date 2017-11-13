@@ -4,13 +4,15 @@
     position: relative;
 
     .name {
-        border-bottom: thin solid white;
+        border-bottom: thin solid rgba(255, 255, 255, 0.5);
     }
 }
 
 .redirect {
     @extend .button;
     transition: all 0.3s;
+    text-decoration: none;
+    display: block;
 
     &:hover,
     &:focus {
@@ -23,6 +25,11 @@
             opacity: 1;
         }
     }
+}
+
+.disabled {
+    pointer-events: none;
+    cursor: default;
 }
 
 .thumbnail {
@@ -63,6 +70,7 @@
 
         &:focus,
         &:hover {
+            z-index: 10;
             svg {
                 fill: rgb(180, 255, 255);
             }
@@ -76,10 +84,6 @@
             fill: rgb(255, 255, 255);
         }
     }
-}
-
-.name {
-    display: inline-block;
 }
 
 .infoText {

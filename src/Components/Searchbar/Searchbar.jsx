@@ -108,7 +108,7 @@ export default class Searchbar extends React.Component {
         const key = ev.keyCode || ev.which;
         if (this.state.results.length && (key === 38 || key === 40)) {
             ev.preventDefault();
-            const res = [this.input, ...document.querySelectorAll('[class*="Searchbar"] button[class*="Link"]')];
+            const res = [this.input, ...[...this.resWrapper.children].map(e => e.firstElementChild)];
             const active = document.activeElement;
             const ind = res.indexOf(active);
             const isLast = ind === res.length - 1;
@@ -159,7 +159,7 @@ export default class Searchbar extends React.Component {
                     value={input}
                     placeholder="Enter name or #<ID>" type="text"
                     ref={e => this.input = e} />
-                <div className={absolute ? Styles.absolute : null}>
+                <div className={absolute ? Styles.absolute : null} ref={el => this.resWrapper = el}>
                     {searchResults}
                 </div>
             </div>

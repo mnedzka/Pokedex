@@ -1,10 +1,9 @@
 import React from 'react';
 import Styles from './PokeType.scss';
-import { connect } from 'react-redux';
-import { showInPokedex } from 'Actions';
+import { Link } from 'react-router-dom';
 import { formatName } from 'src/utils';
 
-class PokeType extends React.Component {
+export default class PokeType extends React.Component {
     shouldComponentUpdate (nextProps) {
         if (nextProps === this.props) {
             return false;
@@ -12,27 +11,13 @@ class PokeType extends React.Component {
         return true;
     }
 
-    handleClick = id => {
-        return this.props.redirect({
-            id,
-            type : 'type',
-        });
-    };
-
     render () {
         return this.props.type.map((type, i) => {
             const text = formatName(type.name);
-            return <span key={i}
-                className={Styles[type.name]}
-                onClick={() => this.handleClick(type.id)}>
+            const path = `/pokedex/type/${type.id}`;
+            return <Link key={i} to={path} className={Styles[type.name]}>
                 {text}
-            </span>;
+            </Link>;
         });
     }
 }
-
-const mapDispatchToProps = dispatch => ({
-    redirect : data => dispatch(showInPokedex(data)),
-});
-
-export default connect(null, mapDispatchToProps)(PokeType);

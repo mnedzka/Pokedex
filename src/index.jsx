@@ -5,6 +5,10 @@ import Store from './store';
 import PokeCache from './fetch';
 import { Provider } from 'react-redux';
 import { updateData } from 'Actions';
+import {
+    HashRouter,
+    Route,
+} from 'react-router-dom';
 
 const onLoad = function onDomConentLoaded () {
     document.removeEventListener('DOMContentLoaded', onLoad);
@@ -33,7 +37,9 @@ const onLoad = function onDomConentLoaded () {
     new PokeCache().get(undefined, 'pokelistundefined').then(d => Store.dispatch(updateData(d)));
     ReactDOM.render(
         <Provider store={Store}>
-            <App />
+            <HashRouter>
+                <Route path="/:pageName?/:subpage?/:id?" component={App} />
+            </HashRouter>
         </Provider>,
         document.querySelector('#app')
     );

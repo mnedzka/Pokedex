@@ -96,8 +96,8 @@ export default class Pokedex extends React.Component {
             ['SP. Defense', pokemon.special_defense],
         ];
         return <div className={Styles.info} key="info">
-            <div>
-                <PokeImg id={id} size="md" />
+            <div className={Styles.pokemon}>
+                <PokeImg id={id} size="fill" />
             </div>
             <div className={Styles.data}>
                 <DataTable data={pokemonData} />

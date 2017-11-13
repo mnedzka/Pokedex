@@ -4,6 +4,10 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
+
+    @media screen and (max-width: 224px) {
+        justify-content: center;
+    }
 }
 
 .item {
@@ -21,7 +25,7 @@
 
     &:hover,
     &:focus {
-        border: 0px solid transparent;
+        border: 0 solid transparent;
     }
 
     &:focus {
@@ -37,6 +41,7 @@
 
 .selected {
     @extend .item;
+    border: 0 solid transparent;
 
     background-color: $blue_light;
 }
@@ -59,4 +64,11 @@
     flex-grow: 1;
     display: flex;
     align-items: center;
+}
+
+.pokemon {
+    background-image: url('./resources/icons/pokedex.svg');
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
 }

@@ -43,7 +43,7 @@ class FetchWrapper extends Storage {
         .then(r => {
             window.__fetchlist.rm(this.__id);
             if (!r.ok) {
-                throw new Error('Fetch Aborted');
+                return r.text().then(t => Promise.reject(t));
             }
             return r.json();
         })
@@ -126,6 +126,19 @@ class FetchWrapper extends Storage {
 export default class PokeCache extends Storage {
     get (reqBody = {}, reqID) {
         const { type = 'pokelist', id = 0, storedMoves = [], storedEvo = [] } = reqBody;
+        const availableResources = [
+            'ability',
+            'egg_group',
+            'item',
+            'move',
+            'pokedex',
+            'pokelist',
+            'pokemon',
+            'type',
+        ];
+        if (!availableResources.includes(type)) {
+            return Promise.resolve(new Error());
+        }
         const isFetchAlive = window.__fetchlist.has(reqID);
         if (isFetchAlive) {
             return Promise.resolve(null);

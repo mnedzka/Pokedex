@@ -97,7 +97,6 @@ const DexPokemon = props => {
         speed.base,
     ];
     const showcaseStyle = data.types.reduce((acc, t) => acc + t.name, '');
-    console.log(showcaseStyle);
     return <div>
         <div className={Styles.nav}>
             {createNavBtns(data.id)}

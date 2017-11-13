@@ -1,6 +1,4 @@
 import {
-    PAGE_CHANGE,
-    PAGE_SHOW_IN_DEX,
     PAGE_UPDATE_DEX_DATA,
     LIST_UPDATE_DATA,
     COMPARE_ADD_ITEM,
@@ -9,24 +7,6 @@ import {
 } from './actionTypes.js';
 
 // STORE.PAGE
-const changePage = function changeCurrentPage (newPage) {
-    window.__fetchlist.ab();
-    window.scrollTo(0, 0);
-    return {
-        type : PAGE_CHANGE,
-        payload : newPage,
-    };
-};
-
-const showInPokedex = function showInfoInPokedexPage (pokedexPageData) {
-    window.__fetchlist.ab();
-    window.scrollTo(0, 0);
-    return {
-        type : PAGE_SHOW_IN_DEX,
-        payload : pokedexPageData,
-    };
-};
-
 const updateDexData = function updatePokedexItemData (dexData, type) {
     return {
         type : PAGE_UPDATE_DEX_DATA,
@@ -81,13 +61,45 @@ const updateCompare = function updateCompareData (data) {
     };
 };
 
+//APP.PAGE
+const getPageData = function getValidPageData (state, ownProps) {
+    const { pokelist, compare, page } = state;
+    const { match : { params : { pageName, subpage, id } } } = ownProps;
+    const dexSubpages = [
+        'ability',
+        'egg_group',
+        'item',
+        'move',
+        'pokemon',
+        'type',
+        'wiki',
+    ];
+    const currentPage = pageName ? pageName : 'home';
+    let dexItemType = subpage ? subpage : currentPage;
+    if (currentPage === 'pokedex' && !dexSubpages.includes(dexItemType)) {
+        dexItemType = currentPage;
+    }
+    const dexItemId = id && !/\D+/.test(id) ? ~~id : id;
+    const { dexItemData, dexItemDataType } = page;
+    return {
+        compare,
+        list : pokelist,
+        page : {
+            currentPage,
+            dexItemType,
+            dexItemId,
+            dexItemData,
+            dexItemDataType,
+        },
+    };
+};
+
 export {
-    changePage,
-    showInPokedex,
     updateDexData,
     updateData,
     addCompare,
     removeCompare,
     updateCompare,
+    getPageData,
 }
 

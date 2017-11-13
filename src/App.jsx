@@ -4,10 +4,10 @@ import { connect } from 'react-redux';
 import { Loader } from 'Components';
 import { Notification } from 'Components';
 import {
-    changePage,
     updateDexData,
     updateData,
     updateCompare,
+    getPageData,
 } from 'Actions';
 import {
     Compare,
@@ -24,6 +24,10 @@ class App extends React.Component {
         this.fetch = new PokeCache();
     }
 
+    fetchFail = () => {
+        this.props.history.push('/404');
+    };
+
     getData = (id, type) => {
         const { page } = this.props;
         const reqBody = {
@@ -37,7 +41,7 @@ class App extends React.Component {
                 if (data === null) {
                     return;
                 }
-                return this.props.fetchFail('404');
+                return this.fetchFail();
             }
             if (reqBody.type === 'pokelist') {
                 return this.props.updateList(data);
@@ -72,25 +76,21 @@ class App extends React.Component {
     };
 
     createContent = () => {
-        const { page, list, compare } = this.props;
-        let Content = Loader;
+        const { list, compare, page } = this.props;
         let title = 'Home';
+        let content = <Loader />;
         switch (page.currentPage) {
             case '404':
                 title = 'Sorry!';
-                Content = NotFound;
+                content = <NotFound />;
                 break;
             case 'pokelist':
                 title = 'Pokelist';
                 if (!list.data) {
                     this.getData();
                 } else {
-                    Content = Pokelist;
+                    content = <Pokelist data={list.data} />;
                 }
-                break;
-            case 'home':
-                title = 'Home';
-                Content = Home;
                 break;
             case 'pokedex':
                 title = 'Pokedex';
@@ -100,7 +100,7 @@ class App extends React.Component {
                 } else if (!list.data) {
                     this.getData(undefined, 'pokelist');
                 } else {
-                    Content = Pokedex;
+                    content = <Pokedex page={page} data={page.dexItemData} list={list.data} />;
                 }
                 break;
             case 'compare':
@@ -113,36 +113,38 @@ class App extends React.Component {
                 if (!list.data) {
                     this.getData(null, 'pokelist');
                 } else {
-                    Content = Compare;
+                    content = <Compare />;
                 }
                 break;
+            default:
+                title = 'Home';
+                content = <Home />;
         }
         return {
-            Content,
+            content,
             title,
         };
     };
 
+    componentDidMount () {
+        this.scroll = this.props.history.listen(() => window.scrollTo(0, 0));
+    }
+
     render () {
-        const { compare } = this.props;
-        const { Content, title } = this.createContent();
+        const { compare, page } = this.props;
+        const { content, title } = this.createContent();
         return <Layout title={title}>
-            <Content />
+            {content}
             <Notification data={compare.notification} pokemon={compare.pokemon} />
         </Layout>;
     }
 }
 
-const mapStateToProps = state => ({
-    page : state.page,
-    list : state.pokelist,
-    compare : state.compare,
-});
+const mapStateToProps = (state, ownProps) => getPageData(state, ownProps);
 
 const mapDispatchToProps = dispatch => ({
     updateDex : (data, type) => dispatch(updateDexData(data, type)),
     updateList : data => dispatch(updateData(data)),
-    fetchFail : page => dispatch(changePage(page)),
     updateCompare : data => dispatch(updateCompare(data)),
 });
 
